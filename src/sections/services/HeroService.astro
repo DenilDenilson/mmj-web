@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets'
+
+const { title, banner } = Astro.props
+---
+
+<section class="bg-black pt-16 md:pt-0">
+	<div class="relative mx-auto max-w-7xl">
+		<Image
+			id="heroCarrer"
+			src={banner}
+			width={1280}
+			height={720}
+			alt="MMJ Smart Electronics"
+			class="w-full object-cover md:h-96"
+		/>
+		<div
+			class="absolute inset-0 left-0 top-0 flex flex-col items-center justify-center text-center lg:items-start lg:pl-16"
+		>
+			<h1
+				class="text-pretty text-lg font-normal uppercase leading-normal tracking-wide text-white sm:text-lg md:text-3xl lg:max-w-lg lg:text-start lg:text-3xl lg:leading-tight lg:tracking-wider xl:text-4xl"
+			>
+				{title}
+				<br />
+			</h1>
+			<a
+				href=""
+				class="mt-2 inline-block w-40 bg-white py-2 text-center text-sm font-medium uppercase tracking-wider hover:bg-gray-200 md:mt-8 md:text-base lg:mt-8 lg:w-48 lg:text-xl"
+				>Whatsapp</a
+			>
+		</div>
+	</div>
+</section>
+
+<style>
+	h1 {
+		text-shadow: 0px 5px 21px rgba(0, 0, 0, 0.6);
+	}
+	@media (min-width: 768px) {
+		#heroCarrer {
+			height: 24rem /* 384px */;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		#heroCarrer {
+			height: 32rem /* 512px */;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+</style>

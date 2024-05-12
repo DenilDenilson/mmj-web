@@ -1,0 +1,12 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import HeroProyects from '@/sections/proyectos/HeroProyects.astro'
+import ProyectsCardsDone from '@/sections/proyectos/ProyectsCardsDone.astro'
+
+const { proyecto } = Astro.params
+---
+
+<Layout title="MMJ Smart electronics">
+	<HeroProyects />
+	<ProyectsCardsDone />
+</Layout>

@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets'
+import plus from '@public/svg/plus.svg'
+
+const proyects = [
+	{
+		title: 'Sistema de Adquisición de Datos',
+		nextPage: '/proyectos/sistema-adquisicion-datos',
+	},
+	{
+		title: 'Maquinaria Industrial',
+		nextPage: '/proyectos/maquinaria-industrial',
+	},
+	{
+		title: 'Sistema de Medición de Energía',
+		nextPage: '/proyectos/sistema-medicion-energia',
+	},
+	{
+		title: 'Ecosistema para Gestión de Emergencias',
+		nextPage: '/proyectos/ecosistema-gestion-emergencias',
+	},
+	{
+		title: 'ablero de Control IoT para sistema BMS',
+		nextPage: '/proyectos/tablero-control-iot-bms',
+	},
+]
+---
+
+<section class="mx-auto max-w-7xl py-12 lg:py-16">
+	<h2
+		class="mb-4 text-center text-xl font-semibold uppercase md:mb-4 md:text-3xl"
+	>
+		Proyectos culminados
+	</h2>
+	<ul class="mx-auto flex max-w-5xl flex-wrap justify-center gap-8">
+		{
+			proyects.map((proyect) => (
+				<a href={proyect.nextPage}>
+					<li class="grid h-80 w-80 place-content-center rounded-xl bg-black p-8 text-center font-semibold text-white">
+						<Image
+							src={plus}
+							alt="ícono de suma"
+							width={48}
+							height={48}
+							class="mx-auto mb-4"
+						/>
+						{proyect.title}
+					</li>
+				</a>
+			))
+		}
+	</ul>
+</section>

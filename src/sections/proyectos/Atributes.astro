@@ -1,0 +1,36 @@
+---
+import complete from '@public/svg/complete.svg'
+import { Image } from 'astro:assets'
+
+const { proyecto } = Astro.props
+---
+
+<section class="bg-black py-12">
+	<h2
+		class="mb-8 text-pretty text-center text-xl font-semibold uppercase text-white md:mb-12 md:text-3xl lg:mb-16"
+	>
+		Atributos
+	</h2>
+	<ul
+		class="flex flex-wrap items-center justify-center gap-8 md:gap-8 lg:mx-auto lg:max-w-4xl lg:gap-12 xl:max-w-6xl xl:gap-12"
+	>
+		{
+			proyecto.highs.map((high: string) => (
+				<li class="mx-auto flex items-center justify-start gap-4 md:flex-col">
+					<div class="grid h-24 w-24 place-content-center rounded-full">
+						<Image
+							src={complete}
+							alt="Icono de Pantalla"
+							width={64}
+							height={64}
+							class="h-24"
+						/>
+					</div>
+					<p class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-48 lg:text-pretty">
+						{high}
+					</p>
+				</li>
+			))
+		}
+	</ul>
+</section>

@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets'
+
+const { title, description, mainImage } = Astro.props
+---
+
+<section
+	class="mx-auto max-w-7xl py-12 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:justify-items-center lg:py-16"
+>
+	<div>
+		<h2
+			class="mb-4 text-center text-xl font-bold uppercase md:text-3xl lg:text-start"
+		>
+			{title}
+		</h2>
+		<p
+			class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium md:text-base lg:mx-0 lg:mb-16 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide"
+		>
+			{description}
+		</p>
+		<div
+			class="flex items-center justify-center gap-4 px-4 lg:justify-start lg:px-0"
+		>
+			<h4
+				class="w-52 rounded bg-black py-2 text-center text-lg font-medium uppercase text-white"
+			>
+				Contáctanos
+			</h4>
+		</div>
+	</div>
+	<div class="flex items-center gap-2">
+		<Image
+			src={mainImage}
+			alt="Tablet con imagen del curso"
+			width={512}
+			height={768}
+			class="hidden lg:block"
+		/>
+		<Image
+			src={mainImage}
+			alt="Tablet con imagen del curso"
+			width={512}
+			height={768}
+			class="hidden lg:block"
+		/>
+	</div>
+</section>

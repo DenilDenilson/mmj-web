@@ -1,0 +1,34 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import HeroService from '@/sections/services/HeroService.astro'
+import type { GetStaticPaths } from 'astro'
+import banner from '@/assets/Banners/auto.webp'
+import DescriptionService from '@/sections/services/DescriptionService.astro'
+import AtributesService from '@/sections/services/AtributesService.astro'
+import PicturesService from '@/sections/services/PicturesService.astro'
+
+export const getStaticPaths = (() => {
+	return [
+		{ params: { service: 'industrial-software' } },
+		{ params: { service: 'daq' } },
+		{ params: { service: 'iot' } },
+		{ params: { service: 'bms' } },
+		{ params: { service: 'firmware' } },
+	]
+}) satisfies GetStaticPaths
+
+const { service } = Astro.params
+---
+
+<Layout title="MMJ Smart Electronics">
+	<HeroService title="Software Industrial" banner={banner} />
+	<DescriptionService
+		title="Software Industrial"
+		description="asd"
+		mainImage={banner}
+	/>
+	<AtributesService
+		highs={['Plaxo de entrega', 'Asesoria', 'Análisis', 'Resultado']}
+	/>
+	<PicturesService pictures={[banner, banner, banner]} />
+</Layout>

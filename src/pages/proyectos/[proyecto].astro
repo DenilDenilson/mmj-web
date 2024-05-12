@@ -1,0 +1,36 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import type { GetStaticPaths } from 'astro'
+import HeroProyectos from '@/sections/proyectos/HeroProyectos.astro'
+import { proyectComplete } from '@/data/proyects'
+import Description from '@/sections/proyectos/Description.astro'
+import Atributes from '@/sections/proyectos/Atributes.astro'
+import Pictures from '@/sections/proyectos/Pictures.astro'
+
+export const getStaticPaths = (() => {
+	return [
+		{ params: { proyecto: 'sistema-adquisicion-datos' } },
+		{ params: { proyecto: 'maquinaria-industrial' } },
+		{ params: { proyecto: 'sistema-medicion-energia' } },
+		{ params: { proyecto: 'ecosistema-gestion-emergencias' } },
+		{ params: { proyecto: 'tablero-control-iot-bms' } },
+	]
+}) satisfies GetStaticPaths
+
+const { proyecto } = Astro.params
+---
+
+<Layout title="MMJ Smart electronics">
+	<HeroProyectos
+		proyecto={proyectComplete[`${proyecto}` as keyof typeof proyectComplete]}
+	/>
+	<Description
+		proyecto={proyectComplete[`${proyecto}` as keyof typeof proyectComplete]}
+	/>
+	<Atributes
+		proyecto={proyectComplete[`${proyecto}` as keyof typeof proyectComplete]}
+	/>
+	<Pictures
+		proyecto={proyectComplete[`${proyecto}` as keyof typeof proyectComplete]}
+	/>
+</Layout>

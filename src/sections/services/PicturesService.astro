@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets'
+
+const { pictures } = Astro.props
+---
+
+<section class="mx-auto max-w-7xl py-12 lg:py-16">
+	<h2
+		class="mb-4 text-center text-xl font-semibold uppercase md:mb-4 md:text-3xl"
+	>
+		Algunas fotos de nuestro servicio
+	</h2>
+	<ul class="mx-auto flex max-w-5xl flex-wrap justify-center gap-16">
+		{
+			pictures.map((picture: ImageMetadata) => (
+				<Image
+					src={picture}
+					alt="Tablet con imagen del curso"
+					width={468}
+					height={768}
+					class=""
+				/>
+			))
+		}
+	</ul>
+</section>

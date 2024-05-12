@@ -1,6 +1,6 @@
 ---
 import ProyectThum from '@/components/ProyectThum.astro'
-import { proyects } from '@/data/proyects'
+import { proyectos } from '@/data/proyects'
 ---
 
 <section class="mx-auto pb-16 pt-12">
@@ -49,7 +49,7 @@ import { proyects } from '@/data/proyects'
 		<ul
 			class="relative flex snap-x snap-mandatory overflow-x-auto lg:overflow-x-visible"
 		>
-			{proyects.map((proyect) => <ProyectThum proyect={proyect} />)}
+			{proyectos.map((proyecto) => <ProyectThum proyect={proyecto} />)}
 			<!-- <ProyectThum title="Sistema de adquisición de datos" />
 			<ProyectThum title="Maquinaria industrial" />
 			<ProyectThum title="Sistema de medición de energía" />

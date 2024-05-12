@@ -1,6 +1,7 @@
 import SistemasEmbebidos from '@/assets/Inicio/DataAdq.webp'
+import banner from '@/assets/Banners/firmware.webp'
 
-export const proyects = [
+export const proyectos = [
   {
     title: 'Sistema de Adquisición de Datos',
     description: `Nuestro sistema de adquisición de datos es una solución para monitorear el entorno ambiental. Alimentado por energía solar registra con precisión la temperatura, humedad y nivel, almacenando los datos en una memoria SD con marca de tiempo. Nuestro software de adquisición facilita la lectura, descarga y configuración del equipo, que opera de manera autónoma y utiliza el protocolo Modbus RTU para comunicarse a través de RS485.`,
@@ -11,7 +12,7 @@ export const proyects = [
       'Descarga de información a larga distancia',
       'Reportes y analítica'
     ],
-    nextPage: '/proyects/sistema-adquisicion-datos'
+    nextPage: '/proyectos/sistema-adquisicion-datos'
   },
   {
     title: 'Maquinaria Industrial',
@@ -23,7 +24,7 @@ export const proyects = [
       'Aumento en la productividad del calzado',
       'Control automatizado mediante HMI'
     ],
-    nextPage: '/proyects/maquinaria-industrial'
+    nextPage: '/proyectos/maquinaria-industrial'
   },
   {
     title: 'Sistema de Medición de Energía',
@@ -35,7 +36,7 @@ export const proyects = [
       'Software de adquisición de datos',
       'Equipo industrial'
     ],
-    nextPage: '/proyects/sistema-medicion-energia'
+    nextPage: '/proyectos/sistema-medicion-energia'
   },
   {
     title: 'Ecosistema para Gestión de Emergencias',
@@ -47,7 +48,7 @@ export const proyects = [
       'Concentrador fácil de instalar en activos',
       'Ecosistema escalable'
     ],
-    nextPage: '/proyects/ecosistema-gestion-emergencias'
+    nextPage: '/proyectos/ecosistema-gestion-emergencias'
   },
   {
     title: 'Tablero de Control IoT para sistema BMS',
@@ -59,6 +60,30 @@ export const proyects = [
       'Diversas conectividades',
       'Equipos estandarizados'
     ],
-    nextPage: '#'
+    nextPage: '/proyectos/tablero-control-iot-bms'
   }
 ]
+
+export const proyectComplete = {
+  'sistema-adquisicion-datos': {
+    title: 'Sistema de Adquisición de Datos',
+    description: `Nuestro sistema de adquisición de datos es una solución para monitorear el entorno ambiental. Alimentado por energía solar registra con precisión la temperatura, humedad y nivel, almacenando los datos en una memoria SD con marca de tiempo. Nuestro software de adquisición facilita la lectura, descarga y configuración del equipo, que opera de manera autónoma y utiliza el protocolo Modbus RTU para comunicarse a través de RS485.`,
+    bannerSrc: banner,
+    mainImage: SistemasEmbebidos,
+    highs: [
+      'Equipo autónomo',
+      'Registrador de datos',
+      'Descarga de información a larga distancia',
+      'Reportes y analítica'
+    ],
+    pictures: [
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos
+    ],
+    nextPage: '/proyectos/sistema-adquisicion-datos'
+  }
+}
