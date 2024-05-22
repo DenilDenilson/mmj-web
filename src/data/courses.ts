@@ -139,13 +139,13 @@ export const specialites = {
       {
         name: "Especialización en diseño electrónico profesional con Altium Designer y Normas IPC",
         imgSrc: SistemasEmbebidos,
-        nextPage: "/presencial/altium",
+        nextPage: "/presencial/altium-presencial",
         imgAlt: "Especialización en diseño electrónico profesional con Altium Designer y Normas IPC"
       },
       {
         name: "Diseño de sistemas electrónicos analógicos y digitales",
         imgSrc: SistemasEmbebidos,
-        nextPage: "/presencial/analogica-diseño",
+        nextPage: "/presencial/analogica-diseño-presencial",
         imgAlt: "Diseño de sistemas electrónicos analógicos y digitales"
       }
     ]

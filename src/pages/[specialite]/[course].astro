@@ -1,26 +1,44 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import Description from '@/sections/course/Description.astro'
-import HeroCourse from '@/sections/course/HeroCourse.astro'
-import NeedKnow from '@/sections/course/NeedKnow.astro'
-import WhatYouLearn from '@/sections/course/WhatYouLearn.astro'
-import Beneficts from '@/sections/course/Beneficts.astro'
-import Proyects from '@/sections/course/Proyects.astro'
-import TechLearn from '@/sections/course/TechLearn.astro'
-import Whatsapp from '@/sections/course/Whatsapp.astro'
-import OtherCourses from '@/sections/course/OtherCourses.astro'
-import FAQ from '@/sections/course/FAQ.astro'
-import Kit from '@/sections/course/Kit.astro'
-import WhyChoose from '@/sections/course/WhyChoose.astro'
-import { courses } from '@/data/course'
+import Layout from '@/layouts/Layout.astro';
+import Description from '@/sections/course/Description.astro';
+import HeroCourse from '@/sections/course/HeroCourse.astro';
+import NeedKnow from '@/sections/course/NeedKnow.astro';
+import WhatYouLearn from '@/sections/course/WhatYouLearn.astro';
+import Beneficts from '@/sections/course/Beneficts.astro';
+import Proyects from '@/sections/course/Proyects.astro';
+import TechLearn from '@/sections/course/TechLearn.astro';
+import Whatsapp from '@/sections/course/Whatsapp.astro';
+import OtherCourses from '@/sections/course/OtherCourses.astro';
+import FAQ from '@/sections/course/FAQ.astro';
+import Kit from '@/sections/course/Kit.astro';
+import WhyChoose from '@/sections/course/WhyChoose.astro';
+import { courses } from '@/data/course';
 
 export function getStaticPaths() {
 	return [
+		{ params: { specialite: 'firmware', course: 'pic-iot' } },
+		{ params: { specialite: 'firmware', course: 'nextion' } },
+		{ params: { specialite: 'firmware', course: 'pic-asm' } },
 		{ params: { specialite: 'software', course: 'ansi-c' } },
-	]
+		{ params: { specialite: 'software', course: 'labview-iot' } },
+		{ params: { specialite: 'software', course: 'labview-avanzado' } },
+		{ params: { specialite: 'iot', course: 'esp32-arduino' } },
+		{ params: { specialite: 'iot', course: 'esp32-c' } },
+		{ params: { specialite: 'hardware', course: 'altium' } },
+		{ params: { specialite: 'hardware', course: 'analogica-diseño' } },
+		{ params: { specialite: 'auto', course: 'plc' } },
+		{ params: { specialite: 'auto', course: 'presion' } },
+		{ params: { specialite: 'presencial', course: 'altium-presencial' } },
+		{
+			params: {
+				specialite: 'presencial',
+				course: 'analogica-diseño-presencial',
+			},
+		},
+	];
 }
 
-const { specialite, course } = Astro.params
+const { specialite, course } = Astro.params;
 ---
 
 <Layout title="MMJ Smart Electronics">

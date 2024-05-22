@@ -1,16 +1,17 @@
 ---
-import { Image } from 'astro:assets'
-import HamburguerNav from './Hamburguer.astro'
-import servicesSW from '@public/svg/ServicesSW-Icon.svg'
-import servicesHW from '@public/svg/ServicesHW-Icon.svg'
-import consulting from '@public/svg/Consulting.svg'
-import firmwareIcon from '@public/svg/FirmwareIcon.svg'
-import softwareIcon from '@public/svg/SoftwareIcon.svg'
-import iotIcon from '@public/svg/IoTIcon.svg'
-import hardwareIcon from '@public/svg/HardwareIcon.svg'
-import autoIcon from '@public/svg/AutoIcon.svg'
-import presencialIcon from '@public/svg/PresencialIcon.svg'
-import Triangle from './Triangle.astro'
+import { Image } from 'astro:assets';
+import HamburguerNav from './Hamburguer.astro';
+import arrow from '@public/svg/arrow.svg';
+import servicesSW from '@public/svg/ServicesSW-Icon.svg';
+import servicesHW from '@public/svg/ServicesHW-Icon.svg';
+import consulting from '@public/svg/Consulting.svg';
+import firmwareIcon from '@public/svg/FirmwareIcon.svg';
+import softwareIcon from '@public/svg/SoftwareIcon.svg';
+import iotIcon from '@public/svg/IoTIcon.svg';
+import hardwareIcon from '@public/svg/HardwareIcon.svg';
+import autoIcon from '@public/svg/AutoIcon.svg';
+import presencialIcon from '@public/svg/PresencialIcon.svg';
+import Triangle from './Triangle.astro';
 ---
 
 <nav class="fixed z-50 w-full bg-gradient-to-b from-slate-500 pb-2">
@@ -36,6 +37,13 @@ import Triangle from './Triangle.astro'
 				id="cursosNav"
 				class="cursor-pointer text-lg font-medium hover:underline"
 				>Cursos
+				<Image
+					src={arrow}
+					alt="Flecha para indicar que hay un menú desplegable"
+					width={24}
+					height={24}
+					class="mb-1 ml-1 inline-block transform transition-transform duration-300"
+				/>
 				<div id="cursosNavFloat" class="hidden">
 					<div class="absolute ml-5 mt-3">
 						<Triangle />
@@ -48,72 +56,84 @@ import Triangle from './Triangle.astro'
 								href="/firmware"
 								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
 							>
-								<Image
-									src={firmwareIcon}
-									alt="Ícono sobre el servicio de desarrollo de software"
-									width={48}
-									height={48}
-								/>
+								<div class="grid h-12 w-12 place-content-center">
+									<Image
+										src={firmwareIcon}
+										alt="Ícono sobre el servicio de desarrollo de software"
+										width={48}
+										height={48}
+									/>
+								</div>
 								<span> Firmware </span>
 							</a>
 							<a
 								href="software"
 								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
 							>
-								<Image
-									src={softwareIcon}
-									alt="Ícono sobre el servicio de desarrollo de software"
-									width={48}
-									height={48}
-								/>
+								<div class="grid h-12 w-12 place-content-center">
+									<Image
+										src={softwareIcon}
+										alt="Ícono sobre el servicio de desarrollo de software"
+										width={48}
+										height={48}
+									/>
+								</div>
 								<span> Software </span>
 							</a>
 							<a
 								href="iot"
 								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
 							>
-								<Image
-									src={iotIcon}
-									alt="Ícono sobre el servicio de desarrollo de software"
-									width={48}
-									height={48}
-								/>
+								<div class="grid h-12 w-12 place-content-center">
+									<Image
+										src={iotIcon}
+										alt="Ícono sobre el servicio de desarrollo de software"
+										width={48}
+										height={48}
+									/>
+								</div>
 								<span> IoT </span>
 							</a>
 							<a
 								href="hardware"
 								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
 							>
-								<Image
-									src={hardwareIcon}
-									alt="Ícono sobre el servicio de desarrollo de software"
-									width={48}
-									height={48}
-								/>
+								<div class="grid h-12 w-12 place-content-center">
+									<Image
+										src={hardwareIcon}
+										alt="Ícono sobre el servicio de desarrollo de software"
+										width={48}
+										height={48}
+									/>
+								</div>
 								<span> Hardware </span>
 							</a>
 							<a
 								href="auto"
 								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
 							>
-								<Image
-									src={autoIcon}
-									alt="Ícono sobre el servicio de desarrollo de software"
-									width={48}
-									height={48}
-								/>
+								<div class="grid h-12 w-12 place-content-center">
+									<Image
+										src={autoIcon}
+										alt="Ícono sobre el servicio de desarrollo de software"
+										width={48}
+										height={48}
+									/>
+								</div>
 								<span> Automatización </span>
 							</a>
 							<a
 								href="presencial"
 								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
 							>
-								<Image
-									src={presencialIcon}
-									alt="Ícono sobre el servicio de desarrollo de software"
-									width={48}
-									height={48}
-								/>
+								<div class="grid h-12 w-12 place-content-center">
+									<Image
+										src={presencialIcon}
+										alt="Ícono sobre el servicio de desarrollo de software"
+										width={48}
+										height={48}
+									/>
+								</div>
 								<span> Presenciales </span>
 							</a>
 						</ul>
@@ -124,6 +144,13 @@ import Triangle from './Triangle.astro'
 				id="servicesNav"
 				class="cursor-pointer text-lg font-medium hover:underline"
 				>Servicios
+				<Image
+					src={arrow}
+					alt="Flecha para indicar que hay un menú desplegable"
+					width={24}
+					height={24}
+					class="mb-1 ml-1 inline-block transform transition-transform duration-300"
+				/>
 				<div id="servicesNavFloat" class="hidden">
 					<div class="absolute ml-8 mt-3">
 						<Triangle />
@@ -185,19 +212,32 @@ import Triangle from './Triangle.astro'
 </nav>
 
 <script>
-	const servicesNav = document.getElementById('servicesNav')
-	const cursosNav = document.getElementById('cursosNav')
-	const servicesNavFloat = document.getElementById('servicesNavFloat')
-	const cursosNavFloat = document.getElementById('cursosNavFloat')
+	const servicesNav = document.getElementById('servicesNav');
+	const cursosNav = document.getElementById('cursosNav');
+	const servicesNavFloat = document.getElementById('servicesNavFloat');
+	const cursosNavFloat = document.getElementById('cursosNavFloat');
 
 	if (servicesNav && cursosNav && servicesNavFloat && cursosNavFloat) {
 		servicesNav.addEventListener('click', () => {
-			servicesNavFloat.classList.toggle('hidden')
-			cursosNavFloat.classList.add('hidden')
-		})
+			servicesNavFloat.classList.toggle('hidden');
+			servicesNav.firstElementChild !== null
+				? servicesNav.firstElementChild.classList.toggle('rotate-180')
+				: null;
+			cursosNav.firstElementChild !== null
+				? cursosNav.firstElementChild.classList.remove('rotate-180')
+				: null;
+			servicesNav.firstElementChild !== null;
+			cursosNavFloat.classList.add('hidden');
+		});
 		cursosNav.addEventListener('click', () => {
-			cursosNavFloat.classList.toggle('hidden')
-			servicesNavFloat.classList.add('hidden')
-		})
+			cursosNavFloat.classList.toggle('hidden');
+			cursosNav.firstElementChild !== null
+				? cursosNav.firstElementChild.classList.toggle('rotate-180')
+				: null;
+			servicesNav.firstElementChild !== null
+				? servicesNav.firstElementChild.classList.remove('rotate-180')
+				: null;
+			servicesNavFloat.classList.add('hidden');
+		});
 	}
 </script>

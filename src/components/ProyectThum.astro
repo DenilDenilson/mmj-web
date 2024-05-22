@@ -1,7 +1,7 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from 'astro:assets';
 
-const { proyect } = Astro.props
+const { proyect } = Astro.props;
 ---
 
 <div>
@@ -31,8 +31,11 @@ const { proyect } = Astro.props
 			>
 				{
 					proyect.highs.map((high: string) => (
-						<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
-							&bull; {high}
+						<li class="grid grid-cols-[32px_1fr] gap-1">
+							<div class="h-8 w-8 self-center bg-black" />
+							<p class="text-sm font-medium lg:text-lg xl:text-xl xl:font-normal">
+								{high}
+							</p>
 						</li>
 					))
 				}
