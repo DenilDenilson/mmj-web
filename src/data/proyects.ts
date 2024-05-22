@@ -1,4 +1,4 @@
-import SistemasEmbebidos from '@/assets/Inicio/DataAdq.webp'
+import SistemasEmbebidos from '@public/images/Broken.png'
 import banner from '@/assets/Banners/firmware.webp'
 
 export const proyectos = [
@@ -66,6 +66,90 @@ export const proyectos = [
 
 export const proyectComplete = {
   'sistema-adquisicion-datos': {
+    title: 'Sistema de Adquisición de Datos',
+    description: `Nuestro sistema de adquisición de datos es una solución para monitorear el entorno ambiental. Alimentado por energía solar registra con precisión la temperatura, humedad y nivel, almacenando los datos en una memoria SD con marca de tiempo. Nuestro software de adquisición facilita la lectura, descarga y configuración del equipo, que opera de manera autónoma y utiliza el protocolo Modbus RTU para comunicarse a través de RS485.`,
+    bannerSrc: banner,
+    mainImage: SistemasEmbebidos,
+    highs: [
+      'Equipo autónomo',
+      'Registrador de datos',
+      'Descarga de información a larga distancia',
+      'Reportes y analítica'
+    ],
+    pictures: [
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos
+    ],
+    nextPage: '/proyectos/sistema-adquisicion-datos'
+  },
+  'maquinaria-industrial': {
+    title: 'Sistema de Adquisición de Datos',
+    description: `Nuestro sistema de adquisición de datos es una solución para monitorear el entorno ambiental. Alimentado por energía solar registra con precisión la temperatura, humedad y nivel, almacenando los datos en una memoria SD con marca de tiempo. Nuestro software de adquisición facilita la lectura, descarga y configuración del equipo, que opera de manera autónoma y utiliza el protocolo Modbus RTU para comunicarse a través de RS485.`,
+    bannerSrc: banner,
+    mainImage: SistemasEmbebidos,
+    highs: [
+      'Equipo autónomo',
+      'Registrador de datos',
+      'Descarga de información a larga distancia',
+      'Reportes y analítica'
+    ],
+    pictures: [
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos
+    ],
+    nextPage: '/proyectos/sistema-adquisicion-datos'
+  },
+  'sistema-medicion-energia': {
+    title: 'Sistema de Adquisición de Datos',
+    description: `Nuestro sistema de adquisición de datos es una solución para monitorear el entorno ambiental. Alimentado por energía solar registra con precisión la temperatura, humedad y nivel, almacenando los datos en una memoria SD con marca de tiempo. Nuestro software de adquisición facilita la lectura, descarga y configuración del equipo, que opera de manera autónoma y utiliza el protocolo Modbus RTU para comunicarse a través de RS485.`,
+    bannerSrc: banner,
+    mainImage: SistemasEmbebidos,
+    highs: [
+      'Equipo autónomo',
+      'Registrador de datos',
+      'Descarga de información a larga distancia',
+      'Reportes y analítica'
+    ],
+    pictures: [
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos
+    ],
+    nextPage: '/proyectos/sistema-adquisicion-datos'
+  },
+  'ecosistema-gestion-emergencias': {
+    title: 'Sistema de Adquisición de Datos',
+    description: `Nuestro sistema de adquisición de datos es una solución para monitorear el entorno ambiental. Alimentado por energía solar registra con precisión la temperatura, humedad y nivel, almacenando los datos en una memoria SD con marca de tiempo. Nuestro software de adquisición facilita la lectura, descarga y configuración del equipo, que opera de manera autónoma y utiliza el protocolo Modbus RTU para comunicarse a través de RS485.`,
+    bannerSrc: banner,
+    mainImage: SistemasEmbebidos,
+    highs: [
+      'Equipo autónomo',
+      'Registrador de datos',
+      'Descarga de información a larga distancia',
+      'Reportes y analítica'
+    ],
+    pictures: [
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos,
+      SistemasEmbebidos
+    ],
+    nextPage: '/proyectos/sistema-adquisicion-datos'
+  },
+  'tablero-control-iot-bms': {
     title: 'Sistema de Adquisición de Datos',
     description: `Nuestro sistema de adquisición de datos es una solución para monitorear el entorno ambiental. Alimentado por energía solar registra con precisión la temperatura, humedad y nivel, almacenando los datos en una memoria SD con marca de tiempo. Nuestro software de adquisición facilita la lectura, descarga y configuración del equipo, que opera de manera autónoma y utiliza el protocolo Modbus RTU para comunicarse a través de RS485.`,
     bannerSrc: banner,
