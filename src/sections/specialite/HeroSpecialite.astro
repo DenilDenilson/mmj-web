@@ -1,30 +1,34 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from 'astro:assets';
 
-const { specialite } = Astro.props
+const { specialite } = Astro.props;
 ---
 
-<section class="bg-black pt-16 md:pt-0">
-	<div class="relative mx-auto max-w-7xl">
+<section class="bg-black pt-0 md:pt-0">
+	<div class="relative">
 		<Image
 			id="heroCarrer"
 			src={specialite.bannerSrc}
 			width={1280}
 			height={720}
 			alt="MMJ Smart Electronics"
-			class=""
+			class="max-h-[512px] w-screen object-cover md:max-h-[512px] lg:max-h-[640px]"
 		/>
-		<div class="absolute left-[5%] top-[35%] sm:top-[30%] lg:top-[40%]">
-			<h1
-				class="max-w-64 text-pretty text-base font-normal uppercase leading-normal tracking-wide text-white sm:max-w-xs sm:text-lg md:max-w-sm md:text-2xl lg:max-w-xl lg:text-4xl"
+		<div class="absolute inset-0 mx-auto max-w-7xl">
+			<div
+				class="absolute left-[5%] top-[35%] mx-auto max-w-7xl sm:top-[30%] lg:top-[40%]"
 			>
-				{specialite.name}
-			</h1>
-			<a
-				href=""
-				class="mt-2 inline-block w-40 bg-white py-2 text-center text-sm font-medium uppercase tracking-wider hover:bg-gray-200 md:mt-8 lg:mt-4 lg:w-48 lg:text-xl"
-				>Whatsapp</a
-			>
+				<h1
+					class="max-w-64 text-pretty text-base font-normal uppercase leading-normal tracking-wide text-white sm:max-w-xs sm:text-lg md:max-w-sm md:text-2xl lg:max-w-xl lg:text-4xl"
+				>
+					{specialite.name}
+				</h1>
+				<a
+					href=""
+					class="mt-2 inline-block w-40 bg-white py-2 text-center text-sm font-medium uppercase tracking-wider hover:bg-gray-200 md:mt-8 lg:mt-4 lg:w-48 lg:text-xl"
+					>Whatsapp</a
+				>
+			</div>
 		</div>
 	</div>
 </section>

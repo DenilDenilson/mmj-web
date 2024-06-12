@@ -1,10 +1,10 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from 'astro:assets';
 
-const { specialization } = Astro.props
+const { specialization } = Astro.props;
 ---
 
-<div class="relative mx-auto w-[300px]">
+<div class="relative mx-auto w-[300px] overflow-hidden rounded-xl">
 	<Image
 		src={specialization.imgSrc}
 		alt={specialization.imgAlt}

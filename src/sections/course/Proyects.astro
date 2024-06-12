@@ -1,18 +1,18 @@
 ---
-import { Image } from 'astro:assets'
-import check from '@public/svg/check.svg'
+import { Image } from 'astro:assets';
+import check from '@public/svg/check.svg';
 
-const { course } = Astro.props
+const { course } = Astro.props;
 ---
 
 <section class="mx-auto max-w-7xl px-8 py-12">
 	<h2
 		class="mb-8 text-pretty text-center text-xl font-semibold uppercase text-black md:mb-12 md:text-3xl"
 	>
-		Proyectos que desarrollaremos en el curso
+		Proyectos que desarrollaremos <br /> en el curso
 	</h2>
 	<ul
-		class="flex flex-col items-start justify-start justify-items-center gap-4 lg:grid lg:grid-cols-2 lg:grid-rows-4 lg:items-center"
+		class="flex flex-col items-start justify-start justify-items-start gap-4 lg:grid lg:grid-cols-2 lg:grid-rows-4 lg:items-center"
 	>
 		{
 			course.proyects.map((proyect: string) => (

@@ -1,5 +1,5 @@
 ---
-const { course } = Astro.props
+const { course } = Astro.props;
 ---
 
 <section class="mx-auto max-w-6xl py-12">
@@ -24,7 +24,7 @@ const { course } = Astro.props
 			<input class="hidden" type="radio" name="acordeon" id="acordeon6" />
 
 			<!-- </div> -->
-			<div class="content">
+			<div class="content relative">
 				{
 					course.syllabus.map(
 						(syllabu: { theme: string; topics: string[] }, index: any) => (
@@ -33,14 +33,14 @@ const { course } = Astro.props
 									for={`acordeon${index + 1}`}
 									class="flex items-center gap-8"
 								>
-									<p class="grid h-10 w-10 place-content-center bg-black text-white">
+									<p class="z-30 grid h-10 w-10 place-content-center bg-black text-white">
 										{index + 1}
 									</p>
 									<p class="flex h-10 w-full items-center rounded-lg bg-stone-200 px-8 font-semibold text-black shadow shadow-stone-900 lg:text-xl">
 										{`Tema ${index + 1}: ${syllabu.theme}`}
 									</p>
 								</label>
-								<ul class="max-h-0 overflow-hidden px-24">
+								<ul class="max-h-0 overflow-hidden pl-20 pr-8 md:px-24">
 									{syllabu.topics.map((topic: string) => (
 										<li class="mt-2 font-normal tracking-wide lg:text-lg">
 											&bull; {topic}
@@ -51,6 +51,8 @@ const { course } = Astro.props
 						),
 					)
 				}
+				<div class="absolute left-[15px] top-0 z-10 h-full w-[2px] bg-black">
+				</div>
 			</div>
 		</div>
 		<a

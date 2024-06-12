@@ -1,41 +1,43 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from 'astro:assets';
 
-const { course } = Astro.props
+const { course } = Astro.props;
 ---
 
-<section class="bg-black pt-16 md:pt-0">
-	<div class="relative mx-auto max-w-7xl">
+<section class="bg-black pt-0 md:pt-0">
+	<div class="relative">
 		<Image
 			id="heroCarrer"
 			src={course.bannerSrc}
 			width={1280}
 			height={720}
 			alt="MMJ Smart Electronics"
-			class="w-full object-cover md:h-96"
+			class="max-h-[512px] w-screen object-cover md:max-h-[512px] lg:max-h-[640px]"
 		/>
-		<div
-			class="absolute inset-0 left-0 top-0 flex flex-col items-center justify-center text-center lg:items-start lg:pl-16"
-		>
-			<h1
-				class="text-pretty text-lg font-normal uppercase leading-normal tracking-wide text-white sm:text-lg md:text-3xl lg:max-w-lg lg:text-start lg:text-3xl lg:leading-tight lg:tracking-wider xl:text-4xl"
+		<div class="absolute inset-0 mx-auto max-w-7xl">
+			<div
+				class="absolute inset-0 left-0 top-0 flex flex-col items-center justify-center text-center lg:items-start lg:pl-16"
 			>
-				{course.title}
-				<br />
-			</h1>
-			<a
-				href=""
-				class="mt-2 inline-block w-40 bg-white py-2 text-center text-sm font-medium uppercase tracking-wider hover:bg-gray-200 md:mt-8 md:text-base lg:mt-8 lg:w-48 lg:text-xl"
-				>Whatsapp</a
-			>
+				<h1
+					class="text-pretty text-lg font-normal uppercase leading-normal tracking-wide text-white sm:text-lg md:text-3xl lg:max-w-lg lg:text-start lg:text-3xl lg:leading-tight lg:tracking-wider xl:text-4xl"
+				>
+					{course.title}
+					<br />
+				</h1>
+				<a
+					href=""
+					class="mt-2 inline-block w-40 bg-white py-2 text-center text-sm font-medium uppercase tracking-wider hover:bg-gray-200 md:mt-8 md:text-base lg:mt-8 lg:w-48 lg:text-xl"
+					>Whatsapp</a
+				>
+			</div>
+			<Image
+				src={course.laptopImage}
+				width={768}
+				height={720}
+				alt="MMJ Smart Electronics"
+				class="absolute -right-48 bottom-0 z-10 hidden lg:visible lg:-bottom-10 lg:block xl:-right-24"
+			/>
 		</div>
-		<Image
-			src={course.laptopImage}
-			width={768}
-			height={720}
-			alt="MMJ Smart Electronics"
-			class="absolute -right-48 bottom-0 z-10 hidden lg:visible lg:-bottom-10 lg:block xl:-right-24"
-		/>
 	</div>
 </section>
 

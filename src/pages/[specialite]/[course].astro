@@ -13,6 +13,8 @@ import FAQ from '@/sections/course/FAQ.astro';
 import Kit from '@/sections/course/Kit.astro';
 import WhyChoose from '@/sections/course/WhyChoose.astro';
 import { courses } from '@/data/course';
+import BannerLine from '@/sections/course/BannerLine.astro';
+import BannerLineFixed from '@/sections/course/BannerLineFixed.astro';
 
 export function getStaticPaths() {
 	return [
@@ -49,9 +51,11 @@ const { specialite, course } = Astro.params;
 		<WhatYouLearn course={courses[`${course}` as keyof typeof courses]} />
 		<Beneficts />
 		<Proyects course={courses[`${course}` as keyof typeof courses]} />
+		<BannerLine />
 		<TechLearn course={courses[`${course}` as keyof typeof courses]} />
 		<Kit course={courses[`${course}` as keyof typeof courses]} />
 		<WhyChoose />
+		<BannerLineFixed />
 		<FAQ />
 		<OtherCourses course={courses[`${course}` as keyof typeof courses]} />
 		<Whatsapp />
