@@ -36,13 +36,13 @@ const { course } = Astro.props;
 									<p class="z-30 grid h-10 w-10 place-content-center bg-black text-white">
 										{index + 1}
 									</p>
-									<p class="flex h-10 w-full items-center rounded-lg bg-stone-200 px-8 font-semibold text-black shadow shadow-stone-900 lg:text-xl">
+									<p class="flex w-full items-center overflow-ellipsis rounded-lg bg-stone-200 px-2 py-2 font-semibold text-black shadow shadow-stone-900 md:h-10 md:px-8 lg:text-xl">
 										{`Tema ${index + 1}: ${syllabu.theme}`}
 									</p>
 								</label>
-								<ul class="max-h-0 overflow-hidden pl-20 pr-8 md:px-24">
+								<ul class="max-h-0 overflow-y-auto pl-20 pr-8 md:overflow-hidden md:px-24">
 									{syllabu.topics.map((topic: string) => (
-										<li class="mt-2 font-normal tracking-wide lg:text-lg">
+										<li class="pt-2 font-normal tracking-wide lg:text-lg">
 											&bull; {topic}
 										</li>
 									))}
@@ -73,6 +73,6 @@ const { course } = Astro.props;
 	.slider input:nth-child(4):checked ~ .content > div:nth-child(4) > ul,
 	.slider input:nth-child(5):checked ~ .content > div:nth-child(5) > ul,
 	.slider input:nth-child(6):checked ~ .content > div:nth-child(6) > ul {
-		max-height: 256px;
+		max-height: 384px;
 	}
 </style>
