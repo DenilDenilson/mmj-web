@@ -1,16 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import foto1 from '@/assets/Course/foto1.webp';
-import foto2 from '@/assets/Course/foto2.webp';
-import foto3 from '@/assets/Course/foto3.webp';
-import foto4 from '@/assets/Course/foto4.webp';
+
+const { course } = Astro.props;
 ---
 
 <section class="">
 	<ul class="grid grid-cols-4">
-		<Image src={foto1} alt="Foto1" />
-		<Image src={foto2} alt="Foto1" />
-		<Image src={foto3} alt="Foto1" />
-		<Image src={foto4} alt="Foto1" />
+		{course.fotos.map((foto: any) => <Image src={foto.src} alt="Foto1" />)}
 	</ul>
 </section>

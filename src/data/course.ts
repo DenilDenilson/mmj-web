@@ -5,12 +5,24 @@ import picAsmBanner from '@/assets/Banners/pic-asm-banner.webp'
 
 // Laptops
 import picIoTLaptop from '@/assets/Course/laptop-pic-iot.webp'
+import nextionLaptop from '@/assets/Course/Laptop-nextion.png'
 
 // Tablets
 import picIotTablet from '@/assets/Course/tablet-pic-iot.webp'
+import nextionTablet from '@/assets/Course/Tablet-nextion.png'
 
 // Kit
 import kitPicIot from '@/assets/Course/kit-pic-iot.webp'
+
+// Fotos
+import foto1 from '@/assets/Course/foto1.webp';
+import foto2 from '@/assets/Course/foto2.webp';
+import foto3 from '@/assets/Course/foto3.webp';
+import foto4 from '@/assets/Course/foto4.webp';
+import foto1Nextion from '@/assets/Course/foto1-nextion.jpg';
+import foto2Nextion from '@/assets/Course/foto2-nextion.jpg';
+import foto3Nextion from '@/assets/Course/foto3-nextion.jpg';
+import foto4Nextion from '@/assets/Course/foto4-nextion.jpg';
 
 import laptop from '@/assets/Course/Laptop.webp'
 import broken from '@public/images/Broken.png'
@@ -33,9 +45,15 @@ import nextion from '@/assets/Course/nextion.webp'
 import arduino from '@/assets/Course/arduino.webp'
 
 // DONES
+// F I R M W A R E
+// nextion-arduino ✅
 // pic-iot ✅
 
+// P R E S E C I A L E S
+// Pic y lora 
+
 export const courses = {
+  //
   'pic-asm': {
     title: 'Diseño digital de las compuertas al procesador',
     bannerSrc: broken,
@@ -173,15 +191,34 @@ export const courses = {
       },
     ]
   },
+  // DONE ✅
   'nextion': {
     title: 'Diseño de sistemas HMI con pantallas Nextion, esp32 y Arduino',
     bannerSrc: nextionBanner,
-    laptopImage: broken,
-    tabletImage: broken,
+    laptopImage: nextionLaptop,
+    tabletImage: nextionTablet,
     description: 'En este curso aprenderás a diseñar y desarrollar interfaces atractivas para sistemas HMI apoyándonos de Figma y Nextion Editor para las pantallas Nextion de cualquier tipo. También aprenderás a programar el ESP32 y Arduino para la comunicación con las pantallas Nextion y el manejo de sensores y actuadores para el desarrollo de proyectos IoT.',
     time: '39',
     clients: 'Ingenieros, técnicos y estudiantes de ingeniería que deseen aprender a programar pantallas Nextion y manejar las ultimas herramientas de hardware y software para el desarrollo de interfaces HMI y proyectos IoT.',
     NeedKnow: 'La especialización está diseñada de manera que se adapta a personas con cero conocimientos en programación y microcontroladores, pero también para aquellos que tienen un conocimiento intermedio y quieren incrementar/profundizar los conceptos/destrezas en el diseño y desarrollo de sistemas HMI para prioyectos IoT de la mano del docente que desarrolla diversas soluciones para distintos campos de la industria',
+    fotos: [
+      {
+        src: foto1Nextion,
+        alt: 'foto1'
+      },
+      {
+        src: foto2Nextion,
+        alt: 'foto2'
+      },
+      {
+        src: foto3Nextion,
+        alt: 'foto3'
+      },
+      {
+        src: foto4Nextion,
+        alt: 'foto4'
+      }
+    ],
     syllabus: [
       {
         theme: 'Introducción esp32 y Arduino',
@@ -315,6 +352,7 @@ export const courses = {
       },
     ]
   },
+  // DONE ✅
   'pic-iot': {
     title: 'Programación de microcontroladores PIC y comunicación WiFi para IoT',
     bannerSrc: picIotBanner,
@@ -324,6 +362,24 @@ export const courses = {
     time: '30',
     clients: 'Ingenieros, técnicos, estudiantes de ingeniería que deseen aprender a programar los microcontroladores PIC y manejar las ultimas herramientas de hardware y software para el desarrollo de proyectos IoT.',
     NeedKnow: 'Conocimientos básicos de fundamentos de programación.',
+    fotos: [
+      {
+        src: foto1,
+        alt: 'foto1'
+      },
+      {
+        src: foto2,
+        alt: 'foto2'
+      },
+      {
+        src: foto3,
+        alt: 'foto3'
+      },
+      {
+        src: foto4,
+        alt: 'foto4'
+      }
+    ],
     syllabus: [
       {
         theme: 'Arquitectura de microcontroladores PIC y la programación en C',
