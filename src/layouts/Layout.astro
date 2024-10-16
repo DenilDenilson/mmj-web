@@ -1,4 +1,17 @@
 ---
+import '@fontsource-variable/roboto-condensed'; // Supports weights 100-900
+import Cart from '../images/icons/Cart.astro';
+import MMJLogoFooter from '../images/LogoMMJ-white.png';
+import { Image } from 'astro:assets';
+import Mobile from '../images/icons/Mobile.astro';
+import PinMap from '../images/icons/PinMap.astro';
+import Mail from '../images/icons/Mail.astro';
+import Clock from '../images/icons/Clock.astro';
+import Facebook from '../images/icons/Facebook.astro';
+import Linkedin from '../images/icons/Linkedin.astro';
+import Youtube from '../images/icons/Youtube.astro';
+import Instagram from '../images/icons/Instagram.astro';
+
 interface Props {
 	title: string;
 }
@@ -17,34 +30,146 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<nav
+			class="max-w-7xl px-8 py-2 mx-auto bg-white flex justify-between items-center"
+		>
+			<!-- El px es porque el tamaño no es 1440 px sino menos, px-8 menos -->
+			<img
+				src="https://pub-eedd7c54d302456e9ce5b946fb0992af.r2.dev/LogoMMJ.png"
+				alt="Logo de MMJ Smart Electronics"
+			/>
+			<ul class="flex gap-4 font-sans font-normal text-black-600 text-base">
+				<a href="#" class="px-4 py-1">Inicio</a>
+				<a href="#" class="px-4 py-1">Cursos</a>
+				<a href="#" class="px-4 py-1">Servicios</a>
+				<a href="#" class="px-4 py-1">Proyectos</a>
+				<a href="#" class="px-4 py-1">Contáctanos</a>
+			</ul>
+			<Cart />
+		</nav>
 		<slot />
+		<footer class="bg-secondary-900 text-white-200">
+			<div
+				class="max-w-7xl px-8 pt-16 pb-8 mx-auto flex justify-between items-start"
+			>
+				<section>
+					<!-- <img
+						src="https://pub-eedd7c54d302456e9ce5b946fb0992af.r2.dev/LogoMMJ-white.png"
+						alt="Logo de MMJ Smart Electronics en el footer"
+					/> -->
+					<Image
+						src={MMJLogoFooter}
+						alt="Logo de MMJ Smart Electronics en el footer"
+					/>
+					<hgroup>
+						<h3 class="font-bold">Misión</h3>
+						<p class="font-light">
+							Impulsar la transformación digital en el Perú y Latinoamérica a
+							través de soluciones tecnológicas innovadoras y talento
+							especializado.
+						</p>
+					</hgroup>
+					<hgroup>
+						<h3 class="font-bold">Visión</h3>
+						<p class="font-light">
+							Ser el líder indiscutible en innovación tecnológica en la región,
+							reconocido por nuestra excelencia, sostenibilidad y compromiso con
+							el desarrollo del talento local.
+						</p>
+					</hgroup>
+				</section>
+				<section>
+					<h3 class="font-bold">Enlaces Útiles</h3>
+					<ul class="flex flex-col">
+						<a href="#" class="font-light">Inicio</a>
+						<a href="#" class="font-light">Cursos</a>
+						<a href="#" class="font-light">Soluciones de Hardware</a>
+						<a href="#" class="font-light">Soluciones de Software</a>
+						<a href="#" class="font-light">Soluciones de IoT</a>
+						<a href="#" class="font-light">Consultoría</a>
+						<a href="#" class="font-light">Contáctanos</a>
+					</ul>
+				</section>
+				<section>
+					<h3 class="font-bold">Nos puedes contactar a través de:</h3>
+					<ul>
+						<li class="flex items-center">
+							<Mobile />
+							<p class="font-light">+51 987 654 321</p>
+						</li>
+						<li class="flex items-center">
+							<PinMap />
+							<p class="font-light">Av. Los innovadores 123, Lima - Perú</p>
+						</li>
+						<li class="flex items-center">
+							<Mail />
+							<p class="font-light">correo@correo.com</p>
+						</li>
+						<li class="flex items-center">
+							<Clock />
+							<p class="font-light">
+								Lunes a Viernes de 09:00 a.m. - 06:00 p.m.
+							</p>
+						</li>
+					</ul>
+					<h3 class="font-bold">Nuestras redes sociales</h3>
+					<ul class="flex">
+						<a href="#">
+							<Facebook />
+						</a>
+						<a href="#">
+							<Linkedin />
+						</a>
+						<a href="#">
+							<Youtube />
+						</a>
+						<a href="#">
+							<Instagram />
+						</a>
+					</ul>
+				</section>
+			</div>
+		</footer>
 	</body>
+	<style is:global>
+		:root {
+			--accent: 136, 58, 234;
+			--accent-light: 224, 204, 250;
+			--accent-dark: 49, 10, 101;
+			--accent-gradient: linear-gradient(
+				45deg,
+				rgb(var(--accent)),
+				rgb(var(--accent-light)) 30%,
+				white 60%
+			);
+		}
+		html {
+			font-family:
+				'Roboto Condensed Variable',
+				Ubuntu,
+				system-ui,
+				-apple-system,
+				BlinkMacSystemFont,
+				'Segoe UI',
+				Roboto,
+				Oxygen,
+				Cantarell,
+				'Open Sans',
+				'Helvetica Neue',
+				sans-serif;
+			background: #fff;
+		}
+
+		code {
+			font-family:
+				Menlo,
+				Monaco,
+				Lucida Console,
+				Liberation Mono,
+				DejaVu Sans Mono,
+				Bitstream Vera Sans Mono,
+				Courier New,
+				monospace;
+		}
+	</style>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
