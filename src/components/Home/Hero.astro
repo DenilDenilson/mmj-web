@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "@src/Images/Home/Video.png";
+---
+
+<section>
+  <div class="mx-auto flex max-w-7xl items-start justify-between px-8 py-20">
+    <div class="">
+      <hgroup class="mb-16 max-w-xl">
+        <h1 class="mb-6 text-pretty text-5xl font-bold text-black-800">
+          Impulsa tu carreca con nuestros <span class="text-primary-500"
+            >cursos y soluciones tecnológicas</span
+          > personalizadas
+        </h1>
+        <p class="text-pretty text-2xl font-light leading-7 text-black-500">
+          Cursos online en IoT, desarrollo de sistemas embebidos y software, con
+          servicios de desarrollo personalizados para empresas de todo el mundo.
+        </p>
+      </hgroup>
+      <div class="flex gap-16">
+        <a
+          href="#"
+          class="inline-block rounded bg-primary-500 px-8 py-4 text-white-200"
+          >Ver cursos</a
+        >
+        <a
+          href="#"
+          class="inline-block rounded border border-black-300 px-8 py-4 text-black-300"
+          >Solicitar Consultoría</a
+        >
+      </div>
+    </div>
+    <div class="-translate-y-8">
+      <div class="">
+        <Image src={HeroImage} alt={"Video del home de MMJ"} />
+      </div>
+      <ul class="flex flex-col items-end text-sm font-light text-black-500">
+        <li>100% cursos en línea</li>
+        <li>Consultoría personalizada</li>
+        <li>Innovación en cada desarrollo</li>
+        <li>Proyectos adaptados a tus necesidades</li>
+      </ul>
+    </div>
+  </div>
+</section>
