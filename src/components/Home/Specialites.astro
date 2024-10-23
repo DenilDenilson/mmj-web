@@ -1,0 +1,92 @@
+---
+import CardSpecialite from "./CardSpecialite.astro";
+import SpecialiteImageContainer from "./SpecialiteImageContainer.astro";
+import Chip from "@src/Images/icons/Chip.astro";
+import Cloud from "@src/Images/icons/Cloud.astro";
+import XorScheme from "@src/Images/icons/XorScheme.astro";
+import RobotArm from "@src/Images/icons/RobotArm.astro";
+import Console from "@src/Images/icons/Console.astro";
+import Birrete from "@src/Images/icons/Birrete.astro";
+
+const specialites = [
+  {
+    image: Chip,
+    title: "Desarrollo de Software Embebido",
+    description:
+      "Aprende a conectar dispositivos y sistemas para recopilar, analizar y utilizar datos en tiempo real",
+    link: "#",
+  },
+  {
+    image: Cloud,
+    title: "Internet de las cosas IoT",
+    description:
+      "Aprende a conectar dispositivos y sistemas para recopilar, analizar y utilizar datos en tiempo real",
+    link: "#",
+  },
+  {
+    image: XorScheme,
+    title: "Desarrollo de Hardware",
+    description:
+      "Aprende a conectar dispositivos y sistemas para recopilar, analizar y utilizar datos en tiempo real",
+    link: "#",
+  },
+  {
+    image: RobotArm,
+    title: "Automatización industrial",
+    description:
+      "Aprende a conectar dispositivos y sistemas para recopilar, analizar y utilizar datos en tiempo real",
+    link: "#",
+  },
+  {
+    image: Console,
+    title: "Desarrollo de Software",
+    description:
+      "Aprende a conectar dispositivos y sistemas para recopilar, analizar y utilizar datos en tiempo real",
+    link: "#",
+  },
+  {
+    image: Birrete,
+    title: "Cursos presenciales",
+    description:
+      "Aprende a conectar dispositivos y sistemas para recopilar, analizar y utilizar datos en tiempo real",
+    link: "#",
+  },
+];
+---
+
+<section class="bg-white-500">
+  <div
+    class="mx-auto flex max-w-7xl items-center justify-between gap-16 px-8 py-20"
+  >
+    <SpecialiteImageContainer />
+    <div class="flex flex-col items-center">
+      <hgroup>
+        <h2 class="mb-4 text-center text-[40px] font-bold text-secondary-400">
+          Explora Nuestras Especialidades
+        </h2>
+        <p class="mb-12 text-pretty text-center text-xl text-black-500">
+          Cada una de nuestras especialidades ofrece un conjunto de cursos
+          diseñados para desarrollar habilidades clave en áreas tecnológicas de
+          alta demanda.
+        </p>
+      </hgroup>
+      <div class="mb-7 grid grid-cols-2 grid-rows-3 gap-8">
+        {
+          specialites.map((specialite) => (
+            <CardSpecialite
+              title={specialite.title}
+              description={specialite.description}
+              link={specialite.link}
+            >
+              <specialite.image />
+            </CardSpecialite>
+          ))
+        }
+      </div>
+      <span class="text-pretty text-center text-xl text-primary-400">
+        ¡Descubre cuál se adapta mejor a tus objetivos y comienza a transformar
+        tu futuro hoy mismo!</span
+      >
+    </div>
+  </div>
+</section>

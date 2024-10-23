@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Specialite1 from "@src/Images/Home/MMJ-Specilad1.png";
+import Specialite2 from "@src/Images/Home/MMJ-Specilad2.png";
+import Specialite3 from "@src/Images/Home/MMJ-Specilad3.png";
+import Specialite4 from "@src/Images/Home/MMJ-Specilad4.png";
+---
+
+<div class="grid min-w-[424px] grid-cols-2 gap-8">
+  <div class="grid translate-y-8 grid-rows-2 gap-8">
+    <div>
+      <Image
+        height={288}
+        src={Specialite1}
+        alt={"Imagen de la especialidad 1"}
+      />
+    </div>
+    <div>
+      <Image
+        height={288}
+        src={Specialite2}
+        alt={"Imagen de la especialidad 2"}
+      />
+    </div>
+  </div>
+  <div class="grid -translate-y-8 grid-rows-2 gap-8">
+    <div>
+      <Image
+        height={288}
+        src={Specialite3}
+        alt={"Imagen de la especialidad 3"}
+      />
+    </div>
+    <div>
+      <Image
+        height={288}
+        src={Specialite4}
+        alt={"Imagen de la especialidad 4"}
+      />
+    </div>
+  </div>
+</div>
