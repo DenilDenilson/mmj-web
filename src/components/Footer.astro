@@ -1,0 +1,143 @@
+---
+import { Image } from "astro:assets";
+import MMJLogoFooter from "../Images/LogoMMJ-white.png";
+import Mobile from "../Images/icons/Mobile.astro";
+import PinMap from "../Images/icons/PinMap.astro";
+import Mail from "../Images/icons/Mail.astro";
+import Clock from "../Images/icons/Clock.astro";
+import Facebook from "../Images/icons/Facebook.astro";
+import Linkedin from "../Images/icons/Linkedin.astro";
+import Youtube from "../Images/icons/Youtube.astro";
+import Instagram from "../Images/icons/Instagram.astro";
+---
+
+<footer class="bg-secondary-900 text-white-200">
+  <div
+    class="mx-auto flex max-w-7xl items-start justify-between px-8 pb-8 pt-16"
+  >
+    <section class="max-w-80">
+      <!-- <img
+						src="https://pub-eedd7c54d302456e9ce5b946fb0992af.r2.dev/LogoMMJ-white.png"
+						alt="Logo de MMJ Smart Electronics en el footer"
+					/> -->
+      <div class="mb-6">
+        <Image
+          src={MMJLogoFooter}
+          alt="Logo de MMJ Smart Electronics en el footer"
+        />
+      </div>
+      <hgroup class="mb-4">
+        <h3 class="mb-2 font-bold">Misión</h3>
+        <p class="font-light leading-5">
+          Impulsar la transformación digital en el Perú y Latinoamérica a través
+          de soluciones tecnológicas innovadoras y talento especializado.
+        </p>
+      </hgroup>
+      <hgroup>
+        <h3 class="mb-2 font-bold">Visión</h3>
+        <p class="font-light leading-5">
+          Ser el líder indiscutible en innovación tecnológica en la región,
+          reconocido por nuestra excelencia, sostenibilidad y compromiso con el
+          desarrollo del talento local.
+        </p>
+      </hgroup>
+    </section>
+    <section>
+      <h3 class="mb-6 font-bold">Enlaces Útiles</h3>
+      <ul class="flex flex-col gap-2">
+        <li>
+          <a href="#" class="group relative font-light">
+            Inicio
+            <span
+              class="absolute bottom-0 left-0 h-[2px] w-0 bg-white-200 transition-all duration-200 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group relative font-light">
+            Cursos
+            <span
+              class="absolute bottom-0 left-0 h-[2px] w-0 bg-white-200 transition-all duration-200 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group relative font-light">
+            Soluciones de Hardware
+            <span
+              class="absolute bottom-0 left-0 h-[2px] w-0 bg-white-200 transition-all duration-200 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group relative font-light">
+            Soluciones de Software
+            <span
+              class="absolute bottom-0 left-0 h-[2px] w-0 bg-white-200 transition-all duration-200 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group relative font-light">
+            Soluciones de IoT
+            <span
+              class="absolute bottom-0 left-0 h-[2px] w-0 bg-white-200 transition-all duration-200 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group relative font-light">
+            Consultoría
+            <span
+              class="absolute bottom-0 left-0 h-[2px] w-0 bg-white-200 transition-all duration-200 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group relative font-light">
+            Contáctanos
+            <span
+              class="absolute bottom-0 left-0 h-[2px] w-0 bg-white-200 transition-all duration-200 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3 class="mb-6 font-bold">Nos puedes contactar a través de:</h3>
+      <ul class="mb-8 flex flex-col gap-2">
+        <li class="flex items-center gap-1">
+          <Mobile />
+          <p class="font-light">+51 987 654 321</p>
+        </li>
+        <li class="flex items-center gap-1">
+          <PinMap />
+          <p class="font-light">Av. Los innovadores 123, Lima - Perú</p>
+        </li>
+        <li class="flex items-center gap-1">
+          <Mail />
+          <p class="font-light">correo@correo.com</p>
+        </li>
+        <li class="flex items-center gap-1">
+          <Clock />
+          <p class="font-light">Lunes a Viernes de 09:00 a.m. - 06:00 p.m.</p>
+        </li>
+      </ul>
+      <h3 class="mb-6 font-bold">Nuestras redes sociales</h3>
+      <ul class="flex gap-4">
+        <a href="#">
+          <Facebook />
+        </a>
+        <a href="#">
+          <Linkedin />
+        </a>
+        <a href="#">
+          <Youtube />
+        </a>
+        <a href="#">
+          <Instagram />
+        </a>
+      </ul>
+    </section>
+  </div>
+</footer>
