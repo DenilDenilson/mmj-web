@@ -1,0 +1,164 @@
+---
+import { Image } from "astro:assets";
+import proyectImage from "@src/Images/Home/MMJ-Proyectn.png";
+import Check from "@src/Images/icons/Check.astro";
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-8 py-20">
+    <hgroup>
+      <h2 class="mb-4 text-center text-[40px] font-bold text-secondary-400">
+        Proyectos Tecnológicos Personalizados en Diversos Sectores
+      </h2>
+      <p
+        class="mx-auto mb-12 max-w-3xl text-pretty text-center text-xl text-black-500"
+      >
+        Nuestras soluciones han impactado en múltiples sectores, desde la
+        industria minera hasta la agroindustria, con tecnología avanzada y
+        personalización total.
+      </p>
+    </hgroup>
+    <div class="flex items-start justify-center">
+      <ul
+        class="flex h-[500px] translate-x-[1px] flex-col items-center overflow-x-hidden"
+      >
+        <!-- El h-[500px] es para evitar que desaparezca la sombra del span interior de las opciones -->
+        <!-- El span en el interior de las opciones es para que la sombra de las opciones no se superponga al article -->
+        <li
+          class="project-options relative z-50 grid h-[72px] w-52 place-content-center rounded-l border-b border-l border-t border-b-secondary-100 border-l-secondary-100 border-t-secondary-100 bg-white-500 text-xl text-secondary-500 hover:text-secondary-500 active:border-b active:border-l active:border-t active:border-secondary-100"
+        >
+          Agrícola
+          <span
+            class="absolute inset-0 -z-50 shadow-[16px_16px_24px_0px_#18181B30]"
+          >
+          </span>
+        </li>
+        <li
+          class="project-options relative z-30 grid h-[72px] w-52 place-content-center rounded-l text-xl text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-t active:border-secondary-100"
+        >
+          Minería
+          <span
+            class="invisible absolute inset-0 -z-50 shadow-[16px_16px_24px_0px_#18181B30]"
+          >
+          </span>
+        </li>
+        <li
+          class="project-options relative grid h-[72px] w-52 place-content-center rounded-l text-xl text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-t active:border-secondary-100"
+        >
+          Industrial
+          <span
+            class="invisible absolute inset-0 -z-50 shadow-[16px_16px_24px_0px_#18181B30]"
+          >
+          </span>
+        </li>
+        <li
+          class="project-options relative grid h-[72px] w-52 place-content-center rounded-l text-xl text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-t active:border-secondary-100"
+        >
+          Tecnología
+          <span
+            class="invisible absolute inset-0 -z-50 shadow-[16px_16px_24px_0px_#18181B30]"
+          >
+          </span>
+        </li>
+        <li
+          class="project-options relative grid h-[72px] w-52 place-content-center rounded-l text-xl text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-t active:border-secondary-100"
+        >
+          Administrativas
+          <span
+            class="invisible absolute inset-0 -z-50 shadow-[16px_16px_24px_0px_#18181B30]"
+          >
+          </span>
+        </li>
+      </ul>
+      <article
+        class="flex h-[500px] items-start justify-between gap-12 rounded-r border border-secondary-100 bg-white-500 shadow-[16px_16px_24px_0px_#18181B30]"
+      >
+        <div
+          class="flex h-full max-w-md flex-col items-start justify-between pb-8 pl-8 pt-7"
+        >
+          <div>
+            <hgroup class="mb-6">
+              <h5 class="mb-3 text-xl text-black-500">
+                Sistema de Adquisición de datos
+              </h5>
+              <p class="mb-2 text-base font-light leading-5">
+                Desarrollamos sistemas avanzados de adquisición de datos en
+                tiempo real, utilizados en diferentes sectores industriales para
+                optimizar procesos y mejorar la toma de decisiones.
+              </p>
+              <p class="text-base font-light leading-5">
+                Desarrollamos sistemas avanzados de adquisición de datos en
+                tiempo real, utilizados en diferentes sectores industriales para
+                optimizar procesos y mejorar la toma de decisiones.
+              </p>
+            </hgroup>
+            <ul>
+              <h5 class="text-black-500">Logros del proyecto</h5>
+              <li class="flex items-center gap-2 font-light text-black-500">
+                <Check />
+                <span> Recopilación de datos en tiempo real </span>
+              </li>
+              <li class="flex items-center gap-2 font-light text-black-500">
+                <Check />
+                <span> Análisis predictivo </span>
+              </li>
+              <li class="flex items-center gap-2 font-light text-black-500">
+                <Check />
+                <span> Soluciones personalizadas según industrial </span>
+              </li>
+              <li class="flex items-center gap-2 font-light text-black-500">
+                <Check />
+                <span> Soluciones personalizadas según industrial </span>
+              </li>
+              <li class="flex items-center gap-2 font-light text-black-500">
+                <Check />
+                <span> Soluciones personalizadas según industrial </span>
+              </li>
+            </ul>
+          </div>
+          <a
+            href="#"
+            class="inline-block rounded border border-black-300 px-4 py-2 text-black-300"
+            >Ver más proyectos</a
+          >
+        </div>
+        <picture>
+          <Image src={proyectImage} alt={"Imagen del proyecto de MMJ"} />
+        </picture>
+      </article>
+    </div>
+  </div>
+</section>
+<script>
+  const projectOptions = document.querySelectorAll(".project-options");
+  const projectOptionsShadow = document.querySelectorAll(
+    ".project-options span",
+  );
+
+  projectOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      projectOptionsShadow.forEach((shadow) => {
+        shadow.classList.add("invisible");
+      });
+      projectOptions.forEach((opt) => {
+        opt.classList.remove(
+          "border-b",
+          "border-l",
+          "border-t",
+          "border-secondary-100",
+          "bg-white-500",
+          "text-secondary-500",
+        );
+      });
+      option.classList.add(
+        "border-b",
+        "border-l",
+        "border-t",
+        "border-secondary-100",
+        "bg-white-500",
+        "text-secondary-500",
+      );
+      (option.firstElementChild as HTMLElement).classList.remove("invisible");
+    });
+  });
+</script>
