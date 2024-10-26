@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+
+import SolutionsSoftware from "@src/Images/Home/SolutionsSoftware.webp";
+import CheckChip from "@src/Images/icons/CheckChip.astro";
+---
+
+<div class="flex flex-row-reverse items-start gap-8">
+  <div class="h-[537px] w-[592px]">
+    <!-- Definimos el alto y ancho para que ocupe espacio y subimos una imagen absoluta -->
+    <div class="relative h-[537px] w-[592px]">
+      <div class="absolute h-[537px] w-[1134px]">
+        <Image
+          src={SolutionsSoftware}
+          width={1134}
+          alt={"Imagen de soluciones de hardware"}
+          class="absolute right-[556px] top-1 h-full w-full object-contain"
+        />
+      </div>
+      <h3 class="absolute -left-72 bottom-0 text-2xl font-bold text-black-500">
+        Beneficios de implementar una Solución de Software
+      </h3>
+    </div>
+  </div>
+  <article>
+    <h3 class="mb-7 text-3xl font-bold text-black-500">
+      Soluciones de Software a Medida
+    </h3>
+    <p class="mb-4 font-light leading-5 text-black-500">
+      Diseñamos y desarrollamos hardware personalizado que cumple con los
+      requerimientos específicos de tu negocio. Desde prototipos hasta
+      producción en serie, te acompañamos en cada etapa del proceso para
+      garantizar dispositivos eficientes y de alta calidad.
+    </p>
+    <h3 class="mb-2 text-2xl font-bold text-black-500">Qué implica:</h3>
+    <ul>
+      <li class="flex h-10 items-center gap-2 font-light text-black-800">
+        <CheckChip class="" />
+        <span> Desarrollo de circuitos y PCB a medida. </span>
+      </li>
+      <li class="flex h-10 items-center gap-2 font-light text-black-800">
+        <CheckChip class="" />
+        Creación de prototipos funcionales para pruebas y validación.
+      </li>
+      <li class="flex h-10 items-center gap-2 font-light text-black-800">
+        <CheckChip class="" />
+        Compatibilidad y adaptación a tus sistemas actuales.
+      </li>
+      <li class="flex h-10 items-center gap-2 font-light text-black-800">
+        <CheckChip class="" />
+        Aseguramos que el hardware cumpla con las regulaciones y estándares de calidad
+      </li>
+      <li class="flex h-10 items-center gap-2 font-light text-black-800">
+        <CheckChip class="" />
+        Aseguramos que el hardware cumpla con las regulaciones y estándares de calidad
+      </li>
+      <li class="flex h-10 items-center gap-2 font-light text-black-800">
+        <CheckChip class="" />
+        Aseguramos que el hardware cumpla con las regulaciones y estándares de calidad
+      </li>
+    </ul>
+  </article>
+</div>
