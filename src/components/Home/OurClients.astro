@@ -1,0 +1,169 @@
+---
+import LogoMpLab from "@src/Images/Home/LogoMpLab.webp";
+import LogoAltium from "@src/Images/Home/LogoAltium.webp";
+import LogoMicrochip from "@src/Images/Home/LogoMicrochip.webp";
+import LogoNextion from "@src/Images/Home/LogoNextion.webp";
+import LogoSiemens from "@src/Images/Home/LogoSiemens.webp";
+import { Image } from "astro:assets";
+---
+
+<section class="bg-white-500">
+  <div class="mx-auto max-w-7xl px-8 pb-16 pt-12">
+    <h3 class="mb-14 text-center text-[40px] font-bold text-black-800">
+      Nuestros Clientes y Colaboradores
+    </h3>
+    <ul class="slider mx-auto max-w-6xl overflow-hidden">
+      <input
+        checked
+        type="radio"
+        name="clientes"
+        id="cliente1"
+        class="hidden"
+      />
+      <input type="radio" name="clientes" id="cliente2" class="hidden" />
+      <input type="radio" name="clientes" id="cliente3" class="hidden" />
+      <input type="radio" name="clientes" id="cliente4" class="hidden" />
+      <input type="radio" name="clientes" id="cliente5" class="hidden" />
+      <li class="flex w-full transition-transform duration-300 ease-in-out">
+        <ul class="flex w-full shrink-0 items-center justify-between">
+          <li>
+            <Image width={120} src={LogoMpLab} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={120} src={LogoMpLab} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={120} src={LogoMpLab} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={120} src={LogoMpLab} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={120} src={LogoMpLab} alt="Logo de MPLAB" />
+          </li>
+        </ul>
+        <ul class="flex w-full shrink-0 items-center justify-between">
+          <li>
+            <Image width={184} src={LogoAltium} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={184} src={LogoAltium} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={184} src={LogoAltium} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={184} src={LogoAltium} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={184} src={LogoAltium} alt="Logo de MPLAB" />
+          </li>
+        </ul>
+        <ul class="flex w-full shrink-0 items-center justify-between">
+          <li>
+            <Image width={208} src={LogoMicrochip} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={208} src={LogoMicrochip} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={208} src={LogoMicrochip} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={208} src={LogoMicrochip} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={208} src={LogoMicrochip} alt="Logo de MPLAB" />
+          </li>
+        </ul>
+        <ul class="flex w-full shrink-0 items-center justify-between">
+          <li>
+            <Image width={86} src={LogoNextion} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={86} src={LogoNextion} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={86} src={LogoNextion} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={86} src={LogoNextion} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={86} src={LogoNextion} alt="Logo de MPLAB" />
+          </li>
+        </ul>
+        <ul class="flex w-full shrink-0 items-center justify-between">
+          <li>
+            <Image width={222} src={LogoSiemens} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={222} src={LogoSiemens} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={222} src={LogoSiemens} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={222} src={LogoSiemens} alt="Logo de MPLAB" />
+          </li>
+          <li>
+            <Image width={222} src={LogoSiemens} alt="Logo de MPLAB" />
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="mt-9 flex items-center justify-center gap-4">
+      <label
+        for="cliente1"
+        class="h-4 w-4 cursor-pointer rounded-full bg-black-500 text-black-500"
+      ></label>
+      <label
+        for="cliente2"
+        class="h-5 w-5 cursor-pointer rounded-full bg-black-500 text-black-500"
+      ></label>
+      <label
+        for="cliente3"
+        class="h-6 w-6 cursor-pointer rounded-full bg-black-500 text-black-500"
+      ></label>
+      <label
+        for="cliente4"
+        class="h-5 w-5 cursor-pointer rounded-full bg-black-500 text-black-500"
+      ></label>
+      <label
+        for="cliente5"
+        class="h-4 w-4 cursor-pointer rounded-full bg-black-500 text-black-500"
+      ></label>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .slider input:nth-child(1):checked ~ li {
+    transform: translateX(0);
+  }
+
+  .slider input:nth-child(2):checked ~ li {
+    transform: translateX(-100%);
+  }
+
+  .slider input:nth-child(3):checked ~ li {
+    transform: translateX(-200%);
+  }
+
+  .slider input:nth-child(4):checked ~ li {
+    transform: translateX(-300%);
+  }
+
+  .slider input:nth-child(5):checked ~ li {
+    transform: translateX(-400%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
