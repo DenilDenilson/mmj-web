@@ -6,11 +6,14 @@ import Specialite3 from "@src/Images/Home/MMJ-Specilad3.png";
 import Specialite4 from "@src/Images/Home/MMJ-Specilad4.png";
 ---
 
-<div class="grid min-w-[424px] grid-cols-2 gap-8">
-  <div class="grid translate-y-8 grid-rows-2 gap-8">
+<div
+  class="absolute left-0 top-[420px] z-10 grid w-1/3 grid-cols-1 grid-rows-2 gap-8 md:relative md:top-0 md:w-full md:min-w-[424px] md:grid-cols-2 md:grid-rows-1"
+>
+  <div class="grid grid-rows-2 gap-8 md:translate-y-8">
     <div class="shadow-lg shadow-black-200">
       <Image
         height={288}
+        class="md:w-full"
         src={Specialite1}
         alt={"Imagen de la especialidad 1"}
       />
@@ -18,15 +21,17 @@ import Specialite4 from "@src/Images/Home/MMJ-Specilad4.png";
     <div class="shadow-lg shadow-black-200">
       <Image
         height={288}
+        class="md:w-full"
         src={Specialite2}
         alt={"Imagen de la especialidad 2"}
       />
     </div>
   </div>
-  <div class="grid -translate-y-8 grid-rows-2 gap-8">
+  <div class="grid grid-rows-2 gap-8 md:-translate-y-8">
     <div class="shadow-lg shadow-black-200">
       <Image
         height={288}
+        class="md:w-full"
         src={Specialite3}
         alt={"Imagen de la especialidad 3"}
       />
@@ -34,6 +39,7 @@ import Specialite4 from "@src/Images/Home/MMJ-Specilad4.png";
     <div class="shadow-lg shadow-black-200">
       <Image
         height={288}
+        class="md:w-full"
         src={Specialite4}
         alt={"Imagen de la especialidad 4"}
       />

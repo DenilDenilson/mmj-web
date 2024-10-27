@@ -4,9 +4,11 @@ import HeroImage from "@src/Images/Home/Video.png";
 ---
 
 <section>
-  <div class="mx-auto flex max-w-7xl items-start justify-between px-8 py-20">
-    <div class="">
-      <hgroup class="mb-16 max-w-xl">
+  <div
+    class="mx-auto flex max-w-7xl flex-col items-start justify-between px-7 pb-16 pt-8 md:flex-row md:px-8 md:py-20"
+  >
+    <div class="mb-12 md:mb-0">
+      <hgroup class="mb-8 max-w-xl md:mb-16">
         <h1 class="mb-6 text-pretty text-5xl font-bold text-black-800">
           Impulsa tu carrera con nuestros <span class="text-primary-500"
             >cursos y soluciones tecnológicas</span
@@ -17,20 +19,20 @@ import HeroImage from "@src/Images/Home/Video.png";
           servicios de desarrollo personalizados para empresas de todo el mundo.
         </p>
       </hgroup>
-      <div class="flex gap-16">
+      <div class="flex flex-col gap-6 md:flex-row md:gap-16">
         <a
           href="#"
-          class="inline-block rounded bg-primary-500 px-8 py-4 text-white-200 hover:bg-primary-400"
+          class="inline-block rounded bg-primary-500 py-4 text-center text-white-200 hover:bg-primary-400 md:px-8"
           >Ver cursos</a
         >
         <a
           href="#"
-          class="inline-block rounded border border-black-300 px-8 py-4 text-black-300 hover:border-primary-400 hover:text-primary-400"
+          class="inline-block rounded border border-black-300 py-4 text-center text-black-300 hover:border-primary-400 hover:text-primary-400 md:px-8"
           >Solicitar Consultoría</a
         >
       </div>
     </div>
-    <div class="-translate-y-8">
+    <div class="md:-translate-y-8">
       <div class="">
         <Image src={HeroImage} alt={"Video del home de MMJ"} />
       </div>

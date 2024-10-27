@@ -1,16 +1,20 @@
 ---
+import Hamburguer from "@src/Images/icons/Hamburguer.astro";
 import Cart from "../Images/icons/Cart.astro";
 ---
 
 <nav
-  class="bg-white mx-auto flex max-w-7xl items-center justify-between px-8 py-2"
+  class="bg-white fixed mx-auto flex w-full max-w-7xl items-center justify-between border-b border-black-100 bg-white-100 px-8 py-2"
 >
   <!-- El px es porque el tamaño no es 1440 px sino menos, px-8 menos -->
   <img
     src="https://pub-eedd7c54d302456e9ce5b946fb0992af.r2.dev/LogoMMJ.png"
     alt="Logo de MMJ Smart Electronics"
+    class="h-11 md:h-14"
   />
-  <ul class="flex gap-4 font-sans text-base font-normal text-black-600">
+  <ul
+    class="hidden gap-4 font-sans text-base font-normal text-black-600 md:flex"
+  >
     <a
       href="#"
       class="rounded-full px-4 py-1 transition-colors duration-300 hover:bg-[#DDECEE] hover:text-[#155762]"
@@ -37,9 +41,57 @@ import Cart from "../Images/icons/Cart.astro";
       >Contáctanos</a
     >
   </ul>
-  <a class="cursor-pointer">
+  <a class="hidden cursor-pointer md:block">
     <div class="transition-all duration-500 hover:translate-x-2">
       <Cart />
     </div>
   </a>
+  <input class="hidden" type="checkbox" name="hamburguer" id="hamburguer" />
+  <label for="hamburguer" class="md:hidden">
+    <a class="cursor-pointer md:block">
+      <div class="">
+        <Hamburguer />
+      </div>
+    </a>
+  </label>
+  <div
+    class="menu absolute -right-24 top-[61px] z-50 hidden h-[512px] w-full bg-[#18181B] bg-opacity-30 transition-all duration-300 md:hidden"
+  >
+    <ul class="z-50 h-full w-3/4 justify-self-end bg-white-200">
+      <li class="border-b border-black-100 px-4 py-6 text-black-800">Inicio</li>
+      <li class="border-b border-black-100 px-4 py-6 text-black-800">Cursos</li>
+      <li class="border-b border-black-100 px-4 py-6 text-black-800">
+        Servicios
+      </li>
+      <li class="border-b border-black-100 px-4 py-6 text-black-800">
+        Proyectos
+      </li>
+      <li class="border-b border-black-100 px-4 py-6 text-black-800">
+        Contáctanos
+      </li>
+    </ul>
+  </div>
 </nav>
+<div class="h-14"></div>
+<!-- Pequeño espacio que se pierde con el position:fixed -->
+<style is:global>
+  /* // Para asegurarnos que el menú desplegable se vea arriba de todo */
+  nav {
+    z-index: 1000;
+  }
+
+  @keyframes slideIn {
+    0% {
+      display: block;
+    }
+    100% {
+      right: 0px;
+    }
+  }
+
+  /* Cuando el checkbox está marcado, aplica la animación */
+  #hamburguer:checked ~ .menu {
+    display: block;
+    animation: slideIn 0.3s forwards; /* Ejecuta la animación */
+  }
+</style>
