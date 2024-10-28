@@ -2,29 +2,46 @@
 import { Image } from "astro:assets";
 
 import SolutionsSoftware from "@src/Images/Home/SolutionsSoftware.webp";
+import SolutionsSoftwareMobile from "@src/Images/Home/SolutionsSoftwareMobile.webp";
 import CheckChip from "@src/Images/icons/CheckChip.astro";
 ---
 
-<div class="flex flex-row-reverse items-start gap-8">
-  <div class="h-[537px] w-[592px]">
+<div class="flex flex-col-reverse items-start gap-8 lg:flex-row-reverse">
+  <div class="self-center lg:h-[537px] lg:w-[592px]">
     <!-- Definimos el alto y ancho para que ocupe espacio y subimos una imagen absoluta -->
-    <div class="relative h-[537px] w-[592px]">
-      <div class="absolute h-[537px] w-[1134px]">
+    <div class="relative lg:h-[537px] lg:w-[592px]">
+      <div class="absolute lg:h-[537px] lg:w-[1134px]">
         <Image
           src={SolutionsSoftware}
           width={1134}
           alt={"Imagen de soluciones de hardware"}
-          class="absolute right-[556px] top-1 h-full w-full object-contain"
+          class="invisible absolute right-[556px] top-1 h-full w-full object-contain lg:visible"
         />
       </div>
-      <h3 class="absolute -left-72 bottom-0 text-2xl font-bold text-black-500">
+      <Image
+        src={SolutionsSoftwareMobile}
+        width={480}
+        alt={"Imagen de soluciones de hardware"}
+        class="lg:invisible"
+      />
+      <h3
+        class="invisible absolute -left-72 bottom-0 text-2xl font-bold text-black-500 lg:visible"
+      >
         Beneficios de implementar una Solución de Software
       </h3>
     </div>
   </div>
   <article>
-    <h3 class="mb-7 text-3xl font-bold text-black-500">
+    <h3 class="relative mb-7 text-3xl font-bold text-black-500">
       Soluciones de Software a Medida
+      <span
+        class="absolute bottom-0 left-0 h-[2px] w-1/2 bg-secondary-500 lg:hidden"
+      >
+        <span
+          class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-secondary-500"
+        >
+        </span>
+      </span>
     </h3>
     <p class="mb-4 font-light leading-5 text-black-500">
       Diseñamos y desarrollamos hardware personalizado que cumple con los
@@ -32,31 +49,78 @@ import CheckChip from "@src/Images/icons/CheckChip.astro";
       producción en serie, te acompañamos en cada etapa del proceso para
       garantizar dispositivos eficientes y de alta calidad.
     </p>
-    <h3 class="mb-2 text-2xl font-bold text-black-500">Qué implica:</h3>
-    <ul>
-      <li class="flex h-10 items-center gap-2 font-light text-black-800">
-        <CheckChip class="" />
-        <span> Desarrollo de circuitos y PCB a medida. </span>
+    <h3 class="relative mb-2 text-2xl font-bold text-black-500">
+      Qué implica:
+      <span
+        class="absolute bottom-0 left-0 h-[2px] w-2/5 bg-secondary-500 lg:hidden"
+      >
+        <span
+          class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-secondary-500"
+        >
+        </span>
+      </span>
+    </h3>
+    <ul class="mb-8 flex flex-col gap-4 sm:gap-2 lg:mb-0 lg:block lg:gap-0">
+      <li
+        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+      >
+        <div class="grid h-8 w-8 place-content-center">
+          <CheckChip class="" />
+        </div>
+        <span class="leading-5"> Desarrollo de circuitos y PCB a medida. </span>
       </li>
-      <li class="flex h-10 items-center gap-2 font-light text-black-800">
-        <CheckChip class="" />
-        Creación de prototipos funcionales para pruebas y validación.
+      <li
+        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+      >
+        <div class="grid h-8 w-8 place-content-center">
+          <CheckChip class="" />
+        </div>
+        <span class="leading-5">
+          Creación de prototipos funcionales para pruebas y validación.
+        </span>
       </li>
-      <li class="flex h-10 items-center gap-2 font-light text-black-800">
-        <CheckChip class="" />
-        Compatibilidad y adaptación a tus sistemas actuales.
+      <li
+        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+      >
+        <div class="grid h-8 w-8 place-content-center">
+          <CheckChip class="" />
+        </div>
+        <span class="leading-5">
+          Compatibilidad y adaptación a tus sistemas actuales.
+        </span>
       </li>
-      <li class="flex h-10 items-center gap-2 font-light text-black-800">
-        <CheckChip class="" />
-        Aseguramos que el hardware cumpla con las regulaciones y estándares de calidad
+      <li
+        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+      >
+        <div class="grid h-8 w-8 place-content-center">
+          <CheckChip class="" />
+        </div>
+        <span class="leading-5">
+          Aseguramos que el hardware cumpla con las regulaciones y estándares de
+          calidad
+        </span>
       </li>
-      <li class="flex h-10 items-center gap-2 font-light text-black-800">
-        <CheckChip class="" />
-        Aseguramos que el hardware cumpla con las regulaciones y estándares de calidad
+      <li
+        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+      >
+        <div class="grid h-8 w-8 place-content-center">
+          <CheckChip class="" />
+        </div>
+        <span class="leading-5">
+          Aseguramos que el hardware cumpla con las regulaciones y estándares de
+          calidad
+        </span>
       </li>
-      <li class="flex h-10 items-center gap-2 font-light text-black-800">
-        <CheckChip class="" />
-        Aseguramos que el hardware cumpla con las regulaciones y estándares de calidad
+      <li
+        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+      >
+        <div class="grid h-8 w-8 place-content-center">
+          <CheckChip class="" />
+        </div>
+        <span class="leading-5">
+          Aseguramos que el hardware cumpla con las regulaciones y estándares de
+          calidad
+        </span>
       </li>
     </ul>
   </article>
