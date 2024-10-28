@@ -54,18 +54,18 @@ const specialites = [
 ];
 ---
 
-<section class="bg-white-500">
+<section class="overflow-y-hidden bg-white-500">
   <div
-    class="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 px-7 py-20 md:flex-row md:px-8"
+    class="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 px-7 py-20 md:px-8 xl:flex-row"
   >
-    <hgroup class="block md:hidden">
+    <hgroup class="block xl:hidden">
       <h2
         class="mb-4 text-center text-[40px] font-bold leading-tight text-secondary-400"
       >
         Explora Nuestras Especialidades
       </h2>
       <p
-        class="mx-auto max-w-sm text-pretty text-center text-xl leading-tight text-black-500 md:mb-12"
+        class="mx-auto max-w-sm text-pretty text-center text-xl leading-tight text-black-500 xl:mb-12"
       >
         Cada una de nuestras especialidades ofrece un conjunto de cursos
         diseñados para desarrollar habilidades clave en áreas tecnológicas de
@@ -74,7 +74,7 @@ const specialites = [
     </hgroup>
     <SpecialiteImageContainer />
     <div class="flex flex-col items-center">
-      <hgroup class="hidden md:block">
+      <hgroup class="hidden xl:block">
         <h2 class="mb-4 text-center text-[40px] font-bold text-secondary-400">
           Explora Nuestras Especialidades
         </h2>
@@ -99,7 +99,9 @@ const specialites = [
           ))
         }
       </div>
-      <span class="text-pretty text-center text-xl text-primary-400">
+      <span
+        class="z-10 text-pretty text-center text-xl text-primary-400 drop-shadow-xl"
+      >
         ¡Descubre cuál se adapta mejor a tus objetivos y comienza a transformar
         tu futuro hoy mismo!</span
       >
