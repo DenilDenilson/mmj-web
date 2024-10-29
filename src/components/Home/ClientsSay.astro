@@ -4,12 +4,14 @@ import { Image } from "astro:assets";
 ---
 
 <section class="bg-black-700">
-  <div class="mx-auto max-w-7xl px-8 pb-16 pt-16">
-    <h3 class="mb-8 text-center text-[40px] font-bold text-white-200">
+  <div class="mx-auto max-w-7xl px-7 pb-16 pt-16 md:px-8">
+    <h3
+      class="mb-8 text-center text-[40px] font-bold leading-tight text-white-200 lg:leading-none"
+    >
       Lo que dicen nuestros estudiantes y clientes
     </h3>
     <p
-      class="mx-auto mb-12 max-w-4xl text-pretty text-center text-xl text-white-500"
+      class="mx-auto mb-12 max-w-4xl text-pretty text-center text-xl leading-7 text-white-500 lg:leading-normal"
     >
       Nuestros estudiantes y clientes confían en nosotros por la calidad de
       nuestros cursos y soluciones a medida. Lee lo que algunos de ellos tienen
@@ -27,8 +29,12 @@ import { Image } from "astro:assets";
       <input type="radio" name="clientes" id="testimonios3" class="hidden" />
       <input type="radio" name="clientes" id="testimonios4" class="hidden" />
       <input type="radio" name="clientes" id="testimonios5" class="hidden" />
-      <li class="flex w-full transition-transform duration-300 ease-in-out">
-        <ul class="flex w-full shrink-0 items-center justify-between">
+      <li
+        class="flex h-64 w-full transition-transform duration-300 ease-in-out"
+      >
+        <ul
+          class="flex w-full shrink-0 items-center justify-center gap-2 md:justify-between"
+        >
           <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
             <Image
               width={64}
@@ -50,7 +56,9 @@ import { Image } from "astro:assets";
               </p>
             </div>
           </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 md:flex"
+          >
             <Image
               width={64}
               src={WomanPerfil}
@@ -71,72 +79,9 @@ import { Image } from "astro:assets";
               </p>
             </div>
           </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
-            <Image
-              width={64}
-              src={WomanPerfil}
-              alt="Logo de MPLAB"
-              class="rounded-full"
-            />
-            <div class="max-w-64">
-              <hgroup class="mb-2">
-                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
-                <span class="text-sm font-light text-black-500">
-                  Estudiante de IoT
-                </span>
-              </hgroup>
-              <p class="font-light leading-5 text-black-500">
-                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
-                experiencia fue muy práctica y detallada. La experiencia fue muy
-                práctica y detallada.”
-              </p>
-            </div>
-          </li>
-        </ul>
-        <ul class="flex w-full shrink-0 items-center justify-between">
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
-            <Image
-              width={64}
-              src={WomanPerfil}
-              alt="Logo de MPLAB"
-              class="rounded-full"
-            />
-            <div class="max-w-64">
-              <hgroup class="mb-2">
-                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
-                <span class="text-sm font-light text-black-500">
-                  Estudiante de IoT
-                </span>
-              </hgroup>
-              <p class="font-light leading-5 text-black-500">
-                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
-                experiencia fue muy práctica y detallada. La experiencia fue muy
-                práctica y detallada.”
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
-            <Image
-              width={64}
-              src={WomanPerfil}
-              alt="Logo de MPLAB"
-              class="rounded-full"
-            />
-            <div class="max-w-64">
-              <hgroup class="mb-2">
-                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
-                <span class="text-sm font-light text-black-500">
-                  Estudiante de IoT
-                </span>
-              </hgroup>
-              <p class="font-light leading-5 text-black-500">
-                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
-                experiencia fue muy práctica y detallada. La experiencia fue muy
-                práctica y detallada.”
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 lg:flex"
+          >
             <Image
               width={64}
               src={WomanPerfil}
@@ -158,7 +103,9 @@ import { Image } from "astro:assets";
             </div>
           </li>
         </ul>
-        <ul class="flex w-full shrink-0 items-center justify-between">
+        <ul
+          class="flex w-full shrink-0 items-center justify-center gap-2 md:justify-between"
+        >
           <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
             <Image
               width={64}
@@ -180,7 +127,9 @@ import { Image } from "astro:assets";
               </p>
             </div>
           </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 md:flex"
+          >
             <Image
               width={64}
               src={WomanPerfil}
@@ -201,72 +150,9 @@ import { Image } from "astro:assets";
               </p>
             </div>
           </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
-            <Image
-              width={64}
-              src={WomanPerfil}
-              alt="Logo de MPLAB"
-              class="rounded-full"
-            />
-            <div class="max-w-64">
-              <hgroup class="mb-2">
-                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
-                <span class="text-sm font-light text-black-500">
-                  Estudiante de IoT
-                </span>
-              </hgroup>
-              <p class="font-light leading-5 text-black-500">
-                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
-                experiencia fue muy práctica y detallada. La experiencia fue muy
-                práctica y detallada.”
-              </p>
-            </div>
-          </li>
-        </ul>
-        <ul class="flex w-full shrink-0 items-center justify-between">
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
-            <Image
-              width={64}
-              src={WomanPerfil}
-              alt="Logo de MPLAB"
-              class="rounded-full"
-            />
-            <div class="max-w-64">
-              <hgroup class="mb-2">
-                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
-                <span class="text-sm font-light text-black-500">
-                  Estudiante de IoT
-                </span>
-              </hgroup>
-              <p class="font-light leading-5 text-black-500">
-                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
-                experiencia fue muy práctica y detallada. La experiencia fue muy
-                práctica y detallada.”
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
-            <Image
-              width={64}
-              src={WomanPerfil}
-              alt="Logo de MPLAB"
-              class="rounded-full"
-            />
-            <div class="max-w-64">
-              <hgroup class="mb-2">
-                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
-                <span class="text-sm font-light text-black-500">
-                  Estudiante de IoT
-                </span>
-              </hgroup>
-              <p class="font-light leading-5 text-black-500">
-                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
-                experiencia fue muy práctica y detallada. La experiencia fue muy
-                práctica y detallada.”
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 lg:flex"
+          >
             <Image
               width={64}
               src={WomanPerfil}
@@ -288,7 +174,9 @@ import { Image } from "astro:assets";
             </div>
           </li>
         </ul>
-        <ul class="flex w-full shrink-0 items-center justify-between">
+        <ul
+          class="flex w-full shrink-0 items-center justify-center gap-2 md:justify-between"
+        >
           <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
             <Image
               width={64}
@@ -310,6 +198,56 @@ import { Image } from "astro:assets";
               </p>
             </div>
           </li>
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 md:flex"
+          >
+            <Image
+              width={64}
+              src={WomanPerfil}
+              alt="Logo de MPLAB"
+              class="rounded-full"
+            />
+            <div class="max-w-64">
+              <hgroup class="mb-2">
+                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
+                <span class="text-sm font-light text-black-500">
+                  Estudiante de IoT
+                </span>
+              </hgroup>
+              <p class="font-light leading-5 text-black-500">
+                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
+                experiencia fue muy práctica y detallada. La experiencia fue muy
+                práctica y detallada.”
+              </p>
+            </div>
+          </li>
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 lg:flex"
+          >
+            <Image
+              width={64}
+              src={WomanPerfil}
+              alt="Logo de MPLAB"
+              class="rounded-full"
+            />
+            <div class="max-w-64">
+              <hgroup class="mb-2">
+                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
+                <span class="text-sm font-light text-black-500">
+                  Estudiante de IoT
+                </span>
+              </hgroup>
+              <p class="font-light leading-5 text-black-500">
+                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
+                experiencia fue muy práctica y detallada. La experiencia fue muy
+                práctica y detallada.”
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul
+          class="flex w-full shrink-0 items-center justify-center gap-2 md:justify-between"
+        >
           <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
             <Image
               width={64}
@@ -331,7 +269,103 @@ import { Image } from "astro:assets";
               </p>
             </div>
           </li>
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 md:flex"
+          >
+            <Image
+              width={64}
+              src={WomanPerfil}
+              alt="Logo de MPLAB"
+              class="rounded-full"
+            />
+            <div class="max-w-64">
+              <hgroup class="mb-2">
+                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
+                <span class="text-sm font-light text-black-500">
+                  Estudiante de IoT
+                </span>
+              </hgroup>
+              <p class="font-light leading-5 text-black-500">
+                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
+                experiencia fue muy práctica y detallada. La experiencia fue muy
+                práctica y detallada.”
+              </p>
+            </div>
+          </li>
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 lg:flex"
+          >
+            <Image
+              width={64}
+              src={WomanPerfil}
+              alt="Logo de MPLAB"
+              class="rounded-full"
+            />
+            <div class="max-w-64">
+              <hgroup class="mb-2">
+                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
+                <span class="text-sm font-light text-black-500">
+                  Estudiante de IoT
+                </span>
+              </hgroup>
+              <p class="font-light leading-5 text-black-500">
+                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
+                experiencia fue muy práctica y detallada. La experiencia fue muy
+                práctica y detallada.”
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul
+          class="flex w-full shrink-0 items-center justify-center gap-2 md:justify-between"
+        >
           <li class="flex items-start gap-2 rounded-lg bg-white-500 px-6 py-5">
+            <Image
+              width={64}
+              src={WomanPerfil}
+              alt="Logo de MPLAB"
+              class="rounded-full"
+            />
+            <div class="max-w-64">
+              <hgroup class="mb-2">
+                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
+                <span class="text-sm font-light text-black-500">
+                  Estudiante de IoT
+                </span>
+              </hgroup>
+              <p class="font-light leading-5 text-black-500">
+                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
+                experiencia fue muy práctica y detallada. La experiencia fue muy
+                práctica y detallada.”
+              </p>
+            </div>
+          </li>
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 md:flex"
+          >
+            <Image
+              width={64}
+              src={WomanPerfil}
+              alt="Logo de MPLAB"
+              class="rounded-full"
+            />
+            <div class="max-w-64">
+              <hgroup class="mb-2">
+                <h5 class="h-4 text-base text-black-500">Ana Gómez</h5>
+                <span class="text-sm font-light text-black-500">
+                  Estudiante de IoT
+                </span>
+              </hgroup>
+              <p class="font-light leading-5 text-black-500">
+                “Gracias a los cursos, logré crear mi propio proyecto IoT. La
+                experiencia fue muy práctica y detallada. La experiencia fue muy
+                práctica y detallada.”
+              </p>
+            </div>
+          </li>
+          <li
+            class="hidden items-start gap-2 rounded-lg bg-white-500 px-6 py-5 lg:flex"
+          >
             <Image
               width={64}
               src={WomanPerfil}
@@ -355,7 +389,7 @@ import { Image } from "astro:assets";
         </ul>
       </li>
     </ul>
-    <ul class="mt-9 flex items-center justify-center gap-4">
+    <ul class="mt-8 flex items-center justify-center gap-4 md:mt-9">
       <label
         for="testimonios1"
         class="text-whibg-white-500 h-4 w-4 cursor-pointer rounded-full bg-white-500"
