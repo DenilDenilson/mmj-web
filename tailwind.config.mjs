@@ -58,6 +58,12 @@ export default {
       fontFamily: {
         sans: ["Roboto Condensed Variable", ...defaultTheme.fontFamily.sans],
       },
+      lineHeight: {
+        sm: "16px",
+        base: "19px",
+        xl: "23px",
+        "5xl": "47px",
+      },
       screens: {
         xs: "440px",
       },
