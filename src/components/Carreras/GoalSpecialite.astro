@@ -1,0 +1,14 @@
+---
+import Check from "@src/Images/icons/Check.astro";
+
+const { goal } = Astro.props;
+---
+
+<li class="mb-1 flex items-center gap-1">
+  <div class="grid h-5 w-5 place-content-center">
+    <Check fill="#D75C70" />
+  </div>
+  <span class="text-white-200">
+    {goal}
+  </span>
+</li>

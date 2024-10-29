@@ -1,0 +1,17 @@
+---
+import type { GetStaticPaths } from "astro";
+import Hero from "@src/components/Carreras/Hero.astro";
+import Layout from "@src/layouts/Layout.astro";
+import { specialites } from "@src/data/Specialites";
+
+export const getStaticPaths = (() => {
+  // Las uri se usan para obtener el objeto del archivo Specialites.ts
+  return [{ params: { carrera: "embebido" } }];
+}) satisfies GetStaticPaths;
+
+const { carrera } = Astro.params;
+---
+
+<Layout title="Carreras MMJ">
+  <Hero specialite={specialites[`${carrera}` as keyof typeof specialites]} />
+</Layout>

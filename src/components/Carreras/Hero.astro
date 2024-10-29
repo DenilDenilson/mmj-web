@@ -1,0 +1,74 @@
+---
+import type { ISpecialite } from "@src/data/Specialites";
+import Check from "@src/Images/icons/Check.astro";
+import Chip from "@src/Images/icons/Chip.astro";
+import GoalSpecialite from "./GoalSpecialite.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  specialite: ISpecialite;
+}
+
+const { specialite } = Astro.props;
+const { title, description, goals, backgroundHeroImage } = specialite;
+---
+
+<section class="">
+  <div class="relative mx-auto max-w-7xl overflow-x-hidden">
+    <picture class="absolute -z-50 aspect-[2/1] h-full bg-black-900">
+      <Image
+        class="absolute -left-[64rem] -top-24 h-full w-full object-cover"
+        src={backgroundHeroImage}
+        alt="Imagen de fondo de alguien programando"
+      />
+    </picture>
+    <div class="px-6 py-8">
+      <div class="mb-1 grid h-10 w-10 place-content-center">
+        <Chip fill="#E9EAEB" width="40" height="40" />
+      </div>
+      <hgroup>
+        <h3 class="xs:text-5xl mb-2 text-3xl font-bold text-white-50">
+          {title}
+        </h3>
+        <p
+          class="xs:text-xl mb-6 text-base leading-5 tracking-tight text-white-200"
+        >
+          {description}
+        </p>
+      </hgroup>
+      <ul class="mb-6 pl-4">
+        <h4 class="relative mb-3 text-xl font-bold text-white-200">
+          Objetivos de la especialidad
+          <span class="absolute bottom-0 left-0 h-[2px] w-4/5 bg-primary-400">
+            <span
+              class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-primary-400"
+            >
+            </span>
+          </span>
+        </h4>
+        {goals.map((goal) => <GoalSpecialite goal={goal} />)}
+      </ul>
+      <hgroup class="mb-4 pl-4">
+        <h4 class="relative mb-3 text-xl font-bold text-white-300">
+          Ruta Recomendada para esta Especialidad
+          <span class="absolute bottom-0 left-0 h-[2px] w-full bg-primary-400">
+            <span
+              class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-primary-400"
+            >
+            </span>
+          </span>
+        </h4>
+        <p class="text-base leading-5 tracking-tight text-white-300">
+          Te recomendamos seguir este orden de cursos para un aprendizaje
+          completo y estructurado que te permitirá desarrollar las competencias
+          necesarias en cada área.
+        </p>
+      </hgroup>
+      <a
+        href=""
+        class="ml-4 inline-block rounded border border-white-300 px-4 py-2 text-white-300"
+        >Ver ruta</a
+      >
+    </div>
+  </div>
+</section>
