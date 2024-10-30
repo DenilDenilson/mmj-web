@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import entrenadorBase from "@src/Images/Courses/EntrenadorBase.png";
+import Cart from "@src/Images/icons/Cart.astro";
+---
+
+<article
+  class="flex min-w-56 snap-center flex-col items-center rounded border border-[#BABDC1] bg-white-50 px-6 py-4"
+>
+  <Image src={entrenadorBase} alt="Tarjeta pcb Entrenador de MMJ" />
+  <h6 class="mb-1 text-black-900">Entrenador Pic18-MMJ</h6>
+  <p class="flex items-baseline justify-between gap-2">
+    <span class="text-xs text-[#4C545F] line-through"> S/. 580.90 </span>
+    <span class="text-[#3876E0]"> S/. 458.50 </span>
+  </p>
+  <a
+    href="#"
+    class="flex w-fit items-center justify-center gap-1 rounded bg-primary-500 py-2 pl-3 pr-4 text-white-200 hover:bg-primary-400"
+  >
+    <Cart fill="#E9EAEB" width="20" height="20" />
+    <span>Agregar al carrito</span>
+  </a>
+</article>

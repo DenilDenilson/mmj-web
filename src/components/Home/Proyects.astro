@@ -22,7 +22,8 @@ import { proyectsResume, type IProyectResume } from "@src/data/ProyectsHome.ts";
       </p>
     </hgroup>
     <div
-      class="slider flex flex-col-reverse items-start justify-center gap-2 lg:flex-row-reverse lg:gap-0"
+      id="slider"
+      class="flex flex-col-reverse items-start justify-center gap-2 lg:flex-row-reverse lg:gap-0"
     >
       <input class="hidden" name="slider" id="slider1" type="radio" checked />
       <input class="hidden" name="slider" id="slider2" type="radio" />
@@ -31,7 +32,8 @@ import { proyectsResume, type IProyectResume } from "@src/data/ProyectsHome.ts";
       <input class="hidden" name="slider" id="slider5" type="radio" />
 
       <div
-        class="projectsContainer mx-auto overflow-y-hidden rounded-lg shadow-[0px_0px_24px_10px_#18181B30] lg:ml-0 lg:rounded-l-none lg:shadow-[16px_16px_24px_10px_#18181B30]"
+        id="projectsContainer"
+        class="mx-auto overflow-y-hidden rounded-lg shadow-[0px_0px_24px_10px_#18181B30] lg:ml-0 lg:rounded-l-none lg:shadow-[16px_16px_24px_10px_#18181B30]"
       >
         <ul
           class="relative transition-all duration-300 ease-in-out lg:h-[500px]"
@@ -44,7 +46,8 @@ import { proyectsResume, type IProyectResume } from "@src/data/ProyectsHome.ts";
         </ul>
       </div>
       <ul
-        class="buttonsSlider mx-auto mb-4 flex flex-row flex-wrap items-center justify-center gap-0 overflow-x-hidden sm:gap-2 md:gap-4 lg:mb-0 lg:mr-0 lg:h-[500px] lg:translate-x-[1px] lg:flex-col lg:items-end lg:justify-normal lg:gap-0"
+        id="buttonsSlider"
+        class="mx-auto mb-4 flex flex-row flex-wrap items-center justify-center gap-0 overflow-x-hidden sm:gap-2 md:gap-4 lg:mb-0 lg:mr-0 lg:h-[500px] lg:translate-x-[1px] lg:flex-col lg:items-end lg:justify-normal lg:gap-0"
       >
         <!-- El h-[500px] es para evitar que desaparezca la sombra del span interior de las opciones -->
         <!-- El span en el interior de las opciones es para que la sombra de las opciones no se superponga al article -->
@@ -104,54 +107,54 @@ import { proyectsResume, type IProyectResume } from "@src/data/ProyectsHome.ts";
 </section>
 
 <style is:global>
-  .slider
+  #slider
     input:nth-child(1):checked
-    ~ .projectsContainer
+    ~ #projectsContainer
     > ul
     article:nth-child(1) {
     position: relative;
   }
-  .slider
+  #slider
     input:nth-child(2):checked
-    ~ .projectsContainer
+    ~ #projectsContainer
     > ul
     article:nth-child(2) {
     /* top: -500px; */
     position: relative;
   }
 
-  .slider
+  #slider
     input:nth-child(3):checked
-    ~ .projectsContainer
+    ~ #projectsContainer
     > ul
     article:nth-child(3) {
     /* top: -1000px; */
     position: relative;
   }
 
-  .slider
+  #slider
     input:nth-child(4):checked
-    ~ .projectsContainer
+    ~ #projectsContainer
     > ul
     article:nth-child(4) {
     /* top: -1500px; */
     position: relative;
   }
 
-  .slider
+  #slider
     input:nth-child(5):checked
-    ~ .projectsContainer
+    ~ #projectsContainer
     > ul
     article:nth-child(5) {
     /* top: -2000px; */
     position: relative;
   }
 
-  .slider input:nth-child(1):checked ~ .buttonsSlider label:nth-child(1),
-  .slider input:nth-child(2):checked ~ .buttonsSlider label:nth-child(2),
-  .slider input:nth-child(3):checked ~ .buttonsSlider label:nth-child(3),
-  .slider input:nth-child(4):checked ~ .buttonsSlider label:nth-child(4),
-  .slider input:nth-child(5):checked ~ .buttonsSlider label:nth-child(5) {
+  #slider input:nth-child(1):checked ~ #buttonsSlider label:nth-child(1),
+  #slider input:nth-child(2):checked ~ #buttonsSlider label:nth-child(2),
+  #slider input:nth-child(3):checked ~ #buttonsSlider label:nth-child(3),
+  #slider input:nth-child(4):checked ~ #buttonsSlider label:nth-child(4),
+  #slider input:nth-child(5):checked ~ #buttonsSlider label:nth-child(5) {
     border-bottom-width: 1px;
     border-left-width: 1px;
     border-top-width: 1px;
@@ -161,24 +164,24 @@ import { proyectsResume, type IProyectResume } from "@src/data/ProyectsHome.ts";
     color: #1d7988;
   }
 
-  .slider input:nth-child(1):checked ~ .buttonsSlider label:nth-child(1) > span,
-  .slider input:nth-child(2):checked ~ .buttonsSlider label:nth-child(2) > span,
-  .slider input:nth-child(3):checked ~ .buttonsSlider label:nth-child(3) > span,
-  .slider input:nth-child(4):checked ~ .buttonsSlider label:nth-child(4) > span,
-  .slider
+  #slider input:nth-child(1):checked ~ #buttonsSlider label:nth-child(1) > span,
+  #slider input:nth-child(2):checked ~ #buttonsSlider label:nth-child(2) > span,
+  #slider input:nth-child(3):checked ~ #buttonsSlider label:nth-child(3) > span,
+  #slider input:nth-child(4):checked ~ #buttonsSlider label:nth-child(4) > span,
+  #slider
     input:nth-child(5):checked
-    ~ .buttonsSlider
+    ~ #buttonsSlider
     label:nth-child(5)
     > span {
     visibility: visible;
   }
 
   @media (min-width: 1024px) {
-    .slider input:nth-child(1):checked ~ .buttonsSlider label:nth-child(1),
-    .slider input:nth-child(2):checked ~ .buttonsSlider label:nth-child(2),
-    .slider input:nth-child(3):checked ~ .buttonsSlider label:nth-child(3),
-    .slider input:nth-child(4):checked ~ .buttonsSlider label:nth-child(4),
-    .slider input:nth-child(5):checked ~ .buttonsSlider label:nth-child(5) {
+    #slider input:nth-child(1):checked ~ #buttonsSlider label:nth-child(1),
+    #slider input:nth-child(2):checked ~ #buttonsSlider label:nth-child(2),
+    #slider input:nth-child(3):checked ~ #buttonsSlider label:nth-child(3),
+    #slider input:nth-child(4):checked ~ #buttonsSlider label:nth-child(4),
+    #slider input:nth-child(5):checked ~ #buttonsSlider label:nth-child(5) {
       border-right-width: 0px; /* Esto se aplicará a partir de 1024px */
     }
   }
