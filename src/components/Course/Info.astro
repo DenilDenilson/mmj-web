@@ -1,0 +1,249 @@
+---
+import Argentina from "@src/Images/icons/Argentina.astro";
+import ChcekList from "@src/Images/icons/ChcekList.astro";
+import Check from "@src/Images/icons/Check.astro";
+import Chile from "@src/Images/icons/Chile.astro";
+import Circle from "@src/Images/icons/Circle.astro";
+import Clock from "@src/Images/icons/Clock.astro";
+import Colombia from "@src/Images/icons/Colombia.astro";
+import Ecuador from "@src/Images/icons/Ecuador.astro";
+import ElSalvador from "@src/Images/icons/ElSalvador.astro";
+import FAQIcon from "@src/Images/icons/FAQIcon.astro";
+import Flag from "@src/Images/icons/Flag.astro";
+import Honduras from "@src/Images/icons/Honduras.astro";
+import Mexico from "@src/Images/icons/Mexico.astro";
+import Paraguay from "@src/Images/icons/Paraguay.astro";
+import Peru from "@src/Images/icons/Peru.astro";
+import Start from "@src/Images/icons/Start.astro";
+import SunScreen from "@src/Images/icons/SunScreen.astro";
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-7 pb-16 pt-8">
+    <div class="slider flex flex-col-reverse">
+      <input class="hidden" name="slider" id="slider1" type="radio" checked />
+      <input class="hidden" name="slider" id="slider2" type="radio" />
+      <input class="hidden" name="slider" id="slider3" type="radio" />
+      <input class="hidden" name="slider" id="slider4" type="radio" />
+
+      <div class="projectsContainer">
+        <ul
+          class="relative transition-all duration-300 ease-in-out lg:h-[500px]"
+        >
+          <!-- {
+            proyectsResume.map((proyectResume: IProyectResume) => (
+              <ProyecResume proyectResume={proyectResume} />
+            ))
+          } -->
+          <li>
+            <ul class="mb-6">
+              <p class="mb-3 font-light text-black-500">
+                El estudiante tendrá acceso a la plataforma de aprendizaje con
+                todo el material necesario:
+              </p>
+              <li class="mb-1 flex items-center gap-1">
+                <div class="grid h-5 w-5 place-content-center">
+                  <Check />
+                </div>
+                <span class="font-light text-black-500">Guías</span>
+              </li>
+              <li class="mb-1 flex items-center gap-1">
+                <div class="grid h-5 w-5 place-content-center">
+                  <Check />
+                </div>
+                <span class="font-light text-black-500">Tutoriales</span>
+              </li>
+              <li class="mb-1 flex items-center gap-1">
+                <div class="grid h-5 w-5 place-content-center">
+                  <Check />
+                </div>
+                <span class="font-light text-black-500">Ejemplos de código</span
+                >
+              </li>
+              <li class="mb-1 flex items-center gap-1">
+                <div class="grid h-5 w-5 place-content-center">
+                  <Check />
+                </div>
+                <span class="font-light text-black-500">
+                  Videos Explicativos
+                </span>
+              </li>
+            </ul>
+            <ul class="mb-6">
+              <p class="mb-3 font-light text-black-500">
+                Se contará con soporte e interacción, tendrá acceso a:
+              </p>
+              <li class="mb-1 flex items-center gap-1">
+                <div class="grid h-5 w-5 place-content-center">
+                  <Check />
+                </div>
+                <span class="font-light text-black-500">
+                  Canales de discusión y consultas
+                </span>
+              </li>
+              <li class="mb-1 flex items-center gap-1">
+                <div class="grid h-5 w-5 place-content-center">
+                  <Check />
+                </div>
+                <span class="font-light text-black-500">
+                  Feedback por parte del docente
+                </span>
+              </li>
+              <li class="mb-1 flex items-center gap-1">
+                <div class="grid h-5 w-5 place-content-center">
+                  <Check />
+                </div>
+                <span class="font-light text-black-500">
+                  Sesiones de preguntas y respuestas del docente
+                </span>
+              </li>
+            </ul>
+            <p class="mb-2 flex items-baseline justify-between">
+              <span class="text-xl text-black-500">Horario:</span>
+              <span class="mb-1 flex gap-1 rounded bg-[#EDE7F3] px-2 py-1">
+                <Circle />
+                <span class="text-sm text-black-500"
+                  >Inicio: 23 de enero del 2025</span
+                >
+              </span>
+            </p>
+            <p class="mb-3 font-light text-black-500">
+              Las clases se realizaran los días
+              <span class="font-normal"> Martes </span>
+              y
+              <span class="font-normal"> Jueves </span>
+              de cada semana
+            </p>
+            <ul>
+              <p class="flex items-center justify-start pb-3">
+                <span class="flex min-w-48 items-center gap-1">
+                  <Flag />
+                  <span class="text-black-500"> País </span>
+                </span>
+                <span class="flex items-center gap-1">
+                  <Clock fill="#1F2937" width="20" height="20" stroke="1" />
+                  <span class="text-black-500"> Día y Hora </span>
+                </span>
+              </p>
+              <li
+                class="flex items-start justify-start border-t border-black-200 py-3"
+              >
+                <ul class="min-w-48">
+                  <li class="mb-1 flex items-center gap-2">
+                    <Mexico />
+                    <span class="font-light text-black-500">México</span>
+                  </li>
+                  <li class="mb-1 flex items-center gap-2">
+                    <Honduras />
+                    <span class="font-light text-black-500">Honduras</span>
+                  </li>
+                  <li class="mb-1 flex items-center gap-2">
+                    <ElSalvador />
+                    <span class="font-light text-black-500">El Salvador</span>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="mb-1 font-light">Martes y Jueves</li>
+                  <li class="font-normal">18:00 a 21:00</li>
+                </ul>
+              </li>
+              <li
+                class="flex items-start justify-start border-t border-black-200 py-3"
+              >
+                <ul class="min-w-48">
+                  <li class="mb-1 flex items-center gap-2">
+                    <Peru />
+                    <span class="font-light text-black-500">Perú</span>
+                  </li>
+                  <li class="mb-1 flex items-center gap-2">
+                    <Colombia />
+                    <span class="font-light text-black-500">Colombia</span>
+                  </li>
+                  <li class="mb-1 flex items-center gap-2">
+                    <Ecuador />
+                    <span class="font-light text-black-500">Ecuador</span>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="mb-1 font-light">Martes y Jueves</li>
+                  <li class="font-normal">17:00 a 22:00</li>
+                </ul>
+              </li>
+              <li
+                class="flex items-start justify-start border-t border-black-200 py-3"
+              >
+                <ul class="min-w-48">
+                  <li class="mb-1 flex items-center gap-2">
+                    <Chile />
+                    <span class="font-light text-black-500">Chile</span>
+                  </li>
+                  <li class="mb-1 flex items-center gap-2">
+                    <Argentina />
+                    <span class="font-light text-black-500">Argentina</span>
+                  </li>
+                  <li class="mb-1 flex items-center gap-2">
+                    <Paraguay />
+                    <span class="font-light text-black-500">Paraguay</span>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="mb-1 font-light">Martes y Jueves</li>
+                  <li class="font-normal">21:00 a 23:00</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Obtén tu certificado con reconocimiento a nivel nacional</p>
+            <Image />
+          </li>
+        </ul>
+      </div>
+      <ul
+        class="buttonsSlider mx-auto mb-6 flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-4 sm:gap-2 md:gap-4 lg:mb-0 lg:mr-0 lg:h-[500px] lg:translate-x-[1px] lg:flex-col lg:items-end lg:justify-normal lg:gap-0"
+      >
+        <!-- El h-[500px] es para evitar que desaparezca la sombra del span interior de las opciones -->
+        <!-- El span en el interior de las opciones es para que la sombra de las opciones no se superponga al article -->
+        <label
+          for="slider1"
+          class="project-options relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-r active:border-t active:border-secondary-100 lg:h-[72px] lg:w-52 lg:rounded-r-none lg:px-0 lg:py-0"
+        >
+          <SunScreen fill="#1F2937" width="20" height="20" />
+          <span> Acerca del curso </span>
+          <span class="absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"> </span>
+        </label>
+        <label
+          for="slider2"
+          class="project-options relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-r active:border-t active:border-secondary-100 lg:h-[72px] lg:w-52 lg:rounded-r-none lg:px-0 lg:py-0"
+        >
+          <Start />
+          <span> Perfil del egresado </span>
+          <span
+            class="invisible absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"
+          >
+          </span>
+        </label>
+        <label
+          for="slider3"
+          class="project-options relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-r active:border-t active:border-secondary-100 lg:h-[72px] lg:w-52 lg:rounded-r-none lg:px-0 lg:py-0"
+        >
+          <ChcekList />
+          <span> Requisitos </span>
+          <span
+            class="invisible absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"
+          >
+          </span>
+        </label>
+        <label
+          for="slider4"
+          class="project-options relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500 active:border-b active:border-l active:border-r active:border-t active:border-secondary-100 lg:h-[72px] lg:w-52 lg:rounded-r-none lg:px-0 lg:py-0"
+        >
+          <FAQIcon />
+          <span> FAQ's </span>
+          <span
+            class="invisible absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"
+          >
+          </span>
+        </label>
+      </ul>
+    </div>
+  </div>
+</section>
