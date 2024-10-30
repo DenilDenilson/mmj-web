@@ -1,0 +1,13 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "@src/layouts/Layout.astro";
+import Hero from "@src/components/Course/Hero.astro";
+
+export const getStaticPaths = (() => {
+  return [{ params: { carrera: "embebido", course: "ansi-c" } }];
+}) satisfies GetStaticPaths;
+---
+
+<Layout title="C u r s o">
+  <Hero />
+</Layout>

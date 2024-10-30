@@ -1,0 +1,101 @@
+---
+import Calendar from "@src/Images/icons/Calendar.astro";
+import Cart from "@src/Images/icons/Cart.astro";
+import Check from "@src/Images/icons/Check.astro";
+import Circle from "@src/Images/icons/Circle.astro";
+import Clock from "@src/Images/icons/Clock.astro";
+import Vivo from "@src/Images/icons/Vivo.astro";
+import { getCollection, getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+const specificCourse = await getEntry("carrers", `${carrera}/${course}`);
+const {
+  title,
+  description,
+  startDate,
+  goals,
+  modality,
+  duration,
+  hours,
+  priceBase,
+  priceReal,
+} = specificCourse.data;
+---
+
+<section class="">
+  <div class="h-14 w-full"></div>
+  <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
+  <div class="mx-auto max-w-7xl bg-secondary-50 px-7 py-7">
+    <p class="text-sm text-black-300">
+      Cursos/{carrera}/
+      <span class="text-black-500">
+        {course}
+      </span>
+    </p>
+    <div
+      class="mb-4 aspect-video w-full rounded-lg bg-white-800 text-black-300 shadow-[0px_16px_32px_0px_1C253250]"
+    >
+      VIDEO
+    </div>
+    <div class="mb-1 flex justify-end">
+      <p class="mb-1 flex gap-1 rounded bg-[#EDE7F3] px-2 py-1">
+        <Circle />
+        <span class="text-sm text-black-500">Inicio de clases {startDate}</span>
+      </p>
+    </div>
+    <header class="mb-6">
+      <h1 class="mb-2 text-2xl font-bold leading-none text-black-500">
+        {title}
+        <!-- UwU -->
+      </h1>
+      <p class="text-sm font-light leading-tight text-black-500">
+        {description}
+      </p>
+    </header>
+    <ul class="mb-6">
+      <p class="text-black-500">¿Qué lograrás en este curso?</p>
+      {
+        goals.map((goal: string) => (
+          <li class="mb-1 flex items-center gap-1">
+            <div class="grid h-5 w-5 place-content-center">
+              <Check />
+            </div>
+            <span class="font-light text-black-500">{goal}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="mb-1 flex items-center justify-start">
+      <li class="flex items-center gap-1 px-2 py-1">
+        <Vivo width="16" height="16" />
+        <span class="text-sm font-light text-black-400">{modality}</span>
+      </li>
+      <li class="flex items-center gap-1 px-2 py-1">
+        <Calendar width="16" height="16" />
+        <span class="text-sm font-light text-black-400">{duration} semanas</span
+        >
+      </li>
+      <li class="flex items-center gap-1 px-2 py-1">
+        <Clock fill="#4C545F" width="16" height="16" />
+        <span class="text-sm font-light text-black-400">{hours} horas</span>
+      </li>
+    </ul>
+    <footer class="mb-8 flex items-end justify-evenly">
+      <span class="flex flex-row-reverse items-end gap-3">
+        <span class="text-sm text-black-300 line-through">
+          $ {priceBase}
+          <span class="text-sm">USD</span>
+        </span>
+        <a
+          href="#"
+          class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 px-3 py-4"
+        >
+          <Cart fill="#FBFCFC" />
+          <span class="text-sm text-white-100"
+            >$ {priceReal} <span class="text-sm text-[#FFF]">USD</span></span
+          >
+        </a>
+      </span>
+    </footer>
+  </div>
+</section>

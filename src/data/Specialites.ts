@@ -14,6 +14,7 @@ export interface ICourse {
   startDate: string;
   title: string;
   description: string;
+  goals?: string[];
   modality: string;
   duration: number;
   hours: number;
@@ -30,6 +31,7 @@ export interface ISpecialite {
   skillsTech: string[];
   canPerform: string[];
   courses: ICourse[];
+  nextLaunch: ICourse;
   projects: IProject[];
 }
 
@@ -100,6 +102,25 @@ export const specialites: { [key: string]: ISpecialite } = {
         priceReal: 70,
       },
     ],
+    nextLaunch: {
+      bgCourseCard: bgCourseCard,
+      startDate: "12 de febrero del 2025",
+      title: "Desarrollo de Software Embebido con Microcontroladores",
+      description:
+        "Aprende a desarrollar software para sistemas embebidos utilizando microcontroladores y herramientas de programación en tiempo real. Este curso incluye teoría y práctica con ejemplos aplicados a la industria. Este curso incluye teoría y práctica con ejemplos aplicados a la industria.",
+      goals: [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido.",
+      ],
+      modality: "virtual",
+      duration: 4,
+      hours: 40,
+      priceBase: 95.9,
+      priceReal: 70,
+    },
     projects: [
       {
         bgProjectCard: bgProyect,
