@@ -1,0 +1,19 @@
+---
+import type { ISpecialite } from "@src/data/Specialites";
+import CourseCard from "./CourseCard.astro";
+
+interface Props {
+  specialite: ISpecialite;
+}
+
+const { specialite } = Astro.props;
+const { courses } = specialite;
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <main class="flex snap-x snap-mandatory overflow-x-auto">
+      {courses.map((course) => <CourseCard course={course} />)}
+    </main>
+  </div>
+</section>

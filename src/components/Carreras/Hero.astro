@@ -4,18 +4,29 @@ import Check from "@src/Images/icons/Check.astro";
 import Chip from "@src/Images/icons/Chip.astro";
 import GoalSpecialite from "./GoalSpecialite.astro";
 import { Image } from "astro:assets";
+import ObjectiveCardContainer from "./ObjectiveCardContainer.astro";
 
 interface Props {
   specialite: ISpecialite;
 }
 
 const { specialite } = Astro.props;
-const { title, description, goals, backgroundHeroImage } = specialite;
+const {
+  title,
+  description,
+  goals,
+  backgroundHeroImage,
+  studentProfile,
+  skillsTech,
+  canPerform,
+} = specialite;
 ---
 
 <section class="">
+  <div class="h-12 w-full"></div>
+  <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
   <div class="relative mx-auto max-w-7xl overflow-x-hidden">
-    <picture class="absolute -z-50 aspect-[2/1] h-full bg-black-900">
+    <picture class="absolute -z-50 aspect-[2/1] h-full bg-white-50">
       <Image
         class="absolute -left-[64rem] -top-24 h-full w-full object-cover"
         src={backgroundHeroImage}
@@ -27,11 +38,11 @@ const { title, description, goals, backgroundHeroImage } = specialite;
         <Chip fill="#E9EAEB" width="40" height="40" />
       </div>
       <hgroup>
-        <h3 class="xs:text-5xl mb-2 text-3xl font-bold text-white-50">
+        <h3 class="mb-2 text-3xl font-bold text-white-50 xs:text-5xl">
           {title}
         </h3>
         <p
-          class="xs:text-xl mb-6 text-base leading-5 tracking-tight text-white-200"
+          class="mb-6 text-base leading-5 tracking-tight text-white-200 xs:text-xl"
         >
           {description}
         </p>
@@ -69,6 +80,11 @@ const { title, description, goals, backgroundHeroImage } = specialite;
         class="ml-4 inline-block rounded border border-white-300 px-4 py-2 text-white-300"
         >Ver ruta</a
       >
+      <ObjectiveCardContainer
+        studentProfile={studentProfile}
+        skillsTech={skillsTech}
+        canPerform={canPerform}
+      />
     </div>
   </div>
 </section>
