@@ -1,6 +1,5 @@
 import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
 import bgCourseCard from "@src/Images/Carreras/BgCourseCard.png";
-import bgProyect from "@src/Images/Carreras/bgProject.png";
 
 export interface IProject {
   bgProjectCard: ImageMetadata;
@@ -123,21 +122,21 @@ export const specialites: { [key: string]: ISpecialite } = {
     },
     projects: [
       {
-        bgProjectCard: bgProyect,
+        bgProjectCard: bgCourseCard,
         title: "Diseña de un Sistema de Control para un Robot Móvil",
         description:
           "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
         url: "#",
       },
       {
-        bgProjectCard: bgProyect,
+        bgProjectCard: bgCourseCard,
         title: "Diseña de un Sistema de Control para un Robot Móvil",
         description:
           "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
         url: "#",
       },
       {
-        bgProjectCard: bgProyect,
+        bgProjectCard: bgCourseCard,
         title: "Diseña de un Sistema de Control para un Robot Móvil",
         description:
           "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
