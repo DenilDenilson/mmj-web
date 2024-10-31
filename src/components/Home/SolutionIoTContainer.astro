@@ -4,6 +4,7 @@ import Antena from "@src/Images/icons/Antena.astro";
 import Lupa from "@src/Images/icons/Lupa.astro";
 import ControlRemoto from "@src/Images/icons/ControlRemoto.astro";
 import BolsaDinero from "@src/Images/icons/BolsaDinero.astro";
+import CardSolution from "./CardSolution.astro";
 ---
 
 <div class="mb-16">
@@ -19,42 +20,39 @@ import BolsaDinero from "@src/Images/icons/BolsaDinero.astro";
     </span>
   </span>
 </h3>
-<ul
+<div
   class="mb-16 grid grid-cols-2 grid-rows-2 gap-8 lg:flex lg:items-center lg:justify-between lg:gap-0"
 >
-  <li class="flex flex-col items-center gap-1">
+
+  <CardSolution 
+    title="Monitoreo en Tiempo Real"
+    description="Acceso a datos en vivo para una toma de decisiones más rápida y eficaz."  
+  >
     <Antena />
-    <h6 class="text-center text-xl text-black-500">Monitoreo en Tiempo Real</h6>
-    <p class="max-w-52 text-center font-light text-black-500">
-      Acceso a datos en vivo para una toma de decisiones rápida y eficaz.
-    </p>
-  </li>
-  <li class="flex flex-col items-center gap-1">
+  </CardSolution>
+  
+  <CardSolution 
+    title="Análisis Predictivo"
+    description="Predice y prevé patrones para mejorar la eficiencia y prevenir fallas."  
+  >
     <Lupa />
-    <h6 class="text-center text-xl text-black-500">Análisis Predictivo</h6>
-    <p class="max-w-52 text-center font-light text-black-500">
-      Predice y prevé patrones para mejorar la eficiencia y prevenir fallas.
-    </p>
-  </li>
-  <li class="flex flex-col items-center gap-1">
+  </CardSolution>
+
+  <CardSolution 
+    title="Control Remoto"
+    description="Gestiona y supervisa tus dispositivos desde cualquier lugar y en cualquier momento."  
+  >
     <ControlRemoto />
-    <h6 class="text-center text-xl text-black-500">Control Remoto</h6>
-    <p class="max-w-52 text-center font-light text-black-500">
-      Gestiona y supervisa tus dispositivos desde cualquier lugar y en cualquier
-      momento.
-    </p>
-  </li>
-  <li class="flex flex-col items-center gap-1">
+  </CardSolution>
+
+  <CardSolution 
+    title="Reducción de Costos Operativos"
+    description="Optimización de recursos y minimización de gastos mediante el uso inteligente de datos."  
+  >
     <BolsaDinero />
-    <h6 class="text-center text-xl text-black-500">
-      Reducción de Costos Operativos
-    </h6>
-    <p class="max-w-52 text-center font-light text-black-500">
-      Optimización de recursos y minimización de gastos mediante el uso
-      inteligente de datos.
-    </p>
-  </li>
-</ul>
+  </CardSolution>
+
+</div>
 <div class="mb-8 grid place-content-center">
   <a
     href="#"

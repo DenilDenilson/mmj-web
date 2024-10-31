@@ -1,0 +1,11 @@
+---
+const { styles,title, description} = Astro.props;
+---
+<figure class=`flex flex-col items-center gap-4 max-w-[273px] py-6 px-8 ${styles}`>
+    <slot
+    />
+    <figcaption class="text-center font-light text-black-500">
+        <h6 class="text-xl leading-xl font-normal text-black-500">{title}</h6>
+        <p class="mt-[10px] leading-base">{description}</p>
+    </figcaption>
+</figure>
