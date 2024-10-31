@@ -1,0 +1,49 @@
+---
+import ConstructionWeb from "@src/Images/ConstructionWeb.astro";
+import Instagram from "@src/Images/icons/Instagram.astro";
+import Youtube from "@src/Images/icons/Youtube.astro";
+import Facebook from "@src/Images/icons/Facebook.astro";
+import Linkedin from "@src/Images/icons/Linkedin.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="flex h-full items-center justify-center py-16 text-black-500">
+      <div class="mx-auto h-fit w-fit px-7 text-center">
+        <h1 class="text-[32px] leading-[38px] font-bold text-center">Estamos construyendo algo increíble para ti</h1>
+        <figure>
+          <div class="max-w-xl mx-auto my-4">
+              <ConstructionWeb />
+          </div>
+          <figcaption class="flex flex-col items-center text-center">
+            <p class="leading-xl text-xl font-regular">Pronto podrás explorar todo lo que tenemos para ofrecerte.</p>
+            <p class="leading-xl text-xl font-regular">
+              Mientras tanto, te invitamos a seguirnos en nuestras redes para no
+              perderte ninguna novedad.
+            </p>
+            <ul class="flex gap-4 w-fit mt-4 items-center justify-center">
+              <li>
+                <a href="https://www.facebook.com/mmj.smart" class="text-black-500  hover:text-primary-500 transition-all"><Facebook/></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/mmj-smart" class="text-black-500  hover:text-primary-500 transition-all"><Linkedin/></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@mmjsmartelectronics4335" class="text-black-500  hover:text-primary-500 transition-all"> <Youtube/></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/mmj_smart_electronics/" class="text-black-500 hover:text-primary-500 transition-all"><Instagram/></a>
+              </li>
+            </ul>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </body>
+</html>
