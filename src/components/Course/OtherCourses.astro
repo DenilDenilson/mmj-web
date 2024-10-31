@@ -1,0 +1,56 @@
+---
+import CourseCard from "../Carreras/CourseCard.astro";
+import bgCourseCard from "@src/Images/Carreras/BgCourseCard.png";
+
+const courses = [
+  {
+    bgCourseCard: bgCourseCard,
+    startDate: "12 de febrero del 2025",
+    title: "Desarrollo de Software Embebido con Microcontroladores",
+    description:
+      "Aprende a desarrollar software para sistemas embebidos utilizando microcontroladores y herramientas de programación en tiempo real. Este curso incluye teoría y práctica con ejemplos aplicados a la industria. Este curso incluye teoría y práctica con ejemplos aplicados a la industria.",
+    modality: "virtual",
+    duration: 4,
+    hours: 40,
+    priceBase: 95.9,
+    priceReal: 70,
+  },
+  {
+    bgCourseCard: bgCourseCard,
+    startDate: "12 de febrero del 2025",
+    title: "Desarrollo de Software Embebido con Microcontroladores 2",
+    description:
+      "Aprende a desarrollar software para sistemas embebidos utilizando microcontroladores y herramientas de programación en tiempo real. Este curso incluye teoría y práctica con ejemplos aplicados a la industria. Este curso incluye teoría y práctica con ejemplos aplicados a la industria.",
+    modality: "virtual",
+    duration: 4,
+    hours: 40,
+    priceBase: 95.9,
+    priceReal: 70,
+  },
+  {
+    bgCourseCard: bgCourseCard,
+    startDate: "12 de febrero del 2025",
+    title: "Desarrollo de Software Embebido con Microcontroladores 3",
+    description:
+      "Aprende a desarrollar software para sistemas embebidos utilizando microcontroladores y herramientas de programación en tiempo real. Este curso incluye teoría y práctica con ejemplos aplicados a la industria. Este curso incluye teoría y práctica con ejemplos aplicados a la industria.",
+    modality: "virtual",
+    duration: 4,
+    hours: 40,
+    priceBase: 95.9,
+    priceReal: 70,
+  },
+];
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-7 py-16">
+    <h2
+      class="mb-8 text-center text-3xl font-bold leading-10 text-secondary-500 xs:text-[40px]"
+    >
+      Otros cursos que te podrían interesar
+    </h2>
+    <section class="flex snap-x snap-mandatory gap-8 overflow-x-auto">
+      {courses.map((course) => <CourseCard course={course} />)}
+    </section>
+  </div>
+</section>
