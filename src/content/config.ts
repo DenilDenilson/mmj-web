@@ -2,7 +2,7 @@ import { defineCollection } from "astro:content";
 
 // Definiendo mis colecciones
 const courseCollection = defineCollection({
-  type: "content",
+  type: "data",
 });
 
 export const collections = {
