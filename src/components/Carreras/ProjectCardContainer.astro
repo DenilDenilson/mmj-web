@@ -3,12 +3,37 @@ import ArrowLeft from "@src/Images/icons/ArrowLeft.astro";
 import ArrowRight from "@src/Images/icons/ArrowRight.astro";
 import ProjectCard from "./ProjectCard.astro";
 import type { IProject } from "@src/data/Specialites";
+import bgCourseCard from "@src/Images/Carreras/BgCourseCard.png";
 
 interface Props {
-  projects: IProject[];
+  projects: IProject[] | undefined;
 }
 
-const { projects } = Astro.props;
+const exampleProjects: IProject[] = [
+  {
+    bgProjectCard: bgCourseCard,
+    title: "Diseña de un Sistema de Control para un Robot Móvil",
+    description:
+      "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+    url: "#",
+  },
+  {
+    bgProjectCard: bgCourseCard,
+    title: "Diseña de un Sistema de Control para un Robot Móvil",
+    description:
+      "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+    url: "#",
+  },
+  {
+    bgProjectCard: bgCourseCard,
+    title: "Diseña de un Sistema de Control para un Robot Móvil",
+    description:
+      "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+    url: "#",
+  },
+];
+
+const { projects = exampleProjects } = Astro.props;
 const projectAmount = projects.length;
 ---
 

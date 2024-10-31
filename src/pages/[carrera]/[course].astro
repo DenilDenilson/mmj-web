@@ -4,6 +4,8 @@ import Layout from "@src/layouts/Layout.astro";
 import Hero from "@src/components/Course/Hero.astro";
 import Info from "@src/components/Course/Info.astro";
 import Temario from "@src/components/Course/Temario.astro";
+import Kit from "@src/components/Course/Kit.astro";
+import Projects from "@src/components/Course/Projects.astro";
 
 const { course } = Astro.params;
 
@@ -16,4 +18,6 @@ export const getStaticPaths = (() => {
   <Hero />
   <Info />
   <Temario />
+  <Kit />
+  <Projects />
 </Layout>
