@@ -1,0 +1,44 @@
+---
+import RobotError404 from "@src/Images/RobotError404.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section
+      class="flex h-screen items-center justify-center"
+      style="height: 100vh;"
+    >
+      <div class="mx-auto h-fit w-fit px-7 text-center">
+        <h2 class="mb-4 font-sans text-5xl font-bold text-black-500">
+          Página no encontrada
+        </h2>
+        <figure>
+          <div class="block mx-auto max-w-xl">
+            <RobotError404 class="w-fit" />
+          </div>
+          <figcaption>
+            <p class="text-center text-xl font-light leading-5">
+              Es posible que la página haya sido eliminada o que escribieras mal
+              la URL.
+            </p>
+            <p class="mb-4 text-xl font-light leading-5 text-black-500">
+              ¡No te preocupes, te ayudamos a encontrar el camino correcto!
+            </p>
+            <button
+              type="button"
+              onclick="window.location.href = '/'"
+              class="mx-auto block w-fit rounded bg-primary-500 px-4 py-2 text-white-200"
+              >Volver al inicio</button
+            >
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </body>
+</html>
