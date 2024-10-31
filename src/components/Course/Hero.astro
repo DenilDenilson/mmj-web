@@ -5,7 +5,7 @@ import Check from "@src/Images/icons/Check.astro";
 import Circle from "@src/Images/icons/Circle.astro";
 import Clock from "@src/Images/icons/Clock.astro";
 import Vivo from "@src/Images/icons/Vivo.astro";
-import { getCollection, getEntry } from "astro:content";
+import { getEntry } from "astro:content";
 
 const { carrera, course } = Astro.params;
 const specificCourse = await getEntry("carrers", `${carrera}/${course}`);
