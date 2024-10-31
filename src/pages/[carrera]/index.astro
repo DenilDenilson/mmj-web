@@ -1,0 +1,31 @@
+---
+import type { GetStaticPaths } from "astro";
+import Hero from "@src/components/Carreras/Hero.astro";
+import Courses from "@src/components/Carreras/Courses.astro";
+import Layout from "@src/layouts/Layout.astro";
+import { specialites } from "@src/data/Specialites";
+import Projects from "@src/components/Carreras/Projects.astro";
+import NextLaunch from "@src/components/Carreras/NextLaunch.astro";
+import Plans from "@src/components/Carreras/Plans.astro";
+import Ubication from "@src/components/Home/Ubication.astro";
+
+export const getStaticPaths = (() => {
+  // Las uri se usan para obtener el objeto del archivo Specialites.ts
+  return [{ params: { carrera: "embebido" } }];
+}) satisfies GetStaticPaths;
+
+const { carrera } = Astro.params;
+---
+
+<Layout title="Carreras MMJ">
+  <Hero specialite={specialites[`${carrera}` as keyof typeof specialites]} />
+  <Courses specialite={specialites[`${carrera}` as keyof typeof specialites]} />
+  <Projects
+    specialite={specialites[`${carrera}` as keyof typeof specialites]}
+  />
+  <NextLaunch
+    specialite={specialites[`${carrera}` as keyof typeof specialites]}
+  />
+  <Plans specialite={specialites[`${carrera}` as keyof typeof specialites]} />
+  <Ubication />
+</Layout>

@@ -4,11 +4,11 @@ import Cart from "../Images/icons/Cart.astro";
 import ArrowUp from "@src/Images/icons/ArrowUp.astro";
 ---
 
-<nav
-  class="bg-white fixed w-full border-b border-black-100 bg-white-100 "
->
+<nav class="bg-white fixed w-full border-b border-black-100 bg-white-100">
   <!-- El px es porque el tamaño no es 1440 px sino menos, px-8 menos -->
-  <div class="content-nav mx-auto flex max-w-7xl items-center justify-between px-7 py-2 lg:px-8">
+  <div
+    class="content-nav mx-auto flex max-w-7xl items-center justify-between px-7 py-2 lg:px-8"
+  >
     <img
       src="https://pub-eedd7c54d302456e9ce5b946fb0992af.r2.dev/LogoMMJ.png"
       alt="Logo de MMJ Smart Electronics"
@@ -24,20 +24,18 @@ import ArrowUp from "@src/Images/icons/ArrowUp.astro";
       >
       <a
         href="#"
-        class="rounded-full px-4 py-1 flex items-center gap-1 transition-colors duration-300 hover:bg-[#DDECEE] hover:text-[#155762]"
-        >
+        class="flex items-center gap-1 rounded-full px-4 py-1 transition-colors duration-300 hover:bg-[#DDECEE] hover:text-[#155762]"
+      >
         Cursos
         <span><ArrowUp /></span>
-      </a
-      >
+      </a>
       <a
         href="#"
-        class="rounded-full px-4 py-1 flex items-center gap-1 transition-colors duration-300 hover:bg-[#DDECEE] hover:text-[#155762]"
-        >
+        class="flex items-center gap-1 rounded-full px-4 py-1 transition-colors duration-300 hover:bg-[#DDECEE] hover:text-[#155762]"
+      >
         Servicios
         <span><ArrowUp /></span>
-      </a
-      >
+      </a>
       <a
         href="#"
         class="rounded-full px-4 py-1 transition-colors duration-300 hover:bg-[#DDECEE] hover:text-[#155762]"
@@ -49,7 +47,9 @@ import ArrowUp from "@src/Images/icons/ArrowUp.astro";
         >Contáctanos</a
       >
     </ul>
-    <a class="hidden cursor-pointer md:block px-4 py-2 transition-all duration-500 hover:translate-x-2">
+    <a
+      class="hidden cursor-pointer px-4 py-2 transition-all duration-500 hover:translate-x-2 md:block"
+    >
       <div class="">
         <Cart />
       </div>
@@ -66,8 +66,12 @@ import ArrowUp from "@src/Images/icons/ArrowUp.astro";
       class="menu absolute -right-24 top-[61px] z-50 hidden h-[512px] w-full bg-[#18181B] bg-opacity-30 transition-all duration-300 md:hidden"
     >
       <ul class="z-50 h-full w-3/4 justify-self-end bg-white-200">
-        <li class="border-b border-black-100 px-4 py-6 text-black-800">Inicio</li>
-        <li class="border-b border-black-100 px-4 py-6 text-black-800">Cursos</li>
+        <li class="border-b border-black-100 px-4 py-6 text-black-800">
+          Inicio
+        </li>
+        <li class="border-b border-black-100 px-4 py-6 text-black-800">
+          Cursos
+        </li>
         <li class="border-b border-black-100 px-4 py-6 text-black-800">
           Servicios
         </li>

@@ -1,0 +1,67 @@
+---
+import ArrowLeft from "@src/Images/icons/ArrowLeft.astro";
+import ArrowRight from "@src/Images/icons/ArrowRight.astro";
+import ProjectCard from "./ProjectCard.astro";
+import type { IProject } from "@src/data/Specialites";
+
+interface Props {
+  projects: IProject[];
+}
+
+const { projects } = Astro.props;
+const projectAmount = projects.length;
+---
+
+<div class="overflow-x-hidden border-y border-black-100">
+  <div
+    id="carreras-slider"
+    class="relative left-0 mx-auto mb-4 flex max-w-xl py-10 transition-all duration-300 ease-in-out xs:mb-8"
+  >
+    {
+      projects.map((project: IProject, index: number) => (
+        <div class="min-w-full max-w-96 transition-all duration-300 ease-in-out">
+          <ProjectCard index={index} project={project} />
+        </div>
+      ))
+    }
+  </div>
+</div>
+<ul class="mb-6 flex items-center justify-between gap-2 xs:mb-12">
+  <div id="carreras-leftArrow" class="flex cursor-pointer items-center gap-2">
+    <ArrowLeft />
+    <label for="" class="cursor-pointer text-sm text-black-300 xs:text-base"
+      >Anterior Proyecto</label
+    >
+  </div>
+  <div id="carreras-rightArrow" class="flex cursor-pointer items-center gap-2">
+    <label for="" class="cursor-pointer text-sm text-black-500 xs:text-base"
+      >Siguiente Proyecto</label
+    >
+    <ArrowRight />
+  </div>
+</ul>
+
+<script is:inline define:vars={{ projectAmount }}>
+  // hAZ QUE CUANDO SE HAGA CLICK EN EL BOTÓN DE SIGUIENTE PROYECTO SE MUESTRE EL SIGUIENTE PROYECTO
+  const leftArrow = document.getElementById("carreras-leftArrow");
+  const rightArrow = document.getElementById("carreras-rightArrow");
+  const slider = document.querySelector("#carreras-slider");
+
+  let currentProject = 0;
+
+  rightArrow.addEventListener("click", () => {
+    console.log("right");
+    if (currentProject < projectAmount - 1) {
+      currentProject++;
+      slider.style.left = currentProject * -100 + "%";
+    }
+  });
+
+  leftArrow.addEventListener("click", () => {
+    console.log("left");
+    if (currentProject > 0) {
+      currentProject--;
+      slider.style.left = currentProject * -100 + "%";
+    }
+  });
+</script>

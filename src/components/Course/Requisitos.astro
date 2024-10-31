@@ -1,0 +1,75 @@
+---
+import Check from "@src/Images/icons/Check.astro";
+import Warning from "@src/Images/icons/Warning.astro";
+import ProductCard from "./ProductCard.astro";
+---
+
+<li class="invisible absolute hidden">
+  <ul class="mb-6">
+    <p class="mb-3 font-light text-[#1F2937]">
+      Se recomienda al estudiante tener en cuenta lo siguiente:
+    </p>
+    <li class="mb-1 flex items-center gap-1">
+      <div class="grid h-5 w-5 place-content-center">
+        <Check />
+      </div>
+      <span class="font-light text-[#1F2937]"
+        >Conocimientos básicos de programación</span
+      >
+    </li>
+    <li class="mb-1 flex items-center gap-1">
+      <div class="grid h-5 w-5 place-content-center">
+        <Check />
+      </div>
+      <span class="font-light text-[#1F2937]"
+        >Familiaridad con conceptos de electrónica básica</span
+      >
+    </li>
+    <li class="mb-1 flex items-center gap-1">
+      <div class="grid h-5 w-5 place-content-center">
+        <Check />
+      </div>
+      <span class="font-light text-[#1F2937]">Acceso a una PC o laptop</span>
+    </li>
+    <li class="mb-1 flex items-center gap-1">
+      <div class="grid h-5 w-5 place-content-center">
+        <Check />
+      </div>
+      <span class="font-light text-[#1F2937]">Conexión a Internet estable</span>
+    </li>
+  </ul>
+  <div class="mb-6 flex items-start gap-3">
+    <div class="grid h-10 w-10 place-content-center pt-1">
+      <!-- El pt-1 es para que quede correctamente alineado respecto al texto y no tan arriba -->
+      <Warning />
+    </div>
+    <p class="font-light text-[#1F2937]">
+      Se recomienda contar con un kit de desarrollo (como Arduino, STM32 o PIC),
+      aunque no es obligatorio. Además, necesitarás instalar un IDE (como MPLAB,
+      STM32CubeIDE, o Arduino IDE) para realizar las prácticas.
+    </p>
+  </div>
+  <a
+    href="#"
+    class="mb-6 inline-block rounded bg-primary-500 px-6 py-3 text-white-200 hover:bg-primary-400"
+  >
+    Quiero adquirir el kit de desarrollo
+  </a>
+  <section>
+    <h6 class="mb-6 text-center text-black-900">
+      Puedes revisar nuestra tienda
+    </h6>
+    <ul class="mb-6 flex snap-x snap-mandatory gap-12 overflow-x-auto">
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+    </ul>
+    <div class="grid place-content-center">
+      <a
+        href=""
+        class="rounded border border-black-300 px-6 py-3 text-black-300"
+        >Ir a tienda</a
+      >
+    </div>
+  </section>
+</li>

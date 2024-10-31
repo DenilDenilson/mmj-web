@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+
+interface IProject {
+  bgProjectCard: ImageMetadata;
+  title: string;
+  description: string;
+  url: string;
+}
+
+const { project, index } = Astro.props;
+const { bgProjectCard } = project as IProject;
+---
+
+<figure>
+  <Image
+    src={bgProjectCard}
+    alt="Imagen de Proyectos Prácticos"
+    class="mb-6 rounded"
+  />
+  <figcaption class="mb-2 xs:mb-6">
+    <h5 class="text-xl font-bold text-primary-500 xs:text-2xl">
+      Proyecto {(index + 1).toString().padStart(2, "0")}
+    </h5>
+    <h4 class="text-xl leading-tight text-black-500 xs:text-2xl">
+      Diseño de un Sistema de Control para un Robot Móvil
+    </h4>
+  </figcaption>
+</figure>
+<p class="mb-6 text-sm font-light leading-tight text-black-500 xs:text-base">
+  Desarrollarás un sistema de control embebido para electrodomésticos,
+  integrando sensores y actuadores para mejorar su eficiencia y automatización.
+</p>
+<a
+  href="#"
+  class="inline-block rounded border border-black-300 px-6 py-3 text-black-300 hover:bg-white-100"
+  >Ver proyecto</a
+>
