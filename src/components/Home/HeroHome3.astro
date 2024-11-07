@@ -1,16 +1,21 @@
 ---
 import bgHomeHero3 from "@src/Images/Home/bg-HomeHero3.avif";
+import bgHomeHeroDesktop3 from "@src/Images/Home/bgHomeHeroDesktop3.avif";
 import HeroHomeLayout from "./HeroHomeLayout.astro";
 ---
 
-<HeroHomeLayout bgImage={bgHomeHero3}>
-  <h1 class="mb-6 text-pretty text-4xl font-extralight text-white-200">
+<HeroHomeLayout bgImage={bgHomeHero3} bgImageDesktop={bgHomeHeroDesktop3}>
+  <h1
+    class="mb-6 min-h-28 text-pretty text-4xl font-extralight text-white-200 xs:text-5xl md:text-4xl"
+  >
     <span class="font-bold">Proyectos Exitosos</span>
     Para Empresas que Creen en la
     <span class="font-bold">Innovación</span>
   </h1>
   <p class="text-pretty text-xl font-light leading-tight text-white-300">
     Descubre nuestros proyectos en hardware, software e IoT, diseñados para
-    cumplir con los más altos estándares empresariales.
+    cumplir con los más altos estándares de calidad y adaptarse a las
+    necesidades específicas de tu empresa, asegurando soluciones innovadoras y
+    de alto rendimiento.
   </p>
 </HeroHomeLayout>

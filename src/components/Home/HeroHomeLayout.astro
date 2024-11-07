@@ -4,43 +4,52 @@ import formandoEspecialistas from "@src/Images/Home/FormandoEspecialistas.png";
 
 interface Props {
   bgImage: ImageMetadata;
+  bgImageDesktop: ImageMetadata;
 }
 
-const { bgImage } = Astro.props;
+const { bgImage, bgImageDesktop } = Astro.props;
 ---
 
 <div
-  class="relative mx-auto flex min-w-full max-w-7xl flex-col items-start justify-between px-7 pb-16 pt-8 md:flex-row md:px-8 md:py-20"
+  class="relative mx-auto flex h-fit min-w-full max-w-7xl flex-col items-start justify-between px-7 pb-24 pt-8 sm:justify-start md:flex-row md:items-center md:gap-0 md:py-16"
 >
-  <div class="absolute left-0 top-0 -z-10 h-full">
-    <div class="absolute inset-0 z-10 bg-[#11171E70]">
-      <!-- Overlay negro -->
-    </div>
+  <div class="absolute left-0 top-0 -z-10 h-full md:left-auto md:right-0">
+    <div class="absolute inset-0 z-10 bg-[#11171E90] lg:hidden"></div>
+    <Image
+      src={bgImageDesktop}
+      alt="Imagen de un grupo de ingenieros haciendo un proyecto sobre una mesa"
+      class="hidden h-full object-cover md:block"
+    />
     <Image
       src={bgImage}
       alt="Imagen de un grupo de ingenieros haciendo un proyecto sobre una mesa"
-      class="h-full object-cover"
+      class="h-full object-cover md:hidden"
     />
   </div>
-  <div class="mb-8 md:mb-0">
-    <hgroup class="mb-8 max-w-xl md:mb-16">
-      <slot />
-    </hgroup>
-    <div class="flex flex-col gap-4 md:flex-row md:gap-16">
-      <a
-        href="#"
-        class="rounded bg-primary-400 py-4 text-center leading-base text-white-200 ring-1 ring-inset ring-primary-400 transition-all duration-75 hover:bg-primary-500 md:px-8"
-        >Ver líneas de carrera</a
-      >
-      <a
-        href="consultoria"
-        class="rounded border border-white-200 py-4 text-center leading-base text-white-200 transition-all duration-100 hover:bg-white-900 md:px-8"
-        >Solicitar Consultoría</a
-      >
+  <div>
+    <div class="mb-8">
+      <hgroup class="mb-8 max-w-xl sm:mb-32 md:mb-8">
+        <slot />
+      </hgroup>
+      <div class="flex flex-col gap-4 md:flex-row md:gap-16">
+        <a
+          href="#"
+          class="rounded bg-primary-400 py-4 text-center leading-base text-white-200 ring-1 ring-inset ring-primary-400 transition-all duration-75 hover:bg-primary-500 md:px-8"
+          >Ver líneas de carrera</a
+        >
+        <a
+          href="consultoria"
+          class="rounded border border-white-200 py-4 text-center leading-base text-white-200 transition-all duration-100 hover:bg-white-900 md:px-8"
+          >Solicitar Consultoría</a
+        >
+      </div>
+    </div>
+    <div class="self-start md:self-start">
+      <Image
+        src={formandoEspecialistas}
+        alt={"Frase de 'Formando especialistas' de MMJ"}
+        class="mx-auto md:mx-0"
+      />
     </div>
   </div>
-  <Image
-    src={formandoEspecialistas}
-    alt={"Frase de 'Formando especialistas' de MMJ"}
-  />
 </div>

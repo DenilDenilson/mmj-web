@@ -4,8 +4,8 @@ import HeroHome2 from "./HeroHome2.astro";
 import HeroHome3 from "./HeroHome3.astro";
 ---
 
-<section class="pt-14">
-  <div id="sliderControl" class="">
+<section class="bg-black-800 pt-14">
+  <div id="sliderControl" class="relative mx-auto max-w-7xl px-7 md:px-8">
     <input
       class="hidden"
       checked
@@ -16,7 +16,7 @@ import HeroHome3 from "./HeroHome3.astro";
     <input class="hidden" type="radio" name="heroSelector" id="heroSelector2" />
     <input class="hidden" type="radio" name="heroSelector" id="heroSelector3" />
     <div id="heroSlider" class="overflow-x-hidden">
-      <div id="heroContainer" class="flex transition-all duration-300">
+      <div id="heroContainer" class="flex h-fit transition-all duration-300">
         <HeroHome1 />
         <HeroHome2 />
         <HeroHome3 />
@@ -24,7 +24,7 @@ import HeroHome3 from "./HeroHome3.astro";
     </div>
     <ul
       id="heroSelector"
-      class="absolute bottom-4 left-0 right-0 mx-auto flex w-fit gap-4"
+      class="absolute bottom-8 left-0 right-0 mx-auto flex w-fit gap-4"
     >
       <label
         for="heroSelector1"
