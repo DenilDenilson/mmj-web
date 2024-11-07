@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import formandoEspecialistas from "@src/Images/Home/FormandoEspecialistas.png";
+
+interface Props {
+  bgImage: ImageMetadata;
+}
+
+const { bgImage } = Astro.props;
+---
+
+<div
+  class="relative mx-auto flex min-w-full max-w-7xl flex-col items-start justify-between px-7 pb-16 pt-8 md:flex-row md:px-8 md:py-20"
+>
+  <div class="absolute left-0 top-0 -z-10 h-full">
+    <div class="absolute inset-0 z-10 bg-[#11171E70]">
+      <!-- Overlay negro -->
+    </div>
+    <Image
+      src={bgImage}
+      alt="Imagen de un grupo de ingenieros haciendo un proyecto sobre una mesa"
+      class="h-full object-cover"
+    />
+  </div>
+  <div class="mb-8 md:mb-0">
+    <hgroup class="mb-8 max-w-xl md:mb-16">
+      <slot />
+    </hgroup>
+    <div class="flex flex-col gap-4 md:flex-row md:gap-16">
+      <a
+        href="#"
+        class="rounded bg-primary-400 py-4 text-center leading-base text-white-200 ring-1 ring-inset ring-primary-400 transition-all duration-75 hover:bg-primary-500 md:px-8"
+        >Ver líneas de carrera</a
+      >
+      <a
+        href="consultoria"
+        class="rounded border border-white-200 py-4 text-center leading-base text-white-200 transition-all duration-100 hover:bg-white-900 md:px-8"
+        >Solicitar Consultoría</a
+      >
+    </div>
+  </div>
+  <Image
+    src={formandoEspecialistas}
+    alt={"Frase de 'Formando especialistas' de MMJ"}
+  />
+</div>

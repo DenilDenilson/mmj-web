@@ -2,18 +2,17 @@
 import Hamburguer from "@src/Images/icons/Hamburguer.astro";
 import Cart from "../Images/icons/Cart.astro";
 import ArrowUp from "@src/Images/icons/ArrowUp.astro";
+import LogoLarge from "@src/Images/icons/LogoLarge.astro";
 ---
 
-<nav class="bg-white fixed w-full border-b border-black-100 bg-white-100">
+<nav
+  class="bg-white fixed w-full border-b border-black-100 bg-gradient-to-r from-[#9B2035] to-[#DD455F]"
+>
   <!-- El px es porque el tamaño no es 1440 px sino menos, px-8 menos -->
   <div
-    class="content-nav mx-auto flex max-w-7xl items-center justify-between px-7 py-2 lg:px-8"
+    class="content-nav mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8"
   >
-    <img
-      src="https://pub-eedd7c54d302456e9ce5b946fb0992af.r2.dev/LogoMMJ.png"
-      alt="Logo de MMJ Smart Electronics"
-      class="h-11 md:h-14"
-    />
+    <LogoLarge />
     <ul
       class="hidden gap-4 font-sans text-base font-normal text-black-600 md:flex"
     >

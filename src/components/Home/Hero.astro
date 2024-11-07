@@ -1,47 +1,83 @@
 ---
-import { Image } from "astro:assets";
-import HeroImage from "@src/Images/Home/Video.png";
+import HeroHome1 from "./HeroHome1.astro";
+import HeroHome2 from "./HeroHome2.astro";
+import HeroHome3 from "./HeroHome3.astro";
 ---
 
 <section class="pt-14">
-  <div
-    class="mx-auto flex max-w-7xl flex-col items-start justify-between px-7 pb-16 pt-8 md:flex-row md:px-8 md:py-20"
-  >
-    <div class="mb-12 md:mb-0">
-      <hgroup class="mb-8 max-w-xl md:mb-16">
-        <h1 class="mb-6 text-pretty text-5xl font-bold text-black-800">
-          Impulsa tu carrera con nuestros <span class="text-primary-500"
-            >cursos y soluciones tecnológicas</span
-          > personalizadas
-        </h1>
-        <p class="text-pretty text-2xl font-light leading-7 text-black-500">
-          Cursos online en IoT, desarrollo de sistemas embebidos y software, con
-          servicios de desarrollo personalizados para empresas de todo el mundo.
-        </p>
-      </hgroup>
-      <div class="flex flex-col gap-6 md:flex-row md:gap-16">
-        <a
-          href="#"
-          class="rounded bg-primary-500 py-4 text-center leading-base text-white-200 hover:bg-primary-400 md:px-8"
-          >Ver cursos</a
-        >
-        <a
-          href="#"
-          class="rounded border border-black-300 py-4 text-center leading-base text-black-300 hover:border-primary-400 hover:text-primary-400 md:px-8"
-          >Solicitar Consultoría</a
-        >
+  <div id="sliderControl" class="">
+    <input
+      class="hidden"
+      checked
+      type="radio"
+      name="heroSelector"
+      id="heroSelector1"
+    />
+    <input class="hidden" type="radio" name="heroSelector" id="heroSelector2" />
+    <input class="hidden" type="radio" name="heroSelector" id="heroSelector3" />
+    <div id="heroSlider" class="overflow-x-hidden">
+      <div id="heroContainer" class="flex transition-all duration-300">
+        <HeroHome1 />
+        <HeroHome2 />
+        <HeroHome3 />
       </div>
     </div>
-    <div class="md:-translate-y-8">
-      <div class="">
-        <Image src={HeroImage} alt={"Video del home de MMJ"} />
-      </div>
-      <ul class="flex flex-col items-end text-sm font-light text-black-500">
-        <li>100% cursos en línea</li>
-        <li>Consultoría personalizada</li>
-        <li>Innovación en cada desarrollo</li>
-        <li>Proyectos adaptados a tus necesidades</li>
-      </ul>
-    </div>
+    <ul
+      id="heroSelector"
+      class="absolute bottom-4 left-0 right-0 mx-auto flex w-fit gap-4"
+    >
+      <label
+        for="heroSelector1"
+        id="selectHero1"
+        class="h-4 w-4 cursor-pointer rounded-full bg-white-200 transition-colors duration-200 hover:bg-secondary-400"
+      >
+      </label>
+      <label
+        for="heroSelector2"
+        id="selectHero2"
+        class="h-4 w-4 cursor-pointer rounded-full bg-white-200 transition-colors duration-200 hover:bg-secondary-400"
+      >
+      </label>
+      <label
+        for="heroSelector3"
+        id="selectHero3"
+        class="h-4 w-4 cursor-pointer rounded-full bg-white-200 transition-colors duration-200 hover:bg-secondary-400"
+      >
+      </label>
+    </ul>
   </div>
 </section>
+
+<style>
+  #sliderControl > input:nth-child(1):checked ~ #heroSlider > #heroContainer {
+    transform: translateX(0%);
+  }
+  #sliderControl > input:nth-child(2):checked ~ #heroSlider > #heroContainer {
+    transform: translateX(-100%);
+  }
+  #sliderControl > input:nth-child(3):checked ~ #heroSlider > #heroContainer {
+    transform: translateX(-200%);
+  }
+
+  #sliderControl > input:nth-child(1):checked ~ #heroSelector > :nth-child(1),
+  #sliderControl > input:nth-child(2):checked ~ #heroSelector > :nth-child(2),
+  #sliderControl > input:nth-child(3):checked ~ #heroSelector > :nth-child(3) {
+    scale: 1.5;
+    background: #4a94a0;
+  }
+</style>
+
+<!-- <div class="md:-translate-y-8">
+ 
+DESAPARECIÓ EN EL NUEVO DISEÑO
+
+<div class="">
+    <Image src={HeroImage} alt={"Video del home de MMJ"} />
+  </div>
+  <ul class="flex flex-col items-end text-sm font-light text-black-500">
+    <li>Educación online y presencial</li>
+    <li>Proyectos adaptados a tus necesidades</li>
+    <li>Innovación en cada desarrollo</li>
+    <li>Consultoría personalizada</li>
+  </ul>
+</div> -->
