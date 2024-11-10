@@ -61,17 +61,22 @@ const specialites = [
     <SpecialiteImageContainer />
     <div class="flex flex-col items-center">
       <hgroup class="">
-        <h2 class="mb-6 text-center text-[40px] font-bold text-secondary-400">
+        <h2
+          id="SpecialitesTitle"
+          class="mb-6 text-center text-[40px] font-bold text-secondary-400"
+        >
           Explora Nuestras Especialidades
         </h2>
-        <p class="max-w-3xl mb-12 text-pretty text-center text-xl line-height-xl text-black-500">
+        <p
+          class="line-height-xl mb-12 max-w-3xl text-pretty text-center text-xl text-black-500"
+        >
           Cada una de nuestras especialidades ofrece un conjunto de cursos
           diseñados para desarrollar habilidades clave en áreas tecnológicas de
           alta demanda.
         </p>
       </hgroup>
       <div
-        class="z-10 mb-12 grid grid-cols-1 w-full justify-items-end sm:justify-items-center grid-rows-6 gap-8 md:translate-x-0 md:grid-cols-2 md:grid-rows-3"
+        class="z-10 mb-12 grid w-full grid-cols-1 grid-rows-6 justify-items-end gap-8 sm:justify-items-center md:translate-x-0 md:grid-cols-2 md:grid-rows-3"
       >
         {
           specialites.map((specialite) => (
