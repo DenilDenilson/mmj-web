@@ -1,6 +1,8 @@
 ---
 import type { ISpecialite } from "@src/data/Specialites";
 import CourseCard from "./CourseCard.astro";
+import ObjectiveCardContainer from "./ObjectiveCardContainer.astro";
+import { getEntry } from "astro:content";
 
 interface Props {
   specialite: ISpecialite;
@@ -8,10 +10,32 @@ interface Props {
 
 const { specialite } = Astro.props;
 const { courses } = specialite;
+
+const { carrera } = Astro.params;
+const specificCarrer = await getEntry("carrers", `${carrera}/details`);
+
+const {
+  title,
+  description,
+  goals,
+  backgroundHeroImage,
+  studentProfile,
+  skillsTech,
+  canPerform,
+} = specificCarrer?.data || {};
+---
+
 ---
 
 <section>
-  <div class="mx-auto max-w-7xl px-6 py-16">
+  <div class="mx-auto max-w-7xl px-6 py-16 md:relative md:pt-32">
+    <div class="hidden md:absolute md:-top-48 md:z-50 md:block">
+      <ObjectiveCardContainer
+        studentProfile={studentProfile}
+        skillsTech={skillsTech}
+        canPerform={canPerform}
+      />
+    </div>
     <main class="flex snap-x snap-mandatory overflow-x-auto">
       {courses.map((course) => <CourseCard course={course} />)}
     </main>

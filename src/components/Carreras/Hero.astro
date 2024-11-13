@@ -1,15 +1,22 @@
 ---
-import type { ISpecialite } from "@src/data/Specialites";
+import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
+import bgEmbebidoDesktop from "@src/Images/Carreras/HeroBgDesktop.avif";
 import Chip from "@src/Images/icons/Chip.astro";
 import GoalSpecialite from "./GoalSpecialite.astro";
-import { Image } from "astro:assets";
 import ObjectiveCardContainer from "./ObjectiveCardContainer.astro";
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 
-interface Props {
-  specialite: ISpecialite;
-}
+const bgImages = {
+  embebido: {
+    mobile: bgEmbebido,
+    desktop: bgEmbebidoDesktop,
+  },
+};
 
-const { specialite } = Astro.props;
+const { carrera } = Astro.params;
+const specificCarrer = await getEntry("carrers", `${carrera}/details`);
+
 const {
   title,
   description,
@@ -18,21 +25,28 @@ const {
   studentProfile,
   skillsTech,
   canPerform,
-} = specialite;
+} = specificCarrer?.data || {};
 ---
 
-<section class="">
+<section class="md:bg-black-900">
+  <Image
+    class="invisible absolute left-0 right-0 top-20 mx-auto hidden h-full w-full object-cover md:visible md:z-10 md:block md:h-auto"
+    src={bgImages[backgroundHeroImage as keyof typeof bgImages].desktop}
+    alt="Imagen de fondo de alguien programando"
+  />
   <div class="h-12 w-full"></div>
   <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
   <div class="relative mx-auto max-w-7xl overflow-x-hidden">
-    <picture class="absolute -z-50 aspect-[2/1] h-full bg-white-50">
+    <picture
+      class="absolute -z-50 aspect-[2/1] h-full bg-white-50 md:z-0 md:bg-black-900"
+    >
       <Image
-        class="absolute -left-[64rem] -top-24 h-full w-full object-cover"
-        src={backgroundHeroImage}
+        class="absolute -left-[64rem] -top-24 block h-full w-full object-cover md:hidden"
+        src={bgImages[backgroundHeroImage as keyof typeof bgImages].mobile}
         alt="Imagen de fondo de alguien programando"
       />
     </picture>
-    <div class="px-6 py-8">
+    <div class="z-10 px-6 py-8 md:relative md:pb-44">
       <div class="mb-1 grid h-10 w-10 place-content-center">
         <Chip fill="#E9EAEB" width="40" height="40" />
       </div>
@@ -41,13 +55,13 @@ const {
           {title}
         </h3>
         <p
-          class="mb-6 text-base leading-5 tracking-tight text-white-200 xs:text-xl"
+          class="mb-6 text-base leading-tight tracking-tight text-white-200 xs:text-xl lg:max-w-3xl lg:font-light"
         >
           {description}
         </p>
       </hgroup>
       <ul class="mb-6 pl-4">
-        <h4 class="relative mb-3 text-xl font-bold text-white-200">
+        <h4 class="relative mb-3 text-xl font-bold text-white-200 lg:max-w-xl">
           Objetivos de la especialidad
           <span class="absolute bottom-0 left-0 h-[2px] w-4/5 bg-primary-400">
             <span
@@ -56,10 +70,10 @@ const {
             </span>
           </span>
         </h4>
-        {goals.map((goal) => <GoalSpecialite goal={goal} />)}
+        {goals?.map((goal: string) => <GoalSpecialite goal={goal} />)}
       </ul>
       <hgroup class="mb-4 pl-4">
-        <h4 class="relative mb-3 text-xl font-bold text-white-300">
+        <h4 class="relative mb-3 text-xl font-bold text-white-300 lg:max-w-2xl">
           Ruta Recomendada para esta Especialidad
           <span class="absolute bottom-0 left-0 h-[2px] w-full bg-primary-400">
             <span
@@ -68,22 +82,26 @@ const {
             </span>
           </span>
         </h4>
-        <p class="text-base leading-5 tracking-tight text-white-300">
+        <p
+          class="text-base leading-5 tracking-tight text-white-300 lg:max-w-2xl"
+        >
           Te recomendamos seguir este orden de cursos para un aprendizaje
           completo y estructurado que te permitirá desarrollar las competencias
           necesarias en cada área.
         </p>
       </hgroup>
       <a
-        href=""
-        class="ml-4 inline-block rounded border border-white-300 px-4 py-2 text-white-300"
+        href="/soon"
+        class="ml-4 inline-block rounded border border-white-300 px-4 py-2 text-white-300 transition-colors duration-200 hover:bg-white-300 hover:text-black-900"
         >Ver ruta</a
       >
-      <ObjectiveCardContainer
-        studentProfile={studentProfile}
-        skillsTech={skillsTech}
-        canPerform={canPerform}
-      />
+      <div class="md:hidden">
+        <ObjectiveCardContainer
+          studentProfile={studentProfile}
+          skillsTech={skillsTech}
+          canPerform={canPerform}
+        />
+      </div>
     </div>
   </div>
 </section>
