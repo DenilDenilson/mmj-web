@@ -18,8 +18,7 @@ const { carrera } = Astro.params;
 ---
 
 <Layout title="Carreras MMJ">
-  <Hero specialite={specialites[`${carrera}` as keyof typeof specialites]} />
-
+  <Hero />
   <Courses specialite={specialites[`${carrera}` as keyof typeof specialites]} />
   <Projects
     specialite={specialites[`${carrera}` as keyof typeof specialites]}

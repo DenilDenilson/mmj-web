@@ -15,7 +15,7 @@ const bgImages = {
 };
 
 const { carrera } = Astro.params;
-const specificCarrer = await getEntry("carrers", `${carrera}/details`);
+const specificCarrer = await getEntry("carrers", `${carrera}`);
 
 const {
   title,

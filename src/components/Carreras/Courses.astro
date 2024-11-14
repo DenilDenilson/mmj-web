@@ -12,32 +12,34 @@ const { specialite } = Astro.props;
 const { courses } = specialite;
 
 const { carrera } = Astro.params;
-const specificCarrer = await getEntry("carrers", `${carrera}/details`);
+const specificCarrer = await getEntry("carrers", `${carrera}`);
 
-const {
-  title,
-  description,
-  goals,
-  backgroundHeroImage,
-  studentProfile,
-  skillsTech,
-  canPerform,
-} = specificCarrer?.data || {};
----
-
+const { studentProfile, skillsTech, canPerform } = specificCarrer?.data || {};
 ---
 
 <section>
-  <div class="mx-auto max-w-7xl px-6 py-16 md:relative md:pt-32">
-    <div class="hidden md:absolute md:-top-48 md:z-50 md:block">
+  <div class="px-6 py-16 md:relative md:pt-32 lg:px-0">
+    <div
+      class="left-0 right-0 mx-auto hidden max-w-7xl md:absolute md:-top-48 md:z-50 md:block"
+    >
       <ObjectiveCardContainer
         studentProfile={studentProfile}
         skillsTech={skillsTech}
         canPerform={canPerform}
       />
     </div>
-    <main class="flex snap-x snap-mandatory overflow-x-auto">
+    <ul
+      id="courses-in-carrer"
+      class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-2 py-4 lg:block lg:px-0"
+    >
       {courses.map((course) => <CourseCard course={course} />)}
-    </main>
+    </ul>
   </div>
 </section>
+
+<style is:global>
+  @media (min-width: 1024px) {
+    #courses-in-carrer:nth-child(even) {
+    }
+  }
+</style>

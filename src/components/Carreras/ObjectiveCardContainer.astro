@@ -24,7 +24,7 @@ const { studentProfile, skillsTech, canPerform } = Astro.props;
     <p class="font-light leading-4 tracking-wide text-black-400">
       <ul>
         {
-          skillsTech.map((skill: string) => (
+          skillsTech?.map((skill: string) => (
             <li class="mb-1 flex items-center gap-1">
               <div class="grid h-5 w-5 place-content-center">
                 <Check fill="#1D7988" />
@@ -45,7 +45,7 @@ const { studentProfile, skillsTech, canPerform } = Astro.props;
     <p class="font-light leading-4 tracking-wide text-black-400">
       <ul>
         {
-          canPerform.map((perform: string) => (
+          canPerform?.map((perform: string) => (
             <li class="mb-1 flex items-center gap-1">
               <div class="grid h-5 w-5 place-content-center">
                 <Check fill="#1D7988" />
