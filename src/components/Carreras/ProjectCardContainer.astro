@@ -19,14 +19,14 @@ const exampleProjects: IProject[] = [
   },
   {
     bgProjectCard: bgCourseCard,
-    title: "Diseña de un Sistema de Control para un Robot Móvil",
+    title: "Diseña de un Sistema de Control para un Robot Móvil 2",
     description:
       "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
     url: "#",
   },
   {
     bgProjectCard: bgCourseCard,
-    title: "Diseña de un Sistema de Control para un Robot Móvil",
+    title: "Diseña de un Sistema de Control para un Robot Móvil 3",
     description:
       "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
     url: "#",
@@ -40,31 +40,45 @@ const projectAmount = projects.length;
 <div class="overflow-x-hidden border-y border-black-100">
   <div
     id="carreras-slider"
-    class="relative left-0 mx-auto mb-4 flex max-w-xl py-10 transition-all duration-300 ease-in-out xs:mb-8"
+    class="relative left-0 mx-auto mb-4 flex py-10 transition-all duration-300 ease-in-out xs:mb-8 lg:mb-0"
   >
     {
       projects.map((project: IProject, index: number) => (
-        <div class="min-w-full max-w-96 transition-all duration-300 ease-in-out">
+        <div class="min-w-full transition-all duration-300 ease-in-out">
           <ProjectCard index={index} project={project} />
         </div>
       ))
     }
   </div>
 </div>
-<ul class="mb-6 flex items-center justify-between gap-2 xs:mb-12">
-  <div id="carreras-leftArrow" class="flex cursor-pointer items-center gap-2">
-    <ArrowLeft />
-    <label for="" class="cursor-pointer text-sm text-black-300 xs:text-base"
-      >Anterior Proyecto</label
+<div class="lg:mt-6 lg:flex lg:gap-8">
+  <div class="hidden lg:block lg:min-w-64 lg:flex-1"></div>
+  <!-- Simulamos un cuadro para poder alinear correctamente  -->
+  <ul
+    class="lg:ml-0-0 mx-auto mb-6 flex items-center justify-between gap-2 xs:mb-12 lg:min-w-[672px]"
+  >
+    <div
+      id="carreras-leftArrow"
+      class="flex cursor-pointer items-center gap-2 text-black-500"
     >
-  </div>
-  <div id="carreras-rightArrow" class="flex cursor-pointer items-center gap-2">
-    <label for="" class="cursor-pointer text-sm text-black-500 xs:text-base"
-      >Siguiente Proyecto</label
+      <ArrowLeft />
+      <label for="" class="cursor-pointer text-sm xs:text-base"
+        >Anterior Proyecto</label
+      >
+    </div>
+    <div
+      id="carreras-rightArrow"
+      class="flex cursor-pointer items-center gap-2"
     >
-    <ArrowRight />
-  </div>
-</ul>
+      <label
+        for=""
+        class="cursor-pointer text-right text-sm text-black-500 xs:text-base"
+        >Siguiente Proyecto</label
+      >
+      <ArrowRight />
+    </div>
+  </ul>
+</div>
 
 <script is:inline define:vars={{ projectAmount }}>
   // hAZ QUE CUANDO SE HAGA CLICK EN EL BOTÓN DE SIGUIENTE PROYECTO SE MUESTRE EL SIGUIENTE PROYECTO
