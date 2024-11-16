@@ -7,157 +7,168 @@ const { specialite } = Astro.props;
 
 <section>
   <div class="mx-auto max-w-7xl px-7 py-16">
-    <h2 class="mb-12 text-[40px] font-bold leading-tight">
+    <h2
+      class="mb-12 text-center text-[40px] font-bold leading-tight text-secondary-500"
+    >
       También tenemos planes para ti
     </h2>
-    <div
-      class="mx-auto w-fit rounded-t-lg bg-primary-400 px-12 py-2 font-bold text-white-100"
-    >
-      Más seleccionado
+    <div class="lg:mb-12 lg:flex lg:justify-center lg:gap-32">
+      <div>
+        <div
+          class="mx-auto w-fit rounded-t-lg bg-primary-400 px-12 py-2 font-bold text-white-100"
+        >
+          Más seleccionado
+        </div>
+        <section
+          class="mx-auto mb-16 max-w-96 rounded-2xl border border-primary-400 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] lg:mb-0"
+        >
+          <header
+            class="mb-6 text-center text-[40px] font-bold leading-none text-primary-500"
+          >
+            Pack de 3 cursos
+          </header>
+          <div class="mb-6">
+            <p class="grid place-content-center gap-2">
+              <span class="text-center text-sm font-light text-black-500"
+                >Precio regular</span
+              >
+              <span class="text-center text-sm text-black-500 line-through"
+                >$ 300 USD</span
+              >
+            </p>
+            <p class="grid place-content-center">
+              <span class="flex items-baseline gap-1">
+                <span class="self-start text-xl text-black-500">$</span>
+                <span class="text-5xl font-bold text-black-500">240</span>
+                <span class="text-2xl font-bold text-black-500">USD</span>
+              </span>
+            </p>
+            <p class="flex items-baseline justify-center gap-2">
+              <span class="font-light text-secondary-500">Ahorra </span><span
+                class="text-secondary-500">60 $</span
+              >
+            </p>
+          </div>
+          <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
+            <Chip width="76" height="76" />
+          </div>
+          <p class="mb-6 text-center text-sm leading-tight text-black-500">
+            Selecciona 3 cursos de la especialidad de Desarrollo de Software
+            Embebido y disfruta de un 20% de descuento en tu compra.
+          </p>
+          <ul class="mb-6">
+            <li class="mb-1 flex items-center gap-1">
+              <div class="grid h-5 w-5 place-content-center">
+                <Check fill="#C40B2A" />
+              </div>
+              <span class="font-light text-black-500"
+                >Selección Flexible de 3 cursos</span
+              >
+            </li>
+            <li class="mb-1 flex items-center gap-1">
+              <div class="grid h-5 w-5 place-content-center">
+                <Check fill="#C40B2A" />
+              </div>
+              <span class="font-light text-black-500">20 % de Descuento</span>
+            </li>
+            <li class="mb-1 flex items-center gap-1">
+              <div class="grid h-5 w-5 place-content-center">
+                <Check fill="#C40B2A" />
+              </div>
+              <span class="font-light text-black-500">Material de Apoyo</span>
+            </li>
+            <li class="mb-1 flex items-center gap-1">
+              <div class="grid h-5 w-5 place-content-center">
+                <Check fill="#C40B2A" />
+              </div>
+              <span class="font-light text-black-500">Proyectos Incluidos</span>
+            </li>
+            <li class="mb-1 flex items-center gap-1">
+              <div class="grid h-5 w-5 place-content-center">
+                <Check fill="#C40B2A" />
+              </div>
+              <span class="font-light text-black-500"
+                >Certificación Parcial</span
+              >
+            </li>
+          </ul>
+          <p class="">
+            <a
+              class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
+              href="#">Adquirir plan</a
+            >
+          </p>
+        </section>
+      </div>
+      <section
+        class="mx-auto mb-12 max-w-96 rounded-2xl border border-white-600 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] lg:mx-0 lg:mb-0 lg:mt-10"
+      >
+        <header
+          class="mb-6 text-center text-[40px] font-bold leading-none text-black-500"
+        >
+          Desafío de Especialidad
+        </header>
+        <div class="mb-6">
+          <p class="grid place-content-center">
+            <span class="flex items-baseline gap-1">
+              <span class="self-start text-xl text-black-500">$</span>
+              <span class="text-5xl font-bold text-black-500">370</span>
+              <span class="text-2xl font-bold text-black-500">USD</span>
+            </span>
+          </p>
+        </div>
+        <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
+          <Chip width="76" height="76" />
+        </div>
+        <p class="mb-6 text-center text-sm leading-tight text-black-500">
+          Accede a toda la especialidad de {specialite.title}.
+        </p>
+        <ul class="mb-6">
+          <li class="mb-1 flex items-center gap-1">
+            <div class="grid h-5 w-5 place-content-center">
+              <Check fill="#1F2937" />
+            </div>
+            <span class="font-light text-black-500"
+              >Acceso a todos los cursos</span
+            >
+          </li>
+          <li class="mb-1 flex items-center gap-1">
+            <div class="grid h-5 w-5 place-content-center">
+              <Check fill="#1F2937" />
+            </div>
+            <span class="font-light text-black-500">Material Exclusivo</span>
+          </li>
+          <li class="mb-1 flex items-center gap-1">
+            <div class="grid h-5 w-5 place-content-center">
+              <Check fill="#1F2937" />
+            </div>
+            <span class="font-light text-black-500">Proyectos Prácticos</span>
+          </li>
+          <li class="mb-1 flex items-center gap-1">
+            <div class="grid h-5 w-5 place-content-center">
+              <Check fill="#1F2937" />
+            </div>
+            <span class="font-light text-black-500">Soporte Continuo</span>
+          </li>
+          <li class="mb-1 flex items-center gap-1">
+            <div class="grid h-5 w-5 place-content-center">
+              <Check fill="#1F2937" />
+            </div>
+            <span class="font-light text-black-500">Certificación Completa</span
+            >
+          </li>
+        </ul>
+        <p class="translate-y-[50px]">
+          <a
+            class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
+            href="#">Adquirir plan</a
+          >
+        </p>
+      </section>
     </div>
-    <section
-      class="mb-16 rounded-2xl border border-primary-400 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25]"
+    <p
+      class="text-center font-light text-primary-500 md:text-lg lg:text-xl lg:font-medium"
     >
-      <header
-        class="mb-6 text-center text-[40px] font-bold leading-none text-primary-500"
-      >
-        Pack de 3 cursos
-      </header>
-      <div class="mb-6">
-        <p class="grid place-content-center gap-2">
-          <span class="text-center text-sm font-light text-black-500"
-            >Precio regular</span
-          >
-          <span class="text-center text-sm text-black-500 line-through"
-            >$ 300 USD</span
-          >
-        </p>
-        <p class="grid place-content-center">
-          <span class="flex items-baseline gap-1">
-            <span class="self-start text-xl text-black-500">$</span>
-            <span class="text-5xl font-bold text-black-500">240</span>
-            <span class="text-2xl font-bold text-black-500">USD</span>
-          </span>
-        </p>
-        <p class="flex items-baseline justify-center gap-2">
-          <span class="font-light text-secondary-500">Ahorra </span><span
-            class="text-secondary-500">60 $</span
-          >
-        </p>
-      </div>
-      <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
-        <Chip width="76" height="76" />
-      </div>
-      <p class="mb-6 text-center text-sm leading-tight text-black-500">
-        Selecciona 3 cursos de la especialidad de Desarrollo de Software
-        Embebido y disfruta de un 20% de descuento en tu compra.
-      </p>
-      <ul class="mb-6">
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#C40B2A" />
-          </div>
-          <span class="font-light text-black-500"
-            >Selección Flexible de 3 cursos</span
-          >
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#C40B2A" />
-          </div>
-          <span class="font-light text-black-500">20 % de Descuento</span>
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#C40B2A" />
-          </div>
-          <span class="font-light text-black-500">Material de Apoyo</span>
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#C40B2A" />
-          </div>
-          <span class="font-light text-black-500">Proyectos Incluidos</span>
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#C40B2A" />
-          </div>
-          <span class="font-light text-black-500">Certificación Parcial</span>
-        </li>
-      </ul>
-      <p class="">
-        <a
-          class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50"
-          href="#">Adquirir plan</a
-        >
-      </p>
-    </section>
-    <section
-      class="mb-12 rounded-2xl border border-primary-400 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25]"
-    >
-      <header
-        class="mb-6 text-center text-[40px] font-bold leading-none text-black-500"
-      >
-        Pack de 3 cursos
-      </header>
-      <div class="mb-6">
-        <p class="grid place-content-center">
-          <span class="flex items-baseline gap-1">
-            <span class="self-start text-xl text-black-500">$</span>
-            <span class="text-5xl font-bold text-black-500">370</span>
-            <span class="text-2xl font-bold text-black-500">USD</span>
-          </span>
-        </p>
-      </div>
-      <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
-        <Chip width="76" height="76" />
-      </div>
-      <p class="mb-6 text-center text-sm leading-tight text-black-500">
-        Accede a toda la especialidad de {specialite.title}.
-      </p>
-      <ul class="mb-6">
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#1F2937" />
-          </div>
-          <span class="font-light text-black-500"
-            >Acceso a todos los cursos</span
-          >
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#1F2937" />
-          </div>
-          <span class="font-light text-black-500">Material Exclusivo</span>
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#1F2937" />
-          </div>
-          <span class="font-light text-black-500">Proyectos Prácticos</span>
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#1F2937" />
-          </div>
-          <span class="font-light text-black-500">Soporte Continuo</span>
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#1F2937" />
-          </div>
-          <span class="font-light text-black-500">Certificación Completa</span>
-        </li>
-      </ul>
-      <p class="">
-        <a
-          class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50"
-          href="#">Adquirir plan</a
-        >
-      </p>
-    </section>
-    <p class="text-center font-light text-primary-500">
       ¡Empieza tu formación ahora!<br />
       Elige tu plan ideal y avanza hacia tu objetivo
     </p>
