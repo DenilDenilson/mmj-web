@@ -1,22 +1,20 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
 import { Image } from "astro:assets";
+import bgCourseCard from "@src/Images/Carreras/BgCourseCard.png";
 
-interface IProject {
-  bgProjectCard: ImageMetadata;
-  title: string;
-  description: string;
-  url: string;
-}
+const bgImages = {
+  proyectBase: bgCourseCard,
+};
 
 const { project, index } = Astro.props;
-const { bgProjectCard } = project as IProject;
+const { bgProjectCard, title, description, url, goals, skills } = project;
 ---
 
 <div class="lg:flex lg:justify-center lg:gap-8">
   <figure class="lg:flex-1">
     <Image
-      src={bgProjectCard}
+      src={bgImages[bgProjectCard as keyof typeof bgImages]}
       alt="Imagen de Proyectos Prácticos"
       class="mx-auto mb-6 aspect-video w-full rounded lg:h-full"
     />
@@ -31,62 +29,36 @@ const { bgProjectCard } = project as IProject;
       <h4
         class="text-xl leading-tight text-black-500 xs:text-2xl md:text-3xl lg:text-2xl"
       >
-        Diseño de un Sistema de Control para un Robot Móvil
+        {title}
       </h4>
     </figcaption>
     <p
       class="mb-6 text-sm font-light leading-tight text-black-500 xs:text-base md:text-lg lg:mb-4 lg:text-base lg:leading-5"
     >
-      Desarrollarás un sistema de control embebido para electrodomésticos,
-      integrando sensores y actuadores para mejorar su eficiencia y
-      automatización.
+      {description}
     </p>
     <ul class="mb-2 flex items-start justify-between">
       <ul class="hidden lg:block">
         <p class="mb-1 text-black-500">Objetivos</p>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Objetivo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Objetivo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Objetivo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Objetivo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Objetivo 1</span>
-        </li>
+        {
+          goals.map((goal: string) => (
+            <li class="mb-2 flex items-center gap-1">
+              <Check fill="#C40B2A" />
+              <span class="text-base font-light text-black-500">{goal}</span>
+            </li>
+          ))
+        }
       </ul>
       <ul class="hidden lg:block">
         <p class="mb-1 text-black-500">Habilidades Reforzadas</p>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Refuerzo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Refuerzo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Refuerzo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Refuerzo 1</span>
-        </li>
-        <li class="mb-2 flex items-center gap-1">
-          <Check fill="#C40B2A" />
-          <span class="text-base font-light text-black-500">Refuerzo 1</span>
-        </li>
+        {
+          skills.map((skill: string) => (
+            <li class="mb-2 flex items-center gap-1">
+              <Check fill="#C40B2A" />
+              <span class="text-base font-light text-black-500">{skill}</span>
+            </li>
+          ))
+        }
       </ul>
     </ul>
     <div class="hidden lg:block">
@@ -97,7 +69,7 @@ const { bgProjectCard } = project as IProject;
       >
     </div>
     <a
-      href="#"
+      href={url}
       class="inline-block rounded border border-black-300 px-6 py-3 text-black-300 hover:bg-white-200 lg:hidden"
       >Ver proyecto</a
     >

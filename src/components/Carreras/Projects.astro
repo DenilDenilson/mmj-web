@@ -1,8 +1,11 @@
 ---
+import { getEntry } from "astro:content";
 import ProjectCardContainer from "./ProjectCardContainer.astro";
 
-const { specialite } = Astro.props;
-const { projects } = specialite;
+const { carrera } = Astro.params;
+
+const specialite = await getEntry("carrers", `${carrera}`);
+const projects = specialite?.data.projects;
 ---
 
 <section>

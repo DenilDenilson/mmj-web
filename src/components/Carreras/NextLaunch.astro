@@ -9,13 +9,16 @@ import Vivo from "@src/Images/icons/Vivo.astro";
 import bgNextLaunch from "@src/Images/Carreras/BgCourseNextLaunch.png";
 import type { ISpecialite } from "@src/data/Specialites";
 import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 
-interface Props {
-  specialite: ISpecialite;
+const { carrera } = Astro.params;
+// CAMBIAMOS MANUALMENTE EL ID DEL PROXIMO LANZAMIENTO
+const nextLaunch = await getEntry("courses", `${carrera}/ansi-c`);
+if (!nextLaunch) {
+  throw new Error("No se encontró el próximo lanzamiento");
 }
-
-const { specialite } = Astro.props;
-const { nextLaunch } = specialite;
+const carrer = await getEntry(nextLaunch.data.carrer);
+console.log(carrer);
 const {
   startDate,
   title,
@@ -26,7 +29,7 @@ const {
   priceBase,
   priceReal,
   hours,
-} = nextLaunch;
+} = nextLaunch?.data || {};
 ---
 
 <section class="relative overflow-x-hidden">
@@ -45,7 +48,7 @@ const {
         <span class="flex items-center gap-2">
           <Chip width="24" height="24" />
           <span class="text-sm text-black-800 md:text-base"
-            >{specialite.title}</span
+            >{carrer.data.title}</span
           >
         </span>
       </p>

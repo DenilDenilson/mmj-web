@@ -2,38 +2,8 @@
 import ArrowLeft from "@src/Images/icons/ArrowLeft.astro";
 import ArrowRight from "@src/Images/icons/ArrowRight.astro";
 import ProjectCard from "./ProjectCard.astro";
-import type { IProject } from "@src/data/Specialites";
-import bgCourseCard from "@src/Images/Carreras/BgCourseCard.png";
 
-interface Props {
-  projects?: IProject[];
-}
-
-const exampleProjects: IProject[] = [
-  {
-    bgProjectCard: bgCourseCard,
-    title: "Diseña de un Sistema de Control para un Robot Móvil",
-    description:
-      "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
-    url: "#",
-  },
-  {
-    bgProjectCard: bgCourseCard,
-    title: "Diseña de un Sistema de Control para un Robot Móvil 2",
-    description:
-      "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
-    url: "#",
-  },
-  {
-    bgProjectCard: bgCourseCard,
-    title: "Diseña de un Sistema de Control para un Robot Móvil 3",
-    description:
-      "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
-    url: "#",
-  },
-];
-
-const { projects = exampleProjects } = Astro.props;
+const { projects } = Astro.props;
 const projectAmount = projects.length;
 ---
 
@@ -43,7 +13,7 @@ const projectAmount = projects.length;
     class="relative left-0 mx-auto mb-4 flex py-10 transition-all duration-300 ease-in-out xs:mb-8 lg:mb-0"
   >
     {
-      projects.map((project: IProject, index: number) => (
+      projects.map((project: any, index: number) => (
         <div class="min-w-full transition-all duration-300 ease-in-out">
           <ProjectCard index={index} project={project} />
         </div>

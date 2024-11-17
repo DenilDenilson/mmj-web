@@ -3,17 +3,18 @@ import type { ISpecialite } from "@src/data/Specialites";
 import CourseCard from "./CourseCard.astro";
 import ObjectiveCardContainer from "./ObjectiveCardContainer.astro";
 import { getEntry } from "astro:content";
+import Console from "@src/Images/icons/Console.astro";
+import { getCollection } from "astro:content";
 
-interface Props {
-  specialite: ISpecialite;
-}
-
-const { specialite } = Astro.props;
-const { courses } = specialite;
+// const { specialite } = Astro.props;
+// const { courses } = specialite;
 
 const { carrera } = Astro.params;
 const specificCarrer = await getEntry("carrers", `${carrera}`);
-
+const courses = await getCollection("courses");
+const coursesInCarrer = courses.filter((course) =>
+  specificCarrer?.id.includes(`${carrera}`),
+);
 const { studentProfile, skillsTech, canPerform } = specificCarrer?.data || {};
 ---
 
@@ -32,7 +33,7 @@ const { studentProfile, skillsTech, canPerform } = specificCarrer?.data || {};
       id="courses-in-carrer"
       class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-2 py-4 lg:block lg:px-0"
     >
-      {courses.map((course) => <CourseCard course={course} />)}
+      {coursesInCarrer.map((course) => <CourseCard course={course} />)}
     </ul>
   </div>
 </section>

@@ -10,18 +10,7 @@ import Microchip from "@src/Images/Carreras/Microchip.png";
 import Arduino from "@src/Images/Carreras/Arduino.png";
 import Siemens from "@src/Images/Carreras/Siemens.png";
 import Texas from "@src/Images/Carreras/Texas.png";
-
-interface ICourse {
-  bgCourseCard: ImageMetadata;
-  startDate: string;
-  title: string;
-  description: string;
-  modality: string;
-  duration: number;
-  hours: number;
-  priceBase: number;
-  priceReal: number;
-}
+import bgAnsiC from "@src/Images/Carreras/BgCourseCard.png";
 
 const { course } = Astro.props;
 const {
@@ -34,7 +23,11 @@ const {
   hours,
   priceBase,
   priceReal,
-} = course as ICourse;
+} = course.data;
+
+const bgImages = {
+  "ansi-c": bgAnsiC,
+};
 ---
 
 <div class="lg:odd:bg-white-500">
@@ -42,7 +35,7 @@ const {
     class="mx-auto min-w-72 max-w-7xl snap-center rounded-xl px-7 py-8 shadow-[0px_8px_16px_0px_#18181B30] lg:flex lg:gap-8 lg:rounded-none lg:shadow-none"
   >
     <Image
-      src={bgCourseCard}
+      src={bgImages[bgCourseCard as keyof typeof bgImages]}
       alt={"Imagen del cuso de < t i t l e>"}
       class="mb-4 rounded lg:mb-0"
     />

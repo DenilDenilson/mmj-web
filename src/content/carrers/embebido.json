@@ -26,22 +26,64 @@
   ],
   "projects": [
     {
-      "bgProjectCard": "@src/Images/Carreras/BgCourseCard.png",
-      "title": "Diseña de un Sistema de Control para un Robot Móvil",
+      "bgProjectCard": "proyectBase",
+      "title": "Diseña de un Sistema de Control para un Robot Móvil 3",
       "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
-      "url": "#"
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
     },
     {
-      "bgProjectCard": "@src/Images/Carreras/BgCourseCard.png",
+      "bgProjectCard": "proyectBase",
       "title": "Diseña de un Sistema de Control para un Robot Móvil",
       "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
-      "url": "#"
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
     },
     {
-      "bgProjectCard": "@src/Images/Carreras/BgCourseCard.png",
+      "bgProjectCard": "proyectBase",
       "title": "Diseña de un Sistema de Control para un Robot Móvil",
       "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
-      "url": "#"
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
     }
   ]
 }
