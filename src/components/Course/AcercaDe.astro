@@ -78,9 +78,11 @@ import { Image } from "astro:assets";
   </ul>
   <p class="mb-2 flex items-baseline justify-between">
     <span class="text-xl text-black-500">Horario:</span>
-    <span class="mb-1 flex gap-1 rounded bg-[#EDE7F3] px-2 py-1">
+    <span class="mb-1 flex items-center gap-1 rounded bg-[#EDE7F3] px-2 py-1">
       <Circle />
-      <span class="text-sm text-black-500">Inicio: 23 de enero del 2025</span>
+      <span class="text-xs text-black-500 xs:text-sm"
+        >Inicio: 23 de enero del 2025</span
+      >
     </span>
   </p>
   <p class="mb-3 font-light text-black-500">
@@ -92,7 +94,7 @@ import { Image } from "astro:assets";
   </p>
   <ul>
     <p class="flex items-center justify-start pb-3">
-      <span class="flex min-w-48 items-center gap-1">
+      <span class="flex min-w-32 items-center gap-1 xs:min-w-48">
         <Flag />
         <span class="text-black-500"> País </span>
       </span>
@@ -102,7 +104,7 @@ import { Image } from "astro:assets";
       </span>
     </p>
     <li class="flex items-start justify-start border-t border-black-200 py-3">
-      <ul class="min-w-48">
+      <ul class="min-w-32 xs:min-w-48">
         <li class="mb-1 flex items-center gap-2">
           <Mexico />
           <span class="font-light text-black-500">México</span>
@@ -122,7 +124,7 @@ import { Image } from "astro:assets";
       </ul>
     </li>
     <li class="flex items-start justify-start border-t border-black-200 py-3">
-      <ul class="min-w-48">
+      <ul class="min-w-32 xs:min-w-48">
         <li class="mb-1 flex items-center gap-2">
           <Peru />
           <span class="font-light text-black-500">Perú</span>
@@ -142,7 +144,7 @@ import { Image } from "astro:assets";
       </ul>
     </li>
     <li class="flex items-start justify-start border-t border-black-200 py-3">
-      <ul class="min-w-48">
+      <ul class="min-w-32 xs:min-w-48">
         <li class="mb-1 flex items-center gap-2">
           <Chile />
           <span class="font-light text-black-500">Chile</span>

@@ -1,5 +1,11 @@
 ---
+import { getEntry } from "astro:content";
 import ProjectCardContainer from "../Carreras/ProjectCardContainer.astro";
+
+const { carrera } = Astro.params;
+
+const specialite = await getEntry("carrers", `${carrera}`);
+const projects = specialite?.data.projects;
 ---
 
 <section>
@@ -15,7 +21,7 @@ import ProjectCardContainer from "../Carreras/ProjectCardContainer.astro";
         aprendido y adquirir experiencia real en sistemas embebidos
       </p>
     </header>
-    <ProjectCardContainer />
+    <ProjectCardContainer projects={projects} />
     <p class="mb-6 text-center text-primary-500">
       Descubre más sobre los proyectos y empieza a construir el futuro con
       nosotros.

@@ -7,19 +7,30 @@ import Temario from "@src/components/Course/Temario.astro";
 import Kit from "@src/components/Course/Kit.astro";
 import Projects from "@src/components/Course/Projects.astro";
 import OtherCourses from "@src/components/Course/OtherCourses.astro";
+import { getCollection } from "astro:content";
 
 const { course } = Astro.params;
 
-export const getStaticPaths = (() => {
-  return [{ params: { carrera: "embebido", course: "ansi-c" } }];
-}) satisfies GetStaticPaths;
+export async function getStaticPaths() {
+  const courseEntries = await getCollection("courses");
+
+  return courseEntries.map((entry) => ({
+    params: {
+      carrera: entry.id.split("/")[0],
+      course: entry.id.split("/")[1],
+    },
+  }));
+  // return [{ params: { carrera: "embebido", course: "ansi-c" } }];
+}
 ---
 
 <Layout title={course}>
   <Hero />
-  <Info />
-  <Temario />
+  <div class="mx-auto max-w-7xl lg:flex">
+    <Info />
+    <Temario />
+  </div>
   <Kit />
   <Projects />
-  <OtherCourses />
+  <!-- <OtherCourses /> -->
 </Layout>
