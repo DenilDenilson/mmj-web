@@ -13,19 +13,13 @@ export const getStaticPaths = (() => {
   // Las uri se usan para obtener el objeto del archivo Specialites.ts
   return [{ params: { carrera: "embebido" } }];
 }) satisfies GetStaticPaths;
-
-const { carrera } = Astro.params;
 ---
 
 <Layout title="Carreras MMJ">
-  <Hero specialite={specialites[`${carrera}` as keyof typeof specialites]} />
-  <Courses specialite={specialites[`${carrera}` as keyof typeof specialites]} />
-  <Projects
-    specialite={specialites[`${carrera}` as keyof typeof specialites]}
-  />
-  <NextLaunch
-    specialite={specialites[`${carrera}` as keyof typeof specialites]}
-  />
-  <Plans specialite={specialites[`${carrera}` as keyof typeof specialites]} />
+  <Hero />
+  <Courses />
+  <Projects />
+  <NextLaunch />
+  <Plans />
   <Ubication />
 </Layout>

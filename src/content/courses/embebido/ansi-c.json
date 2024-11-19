@@ -1,4 +1,5 @@
 {
+  "bgCourseCard": "ansi-c",
   "startDate": "12 de febrero del 2025",
   "title": "Desarrollo de Software Embebido con Ansi C",
   "description": "Aprende a desarrollar software para sistemas embebidos utilizando microcontroladores y herramientas de programación en tiempo real. Este curso incluye teoría y práctica con ejemplos aplicados a la industria. Este curso incluye teoría y práctica con ejemplos aplicados a la industria.",
@@ -13,5 +14,6 @@
   "duration": 4,
   "hours": 40,
   "priceBase": 95.9,
-  "priceReal": 70
+  "priceReal": 70,
+  "carrer": "embebido"
 }

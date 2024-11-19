@@ -2,7 +2,7 @@
 import ArrowUp from "@src/Images/icons/ArrowUp.astro";
 ---
 
-<section>
+<section class="lg:max-w-md">
   <div class="px-7 py-6">
     <details
       open
@@ -62,7 +62,7 @@ import ArrowUp from "@src/Images/icons/ArrowUp.astro";
         </ul>
       </div>
     </details>
-    <details class="transition-all duration-300">
+    <details class="border-l border-black-100 px-6 transition-all duration-300">
       <summary
         class="flex items-center justify-between py-3 text-xl font-bold text-primary-500"
       >
@@ -119,3 +119,19 @@ import ArrowUp from "@src/Images/icons/ArrowUp.astro";
     </details>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const details = document.querySelectorAll("details");
+
+    details.forEach((detail) => {
+      detail.addEventListener("click", () => {
+        details.forEach((d) => {
+          if (d !== detail) {
+            d.removeAttribute("open");
+          }
+        });
+      });
+    });
+  });
+</script>

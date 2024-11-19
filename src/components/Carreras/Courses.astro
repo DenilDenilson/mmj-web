@@ -1,19 +1,46 @@
 ---
 import type { ISpecialite } from "@src/data/Specialites";
 import CourseCard from "./CourseCard.astro";
+import ObjectiveCardContainer from "./ObjectiveCardContainer.astro";
+import { getEntry } from "astro:content";
+import Console from "@src/Images/icons/Console.astro";
+import { getCollection } from "astro:content";
 
-interface Props {
-  specialite: ISpecialite;
-}
+// const { specialite } = Astro.props;
+// const { courses } = specialite;
 
-const { specialite } = Astro.props;
-const { courses } = specialite;
+const { carrera } = Astro.params;
+const specificCarrer = await getEntry("carrers", `${carrera}`);
+const courses = await getCollection("courses");
+const coursesInCarrer = courses.filter((course) =>
+  specificCarrer?.id.includes(`${carrera}`),
+);
+const { studentProfile, skillsTech, canPerform } = specificCarrer?.data || {};
 ---
 
 <section>
-  <div class="mx-auto max-w-7xl px-6 py-16">
-    <main class="flex snap-x snap-mandatory overflow-x-auto">
-      {courses.map((course) => <CourseCard course={course} />)}
-    </main>
+  <div class="px-6 py-16 md:relative md:pt-32 lg:px-0">
+    <div
+      class="left-0 right-0 mx-auto hidden max-w-7xl md:absolute md:-top-48 md:z-50 md:block"
+    >
+      <ObjectiveCardContainer
+        studentProfile={studentProfile}
+        skillsTech={skillsTech}
+        canPerform={canPerform}
+      />
+    </div>
+    <ul
+      id="courses-in-carrer"
+      class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-2 py-4 lg:block lg:px-0"
+    >
+      {coursesInCarrer.map((course) => <CourseCard course={course} />)}
+    </ul>
   </div>
 </section>
+
+<style is:global>
+  @media (min-width: 1024px) {
+    #courses-in-carrer:nth-child(even) {
+    }
+  }
+</style>

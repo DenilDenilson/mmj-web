@@ -9,13 +9,16 @@ import Vivo from "@src/Images/icons/Vivo.astro";
 import bgNextLaunch from "@src/Images/Carreras/BgCourseNextLaunch.png";
 import type { ISpecialite } from "@src/data/Specialites";
 import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 
-interface Props {
-  specialite: ISpecialite;
+const { carrera } = Astro.params;
+// CAMBIAMOS MANUALMENTE EL ID DEL PROXIMO LANZAMIENTO
+const nextLaunch = await getEntry("courses", `${carrera}/ansi-c`);
+if (!nextLaunch) {
+  throw new Error("No se encontró el próximo lanzamiento");
 }
-
-const { specialite } = Astro.props;
-const { nextLaunch } = specialite;
+const carrer = await getEntry(nextLaunch.data.carrer);
+console.log(carrer);
 const {
   startDate,
   title,
@@ -26,101 +29,120 @@ const {
   priceBase,
   priceReal,
   hours,
-} = nextLaunch;
+} = nextLaunch?.data || {};
 ---
 
-<section>
-  <div class="bg- relative max-w-7xl">
-    <picture class="absolute -z-50 aspect-[2/1] h-full bg-white-50">
-      <Image
-        class="absolute h-full w-full object-cover"
-        src={bgNextLaunch}
-        alt="Imagen de fondo de alguien programando"
-      />
-    </picture>
+<section class="relative overflow-x-hidden">
+  <picture class="absolute -z-50 aspect-[2/1] h-full bg-white-50">
+    <Image
+      class="absolute h-full w-full object-cover"
+      src={bgNextLaunch}
+      alt="Imagen de fondo de alguien programando"
+    />
+  </picture>
+  <div class="mx-auto max-w-7xl">
     <div class="px-7 py-16">
       <p
-        class="mb-8 grid place-content-center rounded border-white-100 bg-white-200 px-3 py-1"
+        class="mx-auto mb-8 grid place-content-center rounded border-white-100 bg-white-200 px-3 py-1 md:w-fit"
       >
         <span class="flex items-center gap-2">
           <Chip width="24" height="24" />
-          <span class="text-black-800">{specialite.title}</span>
+          <span class="text-sm text-black-800 md:text-base"
+            >{carrer.data.title}</span
+          >
         </span>
       </p>
-      <p
-        class="mb-1 grid place-content-center rounded border-white-100 bg-white-200 px-4 py-2"
-      >
-        <span class="flex items-baseline gap-1">
-          <span class="text-primary-500">Próximo lanzamiento:</span>
-          <!-- <span class="text-black-800">{startDate}</span> -->
-          <span class="text-black-800">14 Días</span>
-          <span class="text-black-800">06:23:16</span>
-        </span>
-      </p>
-      <header class="mb-6">
-        <h2 class="mb-3 text-3xl font-bold leading-tight text-black-500">
-          {title}
-        </h2>
-        <p class="font-light leading-tight text-black-500">{description}</p>
-      </header>
-      <ul class="mb-6">
-        <p class="text-black-500">¿Qué lograrás en este curso?</p>
-        {
-          goals?.map((goal) => (
-            <li class="mb-1 flex items-center gap-1">
-              <div class="grid h-5 w-5 place-content-center">
-                <Check />
-              </div>
-              <span class="font-light text-black-500">{goal}</span>
+      <div class="lg:flex lg:items-center lg:gap-8">
+        <div>
+          <p
+            class="mb-1 grid place-content-center rounded border-white-100 bg-white-200 px-4 py-2 md:mb-2 md:w-fit"
+          >
+            <span class="flex items-baseline gap-1">
+              <span class="text-sm font-medium text-primary-500"
+                >Próximo lanzamiento:</span
+              >
+              <!-- <span class="text-black-800">{startDate}</span> -->
+              <span class="text-sm text-black-800 md:text-base">14 Días</span>
+              <span class="text-sm text-black-800 md:text-base">06:23:16</span>
+            </span>
+          </p>
+          <header class="mb-6 lg:max-w-2xl">
+            <h2 class="mb-3 text-3xl font-bold leading-tight text-black-500">
+              {title}
+            </h2>
+            <p class="font-light leading-tight text-black-500">{description}</p>
+          </header>
+          <ul class="mb-6">
+            <p class="text-black-500">¿Qué lograrás en este curso?</p>
+            {
+              goals?.map((goal) => (
+                <li class="mb-1 flex items-center gap-1">
+                  <div class="grid h-5 w-5 place-content-center">
+                    <Check />
+                  </div>
+                  <span class="font-light text-black-500">{goal}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <p class="mb-1 flex gap-1 rounded py-2">
+            <Circle />
+            <span class="text-sm text-primary-500 lg:text-base">Inicia:</span>
+            <span class="text-sm text-black-500 lg:text-base">{startDate}</span>
+          </p>
+          <ul class="mb-1 flex items-center justify-start">
+            <li class="flex items-center gap-[2px] px-1 py-2 lg:gap-1 lg:px-3">
+              <Vivo />
+              <span class="text-sm font-light text-black-400 lg:text-base"
+                >{modality}</span
+              >
             </li>
-          ))
-        }
-      </ul>
-      <p class="mb-1 flex gap-1 rounded px-3 py-2">
-        <Circle />
-        <span class="text-sm text-primary-500">Inicia:</span>
-        <span class="text-sm text-black-500">{startDate}</span>
-      </p>
-      <ul class="mb-1 flex items-center justify-center">
-        <li class="flex flex-col items-center gap-1 px-3 py-2">
-          <Vivo />
-          <span class="text-sm font-light text-black-400">{modality}</span>
-        </li>
-        <li class="flex flex-col items-center gap-1 px-3 py-2">
-          <Calendar />
-          <span class="text-sm font-light text-black-400"
-            >{duration} semanas</span
-          >
-        </li>
-        <li class="flex flex-col items-center gap-1 px-3 py-2">
-          <Clock fill="#4C545F" width="24" height="24" />
-          <span class="text-sm font-light text-black-400">{hours} horas</span>
-        </li>
-      </ul>
-      <footer class="mb-8 flex items-end justify-evenly">
-        <span class="flex flex-col items-center">
-          <span class="text-sm text-black-300"
-            >$ {priceBase} <span class="text-sm">USD</span></span
-          >
-          <a
-            href="#"
-            class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 px-3 py-4"
-          >
-            <Cart fill="#FBFCFC" />
-            <span class="text-sm text-white-100"
-              >$ {priceReal} <span class="text-sm text-[#FFF]">USD</span></span
+            <li class="flex items-center gap-[2px] px-1 py-2 lg:gap-1 lg:px-3">
+              <Calendar />
+              <span class="text-sm font-light text-black-400 lg:text-base"
+                >{duration} semanas</span
+              >
+            </li>
+            <li class="flex items-center gap-[2px] px-1 py-2 lg:gap-1 lg:px-3">
+              <Clock fill="#4C545F" width="24" height="24" />
+              <span class="text-sm font-light text-black-400 lg:text-base"
+                >{hours} horas</span
+              >
+            </li>
+          </ul>
+          <footer class="mb-8 flex items-end justify-start gap-8">
+            <span class="flex flex-col items-center">
+              <span class="text-sm text-black-300 lg:text-base"
+                >$ {priceBase} <span class="text-sm">USD</span></span
+              >
+              <a
+                href="#"
+                class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 px-3 py-4 lg:px-6 lg:py-3"
+              >
+                <Cart fill="#FBFCFC" />
+                <span class="text-sm text-white-100"
+                  >$ {priceReal}
+                  <span class="text-sm text-[#FFF] lg:text-base">USD</span
+                  ></span
+                >
+              </a>
+            </span>
+            <a
+              href="#"
+              class="flex rounded border border-black-300 px-3 py-4 lg:px-6 lg:py-3"
             >
-          </a>
-        </span>
-        <a href="#" class="flex rounded border border-black-300 px-3 py-4">
-          <!-- El flex es para igualar las alturas de ambos botones, algo que no entiendo la razón, pero funciona -->
-          <span class="text-sm text-black-300">Más detalles</span>
-        </a>
-      </footer>
-      <div
-        class="aspect-[4/3] w-full rounded-lg bg-white-900 shadow-xl shadow-black-400"
-      >
-        VIDEO
+              <!-- El flex es para igualar las alturas de ambos botones, algo que no entiendo la razón, pero funciona -->
+              <span class="text-sm text-black-300 lg:text-base"
+                >Más detalles</span
+              >
+            </a>
+          </footer>
+        </div>
+        <div
+          class="aspect-[4/3] w-full rounded-lg bg-white-900 shadow-xl shadow-black-400 lg:h-fit lg:max-w-xl"
+        >
+          VIDEO
+        </div>
       </div>
     </div>
   </div>
