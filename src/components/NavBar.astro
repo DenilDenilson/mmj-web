@@ -2,106 +2,490 @@
 import Hamburguer from "@src/Images/icons/Hamburguer.astro";
 import Cart from "../Images/icons/Cart.astro";
 import ArrowUp from "@src/Images/icons/ArrowUp.astro";
-import LogoLarge from "@src/Images/icons/LogoLarge.astro";
+
+// Importando iconos de carreras
+import Chip2 from "@src/Images/icons/Chip-2.astro";
+import Iot from "@src/Images/icons/Iot.astro";
+import LogicXor from "@src/Images/icons/logic-xor.astro";
+import Robot from "@src/Images/icons/Robot.astro";
+import Software from "@src/Images/icons/Software.astro";
+import Study from "@src/Images/icons/Study.astro";
+
+// Estado para la moneda seleccionada
+let selectedCurrency = "PEN";
+let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
 ---
 
-<nav
-  class="bg-white fixed w-full border-b border-black-100 bg-gradient-to-r from-[#9B2035] to-[#DD455F]"
->
-  <!-- El px es porque el tamaño no es 1440 px sino menos, px-8 menos -->
+<nav class="bg-white fixed w-full bg-gradient-to-r from-[#9B2035] to-[#DD455F]">
   <div
-    class="content-nav mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8"
+    class="relative mx-auto flex max-w-7xl items-center justify-between px-7 py-2 text-white-200 lg:px-8 lg:py-1"
   >
-    <LogoLarge />
-    <ul class="hidden font-sans text-base font-normal text-black-600 md:flex">
-      <a
-        href="/"
-        class="rounded-full px-4 py-1 text-white-200 transition-colors duration-300 hover:bg-secondary-50 hover:text-secondary-600"
-        >Inicio</a
-      >
-      <a
-        href="#"
-        class="flex items-center gap-1 rounded-full px-4 py-1 text-white-200 transition-colors duration-300 hover:bg-secondary-50 hover:text-secondary-600"
-      >
-        Cursos
-        <span class=""><ArrowUp fill="currentColor" /></span>
-      </a>
-      <a
-        href="#"
-        class="flex items-center gap-1 rounded-full px-4 py-1 text-white-200 transition-colors duration-300 hover:bg-secondary-50 hover:text-secondary-600"
-      >
-        Servicios
-        <span><ArrowUp fill="currentColor" /></span>
-      </a>
-      <a
-        href="#"
-        class="rounded-full px-4 py-1 text-white-200 transition-colors duration-300 hover:bg-secondary-50 hover:text-secondary-600"
-        >Proyectos</a
-      >
-      <a
-        href="#"
-        class="rounded-full px-4 py-1 text-white-200 transition-colors duration-300 hover:bg-secondary-50 hover:text-secondary-600"
-        >Contáctanos</a
-      >
-    </ul>
-    <a
-      class="hidden cursor-pointer px-4 py-2 transition-all duration-500 hover:translate-x-2 md:block"
+    <figure class="max-h-11 w-[152px] lg:max-h-14 lg:w-[200px]">
+      <img
+        src="src/Images/LogoMMJ-white.png"
+        alt="Logo MMJ"
+        class="h-full object-contain"
+      />
+    </figure>
+
+    <ul
+      id="menu-principal"
+      class="pointer-events-none absolute right-0 top-[60px] scale-95 bg-white-200 text-black-500 opacity-0 transition-all duration-300 lg:pointer-events-auto lg:relative lg:top-0 lg:flex lg:scale-100 lg:items-center lg:gap-4 lg:bg-[#9B203500] lg:text-white-200 lg:opacity-100"
     >
-      <div class="">
-        <Cart fill="#F9FAFB" />
-      </div>
-    </a>
-    <input class="hidden" type="checkbox" name="hamburguer" id="hamburguer" />
-    <label for="hamburguer" class="md:hidden">
-      <a class="cursor-pointer md:block">
-        <div class="">
-          <Hamburguer />
-        </div>
-      </a>
-    </label>
-    <div
-      class="menu absolute -right-24 top-[61px] z-50 hidden h-[512px] w-full bg-[#18181B] bg-opacity-30 transition-all duration-300 md:hidden"
-    >
-      <ul class="z-50 h-full w-3/4 justify-self-end bg-white-200">
-        <li class="border-b border-black-100 px-4 py-6 text-black-800">
-          Inicio
-        </li>
-        <li class="border-b border-black-100 px-4 py-6 text-black-800">
+      <li>
+        <a
+          href="#"
+          class="block px-6 py-3 lg:rounded-full lg:px-4 lg:py-1 lg:hover:bg-primary-300"
+          >Inicio</a
+        >
+      </li>
+
+      <!-- Menú Cursos -->
+      <li
+        class="submenu-parent text-white relative flex cursor-pointer flex-col lg:flex-row lg:items-center lg:gap-1"
+        onclick="toggleMenu(event, 'cursos')"
+      >
+        <span
+          class="flex items-center justify-between px-6 py-3 text-base leading-base hover:bg-primary-300 lg:rounded-full lg:px-4 lg:py-1"
+        >
           Cursos
-        </li>
-        <li class="border-b border-black-100 px-4 py-6 text-black-800">
+          <span id="arrow-cursos" class="transition-transform duration-300">
+            <ArrowUp class="h-5 w-5" />
+          </span>
+        </span>
+
+        <ul
+          id="submenu-cursos"
+          class="submenu bg-white text-black pointer-events-none h-0 scale-95 transform bg-black-50 text-black-500 opacity-0 transition-all duration-300 ease-out lg:absolute lg:left-1/2 lg:top-11 lg:grid lg:w-[424px] lg:-translate-x-1/2 lg:grid-cols-2 lg:gap-4 lg:rounded-lg lg:bg-white-200 lg:p-4"
+        >
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Chip2 width={32} height={32} />
+              Desarrollo de Software Embebido
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Iot class="h-full w-full" />
+              Internet de las cosas IoT
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Software class="h-full w-full" />
+              Desarrollo de Software
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Robot class="h-full w-full" />
+              Automatización Industrial
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <LogicXor class="h-full w-full" />
+              Desarrollo de Hardware
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Study class="h-full w-full" />
+              Cursos Presenciales
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Menú Servicios -->
+      <li
+        class="submenu-parent text-white relative flex cursor-pointer flex-col lg:flex-row lg:items-center lg:gap-1"
+        onclick="toggleMenu(event, 'servicios')"
+      >
+        <span
+          class="relative flex items-center justify-between px-6 py-3 text-base leading-base hover:bg-primary-300 lg:rounded-full lg:px-4 lg:py-1"
+        >
           Servicios
-        </li>
-        <li class="border-b border-black-100 px-4 py-6 text-black-800">
-          Proyectos
-        </li>
-        <li class="border-b border-black-100 px-4 py-6 text-black-800">
-          Contáctanos
-        </li>
-      </ul>
+          <span id="arrow-servicios" class="transition-transform duration-300">
+            <ArrowUp />
+          </span>
+        </span>
+
+        <ul
+          id="submenu-servicios"
+          class="submenu bg-white text-black pointer-events-none flex h-0 scale-95 transform flex-col bg-black-50 text-black-500 opacity-0 transition-all duration-300 ease-out lg:absolute lg:left-1/2 lg:top-11 lg:grid lg:w-[424px] lg:-translate-x-1/2 lg:grid-cols-2 lg:gap-4 lg:rounded-lg lg:bg-white-200 lg:p-4"
+        >
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <LogicXor class="h-full w-full" />
+              Soluciones de Hardware a medida
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Iot class="h-full w-full" />
+              Soluciones de IoT a medida
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Software class="h-full w-full" />
+              Soluciones de Software a medida
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
+            >
+              <Robot class="h-full w-full" />
+              Consultoría
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="block px-6 py-3 hover:bg-primary-300 lg:rounded-full lg:px-4 lg:py-1"
+          >Proyectos</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="block px-6 py-3 hover:bg-primary-300 lg:rounded-full lg:px-4 lg:py-1"
+          >Contáctanos</a
+        >
+      </li>
+    </ul>
+
+    <!-- Menú de Moneda -->
+    <div class="currency-dropdown flex items-center gap-2">
+      <span
+        class="relative flex cursor-pointer items-center gap-1 rounded-full bg-primary-300 px-4 py-1 text-sm leading-sm"
+        onclick="toggleCurrencyMenu()"
+        id="select-content-currency"
+      >
+        <span id="selected-currency-text">{selectedCurrency}</span>
+
+        <!-- Renderiza el componente de bandera seleccionado -->
+        <span
+          id="selected-flag-icon"
+          class="w-5 transition-all duration-300 ease-in-out"
+        >
+          {
+            selectedFlagComponent === "FlagForPeru" ? (
+              <img src="src/Images/icons/flag-for-peru.svg" />
+            ) : (
+              <img src="src/Images/icons/global.svg" />
+            )
+          }
+        </span>
+
+        <ArrowUp id="arrow-currency" class="h-5 w-5 transition-all" />
+      </span>
+
+      <div
+        id="currency-menu"
+        class="absolute top-12 z-10 hidden scale-95 overflow-hidden rounded bg-white-200 text-black-500 opacity-0 transition-all duration-300 ease-in-out"
+      >
+        <span
+          class="flex cursor-pointer items-center gap-1 px-4 py-1 text-sm leading-sm hover:bg-black-50"
+          onclick='selectCurrency("PEN", "FlagForPeru")'
+        >
+          PEN
+          <img src="src/Images/icons/flag-for-peru.svg" />
+        </span>
+        <span
+          class="flex cursor-pointer items-center gap-1 px-4 py-1 text-sm leading-sm hover:bg-black-50"
+          onclick='selectCurrency("USD", "FlagGlobal")'
+        >
+          USD
+          <img src="src/Images/icons/global.svg" class="fill-[#08a]" />
+        </span>
+      </div>
+      <a
+        href="#"
+        class="fixed bottom-4 right-4 rounded-lg border border-black-200 bg-[#F3F4F630] p-2 text-black-500 lg:hidden"
+      >
+        <ArrowUp className="h-8 w-8" />
+      </a>
+      <a
+        href="#"
+        class="fixed bottom-20 right-4 rounded-lg border border-black-200 bg-[#F3F4F630] p-2 text-black-500 lg:relative lg:bottom-0 lg:right-0 lg:flex lg:rounded-full lg:border-none lg:px-4 lg:py-1 lg:text-white-200 lg:hover:bg-primary-300"
+      >
+        <Cart className="h-8 w-8 lg:h-5 lg:w-5" />
+      </a>
+    </div>
+    <div
+      id="menu-Hamburger"
+      class="flex h-10 w-10 flex-col items-center justify-evenly lg:hidden"
+    >
+      <span class="h-0.5 w-3/4 rounded-sm bg-white-200"></span>
+      <span class="h-0.5 w-3/4 rounded-sm bg-white-200"></span>
+      <span class="h-0.5 w-3/4 rounded-sm bg-white-200"></span>
     </div>
   </div>
 </nav>
-<!-- <div class="h-14"></div> -->
-<!-- Pequeño espacio que se pierde con el position:fixed -->
+
 <style is:global>
-  /* // Para asegurarnos que el menú desplegable se vea arriba de todo */
   nav {
     z-index: 1000;
   }
-
-  @keyframes slideIn {
-    0% {
-      display: block;
-    }
-    100% {
-      right: 0px;
-    }
-  }
-
-  /* Cuando el checkbox está marcado, aplica la animación */
-  #hamburguer:checked ~ .menu {
-    display: block;
-    animation: slideIn 0.3s forwards; /* Ejecuta la animación */
+  .rotate-180 {
+    transform: rotate(180deg);
   }
 </style>
+
+<script is:inline>
+  let activeMenu = null;
+
+  function toggleMenu(event, menu) {
+    event.stopPropagation();
+
+    // Cerrar el menú anterior si está abierto
+    closeOtherMenus(menu);
+
+    const submenu = document.getElementById(`submenu-${menu}`);
+    const arrow = document.getElementById(`arrow-${menu}`);
+
+    // Si el submenú está oculto, mostramos su contenido y activamos la flecha
+    if (submenu.classList.contains("opacity-0")) {
+      submenu.classList.remove(
+        "opacity-0",
+        "scale-95",
+        "pointer-events-none",
+        "h-0",
+      );
+      submenu.classList.add(
+        "opacity-100",
+        "scale-100",
+        "pointer-events-auto",
+        "h-fit",
+      );
+      arrow.classList.add("rotate-180");
+    } else {
+      // Si el submenú ya está abierto, lo cerramos
+      submenu.classList.add(
+        "opacity-0",
+        "scale-95",
+        "pointer-events-none",
+        "h-0",
+      );
+      submenu.classList.remove(
+        "opacity-100",
+        "scale-100",
+        "pointer-events-auto",
+        "h-fit",
+      );
+      arrow.classList.remove("rotate-180");
+    }
+
+    activeMenu = submenu.classList.contains("opacity-0") ? null : menu;
+  }
+
+  function closeOtherMenus(menu) {
+    if (activeMenu && activeMenu !== menu) {
+      const prevSubmenu = document.getElementById(`submenu-${activeMenu}`);
+      const prevArrow = document.getElementById(`arrow-${activeMenu}`);
+
+      // Cerramos el menú previamente abierto
+      prevSubmenu.classList.add(
+        "opacity-0",
+        "scale-95",
+        "pointer-events-none",
+        "h-0",
+      );
+      prevSubmenu.classList.remove(
+        "opacity-100",
+        "scale-100",
+        "pointer-events-auto",
+        "h-fit",
+      );
+      prevArrow.classList.remove("rotate-180");
+    }
+  }
+
+  // Apertura del menu Hamburguesa
+  const menuHamburger = document.getElementById("menu-Hamburger");
+  const menuPrincipal = document.getElementById("menu-principal");
+
+  // Función para manejar el estado del menú
+  const toggleMenuHamburger = () => {
+    if (menuHamburger.classList.contains("open-menu")) {
+      // Cerrar el menú
+      menuHamburger.classList.remove("open-menu");
+      menuPrincipal.classList.remove(
+        "opacity-100",
+        "scale-100",
+        "pointer-events-auto",
+      );
+      menuPrincipal.classList.add(
+        "opacity-0",
+        "scale-95",
+        "pointer-events-none",
+      );
+
+      // Cambiar estilos de los hijos de menuHamburger
+      menuHamburger.classList.add("justify-evenly");
+      menuHamburger.classList.remove("justify-center");
+      menuHamburger.children[0].classList.remove("rotate-45");
+      menuHamburger.children[1].classList.remove("hidden");
+      menuHamburger.children[2].classList.remove("-rotate-45");
+    } else {
+      // Abrir el menú
+      menuHamburger.classList.add("open-menu");
+      menuPrincipal.classList.remove(
+        "opacity-0",
+        "scale-95",
+        "pointer-events-none",
+      );
+      menuPrincipal.classList.add(
+        "opacity-100",
+        "scale-100",
+        "pointer-events-auto",
+      );
+
+      // Cambiar estilos de los hijos de menuHamburger
+      menuHamburger.classList.add("justify-center");
+      menuHamburger.classList.remove("justify-evenly");
+      menuHamburger.children[0].classList.add("rotate-45");
+      menuHamburger.children[1].classList.add("hidden");
+      menuHamburger.children[2].classList.add("-rotate-45");
+    }
+  };
+
+  // Evento para abrir/cerrar el menú
+  menuHamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); // Evita que el evento se propague al documento
+    toggleMenuHamburger();
+  });
+
+  // Cerrar el menú al hacer clic fuera de él
+  document.addEventListener("click", (e) => {
+    // Si el clic no ocurre en el menú principal ni en el menú hamburguesa
+    if (
+      !menuPrincipal.contains(e.target) &&
+      !menuHamburger.contains(e.target)
+    ) {
+      if (menuHamburger.classList.contains("open-menu")) {
+        toggleMenuHamburger();
+      }
+    }
+  });
+
+  // Cerrar cualquier submenú si se hace clic fuera de ellos
+  document.addEventListener("click", (event) => {
+    const submenus = document.querySelectorAll(".submenu");
+    const arrows = document.querySelectorAll("[id^='arrow-']");
+    const isClickInsideMenu = event.target.closest(".submenu-parent");
+
+    // Verificar si el clic está dentro de un submenú abierto
+    if (!isClickInsideMenu) {
+      // Cerrar todos los submenús si el clic es fuera
+      submenus.forEach((submenu) => {
+        submenu.classList.add(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+          "h-0",
+        );
+        submenu.classList.remove(
+          "opacity-100",
+          "scale-100",
+          "pointer-events-auto",
+          "h-fit",
+        );
+      });
+      arrows.forEach((arrow) => {
+        arrow.classList.remove("rotate-180");
+      });
+    }
+  });
+
+  // Definir las funciones para manejar el menú de monedas
+  function toggleCurrencyMenu() {
+    const currencyMenu = document.getElementById("currency-menu");
+    const arrowCurrency = document.getElementById(
+      "select-content-currency",
+    ).lastElementChild;
+
+    // Aplica o quita las clases de transición para animar la apertura/cierre del menú
+    currencyMenu.classList.toggle("hidden");
+    currencyMenu.classList.toggle("opacity-0"); // Controla la visibilidad
+    currencyMenu.classList.toggle("scale-95"); // Controla la escala
+
+    // Aplica la rotación suave a la flecha
+    arrowCurrency.classList.toggle("rotate-180");
+  }
+
+  // Esta función actualiza la moneda seleccionada y el componente de la bandera
+  function selectCurrency(currency, flagComponent) {
+    selectedCurrency = currency;
+    selectedFlagComponent = flagComponent;
+
+    // Actualiza el texto y el ícono de la moneda seleccionada
+    document.getElementById("selected-currency-text").textContent = currency;
+
+    const flagContainer = document.getElementById("selected-flag-icon");
+    flagContainer.innerHTML = ""; // Limpia el contenido anterior
+
+    // Actualiza el icono de bandera según la selección
+    if (flagComponent === "FlagForPeru") {
+      flagContainer.innerHTML = `<img src="src/Images/icons/flag-for-peru.svg" class="transition-all duration-300 ease-in-out" />`;
+    } else {
+      flagContainer.innerHTML = `<img src="src/Images/icons/global.svg" class="transition-all duration-300 ease-in-out" />`;
+    }
+
+    // Llama a toggleCurrencyMenu para cerrar el menú después de seleccionar una moneda
+    toggleCurrencyMenu();
+  }
+
+  // Cerrar el menú al hacer clic fuera de él
+  document.addEventListener("click", (event) => {
+    const currencyMenu = document.getElementById("currency-menu");
+    const arrowCurrency = document.getElementById(
+      "select-content-currency",
+    ).lastElementChild;
+
+    // Verifica si el menú y la flecha existen antes de intentar acceder a sus propiedades
+    if (
+      currencyMenu &&
+      arrowCurrency &&
+      !currencyMenu.contains(event.target) &&
+      !event.target.closest(".currency-dropdown")
+    ) {
+      currencyMenu.classList.add("hidden");
+      arrowCurrency.classList.remove("rotate-180");
+    }
+    // toggleCurrencyMenu();
+  });
+</script>
