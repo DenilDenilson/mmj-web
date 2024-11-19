@@ -1,10 +1,10 @@
 ---
-const { fill = "#1C2532", width = "20", height = "20" } = Astro.props;
+const { fill = "currentColor", className = "w-5 h-5" } = Astro.props;
 ---
 
 <svg
-  width={width}
-  height={height}
+  class=`${className}`
+  viewBox="0 0 20 20"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   ><path

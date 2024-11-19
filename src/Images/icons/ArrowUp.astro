@@ -1,12 +1,11 @@
 ---
-const { fill = "#1C2532", width = 21, height = "20" } = Astro.props;
+const { fill = "currentColor", className = "w-5 h-5" } = Astro.props;
 ---
 
 <svg
-  width={width}
-  height={height}
+  class={`max-w-8 max-h-8 ${className}`}
   viewBox="0 0 20 20"
-  fill="none"
+  fill={fill}
   xmlns="http://www.w3.org/2000/svg"
 >
   <g clip-path="url(#clip0_916_5918)">
