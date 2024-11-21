@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "@src/layouts/Layout.astro";
+import Hero from "@src/components/Servicios/Hero.astro";
+import HighLights from "@src/components/Servicios/HighLights.astro";
+import Ubication from "@src/components/Home/Ubication.astro";
+import Services from "@src/components/Servicios/Services.astro";
+import ExitCases from "@src/components/Servicios/ExitCases.astro";
+import OurProcess from "@src/components/Servicios/OurProcess.astro";
+
+export const getStaticPaths = (() => {
+  // Las uri se usan para obtener el objeto del archivo Specialites.ts
+  return [{ params: { service: "servicio-hardware" } }];
+}) satisfies GetStaticPaths;
+---
+
+<Layout title="Servicios MMJ">
+  <Hero />
+  <HighLights />
+  <Services />
+  <ExitCases />
+  <OurProcess />
+  <Ubication />
+</Layout>

@@ -41,7 +41,17 @@ const courseCollection = defineCollection({
   }),
 });
 
+const serviceCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    description: z.string(),
+  }),
+});
+
 export const collections = {
   carrers: carrerCollection,
   courses: courseCollection,
+  services: serviceCollection,
 };

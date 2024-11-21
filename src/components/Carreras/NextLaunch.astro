@@ -18,7 +18,6 @@ if (!nextLaunch) {
   throw new Error("No se encontró el próximo lanzamiento");
 }
 const carrer = await getEntry(nextLaunch.data.carrer);
-console.log(carrer);
 const {
   startDate,
   title,
