@@ -1,6 +1,7 @@
 ---
-import { proyectsResume, type IProyectResume } from "@src/data/ProyectsHome.ts";
-import ProyecResume from "../Home/ProyecResume.astro";
+import Serpentina from "@src/Images/icons/Serpentina.astro";
+import ProcessBase from "@src/Images/Servicios/ProcessBase.png";
+import { Image } from "astro:assets";
 
 // Mucho cuidado con los 500 px, es un valor hardcodeado para funcionar correctamente, esto debe ser modificado en un futuro
 ---
@@ -21,9 +22,75 @@ import ProyecResume from "../Home/ProyecResume.astro";
       </p>
     </hgroup>
 
+    <ul class="relative flex flex-col gap-16">
+      <div
+        class="absolute -top-16 left-0 right-0 mx-auto hidden overflow-x-hidden lg:block"
+      >
+        <Serpentina />
+      </div>
+      <li class="lg:mb-4 lg:flex lg:items-center lg:justify-between">
+        <Image src={ProcessBase} alt="Proceso de MMJ" class="mx-auto mb-8" />
+        <div class="mx-auto max-w-sm">
+          <p
+            class="mx-auto max-w-sm text-center text-4xl text-black-500 lg:text-start"
+          >
+            Consulta Inicial
+          </p>
+          <p
+            class="mx-auto max-w-sm text-center text-xl font-light text-black-500 lg:text-start"
+          >
+            Escuchas tus necesidades y analizamos la viabilidad del proyecto
+          </p>
+        </div>
+      </li>
+      <li class="flex flex-row-reverse items-center justify-between lg:mb-8">
+        <Image src={ProcessBase} alt="Proceso de MMJ" class="mx-auto mb-8" />
+        <div class="mx-auto max-w-sm">
+          <p
+            class="mx-auto max-w-sm text-center text-4xl text-black-500 lg:text-start"
+          >
+            Consulta Inicial
+          </p>
+          <p
+            class="mx-auto max-w-sm text-center text-xl font-light text-black-500 lg:text-start"
+          >
+            Escuchas tus necesidades y analizamos la viabilidad del proyecto
+          </p>
+        </div>
+      </li>
+      <li class="lg:mb-4 lg:flex lg:items-center lg:justify-between">
+        <Image src={ProcessBase} alt="Proceso de MMJ" class="mx-auto mb-8" />
+        <div class="mx-auto max-w-sm">
+          <p
+            class="mx-auto max-w-sm text-center text-4xl text-black-500 lg:text-start"
+          >
+            Consulta Inicial
+          </p>
+          <p
+            class="mx-auto max-w-sm text-center text-xl font-light text-black-500 lg:text-start"
+          >
+            Escuchas tus necesidades y analizamos la viabilidad del proyecto
+          </p>
+        </div>
+      </li>
+      <li class="flex flex-row-reverse items-center justify-between">
+        <Image src={ProcessBase} alt="Proceso de MMJ" class="mx-auto mb-8" />
+        <div class="mx-auto max-w-sm">
+          <p class="text-center text-4xl text-black-500 lg:text-start">
+            Consulta Inicial
+          </p>
+          <p
+            class="text-center text-xl font-light text-black-500 lg:text-start"
+          >
+            Escuchas tus necesidades y analizamos la viabilidad del proyecto
+          </p>
+        </div>
+      </li>
+    </ul>
+
     <div class="mx-auto flex flex-col items-center">
       <span
-        class="z-10 my-8 text-pretty text-center text-xl text-primary-400 drop-shadow-xl lg:mt-16"
+        class="z-10 mb-8 mt-16 text-pretty text-center text-xl text-primary-400 drop-shadow-xl lg:mt-16"
       >
         Contáctanos para una consulta sin compromiso y descubre cómo nuestro
         proceso garantiza la mejor solución de hardware para tus necesidades.</span
@@ -36,3 +103,9 @@ import ProyecResume from "../Home/ProyecResume.astro";
     </div>
   </div>
 </section>
+
+<style>
+  img {
+    filter: drop-shadow(-24px 24px 16px rgba(24, 24, 27, 0.5));
+  }
+</style>
