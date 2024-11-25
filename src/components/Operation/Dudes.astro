@@ -1,0 +1,100 @@
+---
+import { proyectsResume, type IProyectResume } from "@src/data/ProyectsHome.ts";
+import ProyecResume from "../Home/ProyecResume.astro";
+import Question from "@src/Images/icons/Question.astro";
+
+// Mucho cuidado con los 500 px, es un valor hardcodeado para funcionar correctamente, esto debe ser modificado en un futuro
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-7 py-20 md:px-7">
+    <hgroup>
+      <h2
+        class="mb-6 text-center text-[40px] font-bold leading-none text-secondary-400 md:mb-4 md:leading-normal"
+      >
+        Resolvemos tus dudas
+      </h2>
+      <p
+        class="mx-auto mb-12 max-w-3xl text-pretty text-center text-xl text-black-500"
+      >
+        Encuentra respuestas a las preguntas más comunes sobre nuestros
+        servicios de fabricación de circuitos impresos PCB’s. Si tienes otra
+        consulta, no dudes en contactarnos.
+      </p>
+    </hgroup>
+    <ul class="lg:flex lg:items-start lg:justify-between lg:gap-12">
+      <ul class="flex flex-col gap-3 lg:max-w-3xl">
+        <details open>
+          <summary
+            class="cursor-pointer rounded-lg border border-white-600 bg-white-200 px-5 py-3"
+          >
+            ¿Qué incluye el servicio de fabricación de circuitos impresos?
+          </summary>
+          <p class="mt-2 font-light leading-tight text-black-500">
+            Nuestro servicio de fabricación de PCB incluye el diseño,
+            fabricación y ensamblaje de los circuitos impresos según las
+            especificaciones de tu proyecto. También realizamos pruebas de
+            calidad para asegurar un funcionamiento óptimo.
+          </p>
+        </details>
+        <details>
+          <summary
+            class="cursor-pointer rounded-lg border border-white-600 bg-white-200 px-5 py-3"
+          >
+            ¿Qué tipo de cursos ofrecen?
+          </summary>
+          <p class="mt-2 font-light leading-tight text-black-500">
+            Ofrecemos cursos de programación, diseño, marketing y más para que
+            puedas aprender lo que más te gusta. Si tienes alguna duda, no dudes
+            en contactarnos.
+          </p>
+        </details>
+        <details>
+          <summary
+            class="cursor-pointer rounded-lg border border-white-600 bg-white-200 px-5 py-3"
+          >
+            ¿Qué tipo de cursos ofrecen?
+          </summary>
+          <p class="mt-2 font-light leading-tight text-black-500">
+            Ofrecemos cursos de programación, diseño, marketing y más para que
+            puedas aprender lo que más te gusta. Si tienes alguna duda, no dudes
+            en contactarnos.
+          </p>
+        </details>
+        <details>
+          <summary
+            class="cursor-pointer rounded-lg border border-white-600 bg-white-200 px-5 py-3"
+          >
+            ¿Qué tipo de cursos ofrecen?
+          </summary>
+          <p class="mt-2 font-light leading-tight text-black-500">
+            Ofrecemos cursos de programación, diseño, marketing y más para que
+            puedas aprender lo que más te gusta. Si tienes alguna duda, no dudes
+            en contactarnos.
+          </p>
+        </details>
+      </ul>
+      <div class="hidden lg:block">
+        <Question />
+      </div>
+    </ul>
+
+    <div class="mx-auto mt-12 flex flex-col items-center">
+      <span
+        class="z-10 mb-4 text-pretty text-center text-xl text-primary-400 drop-shadow-xl lg:text-2xl"
+      >
+        ¿No encontraste lo que buscabas?</span
+      >
+      <span
+        class="z-10 mb-6 text-pretty text-center text-black-700 drop-shadow-xl lg:text-lg"
+      >
+        Contáctanos directamente y con gusto resolveremos tus dudas.</span
+      >
+      <a
+        href="https://wa.link/fc3qb5"
+        class="mx-auto rounded bg-primary-500 px-8 py-4 text-center text-sm font-light leading-base text-white-200 ring-1 ring-inset ring-primary-500 transition-all duration-200 hover:bg-primary-400 sm:px-8 lg:text-lg xl:px-12 xl:text-xl"
+        >Contáctanos</a
+      >
+    </div>
+  </div>
+</section>

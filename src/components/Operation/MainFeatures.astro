@@ -1,0 +1,160 @@
+---
+import Diploma from "@src/Images/icons/Diploma.astro";
+import MainImage from "@src/Images/Operation/MainImage.webp";
+import { Image } from "astro:assets";
+
+// Mucho cuidado con los 500 px, es un valor hardcodeado para funcionar correctamente, esto debe ser modificado en un futuro
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-7 py-20 md:px-7">
+    <hgroup class="lg:flex lg:gap-12">
+      <h2
+        class="mb-6 text-center text-[40px] font-bold leading-none text-secondary-400 md:mb-4 md:leading-normal lg:text-start lg:text-5xl"
+      >
+        Características principales
+      </h2>
+      <ul
+        class="mb-12 flex flex-col items-center gap-6 md:flex-row md:flex-wrap md:justify-center lg:max-w-3xl"
+      >
+        <li
+          class="flex w-80 items-center justify-start gap-3 rounded-2xl px-3 py-2 outline outline-1 outline-secondary-500 lg:translate-x-6"
+        >
+          <div>
+            <Diploma />
+          </div>
+          <div>
+            <h5 class="text-sm text-black-500 sm:text-base">Adaptabilidad</h5>
+            <p class="text-xs font-light text-black-500 sm:text-sm">
+              PCB's rígidos, flexibles y multicapa para diversas aplicaciones
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex w-80 items-center justify-start gap-3 rounded-2xl px-3 py-2 outline outline-1 outline-secondary-500 lg:translate-x-6"
+        >
+          <div>
+            <Diploma />
+          </div>
+          <div>
+            <h5 class="text-sm text-black-500 sm:text-base">
+              Materiales Duraderos
+            </h5>
+            <p class="text-xs font-light text-black-500 sm:text-sm">
+              Utilizamos sustratos y cobre de alta calidad
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex w-80 items-center justify-start gap-3 rounded-2xl px-3 py-2 outline outline-1 outline-secondary-500 lg:-translate-x-6"
+        >
+          <div>
+            <Diploma />
+          </div>
+          <div>
+            <h5 class="text-sm text-black-500 sm:text-base">
+              Calidad certificada
+            </h5>
+            <p class="text-xs font-light text-black-500 sm:text-sm">
+              Cumplimos con normas internacionales de fabricación.
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex w-80 items-center justify-start gap-3 rounded-2xl px-3 py-2 outline outline-1 outline-secondary-500 lg:-translate-x-6"
+        >
+          <div>
+            <Diploma />
+          </div>
+          <div>
+            <h5 class="text-sm text-black-500 sm:text-base">Adaptabilidad</h5>
+            <p class="text-xs font-light text-black-500 sm:text-sm">
+              PCB's rígidos, flexibles y multicapa para diversas aplicaciones
+            </p>
+          </div>
+        </li>
+      </ul>
+    </hgroup>
+    <div class="lg:flex lg:items-center lg:justify-between lg:gap-12 xl:gap-20">
+      <div class="lg:max-w-md">
+        <p class="mb-8 font-light leading-tight text-black-500 sm:text-lg">
+          Nuestra fabricación de circuitos impresos garantiza precisión, calidad
+          y tiempos de entrega confiables.
+          <br />
+          Trabajamos con tecnologías avanzadas para crear PCB’s que se adaptan a
+          las necesidades de proyectos en sectores como la industria, telecomunicaciones,
+          y dispositivos de consumo.
+        </p>
+        <ul
+          class="mb-8 flex flex-col overflow-hidden rounded-lg bg-secondary-100 text-sm outline outline-1 outline-secondary-300 sm:text-base"
+        >
+          <li class="flex items-center">
+            <p class="flex-1 px-3 py-2">Características</p>
+            <p class="flex-1 border-l border-secondary-300 px-3 py-2">
+              Descripción
+            </p>
+          </li>
+          <li
+            class="flex items-center bg-secondary-50 outline outline-1 outline-secondary-300"
+          >
+            <p
+              class="flex-1 px-3 py-2 font-light outline outline-1 outline-secondary-300"
+            >
+              Capas
+            </p>
+            <p
+              class="flex-1 border-l border-secondary-300 px-3 py-2 font-light"
+            >
+              PCB's de 1 a 8 capas
+            </p>
+          </li>
+          <li
+            class="flex items-center bg-secondary-50 outline outline-1 outline-secondary-300"
+          >
+            <p
+              class="flex-1 px-3 py-2 font-light outline outline-1 outline-secondary-300"
+            >
+              Espesor de cobre
+            </p>
+            <p
+              class="flex-1 border-l border-secondary-300 px-3 py-2 font-light"
+            >
+              Desde 0.5 oz hasta 2 oz
+            </p>
+          </li>
+          <li
+            class="flex items-center bg-secondary-50 outline outline-1 outline-secondary-300"
+          >
+            <p
+              class="flex-1 px-3 py-2 font-light outline outline-1 outline-secondary-300"
+            >
+              Tipo de sustrato
+            </p>
+            <p
+              class="flex-1 border-l border-secondary-300 px-3 py-2 font-light"
+            >
+              FR4, CEM-1, Rogers y otros
+            </p>
+          </li>
+          <li
+            class="flex items-center bg-secondary-50 outline outline-1 outline-secondary-300"
+          >
+            <p
+              class="flex-1 px-3 py-2 font-light outline outline-1 outline-secondary-300"
+            >
+              Tolerancia
+            </p>
+            <p
+              class="flex-1 border-l border-secondary-300 px-3 py-2 font-light"
+            >
+              +- 0.1 mm en el diseño y perforación
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Image src={MainImage} alt="PCB" />
+      </div>
+    </div>
+  </div>
+</section>

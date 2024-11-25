@@ -1,0 +1,114 @@
+---
+import work1 from "@src/Images/Operation/work1.jpg";
+import work2 from "@src/Images/Operation/work2.jpg";
+import work3 from "@src/Images/Operation/work3.jpg";
+import work4 from "@src/Images/Operation/work4.jpg";
+import work5 from "@src/Images/Operation/work5.jpg";
+import work6 from "@src/Images/Operation/work6.jpg";
+import { Image } from "astro:assets";
+
+// Mucho cuidado con los 500 px, es un valor hardcodeado para funcionar correctamente, esto debe ser modificado en un futuro
+---
+
+<section class="bg-white-400">
+  <div class="mx-auto max-w-7xl px-7 py-20 md:px-7">
+    <hgroup class="lg:flex lg:flex-row-reverse lg:justify-between lg:gap-12">
+      <h2
+        class="mb-6 text-center text-[40px] font-bold leading-none text-secondary-400 md:mb-4 md:leading-normal lg:max-w-96 lg:text-end lg:text-5xl"
+      >
+        Galería de resultados
+      </h2>
+      <p class="lg:max-w-xl lg:text-xl lg:leading-tight lg:text-black-500">
+        Explora algunos de los proyectos que hemos completado con dedicación y
+        precisión. Desde el diseño hasta la fabricación, nuestro enfoque está en
+        ofrecer soluciones de alta calidad para cada cliente.
+      </p>
+    </hgroup>
+
+    <ul
+      class="mx-auto my-8 flex max-w-7xl snap-x snap-mandatory gap-8 overflow-x-auto p-2 lg:grid lg:grid-cols-7 lg:grid-rows-[144px,_144px,_144px,_144px] lg:gap-1"
+    >
+      <li
+        class="min-w-fit snap-center overflow-y-auto lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-3"
+      >
+        <div class="grid place-content-center lg:block lg:h-full">
+          <Image
+            src={work1}
+            alt={"Imagen"}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </li>
+      <li
+        class="min-w-fit snap-center overflow-y-auto lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-3"
+      >
+        <div class="grid place-content-center lg:block lg:h-full">
+          <Image src={work2} alt={"Imagen"} class="h-full object-cover" />
+        </div>
+      </li>
+      <li
+        class="min-w-fit snap-center overflow-y-auto lg:col-start-5 lg:col-end-8 lg:row-start-1 lg:row-end-5"
+      >
+        <div class="grid place-content-center lg:block lg:h-full">
+          <Image
+            src={work3}
+            alt={"Imagen"}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </li>
+      <li
+        class="min-w-fit snap-center overflow-y-auto bg-black-400 lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-4"
+      >
+        <div class="grid place-content-center lg:block lg:h-full">
+          <Image
+            src={work4}
+            alt={"Imagen"}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </li>
+      <li
+        class="min-w-fit snap-center overflow-y-auto lg:col-start-3 lg:col-end-5 lg:row-start-3 lg:row-end-5"
+      >
+        <div class="grid place-content-center lg:block lg:h-full">
+          <Image
+            src={work5}
+            alt={"Imagen"}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </li>
+      <li
+        class="min-w-fit snap-center overflow-y-auto lg:col-start-1 lg:col-end-3 lg:row-start-4 lg:row-end-5"
+      >
+        <div class="grid place-content-center lg:block lg:h-full">
+          <Image
+            src={work6}
+            alt={"Imagen"}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </li>
+    </ul>
+
+    <div class="mx-auto flex flex-col items-center">
+      <span
+        class="z-10 mb-4 text-pretty text-center text-xl text-primary-400 drop-shadow-xl lg:text-2xl"
+      >
+        ¿Quieres resultados similares?</span
+      >
+      <span
+        class="z-10 mb-6 text-pretty text-center text-black-700 drop-shadow-xl lg:text-lg"
+      >
+        Contacta a nuestro equipo para obtener una solución personalizada de
+        acuerdo a tus necesidades. Estamos listos para ayudarte.</span
+      >
+      <a
+        href="https://wa.link/fc3qb5"
+        class="mx-auto rounded bg-primary-500 px-8 py-4 text-center text-sm font-light leading-base text-white-200 ring-1 ring-inset ring-primary-500 transition-all duration-200 hover:bg-primary-400 sm:px-8 lg:text-lg xl:px-12 xl:text-xl"
+        >Habla con un experto</a
+      >
+    </div>
+  </div>
+</section>

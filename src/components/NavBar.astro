@@ -4,12 +4,14 @@ import Cart from "../Images/icons/Cart.astro";
 import ArrowUp from "@src/Images/icons/ArrowUp.astro";
 
 // Importando iconos de carreras
+import Logo from "@src/Images/LogoMMJ-white.png";
 import Chip2 from "@src/Images/icons/Chip-2.astro";
 import Iot from "@src/Images/icons/Iot.astro";
 import LogicXor from "@src/Images/icons/logic-xor.astro";
 import Robot from "@src/Images/icons/Robot.astro";
 import Software from "@src/Images/icons/Software.astro";
 import Study from "@src/Images/icons/Study.astro";
+import { Image } from "astro:assets";
 
 // Estado para la moneda seleccionada
 let selectedCurrency = "PEN";
@@ -21,11 +23,7 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
     class="relative mx-auto flex max-w-7xl items-center justify-between px-7 py-2 text-white-200 lg:px-8 lg:py-1"
   >
     <figure class="max-h-11 w-[152px] lg:max-h-14 lg:w-[200px]">
-      <img
-        src="src/Images/LogoMMJ-white.png"
-        alt="Logo MMJ"
-        class="h-full object-contain"
-      />
+      <Image src={Logo} alt="Logo MMJ" class="h-full object-contain" />
     </figure>
 
     <ul

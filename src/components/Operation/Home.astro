@@ -1,0 +1,62 @@
+---
+import HeroImg from "@src/Images/Operation/HeroImg.webp";
+import bgMobile from "@src/Images/Operation/HeroBg.avif";
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+
+const { carrera, service } = Astro.params;
+
+const specificCarrer = await getEntry("carrers", `embebido`);
+const specificService = await getEntry("services", `${service}`); // Recordar que el slug es el nombre del archivo
+
+const { title, subtitle, description } = specificService?.data || {};
+
+const { goals, backgroundHeroImage, studentProfile, skillsTech, canPerform } =
+  specificCarrer?.data || {};
+---
+
+<section class="bg-[#0D1016]">
+  <div class="h-12 w-full"></div>
+  <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
+  <div class="relative mx-auto h-full max-w-7xl sm:flex">
+    <picture class="absolute z-0 aspect-[2/1] h-full w-full sm:bg-black-900">
+      <Image
+        class="absolute h-full"
+        src={bgMobile}
+        alt="Imagen de fondo de alguien programando"
+      />
+    </picture>
+    <div
+      class="z-10 px-4 py-8 sm:relative sm:flex-1 sm:pb-44 lg:flex lg:items-center lg:justify-center lg:pb-8"
+    >
+      <hgroup class="lg:max-w-2xl">
+        <h3
+          class="relative mb-8 text-5xl font-bold text-white-50 xs:text-5xl xl:text-7xl"
+        >
+          Fabricación de circuitos impresos PCB
+          <span class="absolute bottom-0 left-0 h-[2px] w-full bg-primary-400">
+            <span
+              class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-primary-400"
+            >
+            </span>
+          </span>
+        </h3>
+        <p
+          class="relative mb-12 text-base leading-tight tracking-tight text-white-600 xs:text-xl lg:max-w-3xl lg:font-light xl:text-2xl"
+        >
+          Prototipado y producción de PCB’s de alta precisión, diseñados para
+          asegurar el rendimiento y durabilidad que tus proyectos electrónicos
+          necesitan.
+        </p>
+        <a
+          href="https://wa.link/fc3qb5"
+          class="relative rounded bg-primary-500 px-8 py-4 text-center text-sm font-light leading-base text-white-200 ring-1 ring-inset ring-primary-500 transition-all duration-200 hover:bg-primary-400 sm:px-8 lg:text-lg xl:px-12 xl:text-xl"
+          >¡Solicita una consultoría ahora!</a
+        >
+      </hgroup>
+      <div class="relative mt-12">
+        <Image src={HeroImg} alt={"Imagen de fabricación de pcb"} />
+      </div>
+    </div>
+  </div>
+</section>
