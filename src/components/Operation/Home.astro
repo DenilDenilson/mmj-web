@@ -2,17 +2,6 @@
 import HeroImg from "@src/Images/Operation/HeroImg.webp";
 import bgMobile from "@src/Images/Operation/HeroBg.avif";
 import { Image } from "astro:assets";
-import { getEntry } from "astro:content";
-
-const { carrera, service } = Astro.params;
-
-const specificCarrer = await getEntry("carrers", `embebido`);
-const specificService = await getEntry("services", `${service}`); // Recordar que el slug es el nombre del archivo
-
-const { title, subtitle, description } = specificService?.data || {};
-
-const { goals, backgroundHeroImage, studentProfile, skillsTech, canPerform } =
-  specificCarrer?.data || {};
 ---
 
 <section class="bg-[#0D1016]">
