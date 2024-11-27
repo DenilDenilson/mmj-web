@@ -2,6 +2,8 @@
 import Hamburguer from "@src/Images/icons/Hamburguer.astro";
 import Cart from "../Images/icons/Cart.astro";
 import ArrowUp from "@src/Images/icons/ArrowUp.astro";
+import flagPeru from "@src/Images/icons/flag-for-peru.svg";
+import flagGlobal from "@src/Images/icons/global.svg";
 
 // Importando iconos de carreras
 import Logo from "@src/Images/LogoMMJ-white.png";
@@ -187,23 +189,23 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
 
     <!-- Menú de Moneda -->
     <div class="currency-dropdown flex items-center gap-2">
-      <span
+      <!--  <span
         class="relative flex cursor-pointer items-center gap-1 rounded-full bg-primary-300 px-4 py-1 text-sm leading-sm"
         onclick="toggleCurrencyMenu()"
         id="select-content-currency"
       >
-        <span id="selected-currency-text">{selectedCurrency}</span>
+        <span id="selected-currency-text">{selectedCurrency}</span> -->
 
-        <!-- Renderiza el componente de bandera seleccionado -->
-        <span
+      <!-- Renderiza el componente de bandera seleccionado -->
+      <!-- <span
           id="selected-flag-icon"
           class="w-5 transition-all duration-300 ease-in-out"
         >
           {
             selectedFlagComponent === "FlagForPeru" ? (
-              <img src="src/Images/icons/flag-for-peru.svg" />
+              <Image src={flagPeru} alt="Bandera de Perú" />
             ) : (
-              <img src="src/Images/icons/global.svg" />
+              <Image src={flagGlobal} alt="Globo Terraqueo" />
             )
           }
         </span>
@@ -220,14 +222,14 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
           onclick='selectCurrency("PEN", "FlagForPeru")'
         >
           PEN
-          <img src="src/Images/icons/flag-for-peru.svg" />
+          <Image src={flagPeru} alt="Bandera de Perú" />
         </span>
         <span
           class="flex cursor-pointer items-center gap-1 px-4 py-1 text-sm leading-sm hover:bg-black-50"
           onclick='selectCurrency("USD", "FlagGlobal")'
         >
           USD
-          <img src="src/Images/icons/global.svg" class="fill-[#08a]" />
+          <Image src={flagGlobal} alt="Globo Terraqueo" />
         </span>
       </div>
       <a
@@ -235,7 +237,7 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
         class="fixed bottom-4 right-4 rounded-lg border border-black-200 bg-[#F3F4F630] p-2 text-black-500 lg:hidden"
       >
         <ArrowUp className="h-8 w-8" />
-      </a>
+      </a> -->
       <a
         href="/construction"
         class="fixed bottom-20 right-4 rounded-lg border border-black-200 bg-[#F3F4F630] p-2 text-black-500 lg:relative lg:bottom-0 lg:right-0 lg:flex lg:rounded-full lg:border-none lg:px-4 lg:py-1 lg:text-white-200 lg:hover:bg-primary-300"
@@ -243,6 +245,7 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
         <Cart className="h-8 w-8 lg:h-5 lg:w-5" />
       </a>
     </div>
+
     <div
       id="menu-Hamburger"
       class="flex h-10 w-10 flex-col items-center justify-evenly lg:hidden"
@@ -252,164 +255,45 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
       <span class="h-0.5 w-3/4 rounded-sm bg-white-200"></span>
     </div>
   </div>
-</nav>
 
-<style is:global>
-  nav {
-    z-index: 1000;
-  }
-  .rotate-180 {
-    transform: rotate(180deg);
-  }
-</style>
-
-<script is:inline>
-  let activeMenu = null;
-
-  function toggleMenu(event, menu) {
-    event.stopPropagation();
-
-    // Cerrar el menú anterior si está abierto
-    closeOtherMenus(menu);
-
-    const submenu = document.getElementById(`submenu-${menu}`);
-    const arrow = document.getElementById(`arrow-${menu}`);
-
-    // Si el submenú está oculto, mostramos su contenido y activamos la flecha
-    if (submenu.classList.contains("opacity-0")) {
-      submenu.classList.remove(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-        "h-0",
-      );
-      submenu.classList.add(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-        "h-fit",
-      );
-      arrow.classList.add("rotate-180");
-    } else {
-      // Si el submenú ya está abierto, lo cerramos
-      submenu.classList.add(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-        "h-0",
-      );
-      submenu.classList.remove(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-        "h-fit",
-      );
-      arrow.classList.remove("rotate-180");
+  <style is:global>
+    nav {
+      z-index: 1000;
     }
-
-    activeMenu = submenu.classList.contains("opacity-0") ? null : menu;
-  }
-
-  function closeOtherMenus(menu) {
-    if (activeMenu && activeMenu !== menu) {
-      const prevSubmenu = document.getElementById(`submenu-${activeMenu}`);
-      const prevArrow = document.getElementById(`arrow-${activeMenu}`);
-
-      // Cerramos el menú previamente abierto
-      prevSubmenu.classList.add(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-        "h-0",
-      );
-      prevSubmenu.classList.remove(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-        "h-fit",
-      );
-      prevArrow.classList.remove("rotate-180");
+    .rotate-180 {
+      transform: rotate(180deg);
     }
-  }
+  </style>
 
-  // Apertura del menu Hamburguesa
-  const menuHamburger = document.getElementById("menu-Hamburger");
-  const menuPrincipal = document.getElementById("menu-principal");
+  <script is:inline>
+    let activeMenu = null;
 
-  // Función para manejar el estado del menú
-  const toggleMenuHamburger = () => {
-    if (menuHamburger.classList.contains("open-menu")) {
-      // Cerrar el menú
-      menuHamburger.classList.remove("open-menu");
-      menuPrincipal.classList.remove(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-      );
-      menuPrincipal.classList.add(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-      );
+    function toggleMenu(event, menu) {
+      event.stopPropagation();
 
-      // Cambiar estilos de los hijos de menuHamburger
-      menuHamburger.classList.add("justify-evenly");
-      menuHamburger.classList.remove("justify-center");
-      menuHamburger.children[0].classList.remove("rotate-45");
-      menuHamburger.children[1].classList.remove("hidden");
-      menuHamburger.children[2].classList.remove("-rotate-45");
-    } else {
-      // Abrir el menú
-      menuHamburger.classList.add("open-menu");
-      menuPrincipal.classList.remove(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-      );
-      menuPrincipal.classList.add(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-      );
+      // Cerrar el menú anterior si está abierto
+      closeOtherMenus(menu);
 
-      // Cambiar estilos de los hijos de menuHamburger
-      menuHamburger.classList.add("justify-center");
-      menuHamburger.classList.remove("justify-evenly");
-      menuHamburger.children[0].classList.add("rotate-45");
-      menuHamburger.children[1].classList.add("hidden");
-      menuHamburger.children[2].classList.add("-rotate-45");
-    }
-  };
+      const submenu = document.getElementById(`submenu-${menu}`);
+      const arrow = document.getElementById(`arrow-${menu}`);
 
-  // Evento para abrir/cerrar el menú
-  menuHamburger.addEventListener("click", (e) => {
-    e.stopPropagation(); // Evita que el evento se propague al documento
-    toggleMenuHamburger();
-  });
-
-  // Cerrar el menú al hacer clic fuera de él
-  document.addEventListener("click", (e) => {
-    // Si el clic no ocurre en el menú principal ni en el menú hamburguesa
-    if (
-      !menuPrincipal.contains(e.target) &&
-      !menuHamburger.contains(e.target)
-    ) {
-      if (menuHamburger.classList.contains("open-menu")) {
-        toggleMenuHamburger();
-      }
-    }
-  });
-
-  // Cerrar cualquier submenú si se hace clic fuera de ellos
-  document.addEventListener("click", (event) => {
-    const submenus = document.querySelectorAll(".submenu");
-    const arrows = document.querySelectorAll("[id^='arrow-']");
-    const isClickInsideMenu = event.target.closest(".submenu-parent");
-
-    // Verificar si el clic está dentro de un submenú abierto
-    if (!isClickInsideMenu) {
-      // Cerrar todos los submenús si el clic es fuera
-      submenus.forEach((submenu) => {
+      // Si el submenú está oculto, mostramos su contenido y activamos la flecha
+      if (submenu.classList.contains("opacity-0")) {
+        submenu.classList.remove(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+          "h-0",
+        );
+        submenu.classList.add(
+          "opacity-100",
+          "scale-100",
+          "pointer-events-auto",
+          "h-fit",
+        );
+        arrow.classList.add("rotate-180");
+      } else {
+        // Si el submenú ya está abierto, lo cerramos
         submenu.classList.add(
           "opacity-0",
           "scale-95",
@@ -422,68 +306,187 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
           "pointer-events-auto",
           "h-fit",
         );
-      });
-      arrows.forEach((arrow) => {
         arrow.classList.remove("rotate-180");
-      });
-    }
-  });
+      }
 
-  // Definir las funciones para manejar el menú de monedas
-  function toggleCurrencyMenu() {
-    const currencyMenu = document.getElementById("currency-menu");
-    const arrowCurrency = document.getElementById(
-      "select-content-currency",
-    ).lastElementChild;
-
-    // Aplica o quita las clases de transición para animar la apertura/cierre del menú
-    currencyMenu.classList.toggle("hidden");
-    currencyMenu.classList.toggle("opacity-0"); // Controla la visibilidad
-    currencyMenu.classList.toggle("scale-95"); // Controla la escala
-
-    // Aplica la rotación suave a la flecha
-    arrowCurrency.classList.toggle("rotate-180");
-  }
-
-  // Esta función actualiza la moneda seleccionada y el componente de la bandera
-  function selectCurrency(currency, flagComponent) {
-    selectedCurrency = currency;
-    selectedFlagComponent = flagComponent;
-
-    // Actualiza el texto y el ícono de la moneda seleccionada
-    document.getElementById("selected-currency-text").textContent = currency;
-
-    const flagContainer = document.getElementById("selected-flag-icon");
-    flagContainer.innerHTML = ""; // Limpia el contenido anterior
-
-    // Actualiza el icono de bandera según la selección
-    if (flagComponent === "FlagForPeru") {
-      flagContainer.innerHTML = `<img src="src/Images/icons/flag-for-peru.svg" class="transition-all duration-300 ease-in-out" />`;
-    } else {
-      flagContainer.innerHTML = `<img src="src/Images/icons/global.svg" class="transition-all duration-300 ease-in-out" />`;
+      activeMenu = submenu.classList.contains("opacity-0") ? null : menu;
     }
 
-    // Llama a toggleCurrencyMenu para cerrar el menú después de seleccionar una moneda
-    toggleCurrencyMenu();
-  }
+    function closeOtherMenus(menu) {
+      if (activeMenu && activeMenu !== menu) {
+        const prevSubmenu = document.getElementById(`submenu-${activeMenu}`);
+        const prevArrow = document.getElementById(`arrow-${activeMenu}`);
 
-  // Cerrar el menú al hacer clic fuera de él
-  document.addEventListener("click", (event) => {
-    const currencyMenu = document.getElementById("currency-menu");
-    const arrowCurrency = document.getElementById(
-      "select-content-currency",
-    ).lastElementChild;
-
-    // Verifica si el menú y la flecha existen antes de intentar acceder a sus propiedades
-    if (
-      currencyMenu &&
-      arrowCurrency &&
-      !currencyMenu.contains(event.target) &&
-      !event.target.closest(".currency-dropdown")
-    ) {
-      currencyMenu.classList.add("hidden");
-      arrowCurrency.classList.remove("rotate-180");
+        // Cerramos el menú previamente abierto
+        prevSubmenu.classList.add(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+          "h-0",
+        );
+        prevSubmenu.classList.remove(
+          "opacity-100",
+          "scale-100",
+          "pointer-events-auto",
+          "h-fit",
+        );
+        prevArrow.classList.remove("rotate-180");
+      }
     }
-    // toggleCurrencyMenu();
-  });
-</script>
+
+    // Apertura del menu Hamburguesa
+    const menuHamburger = document.getElementById("menu-Hamburger");
+    const menuPrincipal = document.getElementById("menu-principal");
+
+    // Función para manejar el estado del menú
+    const toggleMenuHamburger = () => {
+      if (menuHamburger.classList.contains("open-menu")) {
+        // Cerrar el menú
+        menuHamburger.classList.remove("open-menu");
+        menuPrincipal.classList.remove(
+          "opacity-100",
+          "scale-100",
+          "pointer-events-auto",
+        );
+        menuPrincipal.classList.add(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+        );
+
+        // Cambiar estilos de los hijos de menuHamburger
+        menuHamburger.classList.add("justify-evenly");
+        menuHamburger.classList.remove("justify-center");
+        menuHamburger.children[0].classList.remove("rotate-45");
+        menuHamburger.children[1].classList.remove("hidden");
+        menuHamburger.children[2].classList.remove("-rotate-45");
+      } else {
+        // Abrir el menú
+        menuHamburger.classList.add("open-menu");
+        menuPrincipal.classList.remove(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+        );
+        menuPrincipal.classList.add(
+          "opacity-100",
+          "scale-100",
+          "pointer-events-auto",
+        );
+
+        // Cambiar estilos de los hijos de menuHamburger
+        menuHamburger.classList.add("justify-center");
+        menuHamburger.classList.remove("justify-evenly");
+        menuHamburger.children[0].classList.add("rotate-45");
+        menuHamburger.children[1].classList.add("hidden");
+        menuHamburger.children[2].classList.add("-rotate-45");
+      }
+    };
+
+    // Evento para abrir/cerrar el menú
+    menuHamburger.addEventListener("click", (e) => {
+      e.stopPropagation(); // Evita que el evento se propague al documento
+      toggleMenuHamburger();
+    });
+
+    // Cerrar el menú al hacer clic fuera de él
+    document.addEventListener("click", (e) => {
+      // Si el clic no ocurre en el menú principal ni en el menú hamburguesa
+      if (
+        !menuPrincipal.contains(e.target) &&
+        !menuHamburger.contains(e.target)
+      ) {
+        if (menuHamburger.classList.contains("open-menu")) {
+          toggleMenuHamburger();
+        }
+      }
+    });
+
+    // Cerrar cualquier submenú si se hace clic fuera de ellos
+    document.addEventListener("click", (event) => {
+      const submenus = document.querySelectorAll(".submenu");
+      const arrows = document.querySelectorAll("[id^='arrow-']");
+      const isClickInsideMenu = event.target.closest(".submenu-parent");
+
+      // Verificar si el clic está dentro de un submenú abierto
+      if (!isClickInsideMenu) {
+        // Cerrar todos los submenús si el clic es fuera
+        submenus.forEach((submenu) => {
+          submenu.classList.add(
+            "opacity-0",
+            "scale-95",
+            "pointer-events-none",
+            "h-0",
+          );
+          submenu.classList.remove(
+            "opacity-100",
+            "scale-100",
+            "pointer-events-auto",
+            "h-fit",
+          );
+        });
+        arrows.forEach((arrow) => {
+          arrow.classList.remove("rotate-180");
+        });
+      }
+    });
+
+    // // Definir las funciones para manejar el menú de monedas
+    // function toggleCurrencyMenu() {
+    //   const currencyMenu = document.getElementById("currency-menu");
+    //   const arrowCurrency = document.getElementById(
+    //     "select-content-currency",
+    //   ).lastElementChild;
+
+    //   // Aplica o quita las clases de transición para animar la apertura/cierre del menú
+    //   currencyMenu.classList.toggle("hidden");
+    //   currencyMenu.classList.toggle("opacity-0"); // Controla la visibilidad
+    //   currencyMenu.classList.toggle("scale-95"); // Controla la escala
+
+    //   // Aplica la rotación suave a la flecha
+    //   arrowCurrency.classList.toggle("rotate-180");
+    // }
+
+    // // Esta función actualiza la moneda seleccionada y el componente de la bandera
+    // function selectCurrency(currency, flagComponent) {
+    //   selectedCurrency = currency;
+    //   selectedFlagComponent = flagComponent;
+
+    //   // Actualiza el texto y el ícono de la moneda seleccionada
+    //   document.getElementById("selected-currency-text").textContent = currency;
+
+    //   const flagContainer = document.getElementById("selected-flag-icon");
+    //   flagContainer.innerHTML = ""; // Limpia el contenido anterior
+
+    //   // Actualiza el icono de bandera según la selección
+    //   if (flagComponent === "FlagForPeru") {
+    //     flagContainer.innerHTML = `<Image src={flagPeru} alt="Globo Terraqueo" class="transition-all duration-300 ease-in-out" />`;
+    //   } else {
+    //     flagContainer.innerHTML = `<Image src={flagGlobal} alt="Globo Terraqueo" class="transition-all duration-300 ease-in-out" />`;
+    //   }
+
+    //   // Llama a toggleCurrencyMenu para cerrar el menú después de seleccionar una moneda
+    //   toggleCurrencyMenu();
+    // }
+
+    // Cerrar el menú al hacer clic fuera de él
+    document.addEventListener("click", (event) => {
+      const currencyMenu = document.getElementById("currency-menu");
+      const arrowCurrency = document.getElementById(
+        "select-content-currency",
+      ).lastElementChild;
+
+      // Verifica si el menú y la flecha existen antes de intentar acceder a sus propiedades
+      if (
+        currencyMenu &&
+        arrowCurrency &&
+        !currencyMenu.contains(event.target) &&
+        !event.target.closest(".currency-dropdown")
+      ) {
+        currencyMenu.classList.add("hidden");
+        arrowCurrency.classList.remove("rotate-180");
+      }
+      // toggleCurrencyMenu();
+    });
+  </script>
+</nav>
