@@ -1,118 +1,77 @@
 ---
-import { Image } from "astro:assets";
-
-import SolutionHardware from "@src/Images/Home/SolutionHardware.webp";
-import SolutionHardwareMobile from "@src/Images/Home/SolutionsHardwareMobile.webp";
-import CheckChip from "@src/Images/icons/CheckChip.astro";
+import PuzzleConsulting from "@src/Images/icons/PuzzleConsulting.astro";
 ---
 
-<div class="flex flex-col-reverse items-start gap-8 lg:flex-row">
-  <div class="self-center lg:h-[537px] lg:w-[592px]">
-    <!-- Definimos el alto y ancho para que ocupe espacio y subimos una imagen absoluta -->
-    <div class="relative lg:h-[537px] lg:w-[903px]">
-      <Image
-        src={SolutionHardware}
-        width={903}
-        alt={"Imagen de soluciones de hardware"}
-        class="invisible absolute right-0 top-0 h-full w-full object-contain lg:visible"
-      />
-      <Image
-        src={SolutionHardwareMobile}
-        width={480}
-        alt={"Imagen de soluciones de hardware"}
-        class="lg:invisible"
-      />
-      <h3
-        class="invisible absolute bottom-0 right-4 text-2xl font-bold text-black-500 lg:visible"
-      >
-        Beneficios de implementar una Solución de Hardware
-        <!-- ESTO ES UN TÍTULO DE LA SIGUIENTE SECCIÓN -->
-      </h3>
-    </div>
-  </div>
+<div
+  class="flex flex-col-reverse items-start gap-8 bg-white-200 px-7 py-8 md:px-8 lg:flex-row lg:pb-0 lg:pt-4"
+>
+  <!-- Definimos el alto y ancho para que ocupe espacio y subimos una imagen absoluta -->
   <article>
-    <h3 class="relative mb-7 text-3xl font-bold text-black-500">
-      Soluciones de Hardware a Medida
-      <span
-        class="absolute bottom-0 left-0 h-[2px] w-1/2 bg-secondary-500 lg:hidden"
-      >
-        <span
-          class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-secondary-500"
-        >
-        </span>
-      </span>
-    </h3>
-    <p class="mb-8 font-light leading-5 text-black-500 lg:mb-4">
-      Diseñamos hardware personalizado para distintos campos de la industria.
-      Somos expertos en el diseño y fabricación de PCBs de alta calidad,
-      adaptados a las necesidades del cliente. Además, ofrecemos servicios de
-      ensamblaje para asegurar una solución completa y eficiente.
-    </p>
-    <h3 class="relative mb-2 text-2xl font-bold text-black-500">
+    <hgroup
+      class="relative mb-8 rounded-lg bg-[#1F2937] bg-opacity-80 p-4 lg:max-w-2xl lg:translate-x-48"
+    >
+      <h3 class="mb-4 text-4xl font-bold text-white-200">
+        Soluciones de Hardware a Medida
+      </h3>
+      <p class="mb-4 leading-tight text-white-500 lg:mb-4">
+        Diseñamos y desarrollamos hardware personalizado que cumple con los
+        requerimientos específicos de tu negocio. Desde prototipos hasta
+        producción en serie, te acompañamos en cada etapa del proceso para
+        garantizar dispositivos eficientes y de alta calidad.
+      </p>
+    </hgroup>
+    <h3
+      class="relative mb-4 text-3xl font-bold text-white-200 lg:text-black-500"
+    >
       Qué implica:
-      <span
-        class="absolute bottom-0 left-0 h-[2px] w-2/5 bg-secondary-500 lg:hidden"
-      >
-        <span
-          class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-secondary-500"
-        >
-        </span>
-      </span>
     </h3>
-    <ul class="mb-8 flex flex-col gap-4 sm:gap-2 lg:mb-0 lg:block lg:gap-0">
-      <li
-        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
-      >
-        <div class="grid h-8 w-8 place-content-center">
-          <CheckChip class="" />
-        </div>
-        <span class="leading-5"> Diseño electrónico de tarjetas PCBs</span>
-      </li>
-      <li
-        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
-      >
-        <div class="grid h-8 w-8 place-content-center">
-          <CheckChip class="" />
-        </div>
-        <span class="leading-5">
-          Fabricación local e internacional de tarjetas PCBs.
+    <ul
+      class="relative mb-8 flex flex-wrap justify-center gap-4 text-pretty text-white-200 sm:gap-2 lg:mb-0 lg:text-black-500"
+    >
+      <li class="flex flex-col items-center justify-start gap-2 font-light">
+        <PuzzleConsulting />
+        <span class="mx-auto max-w-48 text-center leading-5">
+          Análisis de necesidades y objetivos
         </span>
       </li>
       <li
-        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+        class="flex flex-col items-center justify-start gap-2 text-pretty font-light"
       >
-        <div class="grid h-8 w-8 place-content-center">
-          <CheckChip class="" />
-        </div>
-        <span class="leading-5"> Ensamblaje y testeo de tarjetas PCBs. </span>
-      </li>
-      <li
-        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
-      >
-        <div class="grid h-8 w-8 place-content-center">
-          <CheckChip class="" />
-        </div>
-        <span class="leading-5">
-          Ingeniería Inversa de equipos electrónicos.
+        <PuzzleConsulting />
+        <span class="mx-auto max-w-48 text-center leading-5">
+          Diseño de arquitectura IoT personalizada
         </span>
       </li>
       <li
-        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+        class="flex flex-col items-center justify-start gap-2 text-pretty font-light"
       >
-        <div class="grid h-8 w-8 place-content-center">
-          <CheckChip class="" />
-        </div>
-        <span class="leading-5"> Diseño mecánico e impresión 3D. </span>
+        <PuzzleConsulting />
+        <span class="mx-auto max-w-48 text-center leading-5">
+          Desarrollo de sensores y dispositivos conectados
+        </span>
       </li>
       <li
-        class="flex h-10 items-center justify-start gap-2 font-light text-black-800"
+        class="flex flex-col items-center justify-start gap-2 text-pretty font-light"
       >
-        <div class="grid h-8 w-8 place-content-center">
-          <CheckChip class="" />
-        </div>
-        <span class="leading-5">
-          Aseguramos que el hardware cumpla con las regulaciones y estándares de
-          calidad
+        <PuzzleConsulting />
+        <span class="mx-auto max-w-48 text-center leading-5">
+          Implementación de plataformas de gestión de datos
+        </span>
+      </li>
+      <li
+        class="flex flex-col items-center justify-start gap-2 text-pretty font-light"
+      >
+        <PuzzleConsulting />
+        <span class="mx-auto max-w-48 text-center leading-5">
+          Integración con sistemas existentes
+        </span>
+      </li>
+      <li
+        class="flex flex-col items-center justify-start gap-2 text-pretty font-light"
+      >
+        <PuzzleConsulting />
+        <span class="mx-auto max-w-48 text-center leading-5">
+          Pruebas de conectividad y seguridad
         </span>
       </li>
     </ul>
