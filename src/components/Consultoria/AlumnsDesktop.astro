@@ -1,37 +1,31 @@
 ---
 import PuzzleConsulting from "@src/Images/icons/PuzzleConsulting.astro";
-import BgEnterpriseDesktop from "@src/Images/Consultoria/BgEnterpriseDesktop.webp";
+import BgStudentDesktop from "@src/Images/Consultoria/BgStudentDesktop.webp";
 import { Image } from "astro:assets";
 ---
 
 <section class="hidden bg-white-100 lg:block">
-  <div class="mx-auto flex max-w-7xl">
+  <div class="mx-auto flex max-w-7xl flex-row-reverse">
     <div class="relative aspect-auto h-fit w-3/5 max-w-4xl">
-      <Image
-        src={BgEnterpriseDesktop}
-        alt="Fondo de la sección"
-        class="w-full"
-      />
-      <div class="rectangle absolute bottom-0 right-0"></div>
-      <div class="triangle absolute bottom-0 right-[72px]"></div>
-      <div class="triangle2 absolute bottom-0 right-0 xl:-right-[1px]"></div>
+      <Image src={BgStudentDesktop} alt="Fondo de la sección" class="w-full" />
+      <div class="rectangle absolute bottom-0 left-0"></div>
+      <div class="triangle absolute bottom-0 left-[72px]"></div>
+      <div class="triangle2 absolute bottom-0 left-0 xl:-right-[1px]"></div>
     </div>
     <div class="relative flex-1">
       <p
         class="relative mx-auto mb-8 mt-8 max-w-3xl text-pretty text-center text-xl leading-none text-black-500 lg:max-w-md"
       >
-        Nuestro servicio de consultoría para empresas y profesionales está
-        diseñado para guiarte en la elección y el desarrollo de
-        <span class="font-bold text-primary-500">
-          soluciones técnicas adecuadas
-        </span>
-        , maximizando tu inversión y asegurando resultados eficaces.
+        Ofrecemos asesoramiento integral para estudiantes en la estructuración,
+        desarrollo y finalización de
+        <span class="font-bold text-primary-500"> tesis y proyectos </span>
+        , asegurando que puedas cumplir tus objetivos académicos.
       </p>
       <ul
-        class="absolute right-[256px] top-0 flex h-full w-fit flex-col justify-between gap-1 py-48 xl:right-[312px]"
+        class="absolute left-[296px] top-0 flex h-full w-fit flex-col justify-between gap-1 py-48 xl:left-[312px]"
       >
         <li
-          class="relative flex w-[496px] translate-x-48 items-center justify-center gap-4 xs:gap-6"
+          class="relative flex w-[496px] -translate-x-48 flex-row-reverse items-center justify-center gap-4 xs:gap-6"
         >
           <PuzzleConsulting />
           <p class="stroke-text text-5xl font-bold">01</p>
@@ -46,7 +40,7 @@ import { Image } from "astro:assets";
           </div>
         </li>
         <li
-          class="relative flex translate-x-16 items-center justify-center gap-4 xs:gap-6"
+          class="relative flex -translate-x-16 flex-row-reverse items-center justify-center gap-4 xs:gap-6"
         >
           <PuzzleConsulting />
           <p class="stroke-text text-5xl font-bold">02</p>
@@ -61,7 +55,7 @@ import { Image } from "astro:assets";
           </div>
         </li>
         <li
-          class="relative flex -translate-x-16 items-center justify-center gap-4 xs:gap-6"
+          class="relative flex translate-x-16 flex-row-reverse items-center justify-center gap-4 xs:gap-6"
         >
           <PuzzleConsulting />
           <p class="stroke-text text-5xl font-bold">03</p>
@@ -76,7 +70,7 @@ import { Image } from "astro:assets";
           </div>
         </li>
         <li
-          class="relative flex translate-x-16 items-center justify-center gap-4 xs:gap-6"
+          class="relative flex -translate-x-16 flex-row-reverse items-center justify-center gap-4 xs:gap-6"
         >
           <PuzzleConsulting />
           <p class="stroke-text text-5xl font-bold">04</p>
@@ -91,7 +85,7 @@ import { Image } from "astro:assets";
           </div>
         </li>
         <li
-          class="relative flex translate-x-48 items-center justify-center gap-4 xs:gap-6"
+          class="relative flex -translate-x-48 items-center justify-center gap-4 xs:gap-6"
         >
           <PuzzleConsulting />
           <p class="stroke-text text-5xl font-bold">05</p>
@@ -106,10 +100,10 @@ import { Image } from "astro:assets";
           </div>
         </li>
         <div
-          class="absolute -right-64 top-1/2 flex h-64 w-64 -translate-y-1/3 flex-col items-center justify-center gap-4 rounded-full bg-black-700 shadow-xl xl:-right-96"
+          class="absolute -left-80 top-1/2 flex h-72 w-72 -translate-y-1/2 flex-col items-center justify-center gap-4 rounded-full bg-black-700 shadow-xl xl:-left-96"
         >
           <h3 class="text-center text-3xl font-bold text-white-200">
-            Consultoría para Empresas
+            Consultoría para Estudiantes
           </h3>
           <div class="relative mx-auto flex flex-col items-center">
             <a
@@ -135,7 +129,7 @@ import { Image } from "astro:assets";
   .triangle {
     height: 100%;
     aspect-ratio: 1/3;
-    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    clip-path: polygon(0% 0, 100% 50%, 0% 100%);
     background: #fbfcfc80;
   }
 
@@ -143,7 +137,7 @@ import { Image } from "astro:assets";
   .triangle2 {
     height: 100%;
     aspect-ratio: 1/3;
-    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    clip-path: polygon(0% 0, 100% 50%, 0% 100%);
     background: #fbfcfc;
   }
 

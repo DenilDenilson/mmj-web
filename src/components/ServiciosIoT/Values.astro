@@ -1,0 +1,236 @@
+---
+import Valor1 from "@src/Images/ServiciosIoT/Valor1.webp";
+import Valor2 from "@src/Images/ServiciosIoT/Valor2.webp";
+import Valor3 from "@src/Images/ServiciosIoT/Valor3.webp";
+import Valor4 from "@src/Images/ServiciosIoT/Valor4.webp";
+import { Image } from "astro:assets";
+---
+
+<section class="bg-white-500">
+  <div class="relative mx-auto max-w-7xl gap-16 py-16 lg:pt-32">
+    <hgroup class="">
+      <h2
+        id="SpecialitesTitle"
+        class="mb-6 text-center text-[40px] font-bold leading-tight text-secondary-400"
+      >
+        Valor al Adquirir una Solución Integral
+      </h2>
+      <p
+        class="line-height-xl relative z-50 mx-auto mb-12 max-w-3xl text-pretty px-6 text-center text-xl leading-tight text-black-500"
+      >
+        Al adquirir una solución integral IoT, los usuarios pueden controlar
+        cada etapa de sus operaciones, logrando eficiencia máxima y una
+        comunicación fluida entre software, hardware y dispositivos IoT.
+      </p>
+    </hgroup>
+
+    <div class="valor-slider relative overflow-x-hidden">
+      <input
+        class="hidden"
+        checked
+        type="radio"
+        name="valorSelector"
+        id="valorSelector1"
+      />
+      <input
+        class="hidden"
+        type="radio"
+        name="valorSelector"
+        id="valorSelector2"
+      />
+      <input
+        class="hidden"
+        type="radio"
+        name="valorSelector"
+        id="valorSelector3"
+      />
+      <input
+        class="hidden"
+        type="radio"
+        name="valorSelector"
+        id="valorSelector4"
+      />
+
+      <ul
+        class="slider-container relative flex transition-all duration-300 ease-in-out"
+      >
+        <li
+          class="relative min-w-full text-white-200 lg:flex lg:gap-6 lg:text-black-500"
+        >
+          <Image
+            src={Valor1}
+            alt="Valor 1"
+            class="absolute top-0 z-0 aspect-auto h-full w-full object-cover lg:relative lg:w-2/5"
+          />
+          <div class="absolute inset-0 bg-black-800 opacity-75 lg:hidden"></div>
+          <div class="">
+            <p
+              class="relative border-secondary-500 pl-4 text-[192px] font-bold"
+            >
+              01
+              <span class="absolute bottom-12 left-4 h-3 w-48 bg-secondary-500"
+              ></span>
+            </p>
+            <h3
+              class="relative mb-3 px-4 text-4xl font-bold leading-tight lg:max-w-md"
+            >
+              Automatización Completa, Resultados Tangibles
+            </h3>
+            <p class="relative px-4 pb-20 lg:max-w-xl">
+              Controla procesos clave desde cualquier lugar, optimiza el tiempo
+              y reduce los errores operativos.
+            </p>
+          </div>
+        </li>
+        <li
+          class="relative min-w-full text-white-200 lg:flex lg:gap-6 lg:text-black-500"
+        >
+          <Image
+            src={Valor2}
+            alt="Valor 2"
+            class="absolute top-0 z-0 aspect-auto h-full w-full object-cover lg:relative lg:w-2/5"
+          />
+          <div class="absolute inset-0 bg-black-800 opacity-75 lg:hidden"></div>
+          <div>
+            <p
+              class="relative border-secondary-500 pl-4 text-[192px] font-bold"
+            >
+              02
+              <span class="absolute bottom-12 left-4 h-3 w-48 bg-secondary-500"
+              ></span>
+            </p>
+            <h3
+              class="relative mb-3 px-4 text-4xl font-bold leading-tight lg:max-w-sm"
+            >
+              Monitoreo en Tiempo Real y Análisis Predictivo
+            </h3>
+            <p class="relative px-4 pb-20">
+              Conoce el rendimiento de cada recurso al instante y toma
+              decisiones con datos precisos.
+            </p>
+          </div>
+        </li>
+        <li
+          class="relative min-w-full text-white-200 lg:flex lg:gap-6 lg:text-black-500"
+        >
+          <Image
+            src={Valor3}
+            alt="Valor 3"
+            class="absolute top-0 z-0 aspect-auto h-full w-full object-cover lg:relative lg:w-2/5"
+          />
+          <div class="absolute inset-0 bg-black-800 opacity-75 lg:hidden"></div>
+          <div>
+            <p
+              class="relative border-secondary-500 pl-4 text-[192px] font-bold"
+            >
+              03
+              <span class="absolute bottom-12 left-4 h-3 w-48 bg-secondary-500"
+              ></span>
+            </p>
+            <h3 class="relative mb-3 px-4 text-4xl font-bold leading-tight">
+              Reducción de Costos Operativos
+            </h3>
+            <p class="relative px-4 pb-20">
+              Ahorra hasta un 30% en costos de operación con sistemas IoT de
+              bajo consumo y alta eficiencia.
+            </p>
+          </div>
+        </li>
+        <li
+          class="relative min-w-full text-white-200 lg:flex lg:gap-6 lg:text-black-500"
+        >
+          <Image
+            src={Valor4}
+            alt="Valor 5"
+            class="absolute top-0 z-0 aspect-auto h-full w-full object-cover lg:relative lg:w-2/5"
+          />
+          <div class="absolute inset-0 bg-black-800 opacity-75 lg:hidden"></div>
+          <div>
+            <p
+              class="relative border-secondary-500 pl-4 text-[192px] font-bold"
+            >
+              04
+              <span class="absolute bottom-12 left-4 h-3 w-48 bg-secondary-500"
+              ></span>
+            </p>
+            <h3 class="relative mb-3 px-4 text-4xl font-bold leading-tight">
+              Solución Todo en Uno: IoT + Software + Hardware
+            </h3>
+            <p class="relative px-4 pb-20">
+              Integra IoT a la medida de tu negocio con dispositivos y software
+              unificados para mayor precisión.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul
+        id="valorSelector"
+        class="absolute left-0 right-0 top-[580px] mx-auto flex w-fit gap-3 xs:top-[460px] md:top-[412px] lg:top-[496px]"
+      >
+        <label
+          for="valorSelector1"
+          id="selectHero1"
+          class="h-4 w-4 cursor-pointer rounded-full bg-white-200 shadow-lg shadow-black-500 transition-colors duration-200 hover:bg-secondary-400"
+        >
+        </label>
+        <label
+          for="valorSelector2"
+          id="selectHero2"
+          class="h-4 w-4 cursor-pointer rounded-full bg-white-200 shadow-lg shadow-black-500 transition-colors duration-200 hover:bg-secondary-400"
+        >
+        </label>
+        <label
+          for="valorSelector3"
+          id="selectHero3"
+          class="h-4 w-4 cursor-pointer rounded-full bg-white-200 shadow-lg shadow-black-500 transition-colors duration-200 hover:bg-secondary-400"
+        >
+        </label>
+        <label
+          for="valorSelector4"
+          id="selectHero4"
+          class="h-4 w-4 cursor-pointer rounded-full bg-white-200 shadow-lg shadow-black-500 transition-colors duration-200 hover:bg-secondary-400"
+        >
+        </label>
+      </ul>
+
+      <div class="mx-auto flex max-w-3xl flex-col items-center">
+        <span
+          class="mb-8 mt-16 text-pretty text-center text-xl text-primary-400 drop-shadow-xl lg:mt-16"
+        >
+          ¿Listo para transformar la gestión de tus recursos con IoT?</span
+        >
+        <a
+          href="https://wa.link/fc3qb5"
+          class="mx-auto rounded bg-primary-500 px-8 py-4 text-center text-sm font-light leading-base text-white-200 ring-1 ring-inset ring-primary-500 transition-all duration-200 hover:bg-primary-400 sm:px-8 lg:text-lg xl:px-12 xl:text-xl"
+          >Solicitar servicio</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #valorSelector1:checked ~ #valorSelector > :nth-child(1),
+  #valorSelector2:checked ~ #valorSelector > :nth-child(2),
+  #valorSelector3:checked ~ #valorSelector > :nth-child(3),
+  #valorSelector4:checked ~ #valorSelector > :nth-child(4) {
+    background-color: #4a94a0;
+    scale: 1.25;
+  }
+
+  #valorSelector1:checked ~ .slider-container {
+    left: 0%;
+  }
+
+  #valorSelector2:checked ~ .slider-container {
+    left: -100%;
+  }
+
+  #valorSelector3:checked ~ .slider-container {
+    left: -200%;
+  }
+
+  #valorSelector4:checked ~ .slider-container {
+    left: -300%;
+  }
+</style>

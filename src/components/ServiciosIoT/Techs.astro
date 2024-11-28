@@ -1,0 +1,219 @@
+---
+import ServiceCard from "@src/Images/Servicios/ServiceCard.jpg";
+import Wifi from "@src/Images/ServiciosIoT/WiFi.webp";
+import Bluetooth from "@src/Images/ServiciosIoT/Bluetooth.webp";
+import Gprs from "@src/Images/ServiciosIoT/Gprs.webp";
+import LoraWan from "@src/Images/ServiciosIoT/LoraWan.webp";
+import Zigbee from "@src/Images/ServiciosIoT/Zigbee.webp";
+import Wifi4g from "@src/Images/ServiciosIoT/WiFi4g.webp";
+import { Image } from "astro:assets";
+---
+
+<section class="bg-white-200">
+  <div
+    class="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 px-7 py-16 md:px-8 lg:pt-32 xl:flex-row"
+  >
+    <div class="flex flex-col items-center">
+      <hgroup class="">
+        <h2
+          id="SpecialitesTitle"
+          class="mb-6 text-center text-[40px] font-bold leading-tight text-secondary-400"
+        >
+          Tecnologías IoT más utilizadas
+        </h2>
+        <p
+          class="line-height-xl relative z-50 mb-12 max-w-3xl text-pretty text-center text-xl leading-tight text-black-500"
+        >
+          Explora las Tecnologías que Transforman tus Proyectos IoT Contamos con
+          un amplio portafolio de tecnologías de conectividad que nos permite
+          desarrollar soluciones personalizadas para monitoreo, control y
+          automatización en múltiples sectores.
+        </p>
+      </hgroup>
+
+      <ul
+        class="mx-auto mb-8 flex max-w-7xl snap-x snap-mandatory flex-col gap-6 overflow-x-auto p-2 lg:h-fit lg:flex-wrap lg:justify-center lg:gap-10 lg:overflow-visible xl:grid xl:grid-cols-2 xl:grid-rows-3 xl:gap-10"
+      >
+        <div class="flex max-w-xl gap-6">
+          <Image src={Wifi} alt="Wifi" class="hidden lg:block" />
+          <li
+            class="flex max-w-lg flex-col items-start gap-6 rounded-lg bg-[#404955] p-4 text-white-200 lg:max-w-72"
+          >
+            <div class="flex items-start gap-6">
+              <Image
+                src={Wifi}
+                alt="Wifi"
+                class="h-28 w-28 rounded lg:hidden"
+              />
+              <div class="flex flex-col items-start">
+                <h3 class="text-xl">WiFi</h3>
+                <p class="font-light">
+                  Tecnología ideal para conexiones estables en entornos con
+                  redes locales de alta velocidad.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3>Aplicaciones:</h3>
+              <p class="font-light">
+                Sistemas de monitoreo en tiempo real, control de dispositivos
+                desde redes locales y hogares inteligentes.
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="flex max-w-xl gap-6">
+          <Image src={Bluetooth} alt="Bluetooth" class="hidden lg:block" />
+          <li
+            class="flex max-w-lg flex-col items-start gap-6 rounded-lg bg-[#404955] p-4 text-white-200 lg:max-w-none"
+          >
+            <div class="flex items-start gap-6">
+              <Image
+                src={Bluetooth}
+                alt="Bluetooth"
+                class="h-28 w-28 rounded lg:hidden"
+              />
+              <div class="flex flex-col items-start">
+                <h3 class="text-xl">Bluetooth</h3>
+                <p class="font-light">
+                  Excelente para aplicaciones de corto alcance con bajo consumo
+                  energético.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3>Aplicaciones:</h3>
+              <p class="font-light">
+                Control de dispositivos en espacios cerrados, sistemas de
+                rastreo en tiempo real, y soluciones portátiles.
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="flex max-w-xl gap-6">
+          <Image src={Gprs} alt="GPRS" class="hidden lg:block" />
+          <li
+            class="flex max-w-lg flex-col items-start gap-6 rounded-lg bg-[#404955] p-4 text-white-200"
+          >
+            <div class="flex items-start gap-6">
+              <Image
+                src={Gprs}
+                alt="GPRS"
+                class="h-28 w-28 rounded lg:hidden"
+              />
+              <div class="flex flex-col items-start">
+                <h3 class="text-xl">GPRS</h3>
+                <p class="font-light">
+                  Conectividad celular de baja velocidad, útil en ubicaciones
+                  sin acceso a WiFi.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3>Aplicaciones:</h3>
+              <p class="font-light">
+                Seguimiento de activos en áreas remotas, sistemas de alerta
+                básica, y monitoreo de ubicación.
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="flex max-w-xl gap-6">
+          <Image src={Wifi4g} alt="4G" class="hidden lg:block" />
+          <li
+            class="flex max-w-lg flex-col items-start gap-6 rounded-lg bg-[#404955] p-4 text-white-200"
+          >
+            <div class="flex items-start gap-6">
+              <Image
+                src={Wifi4g}
+                alt="4G"
+                class="h-28 w-28 rounded lg:hidden"
+              />
+              <div class="flex flex-col items-start">
+                <h3 class="text-xl">4G</h3>
+                <p class="font-light">
+                  Conectividad de alta velocidad en redes móviles para proyectos
+                  que requieren transmisión de datos constante.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3>Aplicaciones:</h3>
+              <p class="font-light">
+                Sistemas de videovigilancia en tiempo real, monitoreo de
+                maquinaria pesada y gestión de recursos en campo.
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="flex max-w-xl gap-6">
+          <Image src={LoraWan} alt="Lorawan" class="hidden lg:block" />
+          <li
+            class="flex max-w-lg flex-col items-start gap-6 rounded-lg bg-[#404955] p-4 text-white-200"
+          >
+            <div class="flex items-start gap-6">
+              <Image
+                src={LoraWan}
+                alt="Lorawan"
+                class="h-28 w-28 rounded lg:hidden"
+              />
+              <div class="flex flex-col items-start">
+                <h3 class="text-xl">LoRaWan</h3>
+                <p class="font-light">
+                  Ideal para redes de bajo consumo y gran alcance, perfecto para
+                  áreas rurales o industriales.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3>Aplicaciones:</h3>
+              <p class="font-light">
+                Sistemas de monitoreo en agricultura, ciudades inteligentes y
+                control de sensores en zonas alejadas.
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="flex max-w-xl gap-6">
+          <Image src={Zigbee} alt="Zigbee" class="hidden lg:block" />
+          <li
+            class="flex max-w-lg flex-col items-start gap-6 rounded-lg bg-[#404955] p-4 text-white-200"
+          >
+            <div class="flex items-start gap-6">
+              <Image
+                src={Zigbee}
+                alt="Zigbee"
+                class="h-28 w-28 rounded lg:hidden"
+              />
+              <div class="flex flex-col items-start">
+                <h3 class="text-xl">Zigbee</h3>
+                <p class="font-light">
+                  Redes de bajo consumo para conexión entre múltiples
+                  dispositivos.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3>Aplicaciones:</h3>
+              <p class="font-light">
+                Automatización del hogar, control de iluminación y sistemas de
+                sensores en interiores.
+              </p>
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <span
+        class="z-10 text-pretty text-center text-xl text-primary-400 drop-shadow-xl"
+      >
+        ¿Interesado en Potenciar tu Proyecto con IoT?</span
+      >
+    </div>
+  </div>
+</section>

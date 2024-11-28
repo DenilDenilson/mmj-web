@@ -1,0 +1,70 @@
+---
+import bgMobile from "@src/Images/Servicios/bgMobile.avif";
+import bgDesktop from "@src/Images/Servicios/bgDesktop.avif";
+import { Image } from "astro:assets";
+---
+
+<section class="lg:bg-[#11171E]">
+  <div class="h-12 w-full"></div>
+  <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
+  <div class="relative mx-auto max-w-7xl overflow-x-hidden sm:flex">
+    <div
+      class="relative hidden overflow-hidden lg:block lg:h-[448px] lg:w-[448px] xl:h-[576px] xl:w-[576px]"
+    >
+      <Image
+        class="invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
+        src={bgDesktop}
+        alt="Imagen de fondo de alguien programando"
+      />
+    </div>
+    <picture
+      class="absolute -z-50 aspect-[2/1] h-full sm:bg-black-900 lg:z-0 lg:hidden"
+    >
+      <Image
+        class="absolute block aspect-auto h-full w-full object-cover sm:hidden"
+        src={bgMobile}
+        alt="Imagen de fondo de alguien programando"
+      />
+      <Image
+        class="absolute hidden aspect-auto h-full w-full object-cover sm:block"
+        src={bgMobile}
+        alt="Imagen de fondo de alguien programando"
+      />
+    </picture>
+    <div
+      class="z-10 max-w-3xl px-4 py-8 sm:relative sm:flex-1 sm:pb-44 lg:pb-8"
+    >
+      <hgroup>
+        <h3
+          class="relative mb-2 text-4xl font-bold text-white-50 xs:text-5xl xl:text-7xl"
+        >
+          Soluciones de IoT a Medida
+          <span class="absolute bottom-0 left-0 h-[2px] w-full bg-primary-400">
+            <span
+              class="absolute -top-1 right-0 h-2 w-2 rounded-full bg-primary-400"
+            >
+            </span>
+          </span>
+        </h3>
+        <p
+          class="mb-6 text-base leading-tight tracking-tight text-white-600 xs:text-xl lg:max-w-3xl lg:font-light xl:text-2xl"
+        >
+          Diseño, desarrollo y fabricación de hardware personalizado para tu
+          industria.
+        </p>
+      </hgroup>
+      <p
+        class="mb-16 leading-tight tracking-tight text-white-50 xs:text-xl lg:mb-24 lg:max-w-3xl lg:font-light xl:mb-32 xl:text-xl xl:tracking-normal"
+      >
+        Transforma tu empresa con IoT. Ofrecemos soluciones integrales de
+        hardware, software y conectividad IoT para optimizar la gestión y
+        monitoreo de recursos.
+      </p>
+      <a
+        href="https://wa.link/fc3qb5"
+        class="rounded bg-primary-500 px-8 py-4 text-center text-sm font-light leading-base text-white-200 ring-1 ring-inset ring-primary-500 transition-all duration-200 hover:bg-primary-400 sm:px-8 lg:text-lg xl:px-12 xl:text-xl"
+        >Descubre nuestra solución integral</a
+      >
+    </div>
+  </div>
+</section>
