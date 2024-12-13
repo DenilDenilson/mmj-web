@@ -11,7 +11,10 @@ import Ubication from "@src/components/Home/Ubication.astro";
 
 export const getStaticPaths = (() => {
   // Las uri se usan para obtener el objeto del archivo Specialites.ts
-  return [{ params: { carrera: "embebido" } }];
+  return [
+    { params: { carrera: "embebido" } },
+    { params: { carrera: "hardware" } }
+  ];
 }) satisfies GetStaticPaths;
 ---
 
@@ -19,7 +22,7 @@ export const getStaticPaths = (() => {
   <Hero />
   <Courses />
   <Projects />
-  <NextLaunch />
+  <!-- <NextLaunch /> -->
   <Plans />
   <Ubication />
 </Layout>

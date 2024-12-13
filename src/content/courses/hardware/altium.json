@@ -1,0 +1,20 @@
+{
+    "bgCourseCard": "ansi-c",
+    "startDate": "Proximamente",
+    "title": "Diseño Electrónico usando Altium Designer y normas IPC",
+    "description": "Desarrolla equipos electrónicos de alto nivel para aplicaciones industriales, desde esquemáticos hasta PCBs optimizados. Domina estándares IPC, diseño de alta velocidad, sistemas embebidos y soluciones avanzadas con Altium Designer, desarrollando hardware eficiente y confiable para distintos sectores tecnológicos.",
+    "goals": [
+      "Comprender los principios del desarrollo de software embebido.",
+      "Aprender a integrar hardware y software en sistemas embebidos",
+      "Dominar la programación en tiempo real y la optimización de recursos.",
+      "Desarrollar aplicaciones robustas y escalables.",
+      "Comprender los principios del desarrollo de software embebido."
+    ],
+    "modality": "virtual",
+    "duration": 4,
+    "hours": 40,
+    "priceBase": 95.9,
+    "priceReal": 70,
+    "carrer": "hardware"
+  }
+  

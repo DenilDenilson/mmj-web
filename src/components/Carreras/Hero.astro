@@ -1,6 +1,8 @@
 ---
 import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
 import bgEmbebidoDesktop from "@src/Images/Carreras/HeroBgDesktop.avif";
+import bgHardware from "@src/Images/Carreras/Hardware/BgHeroHardware.avif"
+import bgHardwareDesktop from "@src/Images/Carreras/Hardware/BgHeroHardware.avif"
 import Chip from "@src/Images/icons/Chip.astro";
 import GoalSpecialite from "./GoalSpecialite.astro";
 import ObjectiveCardContainer from "./ObjectiveCardContainer.astro";
@@ -12,6 +14,10 @@ const bgImages = {
     mobile: bgEmbebido,
     desktop: bgEmbebidoDesktop,
   },
+  hardware: {
+    mobile: bgHardware,
+    desktop: bgHardwareDesktop,
+  }
 };
 
 const { carrera } = Astro.params;
@@ -28,9 +34,9 @@ const {
 } = specificCarrer?.data || {};
 ---
 
-<section class="md:bg-black-900">
+<section class="md:bg-black-900 relative">
   <Image
-    class="invisible absolute left-0 right-0 top-20 mx-auto hidden h-full w-full object-cover md:visible md:z-10 md:block md:h-auto"
+    class="invisible absolute left-0 right-0 top-16 mx-auto hidden h-full w-full object-cover md:visible md:z-10 md:block md:h-full"
     src={bgImages[backgroundHeroImage as keyof typeof bgImages].desktop}
     alt="Imagen de fondo de alguien programando"
   />
@@ -85,9 +91,7 @@ const {
         <p
           class="text-base leading-5 tracking-tight text-white-300 lg:max-w-2xl"
         >
-          Te recomendamos seguir este orden de cursos para un aprendizaje
-          completo y estructurado que te permitirá desarrollar las competencias
-          necesarias en cada área.
+        Te sugerimos seguir una secuencia estructurada de aprendizaje que abarca desde fundamentos hasta proyectos avanzados, asegurando que desarrolles las competencias necesarias para diseñar soluciones a medida para distintos campos de la industria.
         </p>
       </hgroup>
       <a

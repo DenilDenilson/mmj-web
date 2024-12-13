@@ -12,9 +12,12 @@ import { getCollection } from "astro:content";
 const { carrera } = Astro.params;
 const specificCarrer = await getEntry("carrers", `${carrera}`);
 const courses = await getCollection("courses");
+
+
 const coursesInCarrer = courses.filter((course) =>
-  specificCarrer?.id.includes(`${carrera}`),
+course?.id.includes(`${carrera}`),
 );
+
 const { studentProfile, skillsTech, canPerform } = specificCarrer?.data || {};
 ---
 

@@ -24,9 +24,11 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
   <div
     class="relative mx-auto flex max-w-7xl items-center justify-between px-7 py-2 text-white-200 lg:px-8 lg:py-1"
   >
-    <figure class="max-h-11 w-[152px] lg:max-h-14 lg:w-[200px]">
-      <Image src={Logo} alt="Logo MMJ" class="h-full object-contain" />
-    </figure>
+    <a href="/">
+      <figure class="max-h-11 w-[152px] lg:max-h-14 lg:w-[200px]">
+        <Image src={Logo} alt="Logo MMJ" class="h-full object-contain" />
+      </figure>
+    </a>
 
     <ul
       id="menu-principal"
@@ -162,7 +164,7 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
           </li>
           <li>
             <a
-              href="/servicio-consultoria"
+              href="/consultoria"
               class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
             >
               <Robot class="h-full w-full" />
