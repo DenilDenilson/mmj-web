@@ -1,8 +1,8 @@
 {
     "bgCourseCard": "ansi-c",
     "startDate": "Proximamente",
-    "title": "Diseño Electrónico usando Altium Designer y normas IPC",
-    "description": "Desarrolla equipos electrónicos de alto nivel para aplicaciones industriales, desde esquemáticos hasta PCBs optimizados. Domina estándares IPC, diseño de alta velocidad, sistemas embebidos y soluciones avanzadas con Altium Designer, desarrollando hardware eficiente y confiable para distintos sectores tecnológicos.",
+    "title": "Lenguaje de descripción de Hardware para FPGAS con VHDL",
+    "description": "Aprende a diseñar hardware digital con VHDL para FPGAs, desde circuitos combinacionales y secuenciales hasta módulos de comunicación como UART, I2C y SPI. Integra sensores y dispositivos a través de estos protocolos y desarrolla sistemas robustos aplicados a la industria tecnológica. Este curso combina teoría y práctica para impulsar tu carrera en diseño digital.",
     "goals": [
       "Comprender los principios del desarrollo de software embebido.",
       "Aprender a integrar hardware y software en sistemas embebidos",
@@ -10,7 +10,7 @@
       "Desarrollar aplicaciones robustas y escalables.",
       "Comprender los principios del desarrollo de software embebido."
     ],
-    "techs": ["altium"],
+    "techs": ["proteus", "quartus"],
     "modality": "???",
     "duration": 0,
     "hours": 0,

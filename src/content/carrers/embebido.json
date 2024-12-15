@@ -1,28 +1,28 @@
 {
-  "title": "Desarrollo de Software Embebido",
+  "title": "Programación de Microcontroladores",
   "backgroundHeroImage": "embebido",
-  "description": "El desarrollo de software embebido es esencial en la creación de dispositivos inteligentes y sistemas autónomos. Aprenderás a programar microcontroladores, manejar sistemas en tiempo real y crear soluciones robustas.",
+  "description": "El firmware embebido es el núcleo que da vida a los microcontroladores, permitiendo el control y operación de dispositivos inteligentes en una amplia variedad de aplicaciones. En esta especialidad, aprenderás a programar microcontroladores desde cero, optimizar recursos de hardware y desarrollar soluciones integradas de alto rendimiento.",
   "goals": [
-    "Comprender los principios del desarrollo de software embebido.",
-    "Aprender a integrar hardware y software en sistemas embebidos",
-    "Dominar la programación en tiempo real y la optimización de recursos.",
-    "Desarrollar aplicaciones robustas y escalables.",
-    "Comprender los principios del desarrollo de software embebido."
+    "Dominar la programación de microcontroladores para diversas arquitecturas.",
+    "Aprender a interactuar con periféricos como sensores, actuadores y módulos de comunicación",
+    "Diseñar diversos sistemas que integren protocolos de comunicación.",
+    "Implementar sistemas en tiempo real (RTOS) para aplicaciones críticas.",
+    "Diseñar y optimizar código eficiente y escalable para hardware embebido."
   ],
-  "studentProfile": "Al concluir la especialidad de Desarrollo de Software Embebido, el estudiante será un profesional altamente capacitado con habilidades tanto teóricas como prácticas en el diseño, implementación y optimización de sistemas embebidos.",
+  "studentProfile": "Al finalizar la especialidad de Desarrollo de Firmware Embebido, el participante será un experto en la programación y la optimización de microcontroladores, con habilidades para implementar soluciones robustas y eficientes en sistemas para diversas aplicaciones de la industria y tecnología.",
   "skillsTech": [
-    "Dominio de Microcontroladores",
-    "Desarrollo de firmware con FreeRTOS",
-    "Programación de sistemas en tiempo real",
-    "Desarrollo de aplicaciones en C y C++",
-    "Conocimiento de sistemas embebidos"
+    "Programación avanzada de microcontroladores utilizando patrones de diseño",
+    "Dominio de diversas arquitectiras de MCUs a nivel de registro",
+    "Integración de periféricos como sensores, actuadores y módulos de comunicación.",
+    "Diseño y optimización de aplicaciones en C, C++ y Assembler",
+    "Implementación de interfaces y protocolos de comunicación para sistemas embebidos"
   ],
   "canPerform": [
-    "Ingeniero de software embebido",
-    "Desarrollador de sistemas embebidos",
-    "Ingeniero de sistemas en tiempo real",
-    "Desarrollador de automatización",
-    "Ingeniero de sistemas embebidos"
+    "Programador de firmware embebido",
+    "Ingeniero de sistemas embebidos",
+    "Especialista en integración de hardware y software",
+    "Desarrollador de aplicaciones para sistemas en tiempo real",
+    "Gestor de proyectos de soluciones embebidas"
   ],
   "projects": [
     {

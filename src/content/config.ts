@@ -32,6 +32,7 @@ const courseCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     goals: z.array(z.string()),
+    techs: z.array(z.string()),
     modality: z.string(),
     duration: z.number(),
     hours: z.number(),

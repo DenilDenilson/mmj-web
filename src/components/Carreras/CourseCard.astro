@@ -5,12 +5,29 @@ import Circle from "@src/Images/icons/Circle.astro";
 import Clock from "@src/Images/icons/Clock.astro";
 import Vivo from "@src/Images/icons/Vivo.astro";
 import { Image } from "astro:assets";
-import National from "@src/Images/Carreras/National.png";
-import Microchip from "@src/Images/Carreras/Microchip.png";
-import Arduino from "@src/Images/Carreras/Arduino.png";
-import Siemens from "@src/Images/Carreras/Siemens.png";
-import Texas from "@src/Images/Carreras/Texas.png";
 import bgAnsiC from "@src/Images/Carreras/BgCourseCard.png";
+import National from "@src/Images/Techs/National.png";
+import Microchip from "@src/Images/Techs/Microchip.png";
+import Arduino from "@src/Images/Techs/Arduino.png";
+import Siemens from "@src/Images/Techs/Siemens.png";
+import Texas from "@src/Images/Techs/Texas.png";
+import Altium from "@src/Images/Techs/Altium.png";
+import Proteus from "@src/Images/Techs/Proteus.png";
+import Multisim from "@src/Images/Techs/Multisim.png";
+import Webench from "@src/Images/Techs/Webench.png";
+import RedExpert from "@src/Images/Techs/RedExpert.png";
+import Quartus from "@src/Images/Techs/Quartus.png";
+import Espressif from "@src/Images/Techs/Espressif.png";
+import Stm32 from "@src/Images/Techs/Stm32.png";
+import C from "@src/Images/Techs/C.png";
+import MpLabX from "@src/Images/Techs/MpLabX.png";
+import Nextion from "@src/Images/Techs/Nextion.png";
+import Figma from "@src/Images/Techs/Figma.png";
+import Asm from "@src/Images/Techs/Asm.png";
+import Modbus from "@src/Images/Techs/Modbus.png";
+import Rs485 from "@src/Images/Techs/Rs485.png";
+import Ethernet from "@src/Images/Techs/Ethernet.png";
+import TcpIp from "@src/Images/Techs/TcpIp.png";
 
 const { course } = Astro.props;
 const {
@@ -18,6 +35,7 @@ const {
   startDate,
   title,
   description,
+  techs,
   modality,
   duration,
   hours,
@@ -28,6 +46,33 @@ const {
 const bgImages = {
   "ansi-c": bgAnsiC,
 };
+
+const techImages = {
+  "altium": Altium,
+  "national": National,
+  "microchip": Microchip,
+  "arduino": Arduino,
+  "siemens": Siemens,
+  "texas": Texas,
+  "proteus": Proteus,
+  "multisim": Multisim,
+  "webench": Webench,
+  "redexpert": RedExpert,
+  "quartus": Quartus,
+  "espressif": Espressif,
+  "stm32": Stm32,
+  "c": C,
+  "mplabx": MpLabX,
+  "nextion": Nextion,
+  "figma": Figma,
+  "asm": Asm,
+  "modbus": Modbus,
+  "rs485": Rs485,
+  "ethernet": Ethernet,
+  "tcpip": TcpIp
+};
+
+
 ---
 
 <div class="lg:odd:bg-white-500">
@@ -80,31 +125,15 @@ const bgImages = {
           </span>
         </h2>
         <ul class="mb-2 flex items-center gap-8">
-          <Image
-            class="aspect-auto h-10"
-            src={National}
-            alt={"Logo de National"}
-          />
-          <Image
-            class="aspect-auto h-10"
-            src={Microchip}
-            alt={"Logo de National"}
-          />
-          <Image
-            class="aspect-auto h-10"
-            src={Arduino}
-            alt={"Logo de National"}
-          />
-          <Image
-            class="aspect-auto h-10"
-            src={Siemens}
-            alt={"Logo de National"}
-          />
-          <Image
-            class="aspect-auto h-10"
-            src={Texas}
-            alt={"Logo de National"}
-          />
+          {
+            techs.map((tech) => (
+              <Image
+              class="aspect-auto h-10"
+              src={techImages[tech as keyof typeof techImages]}
+              alt={`Logo de ${tech}`}
+            />
+            ))
+          }
         </ul>
       </div>
       <div class="lg:flex lg:flex-row-reverse lg:items-end lg:justify-between">

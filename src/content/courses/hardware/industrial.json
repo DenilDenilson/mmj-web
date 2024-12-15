@@ -1,8 +1,8 @@
 {
     "bgCourseCard": "ansi-c",
     "startDate": "Proximamente",
-    "title": "Diseño Electrónico usando Altium Designer y normas IPC",
-    "description": "Desarrolla equipos electrónicos de alto nivel para aplicaciones industriales, desde esquemáticos hasta PCBs optimizados. Domina estándares IPC, diseño de alta velocidad, sistemas embebidos y soluciones avanzadas con Altium Designer, desarrollando hardware eficiente y confiable para distintos sectores tecnológicos.",
+    "title": "Electrónica para la Industria Diseño, Protección y Comunicación ",
+    "description": "Aprende a diseñar sistemas electrónicos robustos, enfocándote en protección de energía con TVS, MOVs y eFuses, fuentes de alimentación DC/DC, aislamiento galvánico, y filtros EMI. Trabaja con baterías LiPo e Ion-Litio, cargadores y balanceadores, y desarrolla interfaces Ethernet y mucho más.",
     "goals": [
       "Comprender los principios del desarrollo de software embebido.",
       "Aprender a integrar hardware y software en sistemas embebidos",
@@ -10,7 +10,7 @@
       "Desarrollar aplicaciones robustas y escalables.",
       "Comprender los principios del desarrollo de software embebido."
     ],
-    "techs": ["altium"],
+    "techs": ["proteus", "altium", "webench", "redexpert"],
     "modality": "???",
     "duration": 0,
     "hours": 0,

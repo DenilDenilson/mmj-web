@@ -1,0 +1,21 @@
+{
+    "bgCourseCard": "ansi-c",
+    "startDate": "Proximamente",
+    "title": "Diseño e implementación de redes industriales con ESP32",
+    "description": "Aprende a diseñar e implementar redes industriales con ESP32, integrando protocolos como Modbus RTU/TCP, Ethernet, RS485 entre otros. Dominarás la configuración de interfaces de comunicación, diseño de hardware para aplicaciones industriales, y la programación del ESP32 para conectar sensores, actuadores y sistemas SCADA en entornos IoT y de automatización.",
+    "goals": [
+      "Comprender los principios del desarrollo de software embebido.",
+      "Aprender a integrar hardware y software en sistemas embebidos",
+      "Dominar la programación en tiempo real y la optimización de recursos.",
+      "Desarrollar aplicaciones robustas y escalables.",
+      "Comprender los principios del desarrollo de software embebido."
+    ],
+    "techs": ["espressif", "modbus", "rs485", "ethernet", "tcpip"],
+    "modality": "virtual",
+    "duration": 0,
+    "hours": 0,
+    "priceBase": 0,
+    "priceReal": 0,
+    "carrer": "embebido"
+  }
+  

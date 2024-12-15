@@ -1,0 +1,21 @@
+{
+    "bgCourseCard": "ansi-c",
+    "startDate": "Proximamente",
+    "title": "Diseño de Sistemas HMI con pantallas Nextion, ESP32 y Arduino",
+    "description": "Explorarás la integración de hardware y software para desarrollar interfaces Hombre-Máquina (HMI) con pantallas Nextion. Aprenderás sobre protocolos seriales (UART) para comunicación eficiente, diseño de interfaces gráficas interactivas mediante el Nextion Editor y sincronización con controladores ESP32 y Arduino para aplicaciones críticas en tiempo real.",
+    "goals": [
+      "Comprender los principios del desarrollo de software embebido.",
+      "Aprender a integrar hardware y software en sistemas embebidos",
+      "Dominar la programación en tiempo real y la optimización de recursos.",
+      "Desarrollar aplicaciones robustas y escalables.",
+      "Comprender los principios del desarrollo de software embebido."
+    ],
+    "techs": ["arduino", "nextion", "espressif", "figma"],
+    "modality": "virtual",
+    "duration": 12,
+    "hours": 50,
+    "priceBase": 150,
+    "priceReal": 90,
+    "carrer": "embebido"
+  }
+  

@@ -1,0 +1,21 @@
+{
+    "bgCourseCard": "ansi-c",
+    "startDate": "Proximamente",
+    "title": "PProgramación de Microcontroladores PIC en el nuevo Assembler PIC ASS XC8",
+    "description": "En esta especialización trabajarás con ensamblador en el entorno PIC ASS XC8, dominando a detalle la arquitectura interna del MCU. Se impartirán técnicas para el uso eficiente de registros SFR, configuración de periféricos como Timers, ADC, PWM, Interrupciones, módulos de comunicación como la UART, I2C, entre otros, optimizando los recursos del hardware.",
+    "goals": [
+      "Comprender los principios del desarrollo de software embebido.",
+      "Aprender a integrar hardware y software en sistemas embebidos",
+      "Dominar la programación en tiempo real y la optimización de recursos.",
+      "Desarrollar aplicaciones robustas y escalables.",
+      "Comprender los principios del desarrollo de software embebido."
+    ],
+    "techs": ["microchip", "mplabx", "asm", "proteus"],
+    "modality": "virtual",
+    "duration": 0,
+    "hours": 0,
+    "priceBase": 0,
+    "priceReal": 0,
+    "carrer": "embebido"
+  }
+  
