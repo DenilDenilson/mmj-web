@@ -1,0 +1,18 @@
+---
+import SolutionFeature from "../Atoms/SolutionFeature.astro";
+
+const features = [
+  "Monitore de señales analógicas",
+  "Diseño de arquitectura IoT personalizada",
+  "Desarrollo de sensores y dispositivos conectados",
+  "Implementación de plataformas de gestión de datos",
+  "Integración con sistemas existentes",
+  "Pruebas de conectividad y seguridad",
+];
+---
+
+<ul
+  class="relative mb-8 flex flex-wrap justify-center gap-4 text-pretty text-white-200 sm:gap-2 lg:mb-0 lg:text-black-500"
+>
+  {features.map((feature: string) => <SolutionFeature feature={feature} />)}
+</ul>

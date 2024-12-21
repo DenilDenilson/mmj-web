@@ -1,0 +1,54 @@
+---
+import Antena from "@src/Images/icons/Antena.astro";
+import Lupa from "@src/Images/icons/Lupa.astro";
+import ControlRemoto from "@src/Images/icons/ControlRemoto.astro";
+import BolsaDinero from "@src/Images/icons/BolsaDinero.astro";
+import { Image } from "astro:assets";
+import CardSolution from "../Atoms/CardSolution.astro";
+---
+
+<div class="mb-16 flex flex-wrap justify-center gap-8 pl-14 pr-8 md:gap-16">
+  <CardSolution
+    title="Monitoreo en Tiempo Real"
+    description="Acceso a datos en vivo para una toma de decisiones más rápida y eficaz."
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <Antena fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Conectividad Integral"
+    description="Integración con múltiples tecnologías"
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <Lupa fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Sostenibilidad"
+    description="Soluciones que apoyan un mundo más inteligente y sostenible."
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <ControlRemoto fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Optimización de procesos"
+    description="Optimización de recursos y minimización de gastos mediante el uso inteligente de datos."
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <BolsaDinero fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+</div>

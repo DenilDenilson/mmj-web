@@ -51,8 +51,13 @@ const serviceCollection = defineCollection({
   }),
 });
 
+const infoMMJCollection = defineCollection({
+  type: "data",
+});
+
 export const collections = {
   carrers: carrerCollection,
   courses: courseCollection,
   services: serviceCollection,
+  infoMMJ: infoMMJCollection,
 };

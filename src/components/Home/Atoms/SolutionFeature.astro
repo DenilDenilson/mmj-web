@@ -1,0 +1,12 @@
+---
+import PuzzleConsulting from "@src/Images/icons/PuzzleConsulting.astro";
+
+const { feature } = Astro.props;
+---
+
+<li class="flex flex-col items-center justify-start gap-2 font-light">
+  <PuzzleConsulting />
+  <span class="mx-auto max-w-48 text-center leading-5">
+    {feature}
+  </span>
+</li>

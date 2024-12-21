@@ -1,0 +1,19 @@
+---
+import SolutionIoTCartel from "../Atoms/SolutionIoTCartel.astro";
+import SolutionIoTFeatures from "./SolutionIoTFeatures.astro";
+---
+
+<div
+  class="flex flex-col-reverse items-start gap-8 px-7 py-8 md:px-8 lg:flex-row lg:pb-0 lg:pt-4"
+>
+  <!-- Definimos el alto y ancho para que ocupe espacio y subimos una imagen absoluta -->
+  <article>
+    <SolutionIoTCartel />
+    <h3
+      class="relative mb-4 text-3xl font-bold text-white-200 lg:text-black-500"
+    >
+      Qué implica:
+    </h3>
+    <SolutionIoTFeatures />
+  </article>
+</div>

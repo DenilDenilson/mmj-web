@@ -1,57 +1,6 @@
 ---
-import CardSpecialite from "./CardSpecialite.astro";
-import SpecialiteImageContainer from "./SpecialiteImageContainer.astro";
-import Chip from "@src/Images/icons/Chip.astro";
-import Cloud from "@src/Images/icons/Cloud.astro";
-import XorScheme from "@src/Images/icons/XorScheme.astro";
-import RobotArm from "@src/Images/icons/RobotArm.astro";
-import Console from "@src/Images/icons/Console.astro";
-import Birrete from "@src/Images/icons/Birrete.astro";
-
-const specialites = [
-  {
-    image: Chip,
-    title: "Desarrollo de Software Embebido",
-    description:
-      "Programa microcontroladores para recopilar, analizar, controlar y utilizar datos en tiempo real.",
-    link: "embebido",
-  },
-  {
-    image: Cloud,
-    title: "Internet de las cosas IoT",
-    description:
-      "Domina tecnologías como WIFI, Red celular, Lora, etc para tener todo conectado",
-    link: "iot",
-  },
-  {
-    image: XorScheme,
-    title: "Desarrollo de Hardware",
-    description:
-      "Diseña equipos electrónicos con altos estándares de calidad que la industria demanda",
-    link: "hardware",
-  },
-  {
-    image: RobotArm,
-    title: "Automatización industrial",
-    description:
-      "Sé un experto en Automatización y control dominando las tecnologías de Siemens",
-    link: "auto",
-  },
-  {
-    image: Console,
-    title: "Desarrollo de Software",
-    description:
-      "Conviértete en un Arquitecto de software para satisfacer distintas necesidades del mercado",
-    link: "software",
-  },
-  {
-    image: Birrete,
-    title: "Cursos presenciales",
-    description:
-      "Contamos con talleres y cursos ful prácticos que te permitirán iniciar en el mundo de la tecnología",
-    link: "presencial",
-  },
-];
+import SpecialiteImageContainer from "./Sections/SpecialiteImageContainer.astro";
+import SpecialitesInfo from "./Sections/SpecialitesInfo.astro";
 ---
 
 <section class="overflow-y-hidden bg-white-500">
@@ -59,43 +8,6 @@ const specialites = [
     class="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 px-7 py-16 md:px-8 lg:pt-32 xl:flex-row"
   >
     <SpecialiteImageContainer />
-    <div class="flex flex-col items-center">
-      <hgroup class="">
-        <h2
-          id="SpecialitesTitle"
-          class="mb-6 text-center text-[40px] font-bold leading-tight text-secondary-400"
-        >
-          Explora Nuestras Especialidades
-        </h2>
-        <p
-          class="line-height-xl relative z-50 mb-12 max-w-3xl text-pretty text-center text-xl leading-tight text-black-500"
-        >
-          Cada una de nuestras líneas ofrece diversos cursos y especializaciones
-          diseñados para adquirir habilidades clave en diversas áreas
-          tecnológicas de alta demanda.
-        </p>
-      </hgroup>
-      <div
-        class="z-10 mb-12 grid w-full grid-cols-1 grid-rows-6 justify-items-end gap-8 sm:justify-items-center md:translate-x-0 md:grid-cols-2 md:grid-rows-3"
-      >
-        {
-          specialites.map((specialite) => (
-            <CardSpecialite
-              title={specialite.title}
-              description={specialite.description}
-              link={specialite.link}
-            >
-              <specialite.image />
-            </CardSpecialite>
-          ))
-        }
-      </div>
-      <span
-        class="z-10 text-pretty text-center text-xl text-primary-400 drop-shadow-xl"
-      >
-        ¡Encuentra la especialidad que mejor se adapta a tus objetivos y
-        comienza a transformar tu futuro hoy mismo!</span
-      >
-    </div>
+    <SpecialitesInfo />
   </div>
 </section>
