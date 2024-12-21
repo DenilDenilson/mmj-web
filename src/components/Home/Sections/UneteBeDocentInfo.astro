@@ -1,0 +1,44 @@
+---
+import Check from "@src/Images/icons/Check.astro";
+
+const reasonsToBeDocent = [
+  "Flexibilidad horaria",
+  "Capacitación constante",
+  "Plataforma moderna y dinámica",
+  "Impacto directo en la formación de profesionales",
+  "Formarás parte de una comunidad de expertos en tecnología",
+  "Tendrás la posibilidad de trabajar desde cualquier lugar",
+];
+---
+
+<article class="max-w-[488px]">
+  <h5 class="mb-6 text-2xl font-bold text-black-500">
+    Sé Parte de Nuestro Equipo Docente
+  </h5>
+  <p class="mb-8 font-light leading-5 text-black-500">
+    ¿Eres un apasionado de enseñar y compartir conocimientos? Estamos buscando
+    expertos en IoT, desarrollo de software, hardware y más. Únete a nuestro
+    equipo docente y ayúdanos a formar a la próxima generación de profesionales.
+  </p>
+  <h5 class="mb-6 text-xl font-bold text-black-500">
+    ¿Por qué Formar Parte de Nuestro Equipo?
+  </h5>
+  <ul class="mb-12 flex flex-col gap-3">
+    {
+      reasonsToBeDocent.map((reason) => (
+        <li class="flex items-center gap-2">
+          <Check />
+          <span class="text-base font-light text-black-500">{reason}</span>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="grid place-content-center lg:place-content-start">
+    <a
+      href="https://wa.link/2gumgl"
+      target="_blank"
+      class="inline-block rounded bg-primary-500 px-6 py-3 text-white-200 hover:bg-primary-400"
+      >Aplicar como docente</a
+    >
+  </div>
+</article>

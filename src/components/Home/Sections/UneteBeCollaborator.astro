@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import UneteInges from "@src/Images/Home/UneteInges.jpg";
+import UneteBeCollaboratorInfo from "./UneteBeCollaboratorInfo.astro";
+---
+
+<div
+  class="mb-16 flex flex-col-reverse items-center gap-4 lg:flex-row lg:items-start lg:gap-0"
+>
+  <Image width={720} src={UneteInges} alt={"Imagen de ingenieros trabajando"} />
+  <UneteBeCollaboratorInfo />
+</div>

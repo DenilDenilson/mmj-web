@@ -1,0 +1,45 @@
+---
+import Check from "@src/Images/icons/Check.astro";
+
+const reasonsToBeCollaborator = [
+  "Flexibilidad horaria",
+  "Capacitación constante",
+  "Proyectos Desafiantes y de Alto Impacto",
+  "Colaborarás con profesionales talentosos y apasionados.",
+  "Desarrollo Profesional Acelerado",
+  "Ambiente Creativo y Colaborativo",
+];
+---
+
+<article class="max-w-[488px]">
+  <h5 class="mb-6 text-2xl font-bold text-black-500">
+    Colabora en Proyectos Innovadores
+  </h5>
+  <p class="mb-8 font-light leading-5 text-black-500">
+    ¿Te gusta estar en el centro de la acción? Forma parte de nuestro equipo en
+    proyectos desafiantes y contribuye al desarrollo de soluciones tecnológicas
+    para distintas industrias. Buscamos profesionales comprometidos y
+    apasionados por el cambio tecnológico.
+  </p>
+  <h5 class="mb-6 text-xl font-bold text-black-500">
+    Tu Próximo Desafío Te Espera
+  </h5>
+  <ul class="mb-12 flex flex-col gap-3">
+    {
+      reasonsToBeCollaborator.map((reason) => (
+        <li class="flex items-center gap-2">
+          <Check />
+          <span class="text-base font-light text-black-500">{reason}</span>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="grid place-content-center lg:place-content-start">
+    <a
+      href="https://wa.link/wmbn9h"
+      target="_blank"
+      class="inline-block rounded bg-primary-500 px-6 py-3 text-white-200 hover:bg-primary-400"
+      >Explora nuestras vacantes</a
+    >
+  </div>
+</article>

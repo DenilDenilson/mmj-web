@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import UneteDocente from "@src/Images/Home/UnedeDocentes.jpg";
+import UneteBeDocentInfo from "./UneteBeDocentInfo.astro";
+---
+
+<div
+  class="mb-16 flex flex-col items-center gap-4 lg:flex-row lg:items-start lg:gap-0"
+>
+  <UneteBeDocentInfo />
+  <Image width={720} src={UneteDocente} alt={"Imagen de docentes en clase"} />
+</div>
