@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import SolutionSoftwareImage from "@src/Images/Home/SolutionSoftwareImage.webp";
+import SolutionsSoftwareHero from "./SolutionsSoftwareHero.astro";
+---
+
+<div
+  class="relative mb-16 bg-white-500 lg:flex lg:items-start lg:justify-center"
+>
+  <Image
+    src={SolutionSoftwareImage}
+    width={480}
+    alt={"Imagen de soluciones de hardware"}
+    class="absolute h-full w-full object-cover lg:relative lg:h-full lg:w-auto"
+  />
+  <div class="absolute inset-0 bg-[#18181B75] lg:hidden"></div>
+  <SolutionsSoftwareHero />
+</div>

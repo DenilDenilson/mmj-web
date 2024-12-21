@@ -1,0 +1,53 @@
+---
+import Antena from "@src/Images/icons/Antena.astro";
+import Lupa from "@src/Images/icons/Lupa.astro";
+import ControlRemoto from "@src/Images/icons/ControlRemoto.astro";
+import BolsaDinero from "@src/Images/icons/BolsaDinero.astro";
+import CardSolution from "../Atoms/CardSolution.astro";
+---
+
+<div class="mb-16 flex flex-wrap justify-center gap-8 pl-14 pr-8 md:gap-16">
+  <CardSolution
+    title="Optimización de Procesos"
+    description="Mejora en productividad y eficiencia"
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <Antena fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Automatización Inteligente"
+    description="Reducción de intervención manual"
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <Lupa fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Escalabilidad y Flexibilidad"
+    description="Adaptable a distintos entornos y necesidades"
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <ControlRemoto fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Control Centralizado"
+    description="Monitoreo y gestión en tiempo real"
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <BolsaDinero fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+</div>

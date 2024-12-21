@@ -1,0 +1,50 @@
+---
+import Antena from "@src/Images/icons/Antena.astro";
+import Lupa from "@src/Images/icons/Lupa.astro";
+import ControlRemoto from "@src/Images/icons/ControlRemoto.astro";
+import BolsaDinero from "@src/Images/icons/BolsaDinero.astro";
+import CardSolution from "../Atoms/CardSolution.astro";
+---
+
+<div class="mb-16 flex flex-wrap justify-center gap-8 pl-14 pr-8 md:gap-16">
+  <CardSolution
+    title="Personalización Total"
+    description="PCBs adaptados a tus necesidades"
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <Antena fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Calidad y Precisión"
+    description="Fabricación y ensamblaje bajo normativas"
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <Lupa fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution title="Eficiencia" description="Reducción de costos y tiempos.">
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <ControlRemoto fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+
+  <CardSolution
+    title="Escalabilidad"
+    description="Soluciones diseñadas para crecer junto con tus proyectos."
+  >
+    <div
+      class="absolute top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full border-2 border-white-200 bg-[#989DA3] text-white-200"
+    >
+      <BolsaDinero fill="#F7F8F9" width="64" height="64" />
+    </div>
+  </CardSolution>
+</div>
