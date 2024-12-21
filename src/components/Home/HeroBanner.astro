@@ -1,0 +1,66 @@
+---
+import HeroHome1 from "./HeroHome1.astro";
+import HeroHome2 from "./HeroHome2.astro";
+import HeroHome3 from "./HeroHome3.astro";
+---
+
+<div id="sliderControl" class="mx-auto max-w-7xl md:px-8">
+  <input
+    class="hidden"
+    checked
+    type="radio"
+    name="heroSelector"
+    id="heroSelector1"
+  />
+  <input class="hidden" type="radio" name="heroSelector" id="heroSelector2" />
+  <input class="hidden" type="radio" name="heroSelector" id="heroSelector3" />
+  <div id="heroSlider" class="overflow-x-hidden">
+    <div id="heroContainer" class="flex h-fit transition-all duration-300">
+      <HeroHome1 />
+      <HeroHome2 />
+      <HeroHome3 />
+    </div>
+  </div>
+  <ul
+    id="heroSelector"
+    class="absolute bottom-8 left-0 right-0 mx-auto flex w-fit gap-4 lg:bottom-28"
+  >
+    <label
+      for="heroSelector1"
+      id="selectHero1"
+      class="h-4 w-4 cursor-pointer rounded-full bg-white-200 shadow-lg transition-colors duration-200 hover:bg-secondary-400"
+    >
+    </label>
+    <label
+      for="heroSelector2"
+      id="selectHero2"
+      class="h-4 w-4 cursor-pointer rounded-full bg-white-200 shadow-lg transition-colors duration-200 hover:bg-secondary-400"
+    >
+    </label>
+    <label
+      for="heroSelector3"
+      id="selectHero3"
+      class="h-4 w-4 cursor-pointer rounded-full bg-white-200 shadow-lg transition-colors duration-200 hover:bg-secondary-400"
+    >
+    </label>
+  </ul>
+</div>
+
+<style>
+  #sliderControl > input:nth-child(1):checked ~ #heroSlider > #heroContainer {
+    transform: translateX(0%);
+  }
+  #sliderControl > input:nth-child(2):checked ~ #heroSlider > #heroContainer {
+    transform: translateX(-100%);
+  }
+  #sliderControl > input:nth-child(3):checked ~ #heroSlider > #heroContainer {
+    transform: translateX(-200%);
+  }
+
+  #sliderControl > input:nth-child(1):checked ~ #heroSelector > :nth-child(1),
+  #sliderControl > input:nth-child(2):checked ~ #heroSelector > :nth-child(2),
+  #sliderControl > input:nth-child(3):checked ~ #heroSelector > :nth-child(3) {
+    scale: 1.5;
+    background: #4a94a0;
+  }
+</style>
