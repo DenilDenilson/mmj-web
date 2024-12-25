@@ -1,0 +1,70 @@
+---
+import Check from "@src/Images/icons/Check.astro";
+import Chip from "@src/Images/icons/Chip.astro";
+---
+
+<section
+  class="mx-auto mb-12 max-w-96 rounded-2xl border border-white-600 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] md:flex md:flex-col md:justify-between lg:mx-0 lg:mb-0 lg:mt-10"
+>
+  <div>
+    <header
+      class="mb-6 text-center text-[40px] font-bold leading-none text-black-500"
+    >
+      Desafío de Especialidad
+    </header>
+    <div class="mb-6">
+      <p class="grid place-content-center">
+        <span class="flex items-baseline gap-1">
+          <span class="self-start text-xl text-black-500">$</span>
+          <span class="text-5xl font-bold text-black-500">370</span>
+          <span class="text-2xl font-bold text-black-500">USD</span>
+        </span>
+      </p>
+    </div>
+    <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
+      <Chip width="76" height="76" />
+    </div>
+    <p class="mb-6 text-center text-sm leading-tight text-black-500">
+      Accede a toda la especialidad
+    </p>
+    <ul class="mb-6">
+      <li class="mb-1 flex items-center gap-1">
+        <div class="grid h-5 w-5 place-content-center">
+          <Check fill="#1F2937" />
+        </div>
+        <span class="font-light text-black-500">Acceso a todos los cursos</span>
+      </li>
+      <li class="mb-1 flex items-center gap-1">
+        <div class="grid h-5 w-5 place-content-center">
+          <Check fill="#1F2937" />
+        </div>
+        <span class="font-light text-black-500">Material Exclusivo</span>
+      </li>
+      <li class="mb-1 flex items-center gap-1">
+        <div class="grid h-5 w-5 place-content-center">
+          <Check fill="#1F2937" />
+        </div>
+        <span class="font-light text-black-500">Proyectos Prácticos</span>
+      </li>
+      <li class="mb-1 flex items-center gap-1">
+        <div class="grid h-5 w-5 place-content-center">
+          <Check fill="#1F2937" />
+        </div>
+        <span class="font-light text-black-500">Soporte Continuo</span>
+      </li>
+      <li class="mb-1 flex items-center gap-1">
+        <div class="grid h-5 w-5 place-content-center">
+          <Check fill="#1F2937" />
+        </div>
+        <span class="font-light text-black-500">Certificación Completa</span>
+      </li>
+    </ul>
+  </div>
+
+  <p class="">
+    <a
+      class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
+      href="#">Adquirir plan</a
+    >
+  </p>
+</section>

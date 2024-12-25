@@ -1,36 +1,17 @@
 ---
-import type { ISpecialite } from "@src/data/Specialites";
 import CourseCard from "./CourseCard.astro";
-import ObjectiveCardContainer from "./ObjectiveCardContainer.astro";
-import { getEntry } from "astro:content";
-import Console from "@src/Images/icons/Console.astro";
 import { getCollection } from "astro:content";
 
-// const { specialite } = Astro.props;
-// const { courses } = specialite;
-
 const { carrera } = Astro.params;
-const specificCarrer = await getEntry("carrers", `${carrera}`);
 const courses = await getCollection("courses");
 
 const coursesInCarrer = courses.filter((course) =>
   course?.id.includes(`${carrera}`),
 );
-
-const { studentProfile, skillsTech, canPerform } = specificCarrer?.data || {};
 ---
 
 <section>
   <div class="px-6 md:relative md:py-16 md:pt-32 lg:px-0">
-    <!-- <div
-      class="left-0 right-0 mx-auto hidden max-w-7xl md:absolute md:-top-48 md:z-50 md:block"
-    >
-      <ObjectiveCardContainer
-        studentProfile={studentProfile}
-        skillsTech={skillsTech}
-        canPerform={canPerform}
-      />
-    </div> -->
     <ul
       id="courses-in-carrer"
       class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-2 py-4 lg:block lg:px-0"

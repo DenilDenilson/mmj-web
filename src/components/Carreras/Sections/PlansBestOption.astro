@@ -1,0 +1,93 @@
+---
+import Check from "@src/Images/icons/Check.astro";
+import Chip from "@src/Images/icons/Chip.astro";
+---
+
+<div>
+  <div
+    class="mx-auto w-fit rounded-t-lg bg-primary-400 px-12 py-2 font-bold text-white-100"
+  >
+    Más seleccionado
+  </div>
+  <section
+    class="mx-auto mb-16 max-w-96 rounded-2xl border border-primary-400 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] md:flex md:flex-col md:justify-between lg:mb-0"
+  >
+    <div>
+      <header
+        class="mb-6 text-center text-[40px] font-bold leading-none text-primary-500"
+      >
+        Pack de 3 cursos
+      </header>
+      <div class="mb-6">
+        <p class="grid place-content-center gap-2">
+          <span class="text-center text-sm font-light text-black-500"
+            >Precio regular</span
+          >
+          <span class="text-center text-sm text-black-500 line-through"
+            >$ 300 USD</span
+          >
+        </p>
+        <p class="grid place-content-center">
+          <span class="flex items-baseline gap-1">
+            <span class="self-start text-xl text-black-500">$</span>
+            <span class="text-5xl font-bold text-black-500">240</span>
+            <span class="text-2xl font-bold text-black-500">USD</span>
+          </span>
+        </p>
+        <p class="flex items-baseline justify-center gap-2">
+          <span class="font-light text-secondary-500">Ahorra </span><span
+            class="text-secondary-500">60 $</span
+          >
+        </p>
+      </div>
+      <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
+        <Chip width="76" height="76" />
+      </div>
+      <p class="mb-6 text-center text-sm leading-tight text-black-500">
+        Selecciona 3 cursos de la especialidad de Desarrollo de Software
+        Embebido y disfruta de un 20% de descuento en tu compra.
+      </p>
+      <ul class="mb-6">
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#C40B2A" />
+          </div>
+          <span class="font-light text-black-500"
+            >Selección Flexible de 3 cursos</span
+          >
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#C40B2A" />
+          </div>
+          <span class="font-light text-black-500">20 % de Descuento</span>
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#C40B2A" />
+          </div>
+          <span class="font-light text-black-500">Material de Apoyo</span>
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#C40B2A" />
+          </div>
+          <span class="font-light text-black-500">Proyectos Incluidos</span>
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#C40B2A" />
+          </div>
+          <span class="font-light text-black-500">Certificación Parcial</span>
+        </li>
+      </ul>
+    </div>
+
+    <p class="">
+      <a
+        class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
+        href="#">Adquirir plan</a
+      >
+    </p>
+  </section>
+</div>
