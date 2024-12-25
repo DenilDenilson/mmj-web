@@ -1,0 +1,19 @@
+---
+import Circle from "@src/Images/icons/Circle.astro";
+
+const { startDate } = Astro.props;
+---
+
+<span class="text-xl text-black-500">Horario:</span>
+<span class="mb-1 flex items-center gap-1 rounded bg-[#EDE7F3] px-2 py-1">
+  <Circle />
+  <span class="text-xs text-black-500 xs:text-sm">Inicio: {startDate}</span>
+</span>
+
+<p class="mb-3 font-light text-black-500">
+  Las clases se realizaran los días
+  <span class="font-normal"> Martes </span>
+  y
+  <span class="font-normal"> Jueves </span>
+  de cada semana
+</p>

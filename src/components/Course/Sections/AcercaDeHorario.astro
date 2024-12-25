@@ -1,0 +1,14 @@
+---
+import AcercaDeHorarioCountrys from "./AcercaDeHorarioCountrys.astro";
+import AcercaDeHorarioHeader from "./AcercaDeHorarioHeader.astro";
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { startDate } = specificCourse?.data || {};
+---
+
+<p class="mb-2 flex items-baseline justify-between">
+  <AcercaDeHorarioHeader startDate={startDate} />
+  <AcercaDeHorarioCountrys />
+</p>

@@ -1,0 +1,29 @@
+---
+import { getEntry } from "astro:content";
+import HeroContentInfoHeader from "./HeroContentInfoHeader.astro";
+import HeroContentInfoGoals from "./HeroContentInfoGoals.astro";
+import HeroContentInfoFooter from "./HeroContentInfoFooter.astro";
+
+const { carrera, course } = Astro.params;
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const {
+  title,
+  description,
+  goals,
+  modality,
+  duration,
+  hours,
+  priceBase,
+  priceReal,
+} = specificCourse?.data || {};
+---
+
+<HeroContentInfoHeader title={title} description={description} />
+<HeroContentInfoGoals goals={goals} />
+<HeroContentInfoFooter
+  modality={modality}
+  duration={duration}
+  hours={hours}
+  priceBase={priceBase}
+  priceReal={priceReal}
+/>

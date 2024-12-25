@@ -1,6 +1,6 @@
 ---
-import CourseCard from "./CourseCard.astro";
 import { getCollection } from "astro:content";
+import CourseCard from "./Sections/CourseCard.astro";
 
 const { carrera } = Astro.params;
 const courses = await getCollection("courses");

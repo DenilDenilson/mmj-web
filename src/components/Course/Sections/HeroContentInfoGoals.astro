@@ -1,0 +1,19 @@
+---
+import Check from "@src/Images/icons/Check.astro";
+
+const { goals } = Astro.props;
+---
+
+<ul class="mb-6 lg:mb-4">
+  <p class="mb-1 text-black-500">¿Qué lograrás en este curso?</p>
+  {
+    goals?.map((goal: string) => (
+      <li class="mb-1 flex items-center gap-1">
+        <div class="grid h-5 w-5 place-content-center">
+          <Check />
+        </div>
+        <span class="font-light text-black-500">{goal}</span>
+      </li>
+    ))
+  }
+</ul>

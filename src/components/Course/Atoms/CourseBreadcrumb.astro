@@ -1,0 +1,12 @@
+---
+const { course, carrera } = Astro.props;
+---
+
+<p
+  class="text-sm text-black-300 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2"
+>
+  Cursos/{carrera}/
+  <span class="text-black-500">
+    {course}
+  </span>
+</p>

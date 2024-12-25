@@ -1,0 +1,29 @@
+---
+import Cart from "@src/Images/icons/Cart.astro";
+---
+
+<footer class="flex items-end justify-start">
+  <span class="flex flex-row items-end gap-3">
+    <div class="flex flex-col items-end gap-1">
+      <span class="self-start text-sm text-black-300 line-through">
+        $ 100.25
+        <span class="text-sm">USD</span>
+      </span>
+      <a
+        href="#"
+        class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 py-4 pl-5 pr-6 transition-colors duration-300 hover:bg-primary-400"
+      >
+        <Cart fill="#FBFCFC" />
+        <span class="text-sm text-white-100"
+          >$ 850.25 <span class="text-sm text-[#FFF]">USD</span></span
+        >
+      </a>
+    </div>
+
+    <a
+      href=""
+      class="rounded border border-black-300 px-6 py-3 text-black-300 transition-colors duration-300 hover:bg-black-50"
+      >Ir a tienda</a
+    >
+  </span>
+</footer>

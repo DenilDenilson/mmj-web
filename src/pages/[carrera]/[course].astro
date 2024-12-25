@@ -6,7 +6,6 @@ import Info from "@src/components/Course/Info.astro";
 import Temario from "@src/components/Course/Temario.astro";
 import Kit from "@src/components/Course/Kit.astro";
 import Projects from "@src/components/Course/Projects.astro";
-import OtherCourses from "@src/components/Course/OtherCourses.astro";
 import { getCollection } from "astro:content";
 
 const { course } = Astro.params;
@@ -31,6 +30,6 @@ export async function getStaticPaths() {
     <Temario />
   </div>
   <Kit />
-  <Projects />
+  <!-- <Projects /> -->
   <!-- <OtherCourses /> -->
 </Layout>

@@ -1,0 +1,43 @@
+---
+import Calendar from "@src/Images/icons/Calendar.astro";
+import Cart from "@src/Images/icons/Cart.astro";
+import Clock from "@src/Images/icons/Clock.astro";
+import Vivo from "@src/Images/icons/Vivo.astro";
+
+const { modality, duration, hours, priceBase, priceReal } = Astro.props;
+---
+
+<div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-between">
+  <ul class="mb-3 flex items-center justify-start lg:mb-0 lg:gap-6">
+    <li class="flex items-center gap-1 px-2 py-1 lg:flex-col">
+      <Vivo width="24" height="24" />
+      <span class="text-sm font-light text-black-400">{modality}</span>
+    </li>
+    <li class="flex items-center gap-1 px-2 py-1 lg:flex-col">
+      <Calendar width="24" height="24" />
+      <span class="text-sm font-light text-black-400">{duration} semanas</span>
+    </li>
+    <li class="flex items-center gap-1 px-2 py-1 lg:flex-col">
+      <Clock fill="#4C545F" width="24" height="24" />
+      <span class="text-sm font-light text-black-400">{hours} horas</span>
+    </li>
+  </ul>
+  <footer class="flex items-end justify-start">
+    <span class="flex flex-row-reverse items-end gap-3">
+      <span class="text-sm text-black-300 line-through">
+        $ {priceBase}
+        <span class="text-sm">USD</span>
+      </span>
+      <a
+        href="#"
+        class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 py-4 pl-5 pr-6"
+      >
+        <Cart fill="#FBFCFC" />
+        <span class="text-sm text-white-100"
+          >$ {priceReal}
+          <span class="text-sm text-[#FFF]">USD</span></span
+        >
+      </a>
+    </span>
+  </footer>
+</div>

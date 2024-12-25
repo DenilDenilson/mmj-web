@@ -3,10 +3,10 @@ import ChcekList from "@src/Images/icons/ChcekList.astro";
 import FAQIcon from "@src/Images/icons/FAQIcon.astro";
 import Start from "@src/Images/icons/Start.astro";
 import SunScreen from "@src/Images/icons/SunScreen.astro";
-import AcercaDe from "./AcercaDe.astro";
-import PerfilEgresado from "./PerfilEgresado.astro";
-import Requisitos from "./Requisitos.astro";
-import FAQ from "./FAQ.astro";
+import AcercaDe from "./Sections/AcercaDe.astro";
+import FAQ from "./Sections/FAQ.astro";
+import PerfilEgresado from "./Sections/PerfilEgresado.astro";
+import Requisitos from "./Sections/Requisitos.astro";
 ---
 
 <section class="lg:min-w-2xl lg:flex-1">
@@ -58,7 +58,9 @@ import FAQ from "./FAQ.astro";
           class="project-options relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <SunScreen fill="#1F2937" width="20" height="20" />
-          <span class="font-medium text-black-300"> Acerca del curso </span>
+          <span class="cursor-pointer font-medium text-black-300">
+            Acerca del curso
+          </span>
           <span
             class="invisible absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"
           >
@@ -69,7 +71,9 @@ import FAQ from "./FAQ.astro";
           class="project-options relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <Start />
-          <span class="font-medium text-black-300"> Perfil del egresado </span>
+          <span class="cursor-pointer font-medium text-black-300">
+            Perfil del egresado
+          </span>
           <span
             class="invisible absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"
           >
@@ -80,7 +84,9 @@ import FAQ from "./FAQ.astro";
           class="project-options relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <ChcekList />
-          <span class="font-medium text-black-300"> Requisitos </span>
+          <span class="cursor-pointer font-medium text-black-300">
+            Requisitos
+          </span>
           <span
             class="invisible absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"
           >
@@ -91,7 +97,7 @@ import FAQ from "./FAQ.astro";
           class="project-options relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <FAQIcon />
-          <span class="font-medium text-black-300"> FAQ's </span>
+          <span class="cursor-pointer font-medium text-black-300"> FAQ's </span>
           <span
             class="invisible absolute -bottom-1 left-0 h-1 w-20 bg-[#33AF96]"
           >

@@ -1,0 +1,10 @@
+---
+import Circle from "@src/Images/icons/Circle.astro";
+
+const { startDate } = Astro.props;
+---
+
+<p class="mb-1 flex gap-1 rounded bg-[#EDE7F3] px-2 py-1">
+  <Circle />
+  <span class="text-sm text-black-500">Inicio de clases {startDate}</span>
+</p>
