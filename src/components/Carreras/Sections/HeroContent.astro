@@ -1,0 +1,46 @@
+---
+import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
+import bgEmbebidoDesktop from "@src/Images/Carreras/HeroBgDesktop.avif";
+import bgHardware from "@src/Images/Carreras/Hardware/BgHeroHardware.avif";
+import bgHardwareDesktop from "@src/Images/Carreras/Hardware/BgHeroHardware.avif";
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+import HeroContentInfo from "./HeroContentInfo.astro";
+
+const bgImages = {
+  embebido: {
+    mobile: bgEmbebido,
+    desktop: bgEmbebidoDesktop,
+  },
+  hardware: {
+    mobile: bgHardware,
+    desktop: bgHardwareDesktop,
+  },
+};
+
+const { carrera } = Astro.params;
+const specificCarrer = await getEntry("carrers", `${carrera}`);
+
+const { title, description, goals, backgroundHeroImage } =
+  specificCarrer?.data || {};
+---
+
+<Image
+  class="invisible absolute left-0 right-0 mx-auto hidden w-full object-cover md:visible md:z-10 md:block md:h-full"
+  src={bgImages[backgroundHeroImage as keyof typeof bgImages].desktop}
+  alt="Imagen de fondo de alguien programando"
+/>
+<div class="h-12 w-full"></div>
+<!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
+<div class="relative mx-auto max-w-7xl overflow-x-hidden">
+  <picture
+    class="absolute -z-50 aspect-[2/1] h-full bg-white-50 md:z-0 md:bg-black-900"
+  >
+    <Image
+      class="absolute right-0 block h-full w-full object-cover md:hidden"
+      src={bgImages[backgroundHeroImage as keyof typeof bgImages].mobile}
+      alt="Imagen de fondo de alguien programando"
+    />
+  </picture>
+  <HeroContentInfo />
+</div>
