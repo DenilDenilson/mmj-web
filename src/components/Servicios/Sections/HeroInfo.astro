@@ -1,0 +1,22 @@
+---
+import { getEntry } from "astro:content";
+import HeroInfoHeader from "./HeroInfoHeader.astro";
+import HeroInfoDescription from "./HeroInfoDescription.astro";
+import SolicitaColsultoriaButton from "../Atoms/SolicitaColsultoriaButton.astro";
+
+const { service } = Astro.params;
+const specificService = await getEntry("services", `${service}`); // Recordar que el slug es el nombre del archivo
+
+const { title, subtitle, description } = specificService?.data || {};
+---
+
+<div
+  class="z-10 max-w-3xl px-4 pb-28 pt-8 sm:relative sm:flex-1 sm:pb-32 lg:pb-24"
+>
+  <HeroInfoHeader title={title} subtitle={subtitle} />
+  <HeroInfoDescription description={description} />
+  <SolicitaColsultoriaButton
+    link="https://wa.link/fc3qb5"
+    text="¡Solicita una consultoría ahora!"
+  />
+</div>

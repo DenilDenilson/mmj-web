@@ -1,0 +1,37 @@
+---
+import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
+import bgMobile from "@src/Images/Servicios/bgMobile.avif";
+import bgDesktop from "@src/Images/Servicios/bgDesktop.avif";
+import { Image } from "astro:assets";
+
+const bgImages = {
+  embebido: {
+    mobile: bgEmbebido,
+    desktop: bgDesktop,
+  },
+};
+---
+
+<div
+  class="relative hidden overflow-hidden lg:block lg:h-[448px] lg:w-[448px] xl:h-[576px] xl:w-[576px]"
+>
+  <Image
+    class="invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
+    src={bgDesktop}
+    alt="Imagen de fondo de alguien programando"
+  />
+</div>
+<picture
+  class="absolute -z-50 aspect-[2/1] h-full sm:bg-black-900 lg:z-0 lg:hidden"
+>
+  <Image
+    class="absolute block aspect-auto h-full w-full object-cover sm:hidden"
+    src={bgMobile}
+    alt="Imagen de fondo de alguien programando"
+  />
+  <Image
+    class="absolute hidden aspect-auto h-full w-full object-cover sm:block"
+    src={bgMobile}
+    alt="Imagen de fondo de alguien programando"
+  />
+</picture>
