@@ -3,13 +3,15 @@ const { title, description, link } = Astro.props;
 ---
 
 <section
-  class="flex w-80 cursor-pointer items-start gap-4 rounded-2xl border border-black-100 bg-white-100 p-4 transition-all duration-300 hover:border-secondary-100 hover:shadow-[0px_4px_16px_10px_#1D798830]"
+  class="flex w-80 items-start gap-4 rounded-2xl border border-black-100 bg-white-100 p-4 transition-all duration-300 hover:border-secondary-100 hover:shadow-[0px_4px_16px_10px_#1D798830]"
 >
   <div class="flex flex-col items-center">
     <div class="grid h-20 w-20 place-content-center">
       <slot />
     </div>
-    <a href={link} class="text-center text-sm text-primary-500">Ver cursos</a>
+    <a href={link} class="cursor-pointer text-center text-sm text-primary-500"
+      >Ver cursos</a
+    >
   </div>
   <hgroup class="max-w-52">
     <h5 class="mb-3 font-bold leading-base text-black-500">{title}</h5>
