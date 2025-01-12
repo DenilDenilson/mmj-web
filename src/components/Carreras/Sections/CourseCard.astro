@@ -48,31 +48,29 @@ const bgImages = {
 };
 
 const techImages = {
-  "altium": Altium,
-  "national": National,
-  "microchip": Microchip,
-  "arduino": Arduino,
-  "siemens": Siemens,
-  "texas": Texas,
-  "proteus": Proteus,
-  "multisim": Multisim,
-  "webench": Webench,
-  "redexpert": RedExpert,
-  "quartus": Quartus,
-  "espressif": Espressif,
-  "stm32": Stm32,
-  "c": C,
-  "mplabx": MpLabX,
-  "nextion": Nextion,
-  "figma": Figma,
-  "asm": Asm,
-  "modbus": Modbus,
-  "rs485": Rs485,
-  "ethernet": Ethernet,
-  "tcpip": TcpIp
+  altium: Altium,
+  national: National,
+  microchip: Microchip,
+  arduino: Arduino,
+  siemens: Siemens,
+  texas: Texas,
+  proteus: Proteus,
+  multisim: Multisim,
+  webench: Webench,
+  redexpert: RedExpert,
+  quartus: Quartus,
+  espressif: Espressif,
+  stm32: Stm32,
+  c: C,
+  mplabx: MpLabX,
+  nextion: Nextion,
+  figma: Figma,
+  asm: Asm,
+  modbus: Modbus,
+  rs485: Rs485,
+  ethernet: Ethernet,
+  tcpip: TcpIp,
 };
-
-
 ---
 
 <div class="lg:odd:bg-white-500">
@@ -128,10 +126,10 @@ const techImages = {
           {
             techs.map((tech: string) => (
               <Image
-              class="aspect-auto h-10"
-              src={techImages[tech as keyof typeof techImages]}
-              alt={`Logo de ${tech}`}
-            />
+                class="aspect-auto h-10"
+                src={techImages[tech as keyof typeof techImages]}
+                alt={`Logo de ${tech}`}
+              />
             ))
           }
         </ul>
@@ -172,7 +170,7 @@ const techImages = {
             </a>
           </span>
           <a
-            href="#"
+            href={course.id}
             class="flex rounded border border-black-300 px-3 py-4 transition-colors duration-300 hover:bg-white-200 lg:py-2"
           >
             <!-- El flex es para igualar las alturas de ambos botones, algo que no entiendo la razón, pero funciona -->
