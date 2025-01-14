@@ -1,0 +1,20 @@
+{
+  "bgCourseCard": "ansi-c",
+  "startDate": "Proximamente",
+  "title": "Diseño de sistemas SCADA e Industria 4.0 con NI LabVIEW y protocolos IoT",
+  "description": "Los sistemas SCADA, con la integración de IoT, mejoran la eficiencia operativa y el monitoreo en tiempo real. LabVIEW, como herramienta clave en la programación y diseño de sistemas de control, permite desarrollar aplicaciones SCADA, facilitando la enseñanza y el uso de tecnologías avanzadas para el análisis de datos y la automatización en diversas industrias.",
+  "goals": [
+    "Implementarás comunicación con equipos industriales usando protocolos globales.",
+    "Integrarás plataformas de hardware y software para diversas aplicaciones.",
+    "Aprenderás protocolos IoT como MQTT y HTTP para el desarrollo de aplicaciones.",
+    "Desplegarás soluciones IoT con el microcontrolador ESP32 y NI LabVIEW.",
+    "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
+  ],
+  "techs": ["labview", "rs485", "tcpip", "modbus"],
+  "modality": "???",
+  "duration": 0,
+  "hours": 0,
+  "priceBase": 0,
+  "priceReal": 0,
+  "carrer": "software"
+}

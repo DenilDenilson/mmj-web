@@ -1,0 +1,89 @@
+{
+  "title": "Internet de las Cosas (IoT)",
+  "backgroundHeroImage": "iot",
+  "description": "El Internet de las Cosas (IoT) está transformando el mundo, conectando dispositivos y creando soluciones inteligentes que antes parecían imposibles. En esta especialidad, aprenderás cómo diseñar sistemas IoT desde cero, integrando hardware, software y conectividad para crear aplicaciones que monitorean, automatizan y controlan el entorno de forma innovadora.",
+  "goals": [
+    "Diseñar aplicaciones IoT utilizando tecnologías de conectividad inalámbrica.",
+    "Dominar los protocolos de comunicación más utilizados para IoT.",
+    "Desarrollar interfaces HMI modernas para una experiencia de usuario profesional.",
+    "Integrar sensores, actuadores y gateways a diversas plataformas IoT.",
+    "Crear sistemas de monitoreo, automatización y control remoto a través del IoT."
+  ],
+  "studentProfile": "Serás un especialista en desarrollo de soluciones IoT combinando hardware, conectividad y programación. Dominarás diversas tecnologías de conectividad inalámbrica, integrarás sensores y plataformas en la nube implementando sistemas de monitoreo, control y automatización.",
+  "skillsTech": [
+    "Programación del Esp32 en C y manejo de sus periféricos y módulos de comunicación.",
+    "Desarrollo y manejo de librerías para diversas conectividades inalámbricas.",
+    "Dominio de herramientas como Figma y Nextion editor para interfaces gráficas HMI.",
+    "Uso del IDE de Arduino y su dominio en su entorno de programación basado en C y C++.",
+    "Manejo de diversos módulos de radio de red celular de la empresa SIMCOM y Ublox."
+  ],
+  "canPerform": [
+    "Diseñador de soluciones IoT para monitoreo y automatización.",
+    "Diseñador de sistemas IoT para distintos campos de la industria.",
+    "Especialista en integración de dispositivos IoT.",
+    "Desarrollador de firmware embebido para aplicaciones IoT.",
+    "Consultor en implementación de tecnología IoT."
+  ],
+  "projects": [
+    {
+      "bgProjectCard": "proyectBase",
+      "title": "Diseña de un Sistema de Control para un Robot Móvil 3",
+      "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
+    },
+    {
+      "bgProjectCard": "proyectBase",
+      "title": "Diseña de un Sistema de Control para un Robot Móvil",
+      "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
+    },
+    {
+      "bgProjectCard": "proyectBase",
+      "title": "Diseña de un Sistema de Control para un Robot Móvil",
+      "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
+    }
+  ]
+}

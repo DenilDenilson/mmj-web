@@ -3,6 +3,10 @@ import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
 import bgEmbebidoDesktop from "@src/Images/Carreras/HeroBgDesktop.avif";
 import bgHardware from "@src/Images/Carreras/Hardware/BgHeroHardware.avif";
 import bgHardwareDesktop from "@src/Images/Carreras/Hardware/BgHeroHardware.avif";
+import bgSoftware from "@src/Images/Carreras/Software/BgHeroSoftware.jpg";
+import bgSoftwareDesktop from "@src/Images/Carreras/Software/BgHeroSoftware.jpg";
+import bgIoT from "@src/Images/Carreras/IoT/BgHeroIoT.jpg";
+import bgIoTDesktop from "@src/Images/Carreras/IoT/BgHeroIoT.jpg";
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import HeroContentInfo from "./HeroContentInfo.astro";
@@ -15,6 +19,14 @@ const bgImages = {
   hardware: {
     mobile: bgHardware,
     desktop: bgHardwareDesktop,
+  },
+  software: {
+    mobile: bgSoftware,
+    desktop: bgSoftwareDesktop,
+  },
+  iot: {
+    mobile: bgIoT,
+    desktop: bgIoTDesktop,
   },
 };
 

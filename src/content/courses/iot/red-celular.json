@@ -1,0 +1,20 @@
+{
+  "bgCourseCard": "ansi-c",
+  "startDate": "Proximamente",
+  "title": "Diseño de aplicaciones IoT con conectividad a la Red Celular",
+  "description": "Aprenderás a integrar tecnologías como GSM, GPRS, 3G, 4G y GNSS utilizando módulos de Red Celular de SIMCOM. Manejarás protocolos como MQTT/HTTP y desarrollarás aplicaciones conectadas a diversas plataformas IoT desarrollando tus propios equipos reales. Implementaremos soluciones de monitoreo, automatización y control remoto.",
+  "goals": [
+    "Implementarás comunicación con equipos industriales usando protocolos globales.",
+    "Integrarás plataformas de hardware y software para diversas aplicaciones.",
+    "Aprenderás protocolos IoT como MQTT y HTTP para el desarrollo de aplicaciones.",
+    "Desplegarás soluciones IoT con el microcontrolador ESP32 y NI LabVIEW.",
+    "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
+  ],
+  "techs": ["gsm", "gprs", "gnss", "c3g4g", "esp32", "arduino"],
+  "modality": "???",
+  "duration": 0,
+  "hours": 0,
+  "priceBase": 0,
+  "priceReal": 0,
+  "carrer": "iot"
+}

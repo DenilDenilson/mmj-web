@@ -1,0 +1,20 @@
+{
+  "bgCourseCard": "ansi-c",
+  "startDate": "Proximamente",
+  "title": "Programación de SOC Esp32 en C y aplicaciones IoT",
+  "description": "Domina la Arquitectura del SoC ESP32 y aprende a configurar y manejar periféricos como PWM, UART, ADC, DAC, SPI, I2C, entre otros usando el Ide ESP-IDF. Diseña soluciones IoT avanzadas integrando comunicación WiFi, HTTP y MQTT, implementa redes inalámbricas, gestiona datos en plataformas como Ubidots, EMQX, y desarrolla aplicaciones IoT desde cero.",
+  "goals": [
+    "Implementarás comunicación con equipos industriales usando protocolos globales.",
+    "Integrarás plataformas de hardware y software para diversas aplicaciones.",
+    "Aprenderás protocolos IoT como MQTT y HTTP para el desarrollo de aplicaciones.",
+    "Desplegarás soluciones IoT con el microcontrolador ESP32 y NI LabVIEW.",
+    "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
+  ],
+  "techs": ["espressif", "esp32", "c", "mqtt", "espnow", "wifi"],
+  "modality": "???",
+  "duration": 0,
+  "hours": 0,
+  "priceBase": 0,
+  "priceReal": 0,
+  "carrer": "iot"
+}

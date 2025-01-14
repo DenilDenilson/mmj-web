@@ -1,0 +1,89 @@
+{
+  "title": "Desarrollo de Software",
+  "backgroundHeroImage": "software",
+  "description": "El software es el motor que da inteligencia y funcionalidad a los sistemas tecnológicos, permitiendo conectar, controlar y optimizar procesos en el mundo digital. En esta especialidad, aprenderás a programar, diseñar interfaces gráficas avanzadas, implementar protocolos de comunicación y desarrollar soluciones integradas con hardware y plataformas IoT.",
+  "goals": [
+    "Aprender a programar y diseñar sistemas interactivos para controlar dispositivos.",
+    "Crear plataformas personalizadas que conecten Hardware y almacenen información.",
+    "Desarrollar aplicaciones prácticas que integren hardware como microcontroladores y sensores.",
+    "Usar tecnologías modernas para enviar, recibir y visualizar datos de manera eficiente.",
+    "Prepararte para certificaciones internacionales y desarrollar soluciones escalables y eficientes."
+  ],
+  "studentProfile": "El estudiante será capaz de diseñar soluciones IoT que integren hardware, software y conectividad. Dominará herramientas como LabVIEW y Python, trabajará con tecnologías web, microcontroladores y ESP32, y aplicará protocolos como MQTT y HTTP. Estará preparado para desarrollar proyectos escalables y eficientes en diversas industrias",
+  "skillsTech": [
+    "Programar en LabVIEW y Python para desarrollar aplicaciones HMI, SCADA y soluciones IoT.",
+    "Diseñar plataformas IoT desde cero, integrando frontend, backend, bases de datos y comunicación con hardware.",
+    "Implementar protocolos como MQTT, HTTP, Modbus y TCP/IP para conectar dispositivos y plataformas.",
+    "Integrar hardware como ESP32, Raspberry Pi, FPGAS, y microcontroladores con soluciones IoT avanzadas.",
+    "Implementar patrones de diseño y Arquitecturas de software avanzadas."
+  ],
+  "canPerform": [
+    "Arquitecto de Software",
+    "Desarrollador de soluciones IoT para monitoreo, control y automatización.",
+    "Diseñador de sistemas HMI/SCADA para aplicaciones industriales.",
+    "Programador de interfaces gráficas interactivas y sistemas conectados a la nube.",
+    "Consultor en implementación de tecnologías IoT y comunicación industrial."
+  ],
+  "projects": [
+    {
+      "bgProjectCard": "proyectBase",
+      "title": "Diseña de un Sistema de Control para un Robot Móvil 3",
+      "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
+    },
+    {
+      "bgProjectCard": "proyectBase",
+      "title": "Diseña de un Sistema de Control para un Robot Móvil",
+      "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
+    },
+    {
+      "bgProjectCard": "proyectBase",
+      "title": "Diseña de un Sistema de Control para un Robot Móvil",
+      "description": "Desarrollarás un sistema de control embebido para electrodomésticos, integrando sensores y actuadores para mejorar su eficiencia y automatización.",
+      "url": "#",
+      "goals": [
+        "Comprender los principios del desarrollo de software embebido.",
+        "Aprender a integrar hardware y software en sistemas embebidos",
+        "Dominar la programación en tiempo real y la optimización de recursos.",
+        "Desarrollar aplicaciones robustas y escalables.",
+        "Comprender los principios del desarrollo de software embebido."
+      ],
+      "skills": [
+        "Dominio de Microcontroladores",
+        "Desarrollo de firmware con FreeRTOS",
+        "Programación de sistemas en tiempo real",
+        "Desarrollo de aplicaciones en C y C++",
+        "Conocimiento de sistemas embebidos"
+      ]
+    }
+  ]
+}
