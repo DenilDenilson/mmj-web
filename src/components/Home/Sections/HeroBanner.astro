@@ -47,6 +47,36 @@ import HeroHome3 from "../Atoms/HeroHome3.astro";
 </div>
 
 <style>
+  /* Animación para cambiar automáticamente las dispositivas */
+  /* @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(0%);
+    }
+    33.33% {
+      transform: translateX(-100%);
+    }
+    58.33% {
+      transform: translateX(-100%);
+    }
+    66.66% {
+      transform: translateX(-200%);
+    }
+    91.66% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  } */
+
+  /* Configurar el contenedor para usar la animación */
+  /* #heroContainer {
+    animation: slide 9s infinite;
+  } */
+
   #sliderControl > input:nth-child(1):checked ~ #heroSlider > #heroContainer {
     transform: translateX(0%);
   }

@@ -89,7 +89,7 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
           </li>
           <li>
             <a
-              href="auto"
+              href="construction"
               class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
             >
               <Robot class="h-full w-full" />
@@ -107,7 +107,7 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
           </li>
           <li>
             <a
-              href="presencial"
+              href="construction"
               class="flex items-center gap-2 px-6 py-3 text-base leading-base hover:text-secondary-500 lg:px-3 lg:py-1"
             >
               <Study class="h-full w-full" />
@@ -190,7 +190,8 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
     </ul>
 
     <!-- Menú de Moneda -->
-    <div class="currency-dropdown flex items-center gap-2">
+    <!-- borrar hidden y agregar flex después al querer agregarlo -->
+    <div class="currency-dropdown hidden items-center gap-2">
       <!--  <span
         class="relative flex cursor-pointer items-center gap-1 rounded-full bg-primary-300 px-4 py-1 text-sm leading-sm"
         onclick="toggleCurrencyMenu()"

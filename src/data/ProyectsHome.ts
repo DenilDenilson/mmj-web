@@ -1,15 +1,25 @@
-import proyectImage from "@src/Images/Home/MMJ-Proyectn.png";
-import EnergiaProjectImage from "@src/Images/Home/EnergiaProjectImage.jpg";
-import AlertaProjectImage from "@src/Images/Home/AlertaProjectImage.jpg";
-import VaporProjectImage from "@src/Images/Home/VaporProjectImage.jpg";
-import AgricolaProjectImage from "@src/Images/Home/AgricolaProjectImage.jpg";
+import proyectImage from "@src/Images/Home/Proyects/Mineria/MMJ-Proyectn.png";
+import EnergiaProjectImage from "@src/Images/Home/Proyects/Energia/EnergiaProjectImage.jpg";
+import EnergiaProjectImage2 from "@src/Images/Home/Proyects/Energia/EnergiaProjectImage2.jpg";
+import EnergiaProjectImage3 from "@src/Images/Home/Proyects/Energia/EnergiaProjectImage3.jpg";
+import EnergiaProjectImage4 from "@src/Images/Home/Proyects/Energia/EnergiaProjectImage4.jpg";
+import EnergiaProjectImage5 from "@src/Images/Home/Proyects/Energia/EnergiaProjectImage5.jpg";
+import AlertaProjectImage from "@src/Images/Home/Proyects/Emergencia/AlertaProjectImage.jpg";
+import AlertaProjectImage2 from "@src/Images/Home/Proyects/Emergencia/AlertaProjectImage2.jpg";
+import AlertaProjectImage3 from "@src/Images/Home/Proyects/Emergencia/AlertaProjectImage3.jpg";
+import AlertaProjectImage4 from "@src/Images/Home/Proyects/Emergencia/AlertaProjectImage4.jpg";
+import AlertaProjectImage5 from "@src/Images/Home/Proyects/Emergencia/AlertaProjectImage5.jpg";
+import VaporProjectImage from "@src/Images/Home/Proyects/Industrial/VaporProjectImage.jpg";
+import AgricolaProjectImage from "@src/Images/Home/Proyects/Agropecuario/AgricolaProjectImage.jpg";
+import AgricolaProjectImage2 from "@src/Images/Home/Proyects/Agropecuario/AgricolaProjectImage2.jpg";
+import AgricolaProjectImage3 from "@src/Images/Home/Proyects/Agropecuario/AgricolaProjectImage3.jpg";
 
 export interface IProyectResume {
   title: string;
   description1: string;
   description2: string;
   achievements: string[];
-  image: ImageMetadata;
+  images: ImageMetadata[];
 }
 
 export const proyectsResume = [
@@ -26,7 +36,13 @@ export const proyectsResume = [
       "Comunicación fiable vía Modbus RS485.",
       "Diseño compacto para fácil instalación en carril DIN.",
     ],
-    image: EnergiaProjectImage,
+    images: [
+      EnergiaProjectImage,
+      EnergiaProjectImage2,
+      EnergiaProjectImage3,
+      EnergiaProjectImage4,
+      EnergiaProjectImage5,
+    ],
   },
 
   {
@@ -42,7 +58,13 @@ export const proyectsResume = [
       "Comunicación a 200 m por radio",
       "Gestión rápida en plataforma web",
     ],
-    image: AlertaProjectImage,
+    images: [
+      AlertaProjectImage,
+      AlertaProjectImage2,
+      AlertaProjectImage3,
+      AlertaProjectImage4,
+      AlertaProjectImage5,
+    ],
   },
   {
     title: "Maquinaria Generadora de Vapor",
@@ -57,7 +79,7 @@ export const proyectsResume = [
       "Configuración sencilla con HMI",
       "Reducción de intervención humana y mejora de calidad",
     ],
-    image: VaporProjectImage,
+    images: [VaporProjectImage],
   },
   {
     title: "Sistema de Monitoreo y Control Agrícola Inteligente",
@@ -72,7 +94,11 @@ export const proyectsResume = [
       "Reportes detallados de condiciones",
       "Alertas visuales para cada área",
     ],
-    image: AgricolaProjectImage,
+    images: [
+      AgricolaProjectImage,
+      AgricolaProjectImage2,
+      AgricolaProjectImage3,
+    ],
   },
   {
     title: "  Sistema de Seguimiento de Activos GNSS + LTE",
@@ -87,6 +113,6 @@ export const proyectsResume = [
       "Diseño compacto y robusto para entornos difíciles",
       "Tecnologías de bajo consumo con respaldo de batería",
     ],
-    image: proyectImage,
+    images: [proyectImage],
   },
 ];
