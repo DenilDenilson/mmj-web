@@ -1,8 +1,8 @@
 {
   "bgCourseCard": "ansi-c",
   "startDate": "Proximamente",
-  "title": "Electrónica para la Industria Diseño, Protección y Comunicación ",
-  "description": "Aprende a diseñar sistemas electrónicos robustos, enfocándote en protección de energía con TVS, MOVs y eFuses, fuentes de alimentación DC/DC, aislamiento galvánico, y filtros EMI. Trabaja con baterías LiPo e Ion-Litio, cargadores y balanceadores, y desarrolla interfaces Ethernet y mucho más.",
+  "title": "Programación con Arduino y ESP32 para proyectos IoT",
+  "description": "En este curso 100% práctico te enseñamos el manejo de sensores, actuadores y periféricos, aplicando programación en C/C++. Se desarrollarán proyectos con adquisición y envío de datos a plataformas IoT como Ubidots mediante WiFi y MQTT, permitiendo la automatización, control y monitoreo remoto en aplicaciones inteligentes, domótica, robótica, biomédica y más.",
   "goals": [
     "Comprender los principios del desarrollo de software embebido.",
     "Aprender a integrar hardware y software en sistemas embebidos",
@@ -10,7 +10,7 @@
     "Desarrollar aplicaciones robustas y escalables.",
     "Comprender los principios del desarrollo de software embebido."
   ],
-  "techs": ["proteus", "altium", "webench", "redexpert", "multisim"],
+  "techs": ["arduino", "esp32", "wifi", "ubidots"],
   "modality": "???",
   "duration": 0,
   "hours": 0,

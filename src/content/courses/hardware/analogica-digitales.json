@@ -1,21 +1,20 @@
 {
-    "bgCourseCard": "ansi-c",
-    "startDate": "Proximamente",
-    "title": "Sistemas Electrónicos Analógicos y digitales",
-    "description": "Domina los sistemas electrónicos desde cero, abarcando el diseño de circuitos analógicos y digitales, implementación de protocolos de comunicación, creación de prototipos PCBs, y programación de sistemas embebidos en C y Ladder, donde podrás realizar la simulación e implementación de los circuitos electrónicos a diseñar.",
-    "goals": [
-      "Comprender los principios del desarrollo de software embebido.",
-      "Aprender a integrar hardware y software en sistemas embebidos",
-      "Dominar la programación en tiempo real y la optimización de recursos.",
-      "Desarrollar aplicaciones robustas y escalables.",
-      "Comprender los principios del desarrollo de software embebido."
-    ],
-    "techs": ["proteus", "multisim", "arduino", "altium"],
-    "modality": "???",
-    "duration": 0,
-    "hours": 0,
-    "priceBase": 0,
-    "priceReal": 0,
-    "carrer": "hardware"
-  }
-  
+  "bgCourseCard": "ansi-c",
+  "startDate": "Proximamente",
+  "title": "Sistemas Electrónicos Analógicos y digitales",
+  "description": "Domina los sistemas electrónicos desde cero, abarcando el diseño de circuitos analógicos y digitales, implementación de protocolos de comunicación, creación de prototipos PCBs, y programación de sistemas embebidos en C y Ladder, donde podrás realizar la simulación e implementación de los circuitos electrónicos a diseñar.",
+  "goals": [
+    "Comprender los principios del desarrollo de software embebido.",
+    "Aprender a integrar hardware y software en sistemas embebidos",
+    "Dominar la programación en tiempo real y la optimización de recursos.",
+    "Desarrollar aplicaciones robustas y escalables.",
+    "Comprender los principios del desarrollo de software embebido."
+  ],
+  "techs": ["proteus", "multisim", "arduino", "altium", "openplc"],
+  "modality": "???",
+  "duration": 0,
+  "hours": 0,
+  "priceBase": 0,
+  "priceReal": 0,
+  "carrer": "hardware"
+}

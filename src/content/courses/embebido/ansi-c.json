@@ -1,8 +1,8 @@
 {
   "bgCourseCard": "ansi-c",
   "startDate": "Proximamente",
-  "title": "Ansi C orientado de Microcontroladores y SoCs",
-  "description": "Conviertete en un experto en le uso de ANSI C para la manipulación directa de registros, punteros y estructuras en sistemas embebidos. Se abordarán temas como manejo de memoria, patrones de diseño, programación modular para periféricos, entre otros. También se implementarán sistemas operativos en tiempo real para SoCs y microcontroladores.",
+  "title": "Ansi C orientado a Microcontroladores y SoCs",
+  "description": "Conviértete en un experto en le uso de ANSI C para la manipulación directa de registros, punteros y estructuras en sistemas embebidos. Se abordarán temas como manejo de memoria, patrones de diseño, programación modular para periféricos, entre otros. También se implementarán sistemas operativos en tiempo real para SoCs y microcontroladores.",
   "goals": [
     "Comprender los principios del desarrollo de software embebido.",
     "Aprender a integrar hardware y software en sistemas embebidos",

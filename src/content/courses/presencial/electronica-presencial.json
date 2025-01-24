@@ -1,8 +1,8 @@
 {
   "bgCourseCard": "ansi-c",
   "startDate": "Proximamente",
-  "title": "Electrónica para la Industria Diseño, Protección y Comunicación ",
-  "description": "Aprende a diseñar sistemas electrónicos robustos, enfocándote en protección de energía con TVS, MOVs y eFuses, fuentes de alimentación DC/DC, aislamiento galvánico, y filtros EMI. Trabaja con baterías LiPo e Ion-Litio, cargadores y balanceadores, y desarrolla interfaces Ethernet y mucho más.",
+  "title": "Electrónica desde 0 Analógica y Digital",
+  "description": "En este curso 100% práctico te enseñamos desde el análisis de circuitos eléctricos y electrónicos hasta la implementación de proyectos. Se estudiarán leyes fundamentales, componentes pasivos y activos, fuentes de alimentación, transistores, reguladores de voltaje y circuitos digitales, utilizando osciloscopios, multímetros y software de simulación para el diseño y validación de circuitos.",
   "goals": [
     "Comprender los principios del desarrollo de software embebido.",
     "Aprender a integrar hardware y software en sistemas embebidos",
@@ -10,7 +10,7 @@
     "Desarrollar aplicaciones robustas y escalables.",
     "Comprender los principios del desarrollo de software embebido."
   ],
-  "techs": ["proteus", "altium", "webench", "redexpert", "multisim"],
+  "techs": ["proteus"],
   "modality": "???",
   "duration": 0,
   "hours": 0,

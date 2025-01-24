@@ -42,6 +42,8 @@ import Gprs from "@src/Images/Techs/Gprs.png";
 import C3G4G from "@src/Images/Techs/C3G4G.png";
 import GNSS from "@src/Images/Techs/GNSS.png";
 import MQTT from "@src/Images/Techs/MQTT.png";
+import TouchGFX from "@src/Images/Techs/TouchGFX.png";
+import OpenPLC from "@src/Images/Techs/OpenPLC.png";
 
 const { course } = Astro.props;
 const {
@@ -98,6 +100,8 @@ const techImages = {
   c3g4g: C3G4G,
   gnss: GNSS,
   mqtt: MQTT,
+  touchgfx: TouchGFX,
+  openplc: OpenPLC,
 };
 ---
 
@@ -198,7 +202,8 @@ const techImages = {
             </a>
           </span>
           <a
-            href={course.id}
+            href={`https://api.whatsapp.com/send?phone=51970570927&text=Buenas%2C%20quisiera%20detalles%20de%20${title}`}
+            target="_blank"
             class="flex rounded border border-black-300 px-3 py-4 transition-colors duration-300 hover:bg-white-200 lg:py-2"
           >
             <!-- El flex es para igualar las alturas de ambos botones, algo que no entiendo la razón, pero funciona -->

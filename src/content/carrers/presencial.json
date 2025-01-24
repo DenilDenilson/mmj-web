@@ -1,28 +1,28 @@
 {
-  "title": "Programación de Microcontroladores",
-  "backgroundHeroImage": "embebido",
-  "description": "El firmware embebido es el núcleo que da vida a los microcontroladores, permitiendo el control y operación de dispositivos inteligentes en una amplia variedad de aplicaciones. En esta especialidad, aprenderás a programar microcontroladores desde cero, optimizar recursos de hardware y desarrollar soluciones integradas de alto rendimiento.",
+  "title": "Cursos Presenciales Lima-Perú",
+  "backgroundHeroImage": "presencial",
+  "description": "Inicia en el mundo de la electrónica, programación e IoT con nuestros cursos 100% presenciales y totalmente prácticos. Aprende desde cero en un ambiente dinámico, con acceso a herramientas y materiales de laboratorio, guiado por expertos en el aula. No importa si eres principiante o tienes experiencia, nuestros cursos están diseñados para cualquier persona que desee dominar estas tecnologías.",
   "goals": [
-    "Dominio de diversas arquitectiras de MCUs a nivel de registro.",
-    "Aprender a interactuar con periféricos como sensores, actuadores y módulos de comunicación",
-    "Diseñar diversos sistemas que integren protocolos de comunicación.",
-    "Implementar sistemas en tiempo real (RTOS) para aplicaciones críticas.",
-    "Diseñar y optimizar código eficiente y escalable para hardware embebido."
+    "Aprendizaje 100% práctico: No solo teoría, aquí trabajas con herramientas reales y proyectos funcionales en cada clase.",
+    "Experiencia en el aula: Disfruta de un espacio equipado con equipos profesionales para maximizar tu aprendizaje.",
+    "Atención personalizada: Clases con grupos reducidos para un mejor seguimiento de tu progreso.",
+    "Certificación profesional: Al finalizar cada curso, recibirás un certificado que avala tus conocimientos y habilidades.",
+    "Sin requisitos previos: Nuestros cursos están diseñados para cualquier persona, desde principiantes hasta quienes buscan perfeccionar sus habilidades."
   ],
-  "studentProfile": "Al finalizar la especialidad de Desarrollo de Firmware Embebido, el participante será un experto en la programación y la optimización de microcontroladores, con habilidades para implementar soluciones robustas y eficientes en sistemas para diversas aplicaciones de la industria y tecnología.",
+  "studentProfile": "El estudiante adquirirá habilidades prácticas en electrónica, programación e IoT, incluyendo el uso de instrumentos de medición, el diseño y ensamblaje de PCBs, y la programación de microcontroladores como Arduino y ESP32. Estará capacitado para desarrollar proyectos reales con conectividad IoT, aplicando soluciones tecnológicas en entornos industriales y de automatización.",
   "skillsTech": [
-    "Programación avanzada de microcontroladores utilizando patrones de diseño",
-    "Dominio de diversas arquitecturas de MCUs a nivel de registro",
-    "Integración de periféricos como sensores, actuadores y módulos de comunicación.",
-    "Diseño y optimización de aplicaciones en C, C++ y Assembler",
-    "Implementación de interfaces y protocolos de comunicación para sistemas embebidos"
+    "Manejo de instrumentos de medición como multímetros y osciloscopios para el análisis y diagnóstico de circuitos electrónicos.",
+    "Diseño y fabricación de PCBs, desde la creación de esquemáticos hasta el ensamblaje y prueba de circuitos impresos.",
+    "Programación de microcontroladores como Arduino y ESP32 para la automatización y control de dispositivos.",
+    "Implementación de proyectos IoT, integrando sensores, actuadores y comunicación inalámbrica para aplicaciones conectadas.",
+    "Resolución de problemas y trabajo en equipo, aplicando metodologías prácticas en entornos de laboratorio con casos reales."
   ],
   "canPerform": [
-    "Programador de firmware embebido",
-    "Ingeniero de sistemas embebidos",
-    "Especialista en integración de hardware y software",
-    "Desarrollador de aplicaciones para sistemas en tiempo real",
-    "Gestor de proyectos de soluciones embebidas"
+    "Técnico en electrónica, realizando diagnóstico, mantenimiento y desarrollo de circuitos.",
+    "Diseñador de PCBs, creando y ensamblando tarjetas electrónicas.",
+    "Desarrollador IoT, integrando sensores, actuadores y conectividad.",
+    "Programador de microcontroladores, trabajando con Arduino y ESP32.",
+    "Soporte técnico en electrónica e IoT, brindando soluciones para sistemas conectados"
   ],
   "projects": [
     {

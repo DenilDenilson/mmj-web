@@ -2,7 +2,7 @@
   "bgCourseCard": "ansi-c",
   "startDate": "Proximamente",
   "title": "Microcontroladores PIC y comunicación WIFI para IoT",
-  "description": "---",
+  "description": "Aprende a programar microcontroladores PIC y a integrar comunicación WiFi para desarrollar soluciones IoT funcionales. Domina el manejo de periféricos como LCD, teclados matriciales, ADC, USART, Timers, etc., y utiliza el módulo ESP8266 para conectar tus proyectos a plataformas IoT como Ubidots, WhatsApp mediante protocolos como HTTP.",
   "goals": [
     "Comprender los principios del desarrollo de software embebido.",
     "Aprender a integrar hardware y software en sistemas embebidos",
@@ -10,7 +10,7 @@
     "Desarrollar aplicaciones robustas y escalables.",
     "Comprender los principios del desarrollo de software embebido."
   ],
-  "techs": ["microchip", "proteus"],
+  "techs": ["microchip", "proteus", "mplabx"],
   "modality": "virtual",
   "duration": 12,
   "hours": 50,
