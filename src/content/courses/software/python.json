@@ -11,10 +11,10 @@
     "Implementarás comunicación serial y MQTT entre Tkinter, Raspberry Pi Pico y ESP32."
   ],
   "techs": ["python", "tkinter", "esp32", "raspberry"],
-  "modality": "???",
-  "duration": 0,
-  "hours": 0,
-  "priceBase": 0,
-  "priceReal": 0,
+  "modality": "virtual",
+  "duration": 6,
+  "hours": 36,
+  "priceBase": 600,
+  "priceReal": 300,
   "carrer": "software"
 }

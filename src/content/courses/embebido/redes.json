@@ -12,10 +12,10 @@
     ],
     "techs": ["espressif", "modbus", "rs485", "ethernet", "tcpip"],
     "modality": "virtual",
-    "duration": 0,
-    "hours": 0,
-    "priceBase": 0,
-    "priceReal": 0,
+    "duration": 6,
+    "hours": 24,
+    "priceBase": 600,
+    "priceReal": 350,
     "carrer": "embebido"
   }
   

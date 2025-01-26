@@ -11,10 +11,10 @@
     "Comprender los principios del desarrollo de software embebido."
   ],
   "techs": ["proteus", "multisim", "arduino", "altium", "openplc"],
-  "modality": "???",
-  "duration": 0,
-  "hours": 0,
-  "priceBase": 0,
-  "priceReal": 0,
+  "modality": "virtual",
+  "duration": 5,
+  "hours": 30,
+  "priceBase": 700,
+  "priceReal": 350,
   "carrer": "hardware"
 }

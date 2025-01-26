@@ -12,9 +12,9 @@
   ],
   "techs": ["microchip", "proteus", "mplabx"],
   "modality": "virtual",
-  "duration": 12,
-  "hours": 50,
-  "priceBase": 150,
-  "priceReal": 90,
+  "duration": 6,
+  "hours": 36,
+  "priceBase": 500,
+  "priceReal": 300,
   "carrer": "embebido"
 }

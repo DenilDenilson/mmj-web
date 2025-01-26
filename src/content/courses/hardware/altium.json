@@ -11,11 +11,11 @@
       "Comprender los principios del desarrollo de software embebido."
     ],
     "techs": ["altium"],
-    "modality": "???",
-    "duration": 0,
-    "hours": 0,
-    "priceBase": 0,
-    "priceReal": 0,
+    "modality": "virtual",
+    "duration": 12,
+    "hours": 75,
+    "priceBase": 1300,
+    "priceReal": 850,
     "carrer": "hardware"
   }
   

@@ -11,11 +11,11 @@
       "Comprender los principios del desarrollo de software embebido."
     ],
     "techs": ["proteus", "quartus"],
-    "modality": "???",
-    "duration": 0,
-    "hours": 0,
-    "priceBase": 0,
-    "priceReal": 0,
+    "modality": "virtual",
+    "duration": 7,
+    "hours": 52,
+    "priceBase": 1000,
+    "priceReal": 500,
     "carrer": "hardware"
   }
   

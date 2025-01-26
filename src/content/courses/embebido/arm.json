@@ -12,9 +12,9 @@
   ],
   "techs": ["stm32", "nextion", "touchgfx", "c"],
   "modality": "virtual",
-  "duration": 12,
-  "hours": 50,
-  "priceBase": 150,
-  "priceReal": 90,
+  "duration": 7,
+  "hours": 40,
+  "priceBase": 670,
+  "priceReal": 400,
   "carrer": "embebido"
 }

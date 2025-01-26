@@ -12,9 +12,9 @@
   ],
   "techs": ["microchip", "mplabx", "asm", "proteus"],
   "modality": "virtual",
-  "duration": 0,
-  "hours": 0,
-  "priceBase": 0,
-  "priceReal": 0,
+  "duration": 6,
+  "hours": 36,
+  "priceBase": 500,
+  "priceReal": 300,
   "carrer": "embebido"
 }

@@ -11,10 +11,10 @@
     "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
   ],
   "techs": ["gsm", "gprs", "gnss", "c3g4g", "esp32", "arduino"],
-  "modality": "???",
-  "duration": 0,
-  "hours": 0,
-  "priceBase": 0,
-  "priceReal": 0,
+  "modality": "virtual",
+  "duration": 6,
+  "hours": 36,
+  "priceBase": 600,
+  "priceReal": 300,
   "carrer": "iot"
 }

@@ -12,9 +12,9 @@
   ],
   "techs": ["labview", "modbus", "tcpip"],
   "modality": "virtual",
-  "duration": 0,
-  "hours": 0,
-  "priceBase": 0,
-  "priceReal": 0,
+  "duration": 5,
+  "hours": 30,
+  "priceBase": 800,
+  "priceReal": 400,
   "carrer": "software"
 }

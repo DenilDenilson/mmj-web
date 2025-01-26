@@ -12,9 +12,9 @@
   ],
   "techs": ["arduino", "nextion", "esp32", "figma"],
   "modality": "virtual",
-  "duration": 12,
-  "hours": 50,
-  "priceBase": 150,
-  "priceReal": 90,
+  "duration": 8,
+  "hours": 39,
+  "priceBase": 500,
+  "priceReal": 300,
   "carrer": "embebido"
 }

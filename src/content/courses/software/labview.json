@@ -11,10 +11,10 @@
     "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
   ],
   "techs": ["labview", "rs485", "tcpip", "modbus"],
-  "modality": "???",
-  "duration": 0,
-  "hours": 0,
-  "priceBase": 0,
-  "priceReal": 0,
+  "modality": "virtual",
+  "duration": 8,
+  "hours": 48,
+  "priceBase": 800,
+  "priceReal": 400,
   "carrer": "software"
 }

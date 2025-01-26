@@ -12,9 +12,9 @@
   ],
   "techs": ["espressif", "microchip", "stm32", "c", "mplabx"],
   "modality": "virtual",
-  "duration": 12,
+  "duration": 8,
   "hours": 50,
-  "priceBase": 120,
-  "priceReal": 90,
+  "priceBase": 840,
+  "priceReal": 420,
   "carrer": "embebido"
 }

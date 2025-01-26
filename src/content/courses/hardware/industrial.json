@@ -11,10 +11,10 @@
     "Comprender los principios del desarrollo de software embebido."
   ],
   "techs": ["proteus", "altium", "webench", "redexpert", "multisim"],
-  "modality": "???",
-  "duration": 0,
-  "hours": 0,
-  "priceBase": 0,
-  "priceReal": 0,
+  "modality": "virtual",
+  "duration": 8,
+  "hours": 45,
+  "priceBase": 900,
+  "priceReal": 500,
   "carrer": "hardware"
 }
