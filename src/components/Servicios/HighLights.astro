@@ -4,6 +4,11 @@ import Integration from "@src/Images/icons/Integration.astro";
 import OptimizationResources from "@src/Images/icons/OptimizationResources.astro";
 import Scalability from "@src/Images/icons/Scalability.astro";
 import HightLight from "./Sections/HightLight.astro";
+import { getEntry } from "astro:content";
+
+const { service } = Astro.params;
+const specificService = await getEntry("services", `${service}`);
+const { highlights } = specificService?.data || { services: [] }; // Aseguramos que services sea un array vacío en caso de null o undefined
 ---
 
 <ul
@@ -11,29 +16,29 @@ import HightLight from "./Sections/HightLight.astro";
 >
   <HightLight
     color="#6E3C9F"
-    title="Optimización de Recursos"
-    description="Maximiza el rendimiento y la eficiencia con componentes diseñados específicamente para tus necesidades"
+    title={highlights[0]?.title}
+    description={highlights[0]?.description}
   >
     <OptimizationResources />
   </HightLight>
   <HightLight
     color="#33AF96"
-    title="Integración Precisa"
-    description="Soluciones integradas con exactitud a tus equipos y sistemas actuales"
+    title={highlights[1]?.title}
+    description={highlights[1]?.description}
   >
     <Integration />
   </HightLight>
   <HightLight
     color="#D03C55"
-    title="Durabilidad y Confiabilidad"
-    description="Componentes de alta calidad que garantizan la durabilidad y confiabilidad de tus sistemas"
+    title={highlights[2]?.title}
+    description={highlights[2]?.description}
   >
     <Durability />
   </HightLight>
   <HightLight
     color="#57A6B8"
-    title="Escalabilidad Personalizada"
-    description="Diseñado para crecer con tus proyectos, adaptable a futuras necesidades"
+    title={highlights[3]?.title}
+    description={highlights[3]?.description}
   >
     <Scalability />
   </HightLight>

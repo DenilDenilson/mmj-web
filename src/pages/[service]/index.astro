@@ -10,7 +10,10 @@ import OurProcess from "@src/components/Servicios/OurProcess.astro";
 
 export const getStaticPaths = (() => {
   // Las uri se usan para obtener el objeto del archivo Specialites.ts
-  return [{ params: { service: "servicio-hardware" } }];
+  return [
+    { params: { service: "servicio-hardware" } },
+    { params: { service: "servicio-software" } }
+  ];
 }) satisfies GetStaticPaths;
 ---
 

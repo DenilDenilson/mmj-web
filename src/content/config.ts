@@ -48,6 +48,8 @@ const serviceCollection = defineCollection({
     title: z.string(),
     subtitle: z.string(),
     description: z.string(),
+    highlights: z.array(z.object({title: z.string(), description: z.string()})),
+    services: z.array(z.object({title: z.string(), description: z.string()}))
   }),
 });
 

@@ -2,7 +2,7 @@
 import ServiceCardImage from "@src/Images/Servicios/ServiceCard.jpg";
 import { Image } from "astro:assets";
 
-const { title, description, link = "#" } = Astro.props;
+const { title, description, link = "https://wa.link/fc3qb5" } = Astro.props;
 ---
 
 <li
@@ -30,6 +30,7 @@ const { title, description, link = "#" } = Astro.props;
       >
         <a
           href={link}
+          target="_blank"
           class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 px-3 py-1 transition-colors duration-300 hover:bg-primary-400 lg:py-2"
         >
           <span class="text-sm text-white-100 lg:text-base"
