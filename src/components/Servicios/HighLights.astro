@@ -8,7 +8,7 @@ import { getEntry } from "astro:content";
 
 const { service } = Astro.params;
 const specificService = await getEntry("services", `${service}`);
-const { highlights } = specificService?.data || { services: [] }; // Aseguramos que services sea un array vacío en caso de null o undefined
+const { highlights = [] } = specificService?.data || {}; // Aseguramos que highlights sea un array vacío en caso de null o undefined
 ---
 
 <ul
