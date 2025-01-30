@@ -1,20 +1,55 @@
 {
-    "title": "Soluciones de Software a Medida",
-    "subtitle": "Diseño, desarrollo y despliegue de software personalizado para tu industria.",
-    "description": "Desarrollamos software profesional para distintos campos en la industria, optimizando procesis de automatización, control y conectividad. Implementamos tecnologías avanzadas para garantizar soluciones eficientes y adaptadas a cada necesidad.",
-    "highlights": [
-    {"title": "Personalización Total", "description": "Desarrollamos soluciones adaptadas a las necesidades específicas de cada industria, garantizando eficiencia y compatibilidad con sus procesos"},
-    {"title": "Integración Tecnológica", "description": "Conectamos software con hardware, IoT y sistemas industriales, asegurando monitoreo y control en tiempo real"},
-    {"title": "Escalabilidad y Rendimiento", "description": "Creamos aplicaciones optimizadas para crecer con su negocio, manteniendo alta disponibilidad y rendimiento"},
-    {"title": "Seguridad y Confiabilidad", "description":  "Implementamos protocolos robustos para proteger datos y garantizar estabilidad en cada solución desarrollada"}
+  "title": "Soluciones de Software a Medida",
+  "subtitle": "Diseño, desarrollo y despliegue de software personalizado para tu industria.",
+  "description": "Desarrollamos software profesional para distintos campos en la industria, optimizando procesis de automatización, control y conectividad. Implementamos tecnologías avanzadas para garantizar soluciones eficientes y adaptadas a cada necesidad.",
+  "highlights": [
+    {
+      "title": "Personalización Total",
+      "description": "Desarrollamos soluciones adaptadas a las necesidades específicas de cada industria, garantizando eficiencia y compatibilidad con sus procesos"
+    },
+    {
+      "title": "Integración Tecnológica",
+      "description": "Conectamos software con hardware, IoT y sistemas industriales, asegurando monitoreo y control en tiempo real"
+    },
+    {
+      "title": "Escalabilidad y Rendimiento",
+      "description": "Creamos aplicaciones optimizadas para crecer con su negocio, manteniendo alta disponibilidad y rendimiento"
+    },
+    {
+      "title": "Seguridad y Confiabilidad",
+      "description": "Implementamos protocolos robustos para proteger datos y garantizar estabilidad en cada solución desarrollada"
+    }
   ],
-    "services": [
-    {"title": "Desarrollo de Software Industrial", "description": "Creamos soluciones de software a medida para la automatización y control de procesos industriales como HMI/SCADA/DCS/HVAC"},
-    {"title": "Desarrollo de aplicaciones IoT", "description": "Diseñamos aplicaciones web para gestionar y monitorear dispositivos IoT,  acceso remoto, análisis de datos en tiempo real y control eficiente desde cualquier lugar."},
-    {"title": "Desarrollo de apps de escritorio", "description": "Creamos soluciones de escritorio que integran y controlan hardware de manera eficiente. Diseñamos herramientas intuitivas y robustas para la interacción en tiempo real."},
-    {"title": "Programacion de chips", "description": "Desarrollamos firmware especializado, optimizando el rendimiento y asegurando una interaccion eficiente con sensores, actuadores y sistemas embebidos."},
-    {"title": "Implementación RTOS", "description": "Integramos sistemas operativos en tiempo real (RTOS) en microcontroladores optimizando la ejecución simultánea de tareas críticas con precisión, confiabilidad."},
-    {"title": "Desarrollo de apps móviles", "description": "Diseñamos apps móviles intuitivas y funcionales, integrandas con dispositivos IoT y hardware especializado, para monitoreo, control y gestión en tiempo real."}
+  "services": [
+    {
+      "title": "Desarrollo de Software Industrial",
+      "description": "Creamos soluciones de software a medida para la automatización y control de procesos industriales como HMI/SCADA/DCS/HVAC",
+      "ImageSrc": "DesarrolloSoftwareIndustrial"
+    },
+    {
+      "title": "Desarrollo de aplicaciones IoT",
+      "description": "Diseñamos aplicaciones web para gestionar y monitorear dispositivos IoT,  acceso remoto, análisis de datos en tiempo real y control eficiente desde cualquier lugar.",
+      "ImageSrc": "DesarrolloIoT"
+    },
+    {
+      "title": "Desarrollo de apps de escritorio",
+      "description": "Creamos soluciones de escritorio que integran y controlan hardware de manera eficiente. Diseñamos herramientas intuitivas y robustas para la interacción en tiempo real.",
+      "ImageSrc": "DesarrolloEscritorio"
+    },
+    {
+      "title": "Programacion de chips",
+      "description": "Desarrollamos firmware especializado, optimizando el rendimiento y asegurando una interaccion eficiente con sensores, actuadores y sistemas embebidos.",
+      "ImageSrc": "DesarrolloFirmware"
+    },
+    {
+      "title": "Implementación RTOS",
+      "description": "Integramos sistemas operativos en tiempo real (RTOS) en microcontroladores optimizando la ejecución simultánea de tareas críticas con precisión, confiabilidad.",
+      "ImageSrc": "DesarrolloRTOS"
+    },
+    {
+      "title": "Desarrollo de apps móviles",
+      "description": "Diseñamos apps móviles intuitivas y funcionales, integrandas con dispositivos IoT y hardware especializado, para monitoreo, control y gestión en tiempo real.",
+      "ImageSrc": "DesarolloApps"
+    }
   ]
 }
-  

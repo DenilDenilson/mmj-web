@@ -2,7 +2,11 @@
 import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
 import bgMobile from "@src/Images/Servicios/bgMobile.avif";
 import bgDesktop from "@src/Images/Servicios/bgDesktop.avif";
+import bgDesktopHardware from "@src/Images/Servicios/Hardware/HeroHardware.jpg";
+import bgDesktopSoftware from "@src/Images/Servicios/Software/HeroSoftware.jpg";
 import { Image } from "astro:assets";
+
+const { service } = Astro.params;
 
 const bgImages = {
   embebido: {
@@ -15,11 +19,26 @@ const bgImages = {
 <div
   class="relative hidden overflow-hidden lg:block lg:h-[448px] lg:w-[448px] xl:h-[576px] xl:w-[576px]"
 >
-  <Image
+  {
+    service === "servicio-hardware" ? (
+      <Image
+        class="invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
+        src={bgDesktopHardware}
+        alt="Imagen de fondo de alguien programando"
+      />
+    ) : (
+      <Image
+        class="invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
+        src={bgDesktopSoftware}
+        alt="Imagen de fondo de alguien programando"
+      />
+    )
+  }
+  <!-- <Image
     class="invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
     src={bgDesktop}
     alt="Imagen de fondo de alguien programando"
-  />
+  /> -->
 </div>
 <picture
   class="absolute -z-50 aspect-[2/1] h-full sm:bg-black-900 lg:z-0 lg:hidden"

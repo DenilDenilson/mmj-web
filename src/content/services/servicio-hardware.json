@@ -3,17 +3,53 @@
   "subtitle": "Diseño, desarrollo y fabricación de hardware personalizado para tu industria.",
   "description": "Desarrollamos soluciones de hardware a medida, adaptadas a los requerimientos específicos de cada industria. Desde el diseño hasta la implementación, transformamos tus ideas en resultados tangibles.",
   "highlights": [
-    {"title": "Optimización de Recursos", "description": "Maximiza el rendimiento y la eficiencia con componentes diseñados específicamente para tus necesidades"},
-    {"title": "Integración Precisa", "description": "Soluciones integradas con exactitud a tus equipos y sistemas actuales"},
-    {"title": "Durabilidad y Confiabilidad", "description": "Componentes de alta calidad que garantizan la durabilidad y confiabilidad de tus sistemas"},
-    {"title": "Escalabilidad Personalizada", "description":  "Diseñado para crecer con tus proyectos, adaptable a futuras necesidades"}
+    {
+      "title": "Optimización de Recursos",
+      "description": "Maximiza el rendimiento y la eficiencia con componentes diseñados específicamente para tus necesidades"
+    },
+    {
+      "title": "Integración Precisa",
+      "description": "Soluciones integradas con exactitud a tus equipos y sistemas actuales"
+    },
+    {
+      "title": "Durabilidad y Confiabilidad",
+      "description": "Componentes de alta calidad que garantizan la durabilidad y confiabilidad de tus sistemas"
+    },
+    {
+      "title": "Escalabilidad Personalizada",
+      "description": "Diseñado para crecer con tus proyectos, adaptable a futuras necesidades"
+    }
   ],
   "services": [
-    {"title": "Fabricación de circuitos PCBs", "description": "Producimos PCBs multicapa con alta precisión, optimizadas para prototipos y diversas aplicaciones industriales, cumpliendo con estándares internacionales"},
-    {"title": "Diseño electrónico de tarjetas", "description": "Desarrollamos circuitos electrónicos desde el esquemático hasta el layout del PCB, garantizando un diseño optimizado, integridad de señal y máximo rendimiento para tu proyecto"},
-    {"title": "Ensamblake y testeo de tarjetas", "description": "Realizamos ensamblaje de componentes y pruebas funcionales para garantizar el rendimiento y confiabilidad de tus diseños, tanto en prototipos como en producción"},
-    {"title": "Ingeniería Inversa de Equipos", "description": "Analizamos y reconstruimos circuitos electrónicos para recuperar diseños, optimizar funcionalidades o desarrollar nuevas soluciones basadas en tecnología existente"},
-    {"title": "Desarrollo de productos", "description": "Diseñamos y creamos soluciones electrónicas completas, desde la idea hasta el prototipo final, integrando hardware, firmware y diseño mecánico."},
-    {"title": "Diseño mecánico e impresión 3D", "description": "Desarrollamos piezas y estructuras mecánicas personalidades, desde el diseño CAD hasta la impresión 3D, ideales para prototipos funcionales, carcasas y componentes específicos"}
+    {
+      "title": "Fabricación de circuitos PCBs",
+      "description": "Producimos PCBs multicapa con alta precisión, optimizadas para prototipos y diversas aplicaciones industriales, cumpliendo con estándares internacionales",
+      "ImageSrc": "FabricacionPCB"
+    },
+    {
+      "title": "Diseño electrónico de tarjetas",
+      "description": "Desarrollamos circuitos electrónicos desde el esquemático hasta el layout del PCB, garantizando un diseño optimizado, integridad de señal y máximo rendimiento para tu proyecto",
+      "ImageSrc": "DiseñoPCB"
+    },
+    {
+      "title": "Ensamblaje y testeo de tarjetas",
+      "description": "Realizamos ensamblaje de componentes y pruebas funcionales para garantizar el rendimiento y confiabilidad de tus diseños, tanto en prototipos como en producción",
+      "ImageSrc": "EnsamblajePCB"
+    },
+    {
+      "title": "Ingeniería Inversa de Equipos",
+      "description": "Analizamos y reconstruimos circuitos electrónicos para recuperar diseños, optimizar funcionalidades o desarrollar nuevas soluciones basadas en tecnología existente",
+      "ImageSrc": "IngenieriaInversa"
+    },
+    {
+      "title": "Desarrollo de productos",
+      "description": "Diseñamos y creamos soluciones electrónicas completas, desde la idea hasta el prototipo final, integrando hardware, firmware y diseño mecánico.",
+      "ImageSrc": "DesarrolloProducto"
+    },
+    {
+      "title": "Diseño mecánico e impresión 3D",
+      "description": "Desarrollamos piezas y estructuras mecánicas personalidades, desde el diseño CAD hasta la impresión 3D, ideales para prototipos funcionales, carcasas y componentes específicos",
+      "ImageSrc": "Diseño3D"
+    }
   ]
 }

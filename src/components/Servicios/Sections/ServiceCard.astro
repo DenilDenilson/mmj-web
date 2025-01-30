@@ -1,14 +1,51 @@
 ---
 import ServiceCardImage from "@src/Images/Servicios/ServiceCard.jpg";
+import FabricacionPCB from "@src/Images/Servicios/Hardware/FabricacionPCB.jpg";
+import DesarrolloProducto from "@src/Images/Servicios/Hardware/DesarrolloProducto.jpg";
+import Diseño3D from "@src/Images/Servicios/Hardware/Diseño3D.jpg";
+import DiseñoPCB from "@src/Images/Servicios/Hardware/DiseñoPCB.jpg";
+import EnsamblajePCB from "@src/Images/Servicios/Hardware/EnsamblajePCB.jpg";
+import IngenieriaInversa from "@src/Images/Servicios/Hardware/IngenieriaInversa.jpg";
+import DesarolloApps from "@src/Images/Servicios/Software/DesarrolloApps.jpg";
+import DesarrolloEscritorio from "@src/Images/Servicios/Software/DesarrolloEscritorio.jpg";
+import DesarrolloFirmware from "@src/Images/Servicios/Software/DesarrolloFirmware.jpg";
+import DesarrolloIoT from "@src/Images/Servicios/Software/DesarrolloIoT.jpg";
+import DesarrolloRTOS from "@src/Images/Servicios/Software/DesarrolloRTOS.jpg";
+import DesarrolloSoftwareIndustrial from "@src/Images/Servicios/Software/DesarrolloSoftwareIndustrial.jpg";
+
 import { Image } from "astro:assets";
 
-const { title, description, link = "https://wa.link/fc3qb5" } = Astro.props;
+const {
+  title,
+  ImageSrc,
+  description,
+  link = "https://wa.link/fc3qb5",
+} = Astro.props;
+
+const servicesImages = {
+  FabricacionPCB: FabricacionPCB,
+  DesarrolloProducto: DesarrolloProducto,
+  Diseño3D: Diseño3D,
+  DiseñoPCB: DiseñoPCB,
+  EnsamblajePCB: EnsamblajePCB,
+  IngenieriaInversa: IngenieriaInversa,
+  DesarolloApps: DesarolloApps,
+  DesarrolloEscritorio: DesarrolloEscritorio,
+  DesarrolloFirmware: DesarrolloFirmware,
+  DesarrolloIoT: DesarrolloIoT,
+  DesarrolloRTOS: DesarrolloRTOS,
+  DesarrolloSoftwareIndustrial: DesarrolloSoftwareIndustrial,
+};
 ---
 
 <li
   class="h-80 min-w-fit snap-center flex-col justify-center overflow-y-auto rounded bg-white-100 outline outline-1 outline-white-600"
 >
-  <Image src={ServiceCardImage} alt="Imagen de servicio" />
+  <Image
+    src={servicesImages[ImageSrc as keyof typeof servicesImages]}
+    alt={`Imagen de servicio ${title}`}
+    class:list={"h-[161px] w-[280px] rounded-t object-cover"}
+  />
   <div class="relative">
     <hgroup
       class="absolute -top-7 left-0 right-0 mx-auto max-w-60 rounded bg-white-50 px-3 pb-3 pt-2 shadow-sm"

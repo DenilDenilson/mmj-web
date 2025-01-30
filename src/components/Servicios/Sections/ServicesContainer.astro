@@ -10,14 +10,17 @@ const { services } = specificService?.data || { services: [] }; // Aseguramos qu
 <ul
   class="mx-auto mb-8 flex max-w-7xl snap-x snap-mandatory gap-8 overflow-x-auto p-2 lg:h-fit lg:flex-wrap lg:justify-center lg:gap-10 lg:overflow-visible"
 >
-  {services.length > 0 ? (
-    services.map((service) => (
-      <ServiceCard
-        title={service.title}
-        description={service.description}
-      />
-    ))
-  ) : (
-    <li>No hay servicios disponibles.</li> // Mensaje si no hay servicios
-  )}
+  {
+    services.length > 0 ? (
+      services.map((service) => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          ImageSrc={service.ImageSrc}
+        />
+      ))
+    ) : (
+      <li>No hay servicios disponibles.</li> // Mensaje si no hay servicios
+    )
+  }
 </ul>
