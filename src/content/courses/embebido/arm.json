@@ -1,5 +1,5 @@
 {
-  "bgCourseCard": "ansi-c",
+  "bgCourseCard": "arm",
   "startDate": "Proximamente",
   "title": "Programación de Microcontroladores ARM Cortex e interfaces HMI",
   "description": "Domina la programación de microcontroladores STM32 con arquitectura ARM, configurando diversos periféricos, implementando protocolos como UART, I2C y SPI, y diseñando interfaces gráficas. Aprende a optimizar el consumo energético y desarrollar aplicaciones embebidas robustas con STM32CubeIDE, ideales para proyectos industriales y tecnológicos.",

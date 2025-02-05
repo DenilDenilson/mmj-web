@@ -1,5 +1,5 @@
 {
-  "bgCourseCard": "ansi-c",
+  "bgCourseCard": "python",
   "startDate": "Proximamente",
   "title": "Diseño de Aplicaciones de Escritorio con Python para Aplicaciones IoT",
   "description": "En este curso aprenderás a desarrollar soluciones de monitoreo y control de dispositivos IoT usando Python, MQTT y CustomTkinter para crear interfaces gráficas interactivas. Trabajarás con dispositivos como ESP32 y Raspberry Pi Pico, diseñando aplicaciones en tiempo real para la industria, automatización del hogar y más, adquiriendo habilidades clave en desarrollo de software y sistemas embebidos.",
