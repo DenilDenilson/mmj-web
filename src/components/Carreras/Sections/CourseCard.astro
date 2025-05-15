@@ -52,6 +52,7 @@ import TouchGFX from "@src/Images/Techs/TouchGFX.png";
 import OpenPLC from "@src/Images/Techs/OpenPLC.png";
 
 const { course } = Astro.props;
+
 const {
   bgCourseCard,
   startDate,
@@ -213,8 +214,9 @@ const techImages = {
               >
             </a>
           </span>
+          <!-- href={`https://api.whatsapp.com/send?phone=51970570927&text=Buenas%2C%20quisiera%20detalles%20de%20${title}`} -->
           <a
-            href={`https://api.whatsapp.com/send?phone=51970570927&text=Buenas%2C%20quisiera%20detalles%20de%20${title}`}
+            href={course.id}
             target="_blank"
             class="flex rounded border border-black-300 px-3 py-4 transition-colors duration-300 hover:bg-white-200 lg:py-2"
           >

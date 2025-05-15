@@ -1,48 +1,27 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { areasAplicacion } = specificCourse?.data || {};
 ---
 
 <ul class="mb-6">
   <p class="mb-3 font-normal text-[#000]">Áreas de aplicación</p>
-  <li class="mb-1 flex items-start gap-1">
-    <div class="grid h-5 w-5 place-content-center pt-1">
-      <!-- El pt-1 permite alinear correctamente, ya que sino el ícono queda muy arriba respecto al texto -->
-      <Check />
-    </div>
-    <span class="flex flex-col">
-      <span class="font-regular text-black-500">Automotriz</span>
-      <span class="font-light text-black-500"
-        >Participación en el diseño de sistemas de control y monitoreo
-        automotriz.</span
-      >
-    </span>
-  </li>
-  <li class="mb-1 flex items-start gap-1">
-    <div class="grid h-5 w-5 place-content-center pt-1">
-      <!-- El pt-1 permite alinear correctamente, ya que sino el ícono queda muy arriba respecto al texto -->
-      <Check />
-    </div>
-    <span class="flex flex-col">
-      <span class="font-regular text-black-500">Industria Médica </span>
-      <span class="font-light text-black-500"
-        >Desarrollo de dispositivos médicos integrados para monitoreo y
-        diagnóstico.</span
-      >
-    </span>
-  </li>
-  <li class="mb-1 flex items-start gap-1">
-    <div class="grid h-5 w-5 place-content-center pt-1">
-      <!-- El pt-1 permite alinear correctamente, ya que sino el ícono queda muy arriba respecto al texto -->
-      <Check />
-    </div>
-    <span class="flex flex-col">
-      <span class="font-regular text-black-500"
-        >Internet de las Cosas (IoT)</span
-      >
-      <span class="font-light text-black-500">
-        Implementación de soluciones IoT en diferentes plataformas y
-        dispositivos conectados.</span
-      >
-    </span>
-  </li>
+  {
+    areasAplicacion?.map((area) => (
+      <li class="mb-1 flex items-start gap-1">
+        <div class="grid h-5 w-5 place-content-center pt-1">
+          <!-- El pt-1 permite alinear correctamente, ya que sino el ícono queda muy arriba respecto al texto -->
+          <Check />
+        </div>
+        <span class="flex flex-col">
+          <span class="font-regular text-black-500">{area.title}</span>
+          <span class="font-light text-black-500">{area.description}</span>
+        </span>
+      </li>
+    ))
+  }
 </ul>

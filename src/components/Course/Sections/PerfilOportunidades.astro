@@ -1,25 +1,26 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { oportunidadesLaborales } = specificCourse?.data || {};
 ---
 
 <ul class="mb-6">
   <p class="mb-3 font-normal text-[#000]">Oportunidades laborales</p>
-  <li class="mb-1 flex items-center gap-1">
-    <div class="grid h-5 w-5 place-content-center">
-      <Check />
-    </div>
-    <span class="text-[#000]">Ingeniero en Sistemas Embebidos</span>
-  </li>
-  <li class="mb-1 flex items-center gap-1">
-    <div class="grid h-5 w-5 place-content-center">
-      <Check />
-    </div>
-    <span class="text-[#000]">Desarrollador IoT</span>
-  </li>
-  <li class="mb-1 flex items-center gap-1">
-    <div class="grid h-5 w-5 place-content-center">
-      <Check />
-    </div>
-    <span class="text-[#000]">Especialista en Automatización y Control</span>
-  </li>
+  {
+    oportunidadesLaborales?.map((oportunidad: string) => (
+      <li class="mb-1 flex items-start gap-1">
+        <div class="grid h-5 w-5 place-content-center pt-1">
+          <!-- El pt-1 permite alinear correctamente, ya que sino el ícono queda muy arriba respecto al texto -->
+          <Check />
+        </div>
+        <span class="flex flex-col">
+          <span class="font-regular text-black-500">{oportunidad}</span>
+        </span>
+      </li>
+    ))
+  }
 </ul>

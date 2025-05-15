@@ -1,6 +1,10 @@
 {
   "bgCourseCard": "ansi-c",
-  "startDate": "Proximamente",
+  "startDate": "16-mayo",
+  "schedule": {
+    "days": ["Lunes", "Viernes"],
+    "time": [19, 22]
+  },
   "title": "Ansi C orientado a Microcontroladores y SoCs",
   "description": "Conviértete en un experto en le uso de ANSI C para la manipulación directa de registros, punteros y estructuras en sistemas embebidos. Se abordarán temas como manejo de memoria, patrones de diseño, programación modular para periféricos, entre otros. También se implementarán sistemas operativos en tiempo real para SoCs y microcontroladores.",
   "goals": [
@@ -13,8 +17,64 @@
   "techs": ["espressif", "microchip", "stm32", "c", "mplabx"],
   "modality": "virtual",
   "duration": 8,
-  "hours": 50,
-  "priceBase": 840,
-  "priceReal": 420,
-  "carrer": "embebido"
+  "hours": 48,
+  "priceBase": 180,
+  "priceReal": 130,
+  "carrer": "embebido",
+  "competencias": [
+    {
+      "title": "Programación en C para Microcontroladores",
+      "description": "Aprenderás a programar en ANSI C para microcontroladores y SoCs, incluyendo el uso de punteros, estructuras y registros"
+    },
+    {
+      "title": "Desarrollo de Software Embebido",
+      "description": "Aprenderás a desarrollar firmware para sistemas embebidos, microcontroladores y SoCs."
+    },
+    {
+      "title": "Introducción a Sistemas Operativos en Tiempo Real",
+      "description": "Aprenderás a implementar sistemas operativos en tiempo real para microcontroladores y SoCs."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Automatización Industrial",
+      "description": "Desarrollo de sistemas embebidos para la automatización de procesos industriales."
+    },
+    {
+      "title": "IoT",
+      "description": "Desarrollo de dispositivos IoT utilizando microcontroladores y SoCs."
+    },
+    {
+      "title": "Robótica",
+      "description": "Desarrollo de sistemas embebidos para aplicaciones robóticas."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Ingeniero de Sistemas Embebidos",
+    "Desarrollador de Firmware",
+    "Ingeniero de Automatización",
+    "Desarrollador de IoT",
+    "Ingeniero de Robótica"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación",
+    "Conocimientos básicos de electrónica",
+    "Acceso a una PC o laptop",
+    "Conexión a internet estable"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo (como pic, o esp32), aunque no es obligatorio. Además, necesitarás instalar un IDE (como MPLAB, STM32CubeIDE, o VS Code) para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Qué es ANSI C?",
+      "answer": "ANSI C es un estándar del lenguaje de programación C, que define la sintaxis y semántica del lenguaje. Es ampliamente utilizado en el desarrollo de software embebido."
+    },
+    {
+      "question": "¿Qué es un microcontrolador?",
+      "answer": "Un microcontrolador es un pequeño ordenador en un solo chip, que contiene un procesador, memoria y periféricos. Se utiliza en una amplia variedad de aplicaciones embebidas."
+    },
+    {
+      "question": "¿Qué es un SoC?",
+      "answer": "Un SoC (System on Chip) es un circuito integrado que contiene todos los componentes necesarios para un sistema completo, incluyendo CPU, memoria y periféricos."
+    }
+  ]
 }

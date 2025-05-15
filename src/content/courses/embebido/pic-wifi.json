@@ -1,6 +1,10 @@
 {
   "bgCourseCard": "picwifi",
   "startDate": "Proximamente",
+  "schedule": {
+    "days": ["Lunes", "Miércoles"],
+    "time": [19, 22]
+  },
   "title": "Microcontroladores PIC y comunicación WIFI para IoT",
   "description": "Aprende a programar microcontroladores PIC y a integrar comunicación WiFi para desarrollar soluciones IoT funcionales. Domina el manejo de periféricos como LCD, teclados matriciales, ADC, USART, Timers, etc., y utiliza el módulo ESP8266 para conectar tus proyectos a plataformas IoT como Ubidots, WhatsApp mediante protocolos como HTTP.",
   "goals": [
@@ -16,5 +20,40 @@
   "hours": 36,
   "priceBase": 500,
   "priceReal": 300,
-  "carrer": "embebido"
+  "carrer": "embebido",
+  "competencias": [
+    {
+      "title": "Programación en C para Microcontroladores",
+      "description": "Aprenderás a programar en ANSI C para microcontroladores y SoCs, incluyendo el uso de punteros, estructuras y registros"
+    },
+    {
+      "title": "Desarrollo de Software Embebido",
+      "description": "Aprenderás a desarrollar firmware para sistemas embebidos, microcontroladores y SoCs."
+    },
+    {
+      "title": "Introducción a Sistemas Operativos en Tiempo Real",
+      "description": "Aprenderás a implementar sistemas operativos en tiempo real para microcontroladores y SoCs."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Automatización Industrial",
+      "description": "Desarrollo de sistemas embebidos para la automatización de procesos industriales."
+    },
+    {
+      "title": "IoT",
+      "description": "Desarrollo de dispositivos IoT utilizando microcontroladores y SoCs."
+    },
+    {
+      "title": "Robótica",
+      "description": "Desarrollo de sistemas embebidos para aplicaciones robóticas."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Ingeniero de Sistemas Embebidos",
+    "Desarrollador de Firmware",
+    "Ingeniero de Automatización",
+    "Desarrollador de IoT",
+    "Ingeniero de Robótica"
+  ]
 }

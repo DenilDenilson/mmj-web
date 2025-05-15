@@ -29,6 +29,12 @@ const courseCollection = defineCollection({
   schema: z.object({
     bgCourseCard: z.string(),
     startDate: z.string(),
+    schedule: z.optional(
+      z.object({
+        days: z.array(z.string()),
+        time: z.array(z.number()),
+      }),
+    ),
     title: z.string(),
     description: z.string(),
     goals: z.array(z.string()),
@@ -39,6 +45,25 @@ const courseCollection = defineCollection({
     priceBase: z.number(),
     priceReal: z.number(),
     carrer: reference("carrers"),
+    competencias: z.optional(
+      z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+      ),
+    ),
+    areasAplicacion: z.optional(
+      z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+      ),
+    ),
+    oportunidadesLaborales: z.optional(z.array(z.string())),
+    requisitos: z.optional(z.array(z.string())),
+    requisitoWarning: z.optional(z.string()),
   }),
 });
 

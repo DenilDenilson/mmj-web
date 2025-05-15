@@ -5,10 +5,10 @@ import { getEntry } from "astro:content";
 
 const { carrera, course } = Astro.params;
 const specificCourse = await getEntry("courses", `${carrera}/${course}`);
-const { startDate } = specificCourse?.data || {};
+const { startDate, schedule } = specificCourse?.data || {};
 ---
 
 <p class="mb-2 flex items-baseline justify-between">
-  <AcercaDeHorarioHeader startDate={startDate} />
-  <AcercaDeHorarioCountrys />
+  <AcercaDeHorarioHeader startDate={startDate} schedule={schedule} />
+  <AcercaDeHorarioCountrys schedule={schedule} />
 </p>

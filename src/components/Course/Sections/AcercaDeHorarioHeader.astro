@@ -1,7 +1,7 @@
 ---
 import Circle from "@src/Images/icons/Circle.astro";
 
-const { startDate } = Astro.props;
+const { startDate, schedule } = Astro.props;
 ---
 
 <span class="text-xl text-black-500">Horario:</span>
@@ -12,8 +12,8 @@ const { startDate } = Astro.props;
 
 <p class="mb-3 font-light text-black-500">
   Las clases se realizaran los días
-  <span class="font-normal"> Martes </span>
+  <span class="font-normal"> {schedule?.days[0]} </span>
   y
-  <span class="font-normal"> Jueves </span>
+  <span class="font-normal"> {schedule?.days[1]} </span>
   de cada semana
 </p>

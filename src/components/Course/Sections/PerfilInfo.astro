@@ -1,8 +1,20 @@
+---
+const { carrera } = Astro.params;
+console.log(carrera);
+
+const carrerTitle = {
+  embebido: "Desarrollo de Software Embebido con Microcontroladores",
+  hardware: "Desarrollo Web",
+  iot: "Ciencia de Datos",
+  software: "Ciberseguridad",
+};
+---
+
 <p class="font-light leading-tight text-black-900">
   Al finalizar el curso, habrás desarrollado un perfil profesional con
   conocimientos y habilidades especializadas en el área de
   <span class="font-normal">
-    Desarrollo de Software Embebido con Microcontroladores
+    {carrerTitle[carrera as keyof typeof carrerTitle]}.
   </span>
   , preparándote para enfrentar retos en diversas industrias tecnológicas y mejorar
   tus oportunidades laborales.

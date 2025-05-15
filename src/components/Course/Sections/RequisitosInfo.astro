@@ -1,37 +1,24 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { requisitos } = specificCourse?.data || {};
 ---
 
 <ul class="mb-6">
   <p class="mb-3 font-light text-[#1F2937]">
     Se recomienda al estudiante tener en cuenta lo siguiente:
   </p>
-  <li class="mb-1 flex items-center gap-1">
-    <div class="grid h-5 w-5 place-content-center">
-      <Check />
-    </div>
-    <span class="font-light text-[#1F2937]"
-      >Conocimientos básicos de programación</span
-    >
-  </li>
-  <li class="mb-1 flex items-center gap-1">
-    <div class="grid h-5 w-5 place-content-center">
-      <Check />
-    </div>
-    <span class="font-light text-[#1F2937]"
-      >Familiaridad con conceptos de electrónica básica</span
-    >
-  </li>
-  <li class="mb-1 flex items-center gap-1">
-    <div class="grid h-5 w-5 place-content-center">
-      <Check />
-    </div>
-    <span class="font-light text-[#1F2937]">Acceso a una PC o laptop</span>
-  </li>
-  <li class="mb-1 flex items-center gap-1">
-    <div class="grid h-5 w-5 place-content-center">
-      <Check />
-    </div>
-    <span class="font-light text-[#1F2937]">Conexión a Internet estable</span>
-  </li>
+  {
+    requisitos?.map((requisito) => (
+      <li class="mb-1 flex items-center gap-1">
+        <div class="grid h-5 w-5 place-content-center">
+          <Check />
+        </div>
+        <span class="font-light text-[#1F2937]">{requisito}</span>
+      </li>
+    ))
+  }
 </ul>

@@ -3,11 +3,13 @@ import AcercaDeHorarioCountrysHeader from "./AcercaDeHorarioCountrysHeader.astro
 import AcercaDeHorarioCountrysLatamNor from "./AcercaDeHorarioCountrysLatamNor.astro";
 import AcercaDeHorarioCountrysLatamCen from "./AcercaDeHorarioCountrysLatamCen.astro";
 import AcercaDeHorarioCountrysLatamSur from "./AcercaDeHorarioCountrysLatamSur.astro";
+
+const { schedule } = Astro.props;
 ---
 
 <ul>
   <AcercaDeHorarioCountrysHeader />
-  <AcercaDeHorarioCountrysLatamNor />
-  <AcercaDeHorarioCountrysLatamCen />
-  <AcercaDeHorarioCountrysLatamSur />
+  <AcercaDeHorarioCountrysLatamNor schedule={schedule} />
+  <AcercaDeHorarioCountrysLatamCen schedule={schedule} />
+  <AcercaDeHorarioCountrysLatamSur schedule={schedule} />
 </ul>
