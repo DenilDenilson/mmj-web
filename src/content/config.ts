@@ -64,6 +64,34 @@ const courseCollection = defineCollection({
     oportunidadesLaborales: z.optional(z.array(z.string())),
     requisitos: z.optional(z.array(z.string())),
     requisitoWarning: z.optional(z.string()),
+    faqs: z.optional(
+      z.array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        }),
+      ),
+    ),
+    temarioLink: z.optional(z.string()),
+    temario: z.optional(
+      z.array(
+        z.array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        ),
+      ),
+    ),
+    kitPrice: z.optional(z.number()),
+    kitInclude: z.optional(
+      z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+      ),
+    ),
   }),
 });
 

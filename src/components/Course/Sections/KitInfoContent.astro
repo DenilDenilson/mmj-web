@@ -1,7 +1,28 @@
+---
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { kitInclude } = specificCourse?.data || {};
+---
+
 <ol class="mb-6">
   <p class="mb-2 text-xl text-black-500">¿Qué incluye el Kit?</p>
-
-  <li class="mb-3">
+  {
+    kitInclude?.map((item, index) => (
+      <li class="mb-3">
+        <header class="text-primary-500">
+          <span class="inline-block w-4">{index + 1}. </span>
+          <span>{item.title}</span>
+        </header>
+        <p class="pl-5 font-light leading-tight text-black-500">
+          {item.description}
+        </p>
+      </li>
+    ))
+  }
+  <!-- <li class="mb-3">
     <header class="text-primary-500">
       <span class="inline-block w-4"> 1. </span>
       <span> Microcontrolador - STM32 </span>
@@ -41,5 +62,5 @@
       Cables de alta calidad y una protoboard para realizar las conexiones y
       pruebas necesarias durante tus prácticas.
     </p>
-  </li>
+  </li> -->
 </ol>

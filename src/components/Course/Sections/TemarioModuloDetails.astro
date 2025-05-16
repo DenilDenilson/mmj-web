@@ -1,6 +1,22 @@
-<div class="border-b border-black-100 bg-white-400 p-4">
+---
+const { modulo } = Astro.props;
+---
+
+<div class="border-b border-black-100 bg-white-400 p-4 lg:w-80">
   <ul>
-    <li class="mb-4">
+    {
+      modulo?.map((tema: any, index: number) => (
+        <li class="mb-4">
+          <header class="mb-3 font-medium leading-tight text-black-500">
+            Clase 0{index + 1} {tema.title}
+          </header>
+          <p class="font-light leading-tight text-black-800">
+            {tema.description}
+          </p>
+        </li>
+      ))
+    }
+    <!-- <li class="mb-4">
       <header class="mb-3 font-medium leading-tight text-black-500">
         Temario 01: Introducción a la programación
       </header>
@@ -42,6 +58,6 @@
         industria (HMI, VDF, Servomotor, etc).
       </p>
     </li>
-    <li class="font-medium leading-tight text-black-500">+ 08 Temas</li>
+    <li class="font-medium leading-tight text-black-500">+ 08 Temas</li> -->
   </ul>
 </div>

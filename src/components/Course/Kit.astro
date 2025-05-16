@@ -1,9 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import kitBase from "@src/Images/Courses/KitBase.png";
-import Cart from "@src/Images/icons/Cart.astro";
+import { kitsImages } from "@src/data/Kits.ts";
 import KitTitle from "./Sections/KitTitle.astro";
 import KitInfo from "./Sections/KitInfo.astro";
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { bgCourseCard } = specificCourse?.data || {};
 ---
 
 <section class="bg-white-500">
@@ -11,9 +17,9 @@ import KitInfo from "./Sections/KitInfo.astro";
     <KitTitle />
     <div class="lg:flex lg:items-center lg:gap-12">
       <Image
-        src={kitBase}
+        src={kitsImages[bgCourseCard as keyof typeof kitsImages]}
         alt="Kit de Desarrollo"
-        class="mx-auto mb-16 lg:flex-1 lg:object-center"
+        class="mx-auto mb-16 w-96 lg:flex-1 lg:object-center"
       />
       <KitInfo />
     </div>

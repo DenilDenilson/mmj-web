@@ -4,6 +4,7 @@ import Cart from "@src/Images/icons/Cart.astro";
 import Clock from "@src/Images/icons/Clock.astro";
 import Vivo from "@src/Images/icons/Vivo.astro";
 
+const { course } = Astro.params;
 const { modality, duration, hours, priceBase, priceReal } = Astro.props;
 ---
 
@@ -29,7 +30,8 @@ const { modality, duration, hours, priceBase, priceReal } = Astro.props;
         <span class="text-sm">USD</span>
       </span>
       <a
-        href="#"
+        target="_blank"
+        href={`https://api.whatsapp.com/send?phone=51970570927&text=Buenas,%20vengo%20de%20la%20web,%20quiero%20adquirir%20el%20curso%20de%20${course}`}
         class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 py-4 pl-5 pr-6"
       >
         <Cart fill="#FBFCFC" />

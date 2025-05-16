@@ -2,13 +2,13 @@
 import TemarioModuloDetails from "./TemarioModuloDetails.astro";
 import TemarioModuloSummary from "./TemarioModuloSummary.astro";
 
-const { startOpen = false } = Astro.props;
+const { startOpen = false, key, modulo } = Astro.props;
 ---
 
 <details
   class="border-l border-black-100 px-6 transition-all duration-300"
   open={startOpen}
 >
-  <TemarioModuloSummary />
-  <TemarioModuloDetails />
+  <TemarioModuloSummary index={key} />
+  <TemarioModuloDetails modulo={modulo} />
 </details>

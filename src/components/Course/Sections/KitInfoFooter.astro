@@ -1,27 +1,34 @@
 ---
 import Cart from "@src/Images/icons/Cart.astro";
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { kitPrice } = specificCourse?.data || {};
 ---
 
 <footer class="flex items-end justify-start">
   <span class="flex flex-row items-end gap-3">
     <div class="flex flex-col items-end gap-1">
-      <span class="self-start text-sm text-black-300 line-through">
+      <!-- <span class="self-start text-sm text-black-300 line-through">
         $ 100.25
         <span class="text-sm">USD</span>
-      </span>
+      </span> -->
       <a
         href="#"
         class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 py-4 pl-5 pr-6 transition-colors duration-300 hover:bg-primary-400"
       >
         <Cart fill="#FBFCFC" />
         <span class="text-sm text-white-100"
-          >$ 850.25 <span class="text-sm text-[#FFF]">USD</span></span
+          >$ {kitPrice}.00 <span class="text-sm text-[#FFF]">USD</span></span
         >
       </a>
     </div>
 
     <a
-      href=""
+      target="_blank"
+      href={`https://api.whatsapp.com/send?phone=51970570927&text=Buenas,%20vengo%20de%20la%20web,%20quiero%20adquirir%20el%20kit%20de%20${course}`}
       class="rounded border border-black-300 px-6 py-3 text-black-300 transition-colors duration-300 hover:bg-black-50"
       >Ir a tienda</a
     >

@@ -65,16 +65,76 @@
   "requisitoWarning": "Se recomienda contar con un kit de desarrollo (como pic, o esp32), aunque no es obligatorio. Además, necesitarás instalar un IDE (como MPLAB, STM32CubeIDE, o VS Code) para realizar las prácticas.",
   "faqs": [
     {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
       "question": "¿Qué es ANSI C?",
       "answer": "ANSI C es un estándar del lenguaje de programación C, que define la sintaxis y semántica del lenguaje. Es ampliamente utilizado en el desarrollo de software embebido."
     },
     {
-      "question": "¿Qué es un microcontrolador?",
-      "answer": "Un microcontrolador es un pequeño ordenador en un solo chip, que contiene un procesador, memoria y periféricos. Se utiliza en una amplia variedad de aplicaciones embebidas."
+      "question": "¿Tengo que tener conocimientos previos?",
+      "answer": "No es necesario tener conocimientos previos en programación. La especialización de Ansi C orientado a Microcontroladores y SoCs recorre desde los fundamentos de C hasta la implementación al programar microcontroladores."
     },
     {
-      "question": "¿Qué es un SoC?",
-      "answer": "Un SoC (System on Chip) es un circuito integrado que contiene todos los componentes necesarios para un sistema completo, incluyendo CPU, memoria y periféricos."
+      "question": "¿Cuál es la diferencia entre programar en C y Arduino?",
+      "answer": "C con el estándar ANSI es un lenguaje de programación de bajo nivel que permite un control más preciso sobre el hardware, mientras que Arduino es una plataforma de desarrollo que utiliza C/C++ pero abstrae muchas de las complejidades del hardware. Programar en C te da más control y flexibilidad, pero también requiere un mayor conocimiento técnico."
+    },
+    {
+      "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",
+      "answer": "No es obligatorio, aunque sí recomendable. Puedes comenzar con simuladores o herramientas virtuales. Más adelante, te recomendamos adquirir un kit como el ESP32, PIC o STM32 para reforzar tu aprendizaje práctico"
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
     }
-  ]
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1_3F8FeSEB7xvOIHpbJmsv6lBefZUTe7B/view",
+  "temario": [
+    [
+      {
+        "title": "Introducción a los sistemas embebidos y su programación",
+        "description": "Introducción a los Sistemas Embebidos (SE). Tipos de Sistemas Embebidos y campos de aplicación. Introducción a la arquitectura de Microcontroladores. Introducción a los lenguajes de programación para MCUs. Lenguajes de programación de alto y bajo nivel. Historia del lenguaje de programación C. Proceso de compilación de los lenguajes de alto nivel."
+      },
+      {
+        "title": "Tipos de datos y variables",
+        "description": "Tipos de datos nativos. Tipos de datos estandares. Identificadores. Calificadores de tipos de datos. Definición y declaración de variables.Palabras reservadas en ANSI C."
+      },
+      {
+        "title": "Constantes literales y simbólicas",
+        "description": "Literales de tipo integer, float, char, string. Etiquetas de sustitución. Constantes mediante enum. Guardar constantes en la memoria Flash."
+      },
+      {
+        "title": "Operadores y expresiones",
+        "description": "Operadores aritméticos. Operadores de relación. Operadores lógicos. Operadores bitwise y de desplazamiento. Operadores de incremento y decremento. Operadores de asignación simple y compuesta. Operadores de direccionamiento de memoria."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "Esp32 DevKit C",
+      "description": "Placa de desarrollo con ESP32, incluye WiFi y Bluetooth. Ideal para proyectos IoT."
+    },
+    {
+      "title": "Módulo Joystick",
+      "description": "Módulo joystick analógico para controlar la dirección y velocidad de motores."
+    },
+    {
+      "title": "Modulo Relay",
+      "description": "Módulo de relé para controlar dispositivos de alta potencia."
+    },
+    {
+      "title": "Modulo leds tipo semáforo",
+      "description": "Módulo de LEDs tipo semáforo para simular señales de tráfico."
+    }
+  ],
+  "kitPrice": 30
 }

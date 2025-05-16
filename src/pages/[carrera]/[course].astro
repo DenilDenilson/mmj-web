@@ -13,7 +13,7 @@ const { course } = Astro.params;
 export async function getStaticPaths() {
   const courseEntries = await getCollection("courses");
 
-  return courseEntries.map((entry) => ({
+  return courseEntries.map((entry: any) => ({
     params: {
       carrera: entry.id.split("/")[0],
       course: entry.id.split("/")[1],

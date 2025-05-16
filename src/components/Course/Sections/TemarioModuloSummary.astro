@@ -1,11 +1,13 @@
 ---
 import ArrowUp from "@src/Images/icons/ArrowUp.astro";
+
+const { index } = Astro.props;
 ---
 
 <!-- Conditionally add the `open` attribute based on startOpen -->
 <summary
   class="flex min-w-80 cursor-pointer items-center justify-between py-3 text-xl font-bold text-primary-500"
 >
-  <span> Módulo 01 </span>
+  <span> Módulo 0{index + 1} </span>
   <ArrowUp fill="#C40B2A" width="32" height="32" />
 </summary>

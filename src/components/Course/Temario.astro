@@ -1,10 +1,26 @@
 ---
 import TemarioModulo from "./Sections/TemarioModulo.astro";
+
+import { getEntry } from "astro:content";
+
+const { carrera, course } = Astro.params;
+const specificCourse = await getEntry("courses", `${carrera}/${course}`);
+const { temarioLink, temario } = specificCourse?.data || {};
 ---
 
 <section class="lg:max-w-md">
   <div class="px-7 py-6">
-    <TemarioModulo startOpen={true} />
-    <TemarioModulo />
+    {
+      temario?.map((modulo, index) => (
+        <TemarioModulo key={index} startOpen={index === 0} modulo={modulo} />
+      ))
+    }
+    <a
+      href={temarioLink}
+      target="_blank"
+      class="mx-6 my-3 block rounded-md border border-black-300 px-6 py-3 text-center text-black-300 transition-all duration-300 hover:bg-black-50"
+    >
+      Descargar temario completo
+    </a>
   </div>
 </section>
