@@ -1,6 +1,6 @@
 {
   "bgCourseCard": "ansi-c",
-  "startDate": "16-mayo",
+  "startDate": "proximamente",
   "schedule": {
     "days": ["Lunes", "Viernes"],
     "time": [19, 22]
@@ -8,11 +8,11 @@
   "title": "Ansi C orientado a Microcontroladores y SoCs",
   "description": "Conviértete en un experto en le uso de ANSI C para la manipulación directa de registros, punteros y estructuras en sistemas embebidos. Se abordarán temas como manejo de memoria, patrones de diseño, programación modular para periféricos, entre otros. También se implementarán sistemas operativos en tiempo real para SoCs y microcontroladores.",
   "goals": [
+    "Aprender a programar en C y en ANSI C para microcontroladores y SoCs.",
+    "Desarrollar firmware para sistemas embebidos, microcontroladores y SoCs.",
     "Comprender los principios del desarrollo de software embebido.",
     "Aprender a integrar hardware y software en sistemas embebidos",
-    "Dominar la programación en tiempo real y la optimización de recursos.",
-    "Desarrollar aplicaciones robustas y escalables.",
-    "Comprender los principios del desarrollo de software embebido."
+    "Dominar la programación en tiempo real y la optimización de recursos."
   ],
   "techs": ["espressif", "microchip", "stm32", "c", "mplabx"],
   "modality": "virtual",
@@ -62,7 +62,7 @@
     "Acceso a una PC o laptop",
     "Conexión a internet estable"
   ],
-  "requisitoWarning": "Se recomienda contar con un kit de desarrollo (como pic, o esp32), aunque no es obligatorio. Además, necesitarás instalar un IDE (como MPLAB, STM32CubeIDE, o VS Code) para realizar las prácticas.",
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo (como pic, o esp32), aunque no es obligatorio. Además, necesitarás instalar un IDE (como MPLABX IDE, STM32CubeIDE, o VS Code) para realizar las prácticas.",
   "faqs": [
     {
       "question": "¿Cuál es la metodología del curso?",

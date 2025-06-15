@@ -20,7 +20,7 @@ const { startDate } = specificCourse?.data || {};
 const bgImages = {
   "ansi-c": ThumbAnsiC,
   arm: ThumbARM,
-  picwifi: ThumbPicWiFi,
+  "pic-wifi": ThumbPicWiFi,
   redcelular: ThumbRedCelular,
   esp32c: ThumbEsp32C,
   labview: ThumbLabview,
@@ -40,7 +40,7 @@ const bgImages = {
     >
       <Image
         src={bgImages[course as keyof typeof bgImages]}
-        alt={`Imagen del cuso de ${course}`}
+        alt={`Imagen del curso de ${course}`}
         class="h-full w-full rounded-xl object-cover object-center lg:object-contain lg:object-top"
       />
     </div>

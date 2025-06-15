@@ -1,5 +1,5 @@
 {
-  "bgCourseCard": "picwifi",
+  "bgCourseCard": "pic-wifi",
   "startDate": "Proximamente",
   "schedule": {
     "days": ["Lunes", "Miércoles"],
@@ -10,29 +10,29 @@
   "goals": [
     "Comprender los principios del desarrollo de software embebido.",
     "Aprender a integrar hardware y software en sistemas embebidos",
-    "Dominar la programación en tiempo real y la optimización de recursos.",
-    "Desarrollar aplicaciones robustas y escalables.",
+    "Aprender a utilizar microcontroladores PIC para leer datos de sensores.",
+    "Integrar el servicio Ubidots para ver los datos en tiempo real.",
     "Comprender los principios del desarrollo de software embebido."
   ],
   "techs": ["microchip", "proteus", "mplabx"],
-  "modality": "virtual",
-  "duration": 6,
-  "hours": 36,
-  "priceBase": 500,
-  "priceReal": 300,
+  "modality": "híbrido",
+  "duration": 4,
+  "hours": 24,
+  "priceBase": 210,
+  "priceReal": 150,
   "carrer": "embebido",
   "competencias": [
     {
-      "title": "Programación en C para Microcontroladores",
-      "description": "Aprenderás a programar en ANSI C para microcontroladores y SoCs, incluyendo el uso de punteros, estructuras y registros"
+      "title": "Programación en C para Microcontroladores PIC",
+      "description": "Aprenderás a programar en C para microcontroladores PIC, incluyendo el uso de periféricos como LCD, teclados matriciales, ADC, USART y Timers."
     },
     {
-      "title": "Desarrollo de Software Embebido",
-      "description": "Aprenderás a desarrollar firmware para sistemas embebidos, microcontroladores y SoCs."
+      "title": "Integración de Comunicación WiFi",
+      "description": "Aprenderás a integrar el módulo ESP8266 para conectar tus proyectos a plataformas IoT como Ubidots y WhatsApp mediante protocolos como HTTP."
     },
     {
-      "title": "Introducción a Sistemas Operativos en Tiempo Real",
-      "description": "Aprenderás a implementar sistemas operativos en tiempo real para microcontroladores y SoCs."
+      "title": "Enviar datos a WhatsApp usando la API de CallMeBot",
+      "description": "Aprenderás a enviar datos a WhatsApp utilizando la API de CallMeBot, permitiendo la comunicación en tiempo real con tus proyectos embebidos."
     }
   ],
   "areasAplicacion": [
@@ -55,5 +55,82 @@
     "Ingeniero de Automatización",
     "Desarrollador de IoT",
     "Ingeniero de Robótica"
-  ]
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación en C",
+    "Conocimientos básicos de electrónica",
+    "Acceso a una PC o laptop",
+    "Conexión a internet estable"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo (como pic, o esp32), aunque no es obligatorio. Además, necesitarás instalar MPLABX IDE para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Tengo que tener conocimientos previos?",
+      "answer": "No, pero es recomendable tener conocimientos básicos de programación y electrónica. El curso está diseñado para principiantes, pero también es útil para quienes ya tienen experiencia y quieren profundizar en el uso de microcontroladores PIC."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre programar en C y Arduino?",
+      "answer": "C con el estándar ANSI es un lenguaje de programación de bajo nivel que permite un control más preciso sobre el hardware, mientras que Arduino es una plataforma de desarrollo que utiliza C/C++ pero abstrae muchas de las complejidades del hardware. Programar en C te da más control y flexibilidad, pero también requiere un mayor conocimiento técnico."
+    },
+    {
+      "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",
+      "answer": "No es obligatorio, aunque sí recomendable. Puedes comenzar con simuladores o herramientas virtuales. Más adelante, te recomendamos adquirir un kit PIC para reforzar tu aprendizaje práctico"
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/12K69GYSzoNqeOgUs_qF8KhZD2WnuEG97/view",
+  "temario": [
+    [
+      {
+        "title": "Concepto de programación en Ansi C",
+        "description": "Introducción a la programación en C, incluyendo sintaxis básica, estructuras de control y funciones. Incluye ejemplos prácticos de programación en C."
+      },
+      {
+        "title": "Arquitectura de microcontroladores PIC y la programación en C",
+        "description": "Descripción de la arquitectura de los microcontroladores PIC y cómo se relaciona con la programación en C. Incluye ejemplos de configuración de registros y periféricos."
+      },
+      {
+        "title": "Display de 7 segmentos y multiplexación - Pantalla LCD",
+        "description": "Cómo utilizar displays de 7 segmentos y pantallas LCD en proyectos de microcontroladores. Incluye ejemplos prácticos de visualización de datos."
+      },
+      {
+        "title": "Interrupciones internas y externas - Módulo PPS",
+        "description": "Descripción de las interrupciones internas y externas en los microcontroladores PIC, y cómo configurarlas utilizando el módulo PPS. Incluye ejemplos de uso en proyectos."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "Entrenador Universal para Microcontroladores PIC",
+      "description": "PCB de MMJ para facilitar el aprendizaje de microcontroladores PIC, con conectores para periféricos y módulos."
+    },
+    {
+      "title": "Modulo Relay",
+      "description": "Módulo de relé para controlar dispositivos de alta potencia."
+    },
+    {
+      "title": "Módulo ESP8266",
+      "description": "Módulo WiFi ESP8266 para conectar tus proyectos a Internet y plataformas IoT."
+    },
+    {
+      "title": "Programador PCKit 3",
+      "description": "Programador PCKit 3 para cargar el firmware en los microcontroladores PIC."
+    }
+  ],
+  "kitPrice": 80
 }
