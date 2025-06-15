@@ -1,5 +1,5 @@
 {
-  "bgCourseCard": "ansi-c",
+  "bgCourseCard": "pic-asm",
   "startDate": "Proximamente",
   "schedule": {
     "days": ["Lunes", "Miércoles"],
@@ -8,31 +8,30 @@
   "title": "Programación de Microcontroladores PIC en el nuevo Assembler PIC ASS XC8",
   "description": "En esta especialización trabajarás con ensamblador en el entorno PIC ASS XC8, dominando a detalle la arquitectura interna del MCU. Se impartirán técnicas para el uso eficiente de registros SFR, configuración de periféricos como Timers, ADC, PWM, Interrupciones, módulos de comunicación como la UART, I2C, entre otros, optimizando los recursos del hardware.",
   "goals": [
-    "Comprender los principios del desarrollo de software embebido.",
-    "Aprender a integrar hardware y software en sistemas embebidos",
-    "Dominar la programación en tiempo real y la optimización de recursos.",
-    "Desarrollar aplicaciones robustas y escalables.",
+    "Aprender a integrar hardware y software en sistemas embebidos.",
+    "Aprender a utilizar microcontroladores PIC para leer datos de sensores.",
+    "Aprender a utilizar microcontroladores PIC para controlar actuadores.",
     "Comprender los principios del desarrollo de software embebido."
   ],
   "techs": ["microchip", "mplabx", "asm", "proteus"],
-  "modality": "virtual",
-  "duration": 6,
-  "hours": 36,
-  "priceBase": 500,
-  "priceReal": 300,
+  "modality": "híbrido",
+  "duration": 4,
+  "hours": 24,
+  "priceBase": 350,
+  "priceReal": 250,
   "carrer": "embebido",
   "competencias": [
     {
-      "title": "Programación en C para Microcontroladores",
-      "description": "Aprenderás a programar en ANSI C para microcontroladores y SoCs, incluyendo el uso de punteros, estructuras y registros"
+      "title": "Introducción a la Arquitectura de Microcontroladores PIC",
+      "description": "Aprenderás a comprender la arquitectura interna de los microcontroladores PIC, incluyendo el uso eficiente de recursos y la optimización del código."
+    },
+    {
+      "title": "Programación en ASM para microcontroladores PIC",
+      "description": "Aprenderás a programar en ensamblador para microcontroladores PIC, incluyendo el uso de registros SFR, configuración de periféricos como Timers, ADC, PWM, Interrupciones y módulos de comunicación como UART."
     },
     {
       "title": "Desarrollo de Software Embebido",
-      "description": "Aprenderás a desarrollar firmware para sistemas embebidos, microcontroladores y SoCs."
-    },
-    {
-      "title": "Introducción a Sistemas Operativos en Tiempo Real",
-      "description": "Aprenderás a implementar sistemas operativos en tiempo real para microcontroladores y SoCs."
+      "description": "Aprenderás a desarrollar firmware optimizado para microcontroladores PIC usando ASM."
     }
   ],
   "areasAplicacion": [
@@ -41,19 +40,96 @@
       "description": "Desarrollo de sistemas embebidos para la automatización de procesos industriales."
     },
     {
-      "title": "IoT",
-      "description": "Desarrollo de dispositivos IoT utilizando microcontroladores y SoCs."
+      "title": "Desarrollo de Firmware",
+      "description": "Desarrollo de firmware optimizado para microcontroladores PIC en aplicaciones embebidas."
     },
     {
-      "title": "Robótica",
-      "description": "Desarrollo de sistemas embebidos para aplicaciones robóticas."
+      "title": "Optimización de Recursos",
+      "description": "Desarrollo de software embebido optimizando el uso de recursos del hardware."
     }
   ],
   "oportunidadesLaborales": [
     "Ingeniero de Sistemas Embebidos",
     "Desarrollador de Firmware",
-    "Ingeniero de Automatización",
-    "Desarrollador de IoT",
+    "Ingeniero de Optimización de Recursos",
+    "Docencia en Programación de Microcontroladores",
     "Ingeniero de Robótica"
-  ]
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación",
+    "Conocimientos básicos de electrónica",
+    "Acceso a una PC o laptop",
+    "Conexión a internet estable"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo PIC, aunque no es obligatorio. Además, necesitarás instalar MPLABX IDE para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Tengo que tener conocimientos previos?",
+      "answer": "No, pero es recomendable tener conocimientos básicos de programación y electrónica. El curso está diseñado para principiantes, pero también es útil para quienes ya tienen experiencia y quieren profundizar en el uso de microcontroladores PIC."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre programar en C y ASM?",
+      "answer": "Programar en C es más abstracto y fácil de aprender, mientras que programar en ASM te permite un control más detallado del hardware y optimización del código. En este curso nos enfocamos en ASM para aprovechar al máximo los recursos del microcontrolador PIC."
+    },
+    {
+      "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",
+      "answer": "No es obligatorio, aunque sí recomendable. Puedes comenzar con simuladores o herramientas virtuales. Más adelante, te recomendamos adquirir un kit PIC para reforzar tu aprendizaje práctico"
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1ofDz_-0PJUbfFUVkj1VmGI4hSutVKC97/view",
+  "temario": [
+    [
+      {
+        "title": "Introducción a microcontroladores",
+        "description": "Conceptos básicos de microcontroladores, su arquitectura y funcionamiento. Incluye una introducción a los microcontroladores PIC y su entorno de desarrollo."
+      },
+      {
+        "title": "Arquitectura PIC - Instrucciones y Assembler",
+        "description": "Estudio de la arquitectura interna de los microcontroladores PIC, incluyendo el conjunto de instrucciones y el uso del ensamblador (ASM) para programar."
+      },
+      {
+        "title": "Contador de programa - Oscilador de PIC",
+        "description": "Explicación del contador de programa y el oscilador en los microcontroladores PIC, incluyendo cómo configurar el oscilador para diferentes frecuencias."
+      },
+      {
+        "title": "Subrutinas y diseño de librerias",
+        "description": "Introducción a las subrutinas en ASM, cómo diseñar y utilizar librerías para facilitar el desarrollo de firmware en microcontroladores PIC."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "Entrenador Universal para Microcontroladores PIC",
+      "description": "PCB de MMJ para facilitar el aprendizaje de microcontroladores PIC, con conectores para periféricos y módulos."
+    },
+    {
+      "title": "Modulo Relay",
+      "description": "Módulo de relé para controlar dispositivos de alta potencia."
+    },
+    {
+      "title": "Módulo ESP8266",
+      "description": "Módulo WiFi ESP8266 para conectar tus proyectos a Internet y plataformas IoT."
+    },
+    {
+      "title": "Programador PCKit 3",
+      "description": "Programador PCKit 3 para cargar el firmware en los microcontroladores PIC."
+    }
+  ],
+  "kitPrice": 80
 }

@@ -4,28 +4,32 @@ import HeroContentInfo from "./Sections/HeroContentInfo.astro";
 import FechaStart from "./Atoms/FechaStart.astro";
 import CourseBreadcrumb from "./Atoms/CourseBreadcrumb.astro";
 import { Image } from "astro:assets";
-
-import ThumbAnsiC from "@src/Images/Carreras/Embebido/ThumbAnsiC.jpg";
-import ThumbARM from "@src/Images/Carreras/Embebido/ThumbARM.jpg";
-import ThumbPicWiFi from "@src/Images/Carreras/Embebido/ThumbPicWifi.jpg";
-import ThumbRedCelular from "@src/Images/Carreras/IoT/ThumbRedCelular.jpg";
-import ThumbEsp32C from "@src/Images/Carreras/IoT/ThumbEsp32C.jpg";
-import ThumbLabview from "@src/Images/Carreras/Software/ThumbLabview.jpg";
-import ThumbPython from "@src/Images/Carreras/Software/ThumbPython.jpg";
+import { bgImages } from "@src/data/bgImages.ts";
+// import ThumbAnsiC from "@src/Images/Carreras/Embebido/ThumbAnsiC.jpg";
+// import ThumbARM from "@src/Images/Carreras/Embebido/ThumbARM.jpg";
+// import ThumbPicWiFi from "@src/Images/Carreras/Embebido/ThumbPicWifi.jpg";
+// import ThumbPicASM from "@src/Images/Carreras/Embebido/ThumbPicASM.jpg";
+// import ThumbRedesIndustriales from "@src/Images/Carreras/Embebido/ThumbRedesIndustriales.jpg";
+// import ThumbRedCelular from "@src/Images/Carreras/IoT/ThumbRedCelular.jpg";
+// import ThumbEsp32C from "@src/Images/Carreras/IoT/ThumbEsp32C.jpg";
+// import ThumbLabview from "@src/Images/Carreras/Software/ThumbLabview.jpg";
+// import ThumbPython from "@src/Images/Carreras/Software/ThumbPython.jpg";
 
 const { carrera, course } = Astro.params;
 const specificCourse = await getEntry("courses", `${carrera}/${course}`);
 const { startDate } = specificCourse?.data || {};
 
-const bgImages = {
-  "ansi-c": ThumbAnsiC,
-  arm: ThumbARM,
-  "pic-wifi": ThumbPicWiFi,
-  redcelular: ThumbRedCelular,
-  esp32c: ThumbEsp32C,
-  labview: ThumbLabview,
-  python: ThumbPython,
-};
+// const bgImages = {
+//   "ansi-c": ThumbAnsiC,
+//   arm: ThumbARM,
+//   "pic-wifi": ThumbPicWiFi,
+//   "pic-asm": ThumbPicASM,
+//   redes: ThumbRedesIndustriales,
+//   redcelular: ThumbRedCelular,
+//   esp32c: ThumbEsp32C,
+//   labview: ThumbLabview,
+//   python: ThumbPython,
+// };
 ---
 
 <section class="bg-secondary-50">

@@ -1,5 +1,5 @@
 {
-  "bgCourseCard": "ansi-c",
+  "bgCourseCard": "redes",
   "startDate": "Proximamente",
   "schedule": {
     "days": ["Lunes", "Miércoles"],
@@ -8,31 +8,30 @@
   "title": "Diseño e implementación de redes industriales con ESP32",
   "description": "Aprende a diseñar e implementar redes industriales con ESP32, integrando protocolos como Modbus RTU/TCP, Ethernet, RS485 entre otros. Dominarás la configuración de interfaces de comunicación, diseño de hardware para aplicaciones industriales, y la programación del ESP32 para conectar sensores, actuadores y sistemas SCADA en entornos IoT y de automatización.",
   "goals": [
-    "Comprender los principios del desarrollo de software embebido.",
-    "Aprender a integrar hardware y software en sistemas embebidos",
-    "Dominar la programación en tiempo real y la optimización de recursos.",
-    "Desarrollar aplicaciones robustas y escalables.",
-    "Comprender los principios del desarrollo de software embebido."
+    "Comprender los principios del diseño de redes industriales.",
+    "Aprender a implementar protocolos de comunicación industrial como Modbus RTU/TCP, Ethernet y RS485.",
+    "Configurar interfaces de comunicación en el ESP32.",
+    "Integrar dispositivos IoT en entornos industriales."
   ],
   "techs": ["espressif", "modbus", "rs485", "ethernet", "tcpip"],
-  "modality": "virtual",
-  "duration": 6,
-  "hours": 24,
-  "priceBase": 600,
+  "modality": "híbrido",
+  "duration": 5,
+  "hours": 30,
+  "priceBase": 500,
   "priceReal": 350,
   "carrer": "embebido",
   "competencias": [
     {
-      "title": "Programación en C para Microcontroladores",
-      "description": "Aprenderás a programar en ANSI C para microcontroladores y SoCs, incluyendo el uso de punteros, estructuras y registros"
+      "title": "Programación del ESP32",
+      "description": "Aprenderás a programar el ESP32 para interactuar con sensores y actuadores, y a implementar protocolos de comunicación industrial."
     },
     {
-      "title": "Desarrollo de Software Embebido",
-      "description": "Aprenderás a desarrollar firmware para sistemas embebidos, microcontroladores y SoCs."
+      "title": "Implementación de Protocolos de Comunicación",
+      "description": "Aprenderás a implementar protocolos como Modbus RTU/TCP, Ethernet y RS485 en aplicaciones industriales."
     },
     {
-      "title": "Introducción a Sistemas Operativos en Tiempo Real",
-      "description": "Aprenderás a implementar sistemas operativos en tiempo real para microcontroladores y SoCs."
+      "title": "Configuración de Redes Industriales",
+      "description": "Aprenderás a configurar redes industriales para la comunicación entre dispositivos IoT y sistemas SCADA."
     }
   ],
   "areasAplicacion": [
@@ -45,15 +44,92 @@
       "description": "Desarrollo de dispositivos IoT utilizando microcontroladores y SoCs."
     },
     {
-      "title": "Robótica",
-      "description": "Desarrollo de sistemas embebidos para aplicaciones robóticas."
+      "title": "Sistemas SCADA",
+      "description": "Desarrollo de sistemas SCADA para la supervisión y control de procesos industriales."
     }
   ],
   "oportunidadesLaborales": [
     "Ingeniero de Sistemas Embebidos",
-    "Desarrollador de Firmware",
+    "Administrador de Redes Industriales",
     "Ingeniero de Automatización",
     "Desarrollador de IoT",
-    "Ingeniero de Robótica"
-  ]
+    "Ingeniero de Redes Industriales"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación en C",
+    "Conocimientos básicos de electrónica",
+    "Acceso a una PC o laptop",
+    "Conexión a internet estable"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo PLC IoT, aunque no es obligatorio. Además, necesitarás instalar un IDE de preferencia para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Tengo que tener conocimientos previos?",
+      "answer": "No, pero es recomendable tener conocimientos básicos de programación y electrónica. El curso está diseñado para principiantes, pero también es útil para quienes ya tienen experiencia y quieren profundizar en el uso de microcontroladores PIC."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre programar en C y Arduino?",
+      "answer": "C con el estándar ANSI es un lenguaje de programación de bajo nivel que permite un control más preciso sobre el hardware, mientras que Arduino es una plataforma de desarrollo que utiliza C/C++ pero abstrae muchas de las complejidades del hardware. Programar en C te da más control y flexibilidad, pero también requiere un mayor conocimiento técnico."
+    },
+    {
+      "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",
+      "answer": "No es obligatorio, aunque sí recomendable. Puedes comenzar con simuladores o herramientas virtuales. Más adelante, te recomendamos adquirir un kit PIC para reforzar tu aprendizaje práctico"
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1L43fSoAUvGnW9_DsW8mdLO7VenrYpUSv/view",
+  "temario": [
+    [
+      {
+        "title": "Introducción a las Redes Industriales",
+        "description": "Conceptos básicos de redes industriales, protocolos de comunicación y su importancia en la automatización."
+      },
+      {
+        "title": "Protocolos de Comunicación",
+        "description": " Implementación de protocolos como UART, RS422, RS232 y RS485 en el ESP32."
+      },
+      {
+        "title": "Programación orientada a las redes industriales",
+        "description": "Programación del ESP32 para la comunicación con dispositivos industriales utilizando protocolos como Modbus RTU/TCP."
+      },
+      {
+        "title": "Programación orientada a objetos para redes industriales",
+        "description": "Uso de la programación orientada a objetos para estructurar el código en aplicaciones de redes industriales."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }
