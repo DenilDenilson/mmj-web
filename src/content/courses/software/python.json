@@ -1,6 +1,10 @@
 {
   "bgCourseCard": "python",
-  "startDate": "Proximamente",
+  "startDate": "07/08/2025",
+  "schedule": {
+    "days": ["Martes", "Jueves"],
+    "time": [19, 22]
+  },
   "title": "Diseño de Aplicaciones de Escritorio con Python para Aplicaciones IoT",
   "description": "En este curso aprenderás a desarrollar soluciones de monitoreo y control de dispositivos IoT usando Python, MQTT y CustomTkinter para crear interfaces gráficas interactivas. Trabajarás con dispositivos como ESP32 y Raspberry Pi Pico, diseñando aplicaciones en tiempo real para la industria, automatización del hogar y más, adquiriendo habilidades clave en desarrollo de software y sistemas embebidos.",
   "goals": [
@@ -11,10 +15,126 @@
     "Implementarás comunicación serial y MQTT entre Tkinter, Raspberry Pi Pico y ESP32."
   ],
   "techs": ["python", "tkinter", "esp32", "raspberry"],
-  "modality": "virtual",
-  "duration": 6,
-  "hours": 36,
-  "priceBase": 600,
-  "priceReal": 300,
-  "carrer": "software"
+  "modality": "híbrido",
+  "duration": 4,
+  "hours": 24,
+  "priceBase": 350,
+  "priceReal": 250,
+  "carrer": "software",
+  "competencias": [
+    {
+      "title": "Desarrollo de Aplicaciones de Escritorio con Python",
+      "description": "Aprenderás a crear aplicaciones de escritorio interactivas utilizando Python y Tkinter, incluyendo la gestión de eventos y widgets."
+    },
+    {
+      "title": "Integración de Hardware a Software IoT",
+      "description": "Desarrollarás habilidades para programar dispositivos como Raspberry Pi Pico y ESP32 con Arduino, manejando GPIO y UART para interactuar con sensores y actuadores."
+    },
+    {
+      "title": "Comunicación Serial y IoT",
+      "description": "Implementarás comunicación serial y IoT entre aplicaciones de escritorio y dispositivos embebidos para monitoreo y control en tiempo real."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Automatización del Hogar",
+      "description": "Desarrollo de aplicaciones para controlar y monitorear dispositivos IoT en el hogar, como luces, sensores y cámaras."
+    },
+    {
+      "title": "Industria y Manufactura",
+      "description": "Implementación de sistemas de monitoreo y control en tiempo real para procesos industriales utilizando Python y dispositivos embebidos."
+    },
+    {
+      "title": "Educación y Prototipado",
+      "description": "Creación de prototipos educativos y proyectos de investigación utilizando Python y hardware embebido."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Desarrollador de Software Embebido",
+    "Ingeniero de Automatización",
+    "Especialista en IoT y Sistemas Embebidos",
+    "Desarrollador de Aplicaciones de Escritorio",
+    "Integrador de Sistemas IoT"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación",
+    "Conocimientos básicos de electrónica",
+    "Acceso a una PC o laptop con acceso a internet",
+    "Dispositivo Raspberry Pi Pico o ESP32 (opcional, pero recomendado)"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo Python de MMJ, aunque no es obligatorio. Además, necesitarás instalar VS Code para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",
+      "answer": "No es obligatorio, aunque sí recomendable. Puedes comenzar con simuladores o herramientas virtuales. Más adelante, te recomendamos adquirir un kit de MMJ para reforzar tu aprendizaje práctico"
+    },
+    {
+      "question": "¿Necesito conocimientos previos de Python?",
+      "answer": "No es necesario, pero se recomienda tener conocimientos básicos de programación."
+    },
+    {
+      "question": "¿Qué dispositivos necesito para el curso?",
+      "answer": "Se recomienda tener un Raspberry Pi Pico o ESP32, aunque no es obligatorio."
+    },
+    {
+      "question": "¿Puedo realizar el curso si no tengo experiencia en electrónica?",
+      "answer": "Sí, el curso está diseñado para principiantes y se cubrirán los conceptos básicos de electrónica."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1JclN1Z5XgJyY8HVZOT2_heo74Bls_lB8/view",
+  "temario": [
+    [
+      {
+        "title": "POO con Python",
+        "description": "Introducción a la Programación Orientada a Objetos (POO) en Python. Aprenderás conceptos básicos como clases, objetos, herencia y polimorfismo."
+      },
+      {
+        "title": "Interfaces Gráficas con Tkinter",
+        "description": "Cómo crear interfaces gráficas interactivas utilizando Tkinter. Aprenderás a manejar eventos, widgets y diseño de ventanas. Incluye ejemplos prácticos de aplicaciones de escritorio."
+      },
+      {
+        "title": "Gestores de Layout - Uso de entorno virtual",
+        "description": "Uso de gestores de layout en Tkinter para organizar widgets en la interfaz gráfica. Aprenderás a crear entornos virtuales para gestionar dependencias y paquetes de Python."
+      },
+      {
+        "title": "Análisis y Visualización de Datos con Python",
+        "description": "Introducción a la biblioteca Matplotlib para crear gráficos y visualizaciones de datos. Aprenderás a personalizar gráficos y a representar datos de manera efectiva."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }

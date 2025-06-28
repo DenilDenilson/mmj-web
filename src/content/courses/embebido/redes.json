@@ -1,17 +1,17 @@
 {
   "bgCourseCard": "redes",
-  "startDate": "Proximamente",
+  "startDate": "10/08/2025",
   "schedule": {
     "days": ["Lunes", "Miércoles"],
-    "time": [19, 22]
+    "time": [10, 13]
   },
   "title": "Diseño e implementación de redes industriales con ESP32",
-  "description": "Aprende a diseñar e implementar redes industriales con ESP32, integrando protocolos como Modbus RTU/TCP, Ethernet, RS485 entre otros. Dominarás la configuración de interfaces de comunicación, diseño de hardware para aplicaciones industriales, y la programación del ESP32 para conectar sensores, actuadores y sistemas SCADA en entornos IoT y de automatización.",
+  "description": "Domina el diseño de redes industriales usando el SOC ESP32 y protocolos/Interfaces como RS232/RS485/RS422, Modbus, Ethernet TCP/IP y CAN Bus. Aprende a integrar sensores, PLCs y sistemas SCADA/HMI para automatizar y monitorear procesos en tiempo real. Desarrollarás firmware embebido eficiente y aplicarás todo en proyectos reales para distintos campos de la industria.",
   "goals": [
-    "Comprender los principios del diseño de redes industriales.",
-    "Aprender a implementar protocolos de comunicación industrial como Modbus RTU/TCP, Ethernet y RS485.",
-    "Configurar interfaces de comunicación en el ESP32.",
-    "Integrar dispositivos IoT en entornos industriales."
+    "Diseñar e implementar redes industriales con protocolos UART, RS232, RS485,RS4822 Ethernet y CAN Bus.",
+    "Desarrollar sistemas HMI y SCADA con ESP32 para controlar y monitorear procesos",
+    "Configurar comunicación industrial sobre Ethernet con W5500 y ENC28J60",
+    "Integrar sensores industriales, PLCs y pantallas HMI usando Modbus RTU y Modbus TCP/IP."
   ],
   "techs": ["espressif", "modbus", "rs485", "ethernet", "tcpip"],
   "modality": "híbrido",
@@ -22,44 +22,44 @@
   "carrer": "embebido",
   "competencias": [
     {
-      "title": "Programación del ESP32",
-      "description": "Aprenderás a programar el ESP32 para interactuar con sensores y actuadores, y a implementar protocolos de comunicación industrial."
+      "title": "Diseño de redes Industriales con Esp32",
+      "description": "Configuración e implementación de redes de control y monitoreo usando protocolos industriales estándar."
     },
     {
-      "title": "Implementación de Protocolos de Comunicación",
-      "description": "Aprenderás a implementar protocolos como Modbus RTU/TCP, Ethernet y RS485 en aplicaciones industriales."
+      "title": "Integración con sistemas SCADA y HMI",
+      "description": "Comunicación con interfaces gráficas conectadas a sensores y actuadores usando protocolos industriales."
     },
     {
-      "title": "Configuración de Redes Industriales",
-      "description": "Aprenderás a configurar redes industriales para la comunicación entre dispositivos IoT y sistemas SCADA."
+      "title": "Implementación de redes Ethernet y CAN Bus.",
+      "description": "Manejo del hardware W5500, ENC28J60 y MCP2515 para construir redes TCP/IP y CAN confiables."
     }
   ],
   "areasAplicacion": [
     {
       "title": "Automatización Industrial",
-      "description": "Desarrollo de sistemas embebidos para la automatización de procesos industriales."
+      "description": "Desarrollo de redes RS485/Modbus para monitoreo de procesos, control de motores y lectura de sensores en tiempo real."
     },
     {
-      "title": "IoT",
-      "description": "Desarrollo de dispositivos IoT utilizando microcontroladores y SoCs."
+      "title": "Transporte y logística",
+      "description": "Aplicación del protocolo CAN Bus para diagnóstico y monitoreo de flotas, así como sensores embarcados."
     },
     {
-      "title": "Sistemas SCADA",
-      "description": "Desarrollo de sistemas SCADA para la supervisión y control de procesos industriales."
+      "title": "Monitoreo y Adquisición de Datos",
+      "description": "Implementación de redes inteligentes para monitoreo de industria como Agroindustria, Energía, Domótica y más."
     }
   ],
   "oportunidadesLaborales": [
-    "Ingeniero de Sistemas Embebidos",
-    "Administrador de Redes Industriales",
-    "Ingeniero de Automatización",
-    "Desarrollador de IoT",
-    "Ingeniero de Redes Industriales"
+    "Desarrollador de Redes Industriales Embebidas",
+    "Programador de firmware industrial con ESP32",
+    "Especialista en automatización y control",
+    "Integrador de sistemas SCADA/HMI y sensores industriales",
+    "Diseñador de soluciones de comunicación industrial"
   ],
   "requisitos": [
-    "Conocimientos básicos de programación en C",
-    "Conocimientos básicos de electrónica",
-    "Acceso a una PC o laptop",
-    "Conexión a internet estable"
+    "Conocimientos básicos de programación en C y electrónica",
+    "Acceso a una PC o laptop con accedo a internet",
+    "Recomendado contar con el PLC IoT de MMJ con sus periféricos",
+    "Ganas de aprender conceptos reales de automatización industrial"
   ],
   "requisitoWarning": "Se recomienda contar con un kit de desarrollo PLC IoT, aunque no es obligatorio. Además, necesitarás instalar un IDE de preferencia para realizar las prácticas.",
   "faqs": [
@@ -68,12 +68,28 @@
       "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
     },
     {
-      "question": "¿Tengo que tener conocimientos previos?",
-      "answer": "No, pero es recomendable tener conocimientos básicos de programación y electrónica. El curso está diseñado para principiantes, pero también es útil para quienes ya tienen experiencia y quieren profundizar en el uso de microcontroladores PIC."
+      "question": "¿Necesito experiencia previa en automatización industrial?",
+      "answer": "No, el curso empieza desde los fundamentos y avanza progresivamente hasta la implementación de proyectos reales, sin embargo, se adapta a profesionales con experiencia intermedia o avanzada."
     },
     {
-      "question": "¿Cuál es la diferencia entre programar en C y Arduino?",
-      "answer": "C con el estándar ANSI es un lenguaje de programación de bajo nivel que permite un control más preciso sobre el hardware, mientras que Arduino es una plataforma de desarrollo que utiliza C/C++ pero abstrae muchas de las complejidades del hardware. Programar en C te da más control y flexibilidad, pero también requiere un mayor conocimiento técnico."
+      "question": "¿Qué tipo de hardware se necesita para los proyectos?",
+      "answer": "Trabajaremos con ESP32, módulos W5500, RS485, ENC28J60 y sensores industriales compatibles con protocolos Modbus. Se recomienda que se adquiera el PLC IoT de MMJ."
+    },
+    {
+      "question": "¿Veremos diseño de hardware además de la programación?",
+      "answer": "Sí, se incluyen sesiones de diseño eléctrico y despliegue de redes físicas."
+    },
+    {
+      "question": "¿Qué aplicaciones podré desarrollar después del curso?",
+      "answer": "Desde sistemas SCADA/HMI para plantas industriales hasta redes de sensores en agricultura, domótica, energía y más."
+    },
+    {
+      "question": "¿Se enseña comunicación con PLCs y sensores reales?",
+      "answer": "Sí. Usamos simuladores y equipos reales para comunicar ESP32 con PLCs, sensores Modbus y expansores industriales."
+    },
+    {
+      "question": "¿El curso incluye Ethernet y CAN Bus además de RS485?",
+      "answer": "Correcto. Profundizamos en protocolos de transporte TCP/IP, UDP y CAN Bus con hardware real y simuladores."
     },
     {
       "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",

@@ -1,20 +1,146 @@
 {
   "bgCourseCard": "labview",
-  "startDate": "Proximamente",
+  "startDate": "06/08/2025",
+  "schedule": {
+    "days": ["Lunes", "Miercoles"],
+    "time": [19, 22]
+  },
   "title": "Diseño de sistemas SCADA e Industria 4.0 con NI LabVIEW y protocolos IoT",
-  "description": "Los sistemas SCADA, con la integración de IoT, mejoran la eficiencia operativa y el monitoreo en tiempo real. LabVIEW, como herramienta clave en la programación y diseño de sistemas de control, permite desarrollar aplicaciones SCADA, facilitando la enseñanza y el uso de tecnologías avanzadas para el análisis de datos y la automatización en diversas industrias.",
+  "description": "Aprende a desarrollar aplicaciones industriales de monitoreo y control con interfaces gráficas profesionales en NI LabVIEW. Integra hardware como Microcontroladores, PLCs y sensores usando interfaces y protocolos (UART, RS232, RS485, Modbus, MQTT, TCP/IP). Implementa soluciones IoT, almacena datos y automatiza procesos en tiempo real. Prepárate para la certificación CLAD de National Instruments.",
   "goals": [
-    "Implementarás comunicación con equipos industriales usando protocolos globales.",
-    "Integrarás plataformas de hardware y software para diversas aplicaciones.",
-    "Aprenderás protocolos IoT como MQTT y HTTP para el desarrollo de aplicaciones.",
-    "Desplegarás soluciones IoT con el microcontrolador ESP32 y NI LabVIEW.",
-    "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
+    "Diseñar aplicaciones HMI y SCADA profesionales en NI LabVIEW.",
+    "Comunicar software con hardware mediante interfaces y protocolos (UART, RS232, RS485, Modbus, MQTT, HTTP, TCP/IP).",
+    "Desarrollar sistemas con almacenamiento de datos, alarmas, interfaces gráficas y comunicación en red (LAN/WAN).",
+    "Implementar soluciones IoT con ESP32 integradas a LabVIEW."
   ],
   "techs": ["labview", "rs485", "tcpip", "modbus"],
-  "modality": "virtual",
-  "duration": 8,
-  "hours": 48,
-  "priceBase": 800,
-  "priceReal": 400,
-  "carrer": "software"
+  "modality": "híbrido",
+  "duration": 4,
+  "hours": 24,
+  "priceBase": 350,
+  "priceReal": 250,
+  "carrer": "software",
+  "competencias": [
+    {
+      "title": "Diseño de Sistemas SCADA e Interfaces HMI",
+      "description": "Capacidad para diseñar interfaces gráficas profesionales para el monitoreo y control de variables industriales usando NI LabVIEW."
+    },
+    {
+      "title": "Programación en NI LabVIEW",
+      "description": "Dominio del lenguaje gráfico para el desarrollo de soluciones robustas, escalables y sostenibles, integrando patrones de diseño y estructuras eficientes."
+    },
+    {
+      "title": "Integración de Interfaces y Protocolos en LabVIEW",
+      "description": "Habilidad para implementar comunicación con hardware mediante UART, RS232, RS485, Modbus, MQTT, TCP/IP en tiempo real."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Automotriz",
+      "description": "Sistemas de adquisición de datos para el monitoreo de sensores, control de actuadores y supervisión de sistemas en vehículos o líneas de producción automotriz."
+    },
+    {
+      "title": "Internet de las Cosas (IoT)",
+      "description": "Implementación de plataformas conectadas para monitoreo remoto, control de procesos y visualización de datos usando ESP32 y LabVIEW."
+    },
+    {
+      "title": "I+D y Academia",
+      "description": "Desarrollo de prototipos, experimentos y proyectos académicos que integren software, hardware y comunicación industrial."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Ingeniero en Automatización y Control",
+    "Especialista en SCADA y HMI",
+    "Desarrollador de soluciones IoT industriales",
+    "Integrador de software industrial y adquisición de datos",
+    "Postulante a certificación CLAD (LabVIEW Associate Developer)"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación y electrónica",
+    "Acceso a una PC o laptop con acceso a internet",
+    "Ganas de aprender conceptos reales de automatización industrial"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo (ESP32, Arduino o PLC IoT MMJ). También deberás instalar el entorno NI LabVIEW (versión recomendada se brinda al inicio del curso) y otras herramientas de software que serán instaladas durante cada una de las sesiones.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "Necesito tener conocimientos previos en LabVIEW o programación?",
+      "answer": "No. Empezaremos desde lo más básico, aunque si ya tienes conocimientos previos, avanzarás más rápido."
+    },
+    {
+      "question": "¿Qué tipo de hardware se necesita para los proyectos?",
+      "answer": "Trabajamos principalmente con el SOC ESP32, PLC IoT de MMJ y sensores industriales, pero también te enseñamos a comunicarte con cualquier dispositivo electrónico."
+    },
+    {
+      "question": "¿Obtendré un certificado al finalizar?",
+      "answer": "Sí. Recibirás un certificado oficial a nombre de MMJ Smart Electronics y tendrás la preparación necesaria para rendir el examen internacional CLAD."
+    },
+    {
+      "question": "¿La especialización es teórico o práctico?",
+      "answer": "100% práctico. Todas las sesiones están enfocadas en desarrollar proyectos reales con hardware y software, desde la interfaz hasta la conectividad."
+    },
+    {
+      "question": "¿Puedo llevar la especialización si soy estudiante universitario o técnico?",
+      "answer": "¡Claro que sí! Esta especialización está pensada para estudiantes, técnicos, ingenieros o profesionales que deseen llevar sus habilidades al siguiente nivel en el desarrollo de software industrial."
+    },
+    {
+      "question": "¿Puedo aplicar lo aprendido a otras industrias que no sean netamente industriales?",
+      "answer": "CSí. Lo aprendido en esta especialización se puede aplicar a sectores como biomédica, agricultura, energía, domótica, educación, investigación y más, gracias a la versatilidad de NI LabVIEW y la integración con diferentes plataformas de hardware."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1F0r8hfqUrSKiVQLdLvxG6Yr1n1_dLd2V/view",
+  "temario": [
+    [
+      {
+        "title": "Introducción a los Software de Aplicaci+on y Ni LabVIEW",
+        "description": "Conceptos básicos de programación gráfica, entorno de desarrollo y herramientas de LabVIEW."
+      },
+      {
+        "title": "Funcionalidad de Ni LabVIEW y Estructuras de Programación",
+        "description": "Estructuras de programación en LabVIEW, manejo de eventos y estructuras de control, incluyendo bucles y condicionales."
+      },
+      {
+        "title": "Procesamiento de Arreglos en LabVIEW",
+        "description": "Manejo y manipulación de arreglos en LabVIEW para el procesamiento de datos en tiempo real."
+      },
+      {
+        "title": "Diseño de SubVis",
+        "description": "Creación de subVI para modularizar el código y mejorar la reutilización y organización del proyecto."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }

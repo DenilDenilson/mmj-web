@@ -1,8 +1,8 @@
 {
   "bgCourseCard": "pic-asm",
-  "startDate": "Proximamente",
+  "startDate": "07/08/2025",
   "schedule": {
-    "days": ["Lunes", "Miércoles"],
+    "days": ["Lunes", "Sábado"],
     "time": [19, 22]
   },
   "title": "Programación de Microcontroladores PIC en el nuevo Assembler PIC ASS XC8",

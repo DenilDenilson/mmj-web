@@ -1,8 +1,8 @@
 {
   "bgCourseCard": "pic-wifi",
-  "startDate": "Proximamente",
+  "startDate": "08/08/2025",
   "schedule": {
-    "days": ["Lunes", "Miércoles"],
+    "days": ["Lunes", "Viernes"],
     "time": [19, 22]
   },
   "title": "Microcontroladores PIC y comunicación WIFI para IoT",
