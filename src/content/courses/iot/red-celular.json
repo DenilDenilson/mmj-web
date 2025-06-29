@@ -1,20 +1,148 @@
 {
   "bgCourseCard": "redcelular",
-  "startDate": "Proximamente",
+  "startDate": "07/08/2025",
+  "schedule": {
+    "days": ["Martes", "Jueves"],
+    "time": [19, 22]
+  },
   "title": "Diseño de aplicaciones IoT con conectividad a la Red Celular",
-  "description": "Aprenderás a integrar tecnologías como GSM, GPRS, 3G, 4G y GNSS utilizando módulos de Red Celular de SIMCOM. Manejarás protocolos como MQTT/HTTP y desarrollarás aplicaciones conectadas a diversas plataformas IoT desarrollando tus propios equipos reales. Implementaremos soluciones de monitoreo, automatización y control remoto.",
+  "description": "Aprende a desarrollar aplicaciones IoT que se comuniquen a través de redes GSM, GPRS, 3G y 4G LTE. Domina el uso de módulos como SIM800L y SIM7000G, trabaja con ESP32 y plataformas en la nube como Ubidots. Crea soluciones de monitoreo, rastreo y control para sectores como energía, salud y agroindustria. Además, diseña hardware optimizado con Altium Designer y despliega sistemas reales en la nube.",
   "goals": [
-    "Implementarás comunicación con equipos industriales usando protocolos globales.",
-    "Integrarás plataformas de hardware y software para diversas aplicaciones.",
-    "Aprenderás protocolos IoT como MQTT y HTTP para el desarrollo de aplicaciones.",
-    "Desplegarás soluciones IoT con el microcontrolador ESP32 y NI LabVIEW.",
-    "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
+    "Comunicar sensores y dispositivos mediante redes GSM, GPRS, 3G y 4G LTE",
+    "Desarrollar aplicaciones con módulos SIMCOM (SIM800L, SIM7000G, SIM7600, etc)",
+    "Enviar y recibir datos vía SMS, llamadas, MQTT y HTTP a plataformas como Ubidots",
+    "Diseñar prototipos de Hardware IoT para conectividad celular usando Altium Designer",
+    "Crear soluciones para rastreo GNSS y monitoreo de variables ambientales",
+    "Programar en C/C++ y estructurar tus sistemas con máquinas de estado"
   ],
   "techs": ["gsm", "gprs", "gnss", "c3g4g", "esp32", "arduino"],
-  "modality": "virtual",
-  "duration": 6,
-  "hours": 36,
-  "priceBase": 600,
-  "priceReal": 300,
-  "carrer": "iot"
+  "modality": "híbrido",
+  "duration": 8,
+  "hours": 24,
+  "priceBase": 350,
+  "priceReal": 250,
+  "carrer": "iot",
+  "competencias": [
+    {
+      "title": "Diseño de soluciones IoT con redes celulares",
+      "description": "Capacidad para desarrollar aplicaciones conectadas a través de redes GSM, 3G y 4G LTE usando módems de Radio de SIMCOM."
+    },
+    {
+      "title": "Integración de plataformas Cloud e interfaces IoT",
+      "description": "Dominio del envío de datos hacia servidores IoT (Ubidots, LabVIEW, EMQX, etc) usando protocolos MQTT y HTTP."
+    },
+    {
+      "title": "Desarrollo de hardware embebido para IoT",
+      "description": "Diseño de prototipos PCBs, selección de componentes y configuración de módulos SIMCOM para rastreo, monitoreo y control."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Monitoreo y Control de Variables",
+      "description": "Desarrollo de sistemas para monitorear y controlar variables en tiempo real utilizando conectividad celular y notificaciones vía SMS o aplicaciones móviles."
+    },
+    {
+      "title": "Automatización industrial",
+      "description": "Control de dispositivos industriales y lectura de variables a distancia desde cualquier ubicación mediante redes 2G/3G/4G."
+    },
+    {
+      "title": "Smart Cities y domótica",
+      "description": "Monitoreo y control de sistemas inteligentes (iluminación, alarmas, consumo) en ciudades con infraestructura celular."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Técnico o ingeniero en desarrollo de soluciones IoT",
+    "Especialista en conectividad celular y comunicaciones M2M",
+    "Integrador de hardware con plataformas cloud computing",
+    "Desarrollador de soluciones embebidas con redes 2G/3G/4G",
+    "Profesional en diseño de sistemas de monitoreo y rastreo"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación en C/C++ y electrónica",
+    "Acceso a una PC o laptop con acceso a internet",
+    "Interés en el desarrollo de aplicaciones IoT y conectividad celular"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo PLC IoT, aunque no es obligatorio. Además, necesitarás instalar un IDE de preferencia para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito experiencia previa?",
+      "answer": "No. El curso está diseñado para enseñarte desde los fundamentos hasta proyectos reales. Solo necesitas motivación."
+    },
+    {
+      "question": "¿Qué módulos de comunicación se utilizan?",
+      "answer": "Trabajarás con SIM800L, SIM7000G y SIM7600G, junto a tarjetas LilyGO y el SOC ESP32."
+    },
+    {
+      "question": "¿El curso incluye diseño de hardware?",
+      "answer": "Sí. Aprenderás a usar Altium Designer para diseñar prototipos PCBs para conectividad celular, incluyendo cargadores de batería, convertidores DC/DC, comunicaciones y más."
+    },
+    {
+      "question": "¿Podré enviar datos a la nube desde zonas sin WiFi?",
+      "answer": "Exactamente. Aprenderás a trabajar con redes 2G/3G/4G para enviar datos vía MQTT o HTTP desde cualquier lugar con señal celular."
+    },
+    {
+      "question": "¿Qué aplicaciones prácticas podré desarrollar?",
+      "answer": "Desde sistemas de rastreo GPS hasta monitoreo ambiental y control por SMS, llamadas o plataformas cloud."
+    },
+    {
+      "question": "¿Recibiré un certificado al finalizar?",
+      "answer": "Sí. Obtendrás un certificado oficial de MMJ Smart Electronics que valida tus competencias en conectividad IoT por red celular."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1zMYDjgdXN9T04XdWQpbLXg-QtaVjSZON/view",
+  "temario": [
+    [
+      {
+        "title": "Protocolos y Estándares de Red",
+        "description": "Introducción a las redes celulares, GSM, GPRS, 3G y 4G LTE. Estudio de los protocolos de comunicación utilizados en estas redes."
+      },
+      {
+        "title": "Hardware IoT para la Conectividad Celular",
+        "description": "Selección y configuración de módulos de comunicación celular como SIM800L, SIM7000G y SIM7600G. Diseño de circuitos para conectividad."
+      },
+      {
+        "title": "Programación orientada al IoT",
+        "description": "Uso de programación para desarrollar aplicaciones IoT. Estructuración del código y uso de máquinas de estado para gestionar la lógica de las aplicaciones."
+      },
+      {
+        "title": "Programación orientada a objetos",
+        "description": "Uso de programación para desarrollar aplicaciones IoT. Estructuración del código y uso de clases para gestionar la lógica de las aplicaciones."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }

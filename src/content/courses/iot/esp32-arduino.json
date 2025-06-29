@@ -14,7 +14,122 @@
   "modality": "virtual",
   "duration": 6,
   "hours": 36,
-  "priceBase": 500,
-  "priceReal": 300,
-  "carrer": "iot"
+  "priceBase": 350,
+  "priceReal": 250,
+  "carrer": "iot",
+  "competencias": [
+    {
+      "title": "Programación avanzada de ESP32",
+      "description": " Capacidad para programar el SoC ESP32 utilizando y el IDE Arduino, integrando periféricos y protocolos de comunicación."
+    },
+    {
+      "title": "Desarrollo de aplicaciones IoT",
+      "description": "Habilidad para diseñar y desplegar aplicaciones IoT utilizando el ESP32, incluyendo la gestión de datos en plataformas como Ubidots."
+    },
+    {
+      "title": "Integración de redes inalámbricas",
+      "description": "Dominio de la implementación de redes inalámbricas utilizando ESP-NOW, WiFi y protocolos MQTT para la comunicación entre dispositivos IoT."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "IoT y Smart Home",
+      "description": "Implementación de soluciones IoT para el hogar inteligente, integrando dispositivos y plataformas de gestión de datos."
+    },
+    {
+      "title": "Telemetría y Monitoreo Remoto",
+      "description": "Diseño de sistemas de telemetría que permiten el monitoreo y control remoto de variables ambientales y equipos industriales."
+    },
+    {
+      "title": "Desarrollo de Proyectos Educativos",
+      "description": "Creación de proyectos educativos y prototipos utilizando ESP32 para enseñar conceptos de programación y electrónica."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Desarrollador de software embebido para IoT",
+    "Ingeniero de sistemas de control industrial",
+    "Especialista en integración de plataformas IoT",
+    "Técnico en programación de microcontroladores ESP32",
+    "Consultor en soluciones de automatización y monitoreo"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación en C/C++ y electrónica",
+    "Acceso a una PC o laptop con acceso a internet",
+    "Interés en el desarrollo de aplicaciones IoT"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo ESP32 IoT de MMJ, aunque no es obligatorio. Además, necesitarás instalar el IDE de Arduino para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito experiencia previa?",
+      "answer": "No es necesario tener experiencia previa, pero se recomienda tener conocimientos básicos de programación en C/C++ y electrónica. El curso está diseñado para llevarte desde lo básico hasta niveles avanzados."
+    },
+    {
+      "question": "¿Puedo tomar el curso si no tengo un kit de desarrollo?",
+      "answer": "Sí, puedes tomar el curso sin un kit de desarrollo, pero se recomienda tener uno para realizar las prácticas. Puedes adquirir el kit de MMJ IoT ESP32 que incluye todo lo necesario."
+    },
+    {
+      "question": "¿Qué herramientas necesito instalar?",
+      "answer": "Necesitarás instalar el IDE de Arduino para programar el ESP32. También se recomienda tener Ubidots para las prácticas de visualización y control."
+    },
+    {
+      "question": "¿Recibiré un certificado al finalizar?",
+      "answer": "Sí. Obtendrás un certificado oficial de MMJ Smart Electronics que valida tus competencias en conectividad IoT por red celular."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1AkfUKK9G5XPdA_gfb-jKhlrRB-wzQW5_/view",
+  "temario": [
+    [
+      {
+        "title": "Introducción a la progración y al Esp32",
+        "description": "Fundamentos de programación en Arduino y arquitectura del ESP32. Configuración del entorno de desarrollo con el IDE de Arduino."
+      },
+      {
+        "title": "GPIO, Interruptores externas y ADC",
+        "description": "Manejo de entradas y salidas digitales, interrupciones externas y conversión analógica a digital (ADC) en el ESP32."
+      },
+      {
+        "title": "Protocolos e interfaces de comunicación",
+        "description": "Implementación de protocolos de comunicación como UART, I2C y SPI. Configuración y uso de periféricos como sensores y actuadores."
+      },
+      {
+        "title": "Protocolos I2C y SPI",
+        "description": "Manejo avanzado de los protocolos I2C y SPI para la comunicación con dispositivos periféricos."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }

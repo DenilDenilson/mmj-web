@@ -1,6 +1,6 @@
 {
   "bgCourseCard": "esp32c",
-  "startDate": "Proximamente",
+  "startDate": "10/08/2025",
   "title": "Programación de SOC Esp32 en C y aplicaciones IoT",
   "description": "Domina la Arquitectura del SoC ESP32 y aprende a configurar y manejar periféricos como PWM, UART, ADC, DAC, SPI, I2C, entre otros usando el Ide ESP-IDF. Diseña soluciones IoT avanzadas integrando comunicación WiFi, HTTP y MQTT, implementa redes inalámbricas, gestiona datos en plataformas como Ubidots, EMQX, y desarrolla aplicaciones IoT desde cero.",
   "goals": [
@@ -16,5 +16,128 @@
   "hours": 45,
   "priceBase": 800,
   "priceReal": 400,
-  "carrer": "iot"
+  "carrer": "iot",
+  "competencias": [
+    {
+      "title": "Programación avanzada de ESP32",
+      "description": "Capacidad para programar el SoC ESP32 utilizando C y el IDE ESP-IDF, integrando periféricos y protocolos de comunicación."
+    },
+    {
+      "title": "Desarrollo de aplicaciones IoT",
+      "description": "Habilidad para diseñar y desplegar aplicaciones IoT utilizando el ESP32, incluyendo la gestión de datos en plataformas como Ubidots y EMQX."
+    },
+    {
+      "title": "Integración de redes inalámbricas",
+      "description": "Dominio de la implementación de redes inalámbricas utilizando ESP-NOW, WiFi y protocolos MQTT para la comunicación entre dispositivos IoT."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Automatización Industrial",
+      "description": "Desarrollo de sistemas de control y monitoreo industrial utilizando ESP32 para la comunicación con sensores y actuadores."
+    },
+    {
+      "title": "IoT y Smart Home",
+      "description": "Implementación de soluciones IoT para el hogar inteligente, integrando dispositivos y plataformas de gestión de datos."
+    },
+    {
+      "title": "Telemetría y Monitoreo Remoto",
+      "description": "Diseño de sistemas de telemetría que permiten el monitoreo y control remoto de variables ambientales y equipos industriales."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Desarrollador de software embebido para IoT",
+    "Ingeniero de sistemas de control industrial",
+    "Especialista en integración de plataformas IoT",
+    "Técnico en programación de microcontroladores ESP32",
+    "Consultor en soluciones de automatización y monitoreo"
+  ],
+  "requisitos": [
+    "Conocimientos intermedios de programación en C/C++ y electrónica",
+    "Acceso a una PC o laptop con acceso a internet",
+    "Interés en el desarrollo de aplicaciones IoT"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo ESP32 IoT de MMJ, aunque no es obligatorio. Además, necesitarás instalar un IDE de preferencia para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito experiencia previa?",
+      "answer": "No se necesita experiencia conociendo la Esp32, ya que se cubrirá toda su arquitectura desde cero; sin embargo, sí se necesita conocimientos intermedios de programación en C, para esto puede tomar la especialización de ANSI C de MMJ."
+    },
+    {
+      "question": "¿Puedo tomar el curso si no tengo un kit de desarrollo?",
+      "answer": "Sí, puedes tomar el curso sin un kit de desarrollo, pero se recomienda tener uno para realizar las prácticas. Puedes adquirir el kit de MMJ IoT ESP32 que incluye todo lo necesario."
+    },
+    {
+      "question": "¿Qué herramientas necesito instalar?",
+      "answer": "Necesitarás instalar el IDE ESP-IDF para programar el ESP32."
+    },
+    {
+      "question": "¿El curso cubre el uso de plataformas IoT?",
+      "answer": "Sí, aprenderás a integrar el ESP32 con plataformas IoT como Ubidots y EMQX, utilizando protocolos MQTT y HTTP para la gestión de datos."
+    },
+    {
+      "question": "¿Puedo acceder al curso desde cualquier país?",
+      "answer": "Sí, el curso es completamente virtual y puedes acceder desde cualquier parte del mundo con conexión a internet."
+    },
+    {
+      "question": "¿Recibiré un certificado al finalizar?",
+      "answer": "Sí. Obtendrás un certificado oficial de MMJ Smart Electronics que valida tus competencias en conectividad IoT por red celular."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1qxpub0YJ2wSOAm-a8nRnh1Y2tG5KK_Sa/view",
+  "temario": [
+    [
+      {
+        "title": "Arquitectura del SoC ESP32",
+        "description": "Introducción a la arquitectura del ESP32, incluyendo sus características principales y capacidades de procesamiento."
+      },
+      {
+        "title": "Esp32 Logging y Error Handling",
+        "description": "Manejo de registros y errores en aplicaciones ESP32 para mejorar la depuración y el mantenimiento del código."
+      },
+      {
+        "title": "Periféricos GPIO del ESP32",
+        "description": "Configuración y uso de los pines GPIO del ESP32 para interactuar con sensores y actuadores."
+      },
+      {
+        "title": "Interrupt Matrix del ESP32",
+        "description": "Configuración y manejo de interrupciones en el ESP32 para responder a eventos externos de manera eficiente."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }

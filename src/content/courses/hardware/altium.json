@@ -1,21 +1,143 @@
 {
-    "bgCourseCard": "ansi-c",
-    "startDate": "Proximamente",
-    "title": "Diseño Electrónico usando Altium Designer y normas IPC",
-    "description": "Desarrolla equipos electrónicos de alto nivel para aplicaciones industriales, desde esquemáticos hasta PCBs optimizados. Domina estándares IPC, diseño de alta velocidad, sistemas embebidos y soluciones avanzadas con Altium Designer, desarrollando hardware eficiente y confiable para distintos sectores tecnológicos.",
-    "goals": [
-      "Comprender los principios del desarrollo de software embebido.",
-      "Aprender a integrar hardware y software en sistemas embebidos",
-      "Dominar la programación en tiempo real y la optimización de recursos.",
-      "Desarrollar aplicaciones robustas y escalables.",
-      "Comprender los principios del desarrollo de software embebido."
-    ],
-    "techs": ["altium"],
-    "modality": "virtual",
-    "duration": 12,
-    "hours": 75,
-    "priceBase": 1300,
-    "priceReal": 850,
-    "carrer": "hardware"
-  }
-  
+  "bgCourseCard": "ansi-c",
+  "startDate": "Proximamente",
+  "title": "Diseño Electrónico usando Altium Designer y normas IPC",
+  "description": "Desarrolla equipos electrónicos de alto nivel para aplicaciones industriales, desde esquemáticos hasta PCBs optimizados. Domina estándares IPC, diseño de alta velocidad, sistemas embebidos y soluciones avanzadas con Altium Designer, desarrollando hardware eficiente y confiable para distintos sectores tecnológicos.",
+  "goals": [
+    "Comprender los principios del desarrollo de software embebido.",
+    "Aprender a integrar hardware y software en sistemas embebidos",
+    "Dominar la programación en tiempo real y la optimización de recursos.",
+    "Desarrollar aplicaciones robustas y escalables.",
+    "Comprender los principios del desarrollo de software embebido."
+  ],
+  "techs": ["altium"],
+  "modality": "virtual",
+  "duration": 12,
+  "hours": 75,
+  "priceBase": 1300,
+  "priceReal": 850,
+  "carrer": "hardware",
+  "competencias": [
+    {
+      "title": "Diseño de esquemáticos y PCBs",
+      "description": "Capacidad para diseñar esquemáticos y placas de circuito impreso (PCBs) utilizando Altium Designer, aplicando normas IPC para garantizar la calidad y fiabilidad del diseño."
+    },
+    {
+      "title": "Implementación de normas IPC",
+      "description": "Habilidad para aplicar las normas IPC en el diseño de circuitos electrónicos, asegurando la conformidad con los estándares de la industria y la optimización del rendimiento del hardware."
+    },
+    {
+      "title": "Desarrollo de hardware para aplicaciones industriales",
+      "description": "Dominio en el desarrollo de hardware electrónico para aplicaciones industriales, incluyendo la integración de sistemas embebidos y la implementación de soluciones avanzadas con Altium Designer."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Automatización Industrial Avanzada",
+      "description": "Desarrollo de sistemas de control y monitoreo industrial utilizando Altium Designer para el diseño de hardware, integrando sensores, actuadores y sistemas embebidos."
+    },
+    {
+      "title": "Electrónica de Consumo y Dispositivos Inteligentes",
+      "description": "Diseño de dispositivos electrónicos de consumo y soluciones IoT, aplicando técnicas avanzadas de diseño de hardware y normas IPC para garantizar la calidad y fiabilidad del producto final."
+    },
+    {
+      "title": "Automoción y Electrónica Automotriz",
+      "description": "Diseño de sistemas electrónicos para la industria automotriz, integrando sensores, actuadores y sistemas de control utilizando Altium Designer, cumpliendo con las normativas de calidad y seguridad del sector."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Diseñador de hardware electrónico avanzado",
+    "Ingeniero de desarrollo de productos electrónicos",
+    "Especialista en diseño de PCBs y esquemáticos",
+    "Técnico en implementación de normas IPC",
+    "Consultor en soluciones de automatización industrial"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de electrónica y diseño de circuitos",
+    "Acceso a una PC o laptop con Altium Designer instalado",
+    "Interés en el desarrollo de hardware electrónico avanzado"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo básico de MMJ, aunque no es obligatorio. Además, necesitarás instalar Altium Designer para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito experiencia previa?",
+      "answer": "No es necesario tener experiencia previa, pero se recomienda tener conocimientos básicos de electrónica y diseño de circuitos. El curso está diseñado para guiarte desde los fundamentos hasta técnicas avanzadas."
+    },
+    {
+      "question": "¿Puedo acceder al curso desde cualquier lugar?",
+      "answer": "Sí, el curso es completamente virtual y puedes acceder desde cualquier lugar con conexión a internet. Las clases se realizan en vivo, pero también quedan grabadas para que las veas cuando quieras."
+    },
+    {
+      "question": "¿Necesito un kit de desarrollo para el curso?",
+      "answer": "No es obligatorio tener un kit de desarrollo, pero se recomienda contar con uno para realizar las prácticas. Puedes adquirir el kit de MMJ que incluye todo lo necesario para el curso."
+    },
+    {
+      "question": "¿El curso cubre el uso de Altium Designer?",
+      "answer": "Sí, el curso se centra en el uso de Altium Designer para el diseño de esquemáticos y PCBs, incluyendo la aplicación de normas IPC y técnicas avanzadas de diseño."
+    },
+    {
+      "question": "¿Puedo tomar el curso si no tengo conocimientos de Altium Designer?",
+      "answer": "Sí, el curso está diseñado para principiantes y no es necesario tener conocimientos previos de Altium Designer. Comenzaremos desde los fundamentos y avanzaremos hacia técnicas más complejas."
+    },
+    {
+      "question": "¿Recibiré un certificado al finalizar?",
+      "answer": "Sí. Obtendrás un certificado oficial de MMJ Smart Electronics que valida tus competencias en conectividad IoT por red celular."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1YYoy2ncrH5fppCj-OEnE-BUrfG1mR7Z6/view",
+  "temario": [
+    [
+      {
+        "title": "Diagrama Esquemático",
+        "description": "Introducción al diseño de esquemáticos en Altium Designer, incluyendo la creación de componentes, conexiones y organización del diagrama."
+      },
+      {
+        "title": "Placa de Circuito Impreso (PCB)",
+        "description": "Diseño de placas de circuito impreso (PCB) en Altium Designer, abarcando la disposición de componentes, trazado de pistas y optimización del diseño."
+      },
+      {
+        "title": "Proyecto I: Oscilador Colpitts",
+        "description": "Desarrollo de un oscilador Colpitts utilizando Altium Designer, desde el esquemático hasta la PCB, aplicando normas IPC."
+      },
+      {
+        "title": "Diseño de Librerías y Componentes",
+        "description": "Creación y gestión de librerías de componentes en Altium Designer, incluyendo la definición de parámetros eléctricos y mecánicos."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
+}

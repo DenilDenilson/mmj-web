@@ -1,21 +1,135 @@
 {
-    "bgCourseCard": "ansi-c",
-    "startDate": "Proximamente",
-    "title": "Diseño Digital: De los Circuitos Lógicos al Procesador",
-    "description": "Despliega sistemas digitales desde circuitos secuenciales hasta procesadores, incluyendo máquinas de estado, registros, contadores, memorias y periféricos. Aprende a integrar sistemas digitales con el mundo analógico y desarrolla proyectos prácticos para aplicaciones industriales, automotriz, IoT, biomédica y más.",
-    "goals": [
-      "Comprender los principios del desarrollo de software embebido.",
-      "Aprender a integrar hardware y software en sistemas embebidos",
-      "Dominar la programación en tiempo real y la optimización de recursos.",
-      "Desarrollar aplicaciones robustas y escalables.",
-      "Comprender los principios del desarrollo de software embebido."
-    ],
-    "techs": ["proteus", "quartus"],
-    "modality": "virtual",
-    "duration": 5,
-    "hours": 30,
-    "priceBase": 500,
-    "priceReal": 300,
-    "carrer": "hardware"
-  }
-  
+  "bgCourseCard": "ansi-c",
+  "startDate": "Proximamente",
+  "title": "Diseño Digital: De los Circuitos Lógicos al Procesador",
+  "description": "Despliega sistemas digitales desde circuitos secuenciales hasta procesadores, incluyendo máquinas de estado, registros, contadores, memorias y periféricos. Aprende a integrar sistemas digitales con el mundo analógico y desarrolla proyectos prácticos para aplicaciones industriales, automotriz, IoT, biomédica y más.",
+  "goals": [
+    "Comprender los principios del desarrollo de software embebido.",
+    "Aprender a integrar hardware y software en sistemas embebidos",
+    "Dominar la programación en tiempo real y la optimización de recursos.",
+    "Desarrollar aplicaciones robustas y escalables.",
+    "Comprender los principios del desarrollo de software embebido."
+  ],
+  "techs": ["proteus", "quartus"],
+  "modality": "virtual",
+  "duration": 5,
+  "hours": 30,
+  "priceBase": 500,
+  "priceReal": 300,
+  "carrer": "hardware",
+  "competencias": [
+    {
+      "title": "Diseño y análisis de circuitos secuenciales",
+      "description": "Capacidad para diseñar, analizar y simular circuitos secuenciales utilizando herramientas como Proteus y Quartus."
+    },
+    {
+      "title": "Lectura e interpretación de esquemáticos digitales",
+      "description": "Habilidad para leer e interpretar esquemáticos digitales, comprendiendo los componentes y su funcionamiento en circuitos secuenciales."
+    },
+    {
+      "title": "Comprensión de conceptos claves de sistemas digitales",
+      "description": "Dominio de los conceptos fundamentales de sistemas digitales, incluyendo la programación en VHDL y la implementación de máquinas de estado."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Educación Técnica + ID",
+      "description": "Desarrollo de proyectos educativos y prototipos utilizando herramientas de simulación y diseño digital para enseñar conceptos de programación y electrónica."
+    },
+    {
+      "title": "Automatización y Control Digital",
+      "description": "Implementación de sistemas de control y monitoreo digital utilizando circuitos secuenciales, integrando sensores y actuadores."
+    },
+    {
+      "title": "Prototipado de Circuitos Digitales",
+      "description": "Diseño y prototipado de circuitos digitales para aplicaciones en diversas áreas, incluyendo domótica, robótica y sistemas de control."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Diseñador de circuitos digitales",
+    "Desarrollador de prototipos digitales",
+    "Especialista en sistemas secuenciales",
+    "Técnico en mantenimiento y pruebas de circuitos digitales",
+    "Educador en electrónica digital y programación"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de tecnología",
+    "Acceso a una PC o laptop con acceso a internet",
+    "Interés en el desarrollo de aplicaciones digitales"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo básico de MMJ, aunque no es obligatorio. Además, necesitarás instalar las herramientas de simulación como Proteus y Quartus para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito experiencia previa?",
+      "answer": "No es necesario tener experiencia previa, pero se recomienda tener conocimientos básicos de electrónica y programación. El curso está diseñado para principiantes y avanzados."
+    },
+    {
+      "question": "¿Qué herramientas de software se utilizan?",
+      "answer": "Utilizaremos herramientas de simulación como Proteus y Quartus para diseñar y simular circuitos digitales. También se recomienda tener conocimientos básicos de VHDL para la programación de circuitos."
+    },
+    {
+      "question": "¿Puedo tomar el curso si no tengo un kit de desarrollo?",
+      "answer": "Sí, puedes tomar el curso sin un kit de desarrollo, pero se recomienda tener uno para realizar las prácticas. Puedes adquirir el kit de MMJ que incluye todo lo necesario para el curso."
+    },
+    {
+      "question": "¿Recibiré un certificado al finalizar?",
+      "answer": "Sí. Obtendrás un certificado oficial de MMJ Smart Electronics que valida tus competencias en conectividad IoT por red celular."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1lJ8rUadbZpQiljjwId04mY34biQ6cXJV/view",
+  "temario": [
+    [
+      {
+        "title": "Introducción a los Circuitos Secuenciales",
+        "description": "Fundamentos de circuitos secuenciales, incluyendo flip-flops, registros y contadores. Estudio de la teoría de máquinas de estado finito."
+      },
+      {
+        "title": "Registros",
+        "description": "Diseño y análisis de registros, incluyendo registros de desplazamiento y registros de entrada paralela. Implementación de registros en VHDL."
+      },
+      {
+        "title": "Análisis y sínesis de Circuitos Secuenciales Síncronos",
+        "description": "Técnicas de análisis y síntesis de circuitos secuenciales síncronos. Uso de herramientas de diseño digital para la implementación de circuitos secuenciales."
+      },
+      {
+        "title": "Contadores",
+        "description": "Diseño y análisis de contadores, incluyendo contadores ascendentes, descendentes y modulares. Implementación de contadores en VHDL."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
+}

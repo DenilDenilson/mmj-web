@@ -16,5 +16,124 @@
   "hours": 30,
   "priceBase": 700,
   "priceReal": 350,
-  "carrer": "hardware"
+  "carrer": "hardware",
+  "competencias": [
+    {
+      "title": "Diseño y análisis de circuitos digitales y analógicos",
+      "description": "Capacidad para diseñar, analizar y simular circuitos electrónicos analógicos y digitales utilizando herramientas como Proteus y Multisim."
+    },
+    {
+      "title": "Lectura e interpretación de esquemáticos",
+      "description": "Habilidad para leer e interpretar esquemáticos electrónicos, comprendiendo los componentes y su funcionamiento en circuitos analógicos y digitales."
+    },
+    {
+      "title": "Comprensión de conceptos claves de sistemas embebidos",
+      "description": "Dominio de los conceptos fundamentales de sistemas embebidos, incluyendo la programación en C y Ladder, y la implementación de protocolos de comunicación."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Educación Técnica + ID",
+      "description": "Desarrollo de proyectos educativos y prototipos utilizando herramientas de simulación y diseño electrónico para enseñar conceptos de programación y electrónica."
+    },
+    {
+      "title": "Automatización y Control Básica",
+      "description": "Implementación de sistemas de control y monitoreo básico utilizando circuitos analógicos y digitales, integrando sensores y actuadores."
+    },
+    {
+      "title": "Prototipado de Circuitos Electrónicos Fundamentales",
+      "description": "Diseño y prototipado de circuitos electrónicos fundamentales para aplicaciones en diversas áreas, incluyendo domótica, robótica y sistemas de control."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Diseñador de circuitos electrónicos",
+    "Desarrollador de prototipos electrónicos",
+    "Especialista en sistemas embebidos básicos",
+    "Técnico en mantenimiento y pruebas de circuitos electrónicos",
+    "Educador en electrónica y programación"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de tecnología",
+    "Acceso a una PC o laptop con acceso a internet",
+    "Interés en el desarrollo de aplicaciones electrónicas"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo básico de MMJ, aunque no es obligatorio. Además, necesitarás instalar las herramientas de simulación como Proteus y Multisim para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito experiencia previa?",
+      "answer": "No. El curso está diseñado para enseñarte desde los fundamentos hasta proyectos reales. Solo necesitas motivación."
+    },
+    {
+      "question": "¿Qué herramientas de software se utilizan?",
+      "answer": "Trabajaremos con herramientas de simulación y diseño electrónico como Falstad, Multisim y Proteus para simular circuitos analógicos y digitales, Quartus (de Intel/Altera) para el diseño digital con VHDL en FPGAs, y una plataforma de diseño de PCB como Altium Designer para el diseño PCB."
+    },
+    {
+      "question": "¿Se enseña programación avanzada o diseño completo de PLCs o IoT?",
+      "answer": "No. El curso ofrece una introducción práctica a esos temas, ideal como base para futuras especializaciones."
+    },
+    {
+      "question": "¿Obtendré un certificado al finalizar el curso?",
+      "answer": "Sí. Al completar satisfactoriamente el curso recibirás un certificado de finalización expedido por la plataforma, que valida las ~60 horas de formación y las competencias adquiridas en Diseño de Sistemas Electrónicos Analógicos y Digitales."
+    },
+    {
+      "question": "¿Recibiré un certificado al finalizar?",
+      "answer": "Sí. Obtendrás un certificado oficial de MMJ Smart Electronics que valida tus competencias en conectividad IoT por red celular."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/197RsCNgwTHjfJ9PxGizBp86zhxzlSa2m/view",
+  "temario": [
+    [
+      {
+        "title": "Introducción a los circuitos combinacionales",
+        "description": "Fundamentos de circuitos combinacionales, incluyendo puertas lógicas, álgebra booleana y simplificación de circuitos."
+      },
+      {
+        "title": "Circuitos lógicos combinatorios",
+        "description": "Diseño y análisis de circuitos lógicos combinatorios, incluyendo sumadores, restadores, multiplexores y demultiplexores."
+      },
+      {
+        "title": "Circuitos Lógicos MSI",
+        "description": "Introducción a circuitos lógicos MSI (Medium Scale Integration), incluyendo registros, contadores y comparadores."
+      },
+      {
+        "title": "Diseño de Sistemas Digitales",
+        "description": "Diseño de sistemas digitales utilizando circuitos lógicos combinacionales y secuenciales, incluyendo la implementación de máquinas de estados finitos."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }

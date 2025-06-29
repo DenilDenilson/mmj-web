@@ -117,7 +117,7 @@
       },
       {
         "title": "Protocolos de Comunicación",
-        "description": " Implementación de protocolos como UART, RS422, RS232 y RS485 en el ESP32."
+        "description": "Implementación de protocolos como UART, RS422, RS232 y RS485 en el ESP32."
       },
       {
         "title": "Programación orientada a las redes industriales",
