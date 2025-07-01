@@ -1,6 +1,10 @@
 {
-  "bgCourseCard": "ansi-c",
-  "startDate": "Proximamente",
+  "bgCourseCard": "altium",
+  "startDate": "10/08/2025",
+  "schedule": {
+    "days": ["Sábado", "Domingo"],
+    "time": [19, 22]
+  },
   "title": "Diseño Electrónico usando Altium Designer y normas IPC",
   "description": "Desarrolla equipos electrónicos de alto nivel para aplicaciones industriales, desde esquemáticos hasta PCBs optimizados. Domina estándares IPC, diseño de alta velocidad, sistemas embebidos y soluciones avanzadas con Altium Designer, desarrollando hardware eficiente y confiable para distintos sectores tecnológicos.",
   "goals": [

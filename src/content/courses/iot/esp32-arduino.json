@@ -1,6 +1,10 @@
 {
-  "bgCourseCard": "ansi-c",
-  "startDate": "Proximamente",
+  "bgCourseCard": "esp32-arduino",
+  "startDate": "10/08/2025",
+  "schedule": {
+    "days": ["Sábado", "Domingo"],
+    "time": [8, 11]
+  },
   "title": "Diseño de aplicaciones IoT con Esp32 y Arduino",
   "description": "Aprenderás desde los conceptos básicos del ESP32 hasta el manejo de diversos periféricos y protocolos como UART, I2C, SPI, MQTT y RF ESP-NOW. Diseñarás dashboards en Node-RED y Ubidots, controlarás dispositivos y crearás soluciones innovadoras para conectar sensores, actuadores y plataformas inteligentes a través de la tecnología WIFI.",
   "goals": [

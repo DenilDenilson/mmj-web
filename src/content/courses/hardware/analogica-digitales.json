@@ -1,6 +1,10 @@
 {
-  "bgCourseCard": "ansi-c",
-  "startDate": "Proximamente",
+  "bgCourseCard": "analogica-digitales",
+  "startDate": "08/08/2025",
+  "schedule": {
+    "days": ["Miercoles", "Viernes"],
+    "time": [19, 22]
+  },
   "title": "Sistemas Electrónicos Analógicos y digitales",
   "description": "Domina los sistemas electrónicos desde cero, abarcando el diseño de circuitos analógicos y digitales, implementación de protocolos de comunicación, creación de prototipos PCBs, y programación de sistemas embebidos en C y Ladder, donde podrás realizar la simulación e implementación de los circuitos electrónicos a diseñar.",
   "goals": [

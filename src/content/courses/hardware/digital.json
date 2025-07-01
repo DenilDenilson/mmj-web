@@ -1,6 +1,10 @@
 {
-  "bgCourseCard": "ansi-c",
-  "startDate": "Proximamente",
+  "bgCourseCard": "digital",
+  "startDate": "10/08/2025",
+  "schedule": {
+    "days": ["Sábado", "Domingo"],
+    "time": [16, 19]
+  },
   "title": "Diseño Digital: De los Circuitos Lógicos al Procesador",
   "description": "Despliega sistemas digitales desde circuitos secuenciales hasta procesadores, incluyendo máquinas de estado, registros, contadores, memorias y periféricos. Aprende a integrar sistemas digitales con el mundo analógico y desarrolla proyectos prácticos para aplicaciones industriales, automotriz, IoT, biomédica y más.",
   "goals": [

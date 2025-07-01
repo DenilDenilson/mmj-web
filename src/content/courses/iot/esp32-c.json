@@ -1,6 +1,10 @@
 {
-  "bgCourseCard": "esp32c",
+  "bgCourseCard": "esp32-c",
   "startDate": "10/08/2025",
+  "schedule": {
+    "days": ["Sábado", "Domingo"],
+    "time": [19, 22]
+  },
   "title": "Programación de SOC Esp32 en C y aplicaciones IoT",
   "description": "Domina la Arquitectura del SoC ESP32 y aprende a configurar y manejar periféricos como PWM, UART, ADC, DAC, SPI, I2C, entre otros usando el Ide ESP-IDF. Diseña soluciones IoT avanzadas integrando comunicación WiFi, HTTP y MQTT, implementa redes inalámbricas, gestiona datos en plataformas como Ubidots, EMQX, y desarrolla aplicaciones IoT desde cero.",
   "goals": [
