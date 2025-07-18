@@ -17,8 +17,8 @@
   "modality": "híbrido",
   "duration": 5,
   "hours": 30,
-  "priceBase": 500,
-  "priceReal": 350,
+  "priceBase": 140,
+  "priceReal": 100,
   "carrer": "embebido",
   "competencias": [
     {

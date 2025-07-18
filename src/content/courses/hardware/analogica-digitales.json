@@ -18,8 +18,8 @@
   "modality": "virtual",
   "duration": 5,
   "hours": 30,
-  "priceBase": 700,
-  "priceReal": 350,
+  "priceBase": 140,
+  "priceReal": 100,
   "carrer": "hardware",
   "competencias": [
     {
