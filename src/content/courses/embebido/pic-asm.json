@@ -16,7 +16,7 @@
   "techs": ["microchip", "mplabx", "asm", "proteus"],
   "modality": "híbrido",
   "duration": 4,
-  "hours": 24,
+  "hours": 30,
   "priceBase": 100,
   "priceReal": 85,
   "carrer": "embebido",

@@ -1,16 +1,32 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
 import Chip from "@src/Images/icons/Chip.astro";
+
+const { carrera } = Astro.params;
+let text = "";
+switch (carrera) {
+  case "embebido":
+    text = "Firmware Embebido";
+    break;
+  case "iot":
+    text = "IoT";
+    break;
+  case "software":
+    text = "Software";
+    break;
+  default:
+    text = "Carrera";
+}
 ---
 
 <div>
-  <div
+  <!-- <div
     class="mx-auto w-fit rounded-t-lg bg-primary-400 px-12 py-2 font-bold text-white-100"
   >
     Más seleccionado
-  </div>
+  </div> -->
   <section
-    class="mx-auto mb-16 max-w-96 rounded-2xl border border-primary-400 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] md:flex md:flex-col md:justify-between lg:mb-0"
+    class="mx-auto mb-12 max-w-96 rounded-2xl border border-white-600 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] md:flex md:flex-col md:justify-between lg:mb-0 lg:mt-10"
   >
     <div>
       <header
@@ -60,12 +76,6 @@ import Chip from "@src/Images/icons/Chip.astro";
           <div class="grid h-5 w-5 place-content-center">
             <Check fill="#C40B2A" />
           </div>
-          <span class="font-light text-black-500">20 % de Descuento</span>
-        </li>
-        <li class="mb-1 flex items-center gap-1">
-          <div class="grid h-5 w-5 place-content-center">
-            <Check fill="#C40B2A" />
-          </div>
           <span class="font-light text-black-500">Material de Apoyo</span>
         </li>
         <li class="mb-1 flex items-center gap-1">
@@ -80,13 +90,22 @@ import Chip from "@src/Images/icons/Chip.astro";
           </div>
           <span class="font-light text-black-500">Certificación Parcial</span>
         </li>
+
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#C40B2A" />
+          </div>
+          <span class="text-black-500">Opción de pago en cuotas</span>
+        </li>
       </ul>
     </div>
 
     <p class="">
       <a
         class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
-        href="#">Adquirir plan</a
+        target="_blank"
+        href={`https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20el%20plan%20de%203%20cursos%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`}
+        >Adquirir plan</a
       >
     </p>
   </section>

@@ -3,13 +3,13 @@
   "backgroundHeroImage": "embebido",
   "description": "El firmware embebido es el núcleo que da vida a los microcontroladores, permitiendo el control y operación de dispositivos inteligentes en una amplia variedad de aplicaciones. En esta especialidad, aprenderás a programar microcontroladores desde cero, optimizar recursos de hardware y desarrollar soluciones integradas de alto rendimiento.",
   "goals": [
-    "Dominio de diversas arquitectiras de MCUs a nivel de registro.",
-    "Aprender a interactuar con periféricos como sensores, actuadores y módulos de comunicación",
+    "Dominio de diversas arquitecturas de MCUs a nivel de registros.",
+    "Aprender a interactuar con periféricos como sensores, actuadores y módulos de comunicación.",
     "Diseñar diversos sistemas que integren protocolos de comunicación.",
     "Implementar sistemas en tiempo real (RTOS) para aplicaciones críticas.",
     "Diseñar y optimizar código eficiente y escalable para hardware embebido."
   ],
-  "studentProfile": "Al finalizar la especialidad de Desarrollo de Firmware Embebido, el participante será un experto en la programación y la optimización de microcontroladores, con habilidades para implementar soluciones robustas y eficientes en sistemas para diversas aplicaciones de la industria y tecnología.",
+  "studentProfile": "Al finalizar la línea de carrera de Desarrollo de Firmware Embebido, el participante será un experto en la programación y la optimización de microcontroladores, con habilidades para implementar soluciones robustas y eficientes en sistemas para diversas aplicaciones de la industria y tecnología.",
   "skillsTech": [
     "Programación avanzada de microcontroladores utilizando patrones de diseño",
     "Dominio de diversas arquitecturas de MCUs a nivel de registro",

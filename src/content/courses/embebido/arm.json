@@ -1,25 +1,25 @@
 {
-  "bgCourseCard": "ansi-c",
+  "bgCourseCard": "arm",
   "startDate": "septiembre 2025",
   "schedule": {
-    "days": ["Lunes", "Viernes"],
+    "days": ["Lunes", "Miércoles"],
     "time": [19, 22]
   },
-  "title": "Ansi C orientado a Microcontroladores y SoCs",
-  "description": "Conviértete en un experto en el uso de ANSI C para la manipulación directa de registros, punteros y estructuras en sistemas embebidos. Se abordarán temas como manejo de memoria, patrones de diseño, programación modular para periféricos, entre otros. También se implementarán sistemas operativos en tiempo real para SoCs y microcontroladores.",
+  "title": "Programación de Microcontroladores ARM Cortex e interfaces HMI",
+  "description": "Domina la programación de microcontroladores STM32 con arquitectura ARM, configurando diversos periféricos, implementando protocolos como UART, I2C y SPI, y diseñando interfaces gráficas. Aprende a optimizar el consumo energético y desarrollar aplicaciones embebidas robustas con STM32CubeIDE, ideales para proyectos industriales y tecnológicos.",
   "goals": [
-    "Aprender a programar en C y en ANSI C para microcontroladores y SoCs.",
-    "Desarrollar firmware para sistemas embebidos, microcontroladores y SoCs.",
     "Comprender los principios del desarrollo de software embebido.",
     "Aprender a integrar hardware y software en sistemas embebidos",
-    "Dominar la programación en tiempo real y la optimización de recursos."
+    "Dominar la programación en tiempo real y la optimización de recursos.",
+    "Desarrollar aplicaciones robustas y escalables.",
+    "Comprender los principios del desarrollo de software embebido."
   ],
-  "techs": ["espressif", "microchip", "stm32", "c", "mplabx"],
+  "techs": ["stm32", "nextion", "touchgfx", "c"],
   "modality": "virtual",
-  "duration": 8,
-  "hours": 48,
-  "priceBase": 170,
-  "priceReal": 120,
+  "duration": 5,
+  "hours": 30,
+  "priceBase": 100,
+  "priceReal": 85,
   "carrer": "embebido",
   "competencias": [
     {
@@ -62,7 +62,7 @@
     "Acceso a una PC o laptop",
     "Conexión a internet estable"
   ],
-  "requisitoWarning": "Se recomienda contar con un kit de desarrollo (como pic, o esp32), aunque no es obligatorio. Además, necesitarás instalar un IDE (como MPLABX IDE, STM32CubeIDE, o VS Code) para realizar las prácticas.",
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo, aunque no es obligatorio. Además, necesitarás instalar un IDE para realizar las prácticas.",
   "faqs": [
     {
       "question": "¿Cuál es la metodología del curso?",
@@ -75,10 +75,6 @@
     {
       "question": "¿Tengo que tener conocimientos previos?",
       "answer": "No es necesario tener conocimientos previos en programación. La especialización de Ansi C orientado a Microcontroladores y SoCs recorre desde los fundamentos de C hasta la implementación al programar microcontroladores."
-    },
-    {
-      "question": "¿Cuál es la diferencia entre programar en C y Arduino?",
-      "answer": "C con el estándar ANSI es un lenguaje de programación de bajo nivel que permite un control más preciso sobre el hardware, mientras que Arduino es una plataforma de desarrollo que utiliza C/C++ pero abstrae muchas de las complejidades del hardware. Programar en C te da más control y flexibilidad, pero también requiere un mayor conocimiento técnico."
     },
     {
       "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",

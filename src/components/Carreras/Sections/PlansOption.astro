@@ -1,70 +1,103 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
 import Chip from "@src/Images/icons/Chip.astro";
+
+const { carrera } = Astro.params;
+let text = "";
+switch (carrera) {
+  case "embebido":
+    text = "Firmware Embebido";
+    break;
+  case "iot":
+    text = "IoT";
+    break;
+  case "software":
+    text = "Software";
+    break;
+  default:
+    text = "Carrera";
+}
 ---
 
-<section
-  class="mx-auto mb-12 max-w-96 rounded-2xl border border-white-600 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] md:flex md:flex-col md:justify-between lg:mx-0 lg:mb-0 lg:mt-10"
->
-  <div>
-    <header
-      class="mb-6 text-center text-[40px] font-bold leading-none text-black-500"
-    >
-      Desafío de Especialidad
-    </header>
-    <div class="mb-6">
-      <p class="grid place-content-center">
-        <span class="flex items-baseline gap-1">
-          <span class="self-start text-xl text-black-500">$</span>
-          <span class="text-5xl font-bold text-black-500">370</span>
-          <span class="text-2xl font-bold text-black-500">USD</span>
-        </span>
-      </p>
-    </div>
-    <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
-      <Chip width="76" height="76" />
-    </div>
-    <p class="mb-6 text-center text-sm leading-tight text-black-500">
-      Accede a toda la especialidad
-    </p>
-    <ul class="mb-6">
-      <li class="mb-1 flex items-center gap-1">
-        <div class="grid h-5 w-5 place-content-center">
-          <Check fill="#1F2937" />
-        </div>
-        <span class="font-light text-black-500">Acceso a todos los cursos</span>
-      </li>
-      <li class="mb-1 flex items-center gap-1">
-        <div class="grid h-5 w-5 place-content-center">
-          <Check fill="#1F2937" />
-        </div>
-        <span class="font-light text-black-500">Material Exclusivo</span>
-      </li>
-      <li class="mb-1 flex items-center gap-1">
-        <div class="grid h-5 w-5 place-content-center">
-          <Check fill="#1F2937" />
-        </div>
-        <span class="font-light text-black-500">Proyectos Prácticos</span>
-      </li>
-      <li class="mb-1 flex items-center gap-1">
-        <div class="grid h-5 w-5 place-content-center">
-          <Check fill="#1F2937" />
-        </div>
-        <span class="font-light text-black-500">Soporte Continuo</span>
-      </li>
-      <li class="mb-1 flex items-center gap-1">
-        <div class="grid h-5 w-5 place-content-center">
-          <Check fill="#1F2937" />
-        </div>
-        <span class="font-light text-black-500">Certificación Completa</span>
-      </li>
-    </ul>
+<div>
+  <div
+    class="mx-auto w-fit rounded-t-lg bg-primary-400 px-12 py-2 font-bold text-white-100"
+  >
+    Más seleccionado
   </div>
+  <section
+    class="mx-auto mb-16 max-w-96 rounded-2xl border border-primary-400 bg-white-50 p-8 shadow-[0px_16px_32px_px_#18181B25] md:flex md:flex-col md:justify-between lg:mx-0 lg:mb-0"
+  >
+    <div class="lg:mb-10">
+      <header
+        class="mb-6 text-center text-[40px] font-bold leading-none text-black-500"
+      >
+        Desafío de Especialidad
+      </header>
+      <div class="mb-6">
+        <p class="grid place-content-center">
+          <span class="flex items-baseline gap-1">
+            <span class="self-start text-xl text-black-500">$</span>
+            <span class="text-5xl font-bold text-black-500">400</span>
+            <span class="text-2xl font-bold text-black-500">USD</span>
+          </span>
+        </p>
+      </div>
+      <div class="mx-auto mb-6 grid h-24 w-24 place-content-center">
+        <Chip width="76" height="76" />
+      </div>
+      <p class="mb-6 text-center text-sm leading-tight text-black-500">
+        Accede a toda la especialidad
+      </p>
+      <ul class="mb-6">
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#1F2937" />
+          </div>
+          <span class="font-light text-black-500"
+            >Acceso a todos los cursos</span
+          >
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#1F2937" />
+          </div>
+          <span class="font-light text-black-500">Material Exclusivo</span>
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#1F2937" />
+          </div>
+          <span class="font-light text-black-500">Proyectos Prácticos</span>
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#1F2937" />
+          </div>
+          <span class="font-light text-black-500">Soporte Continuo</span>
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#1F2937" />
+          </div>
+          <span class="font-light text-black-500">Certificación Completa</span>
+        </li>
+        <li class="mb-1 flex items-center gap-1">
+          <div class="grid h-5 w-5 place-content-center">
+            <Check fill="#1F2937" />
+          </div>
+          <span class="text-black-500">Opción de pago en cuotas</span>
+        </li>
+      </ul>
+    </div>
 
-  <p class="">
-    <a
-      class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
-      href="#">Adquirir plan</a
-    >
-  </p>
-</section>
+    <p class="">
+      <a
+        class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
+        target="_blank"
+        href={`https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20el%20Desafio%20de%20la%20especialidad en%20la%20linea%20de%20carrera%20de:%20*${text}*`}
+        >Adquirir plan</a
+      >
+    </p>
+  </section>
+</div>
