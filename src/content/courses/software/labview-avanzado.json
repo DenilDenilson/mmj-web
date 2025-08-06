@@ -1,8 +1,8 @@
 {
-  "bgCourseCard": "ansi-c",
+  "bgCourseCard": "labview",
   "startDate": "Proximamente",
   "title": "Arquitecturas avanzadas con NI LabVIEW para la Industria",
-  "description": "Domina las arquitecturas avanzadas de software como Productor-Consumidor, Maestro-Esclavo y QMH en LabVIEW. Aprende a diseñar proyectos industriales integrando hardware como microcontroladores, FPGAs y Controladores Modbus. Prepárate para la certificación internacional CLD y desarrolla soluciones escalables y eficientes para la industria.",
+  "description": "Domina las arquitecturas avanzadas de software como Productor-Consumidor, Maestro-Esclavo y QMH en LabVIEW. Aprende a diseñar proyectos industriales integrando hardware como microcontroladores, FPGAs y Controladores industriales. Prepárate para la certificación internacional CLD y desarrolla soluciones escalables y eficientes para la industria.",
   "goals": [
     "Implementarás comunicación con equipos industriales usando protocolos globales.",
     "Integrarás plataformas de hardware y software para diversas aplicaciones.",
@@ -10,11 +10,11 @@
     "Desplegarás soluciones IoT con el microcontrolador ESP32 y NI LabVIEW.",
     "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
   ],
-  "techs": ["labview", "modbus", "tcpip"],
+  "techs": ["labview", "modbus", "tcpip", "mqtt", "ubidots"],
   "modality": "virtual",
   "duration": 5,
   "hours": 30,
-  "priceBase": 800,
-  "priceReal": 400,
+  "priceBase": 200,
+  "priceReal": 140,
   "carrer": "software"
 }

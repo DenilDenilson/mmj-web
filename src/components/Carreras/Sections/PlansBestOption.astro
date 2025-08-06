@@ -8,6 +8,8 @@ let nCourses = 0;
 let priceBase = 300;
 let finalPrice = 240;
 let discount = priceBase - finalPrice;
+let textLinktoBuy = ``;
+
 switch (carrera) {
   case "embebido":
     nCourses = 3;
@@ -15,6 +17,7 @@ switch (carrera) {
     priceBase = 300;
     finalPrice = 240;
     discount = priceBase - finalPrice;
+    textLinktoBuy = `https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20el%20plan%20de%20${nCourses}%20cursos%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`;
     break;
   case "iot":
     nCourses = 2;
@@ -22,12 +25,23 @@ switch (carrera) {
     priceBase = 205;
     finalPrice = 150;
     discount = priceBase - finalPrice;
+    textLinktoBuy = `https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20el%20plan%20de%20${nCourses}%20cursos%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`;
     break;
   case "software":
-    text = "Software";
-    priceBase = 300;
-    finalPrice = 240;
+    text = "Desarrollo de Software";
+    nCourses = 2;
+    priceBase = 225;
+    finalPrice = 200;
     discount = priceBase - finalPrice;
+    textLinktoBuy = `https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20la%20ruta%20de%20labVIEW%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`;
+    break;
+  case "hardware":
+    nCourses = 3;
+    text = "Diseño de Hardware";
+    priceBase = 300;
+    finalPrice = 250;
+    discount = priceBase - finalPrice;
+    textLinktoBuy = `https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20el%20plan%20de%20${nCourses}%20cursos%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`;
     break;
   default:
     text = "Carrera";
@@ -49,7 +63,11 @@ switch (carrera) {
       <header
         class="mb-6 text-center text-[40px] font-bold leading-none text-primary-500"
       >
-        Pack de {nCourses} cursos
+        {
+          carrera === "software"
+            ? `Ruta de LabVIEW`
+            : `Pack de ${nCourses} cursos`
+        }
       </header>
       <div class="mb-6">
         <p class="grid place-content-center gap-2">
@@ -77,18 +95,22 @@ switch (carrera) {
         <Chip width="76" height="76" />
       </div>
       <p class="mb-6 text-center text-sm leading-tight text-black-500">
-        Selecciona 3 cursos de la especialidad de Desarrollo de Software
-        Embebido y disfruta de un 20% de descuento en tu compra.
+        <!-- Aprovecha  de Desarrollo de Software -->
+        <!-- Embebido y disfruta de un descuento en tu compra. -->
+        Aprovecha esta oferta especial en la ruta de {text} y obtén un descuento
+        exclusivo en tu compra.
+        <!-- ¡Es el momento perfecto para hacer tu compra y comenzar! -->
       </p>
       <ul class="mb-6">
+        <!--         
         <li class="mb-1 flex items-center gap-1">
           <div class="grid h-5 w-5 place-content-center">
             <Check fill="#C40B2A" />
           </div>
           <span class="font-light text-black-500"
-            >Selección Flexible de 3 cursos</span
+            >Selección Flexible de {nCourses} cursos</span
           >
-        </li>
+        </li> -->
         <li class="mb-1 flex items-center gap-1">
           <div class="grid h-5 w-5 place-content-center">
             <Check fill="#C40B2A" />
@@ -123,8 +145,7 @@ switch (carrera) {
       <a
         class="inline-block w-full rounded bg-primary-500 py-3 text-center text-white-50 transition-colors duration-300 hover:bg-primary-400"
         target="_blank"
-        href={`https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20el%20plan%20de%203%20cursos%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`}
-        >Adquirir plan</a
+        href={textLinktoBuy}>Adquirir plan</a
       >
     </p>
   </section>

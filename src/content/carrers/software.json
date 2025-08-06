@@ -5,16 +5,16 @@
   "goals": [
     "Aprender a programar y diseñar sistemas interactivos para controlar dispositivos.",
     "Crear plataformas personalizadas que conecten Hardware y almacenen información.",
-    "Desarrollar aplicaciones prácticas que integren hardware como microcontroladores y sensores.",
+    "Desarrollar aplicaciones prácticas que integren hardware como microcontroladores, sensores y PLCs.",
     "Usar tecnologías modernas para enviar, recibir y visualizar datos de manera eficiente.",
     "Prepararte para certificaciones internacionales y desarrollar soluciones escalables y eficientes."
   ],
-  "studentProfile": "El estudiante será capaz de diseñar soluciones IoT que integren hardware, software y conectividad. Dominará herramientas como LabVIEW y Python, trabajará con tecnologías web, microcontroladores y ESP32, y aplicará protocolos como MQTT y HTTP. Estará preparado para desarrollar proyectos escalables y eficientes en diversas industrias",
+  "studentProfile": "El estudiante será capaz de diseñar soluciones IoT que integren hardware, software y conectividad. Dominará herramientas como LabVIEW y Python, trabajarás con tecnologías web, microcontroladores, ESP32 y PLCs, así mismo aplicará protocolos como MQTT y HTTP. Estarás preparado para desarrollar proyectos escalables y eficientes en diversas industrias",
   "skillsTech": [
     "Programar en LabVIEW y Python para desarrollar aplicaciones HMI, SCADA y soluciones IoT.",
     "Diseñar plataformas IoT desde cero, integrando frontend, backend, bases de datos y comunicación con hardware.",
     "Implementar protocolos como MQTT, HTTP, Modbus y TCP/IP para conectar dispositivos y plataformas.",
-    "Integrar hardware como ESP32, Raspberry Pi, FPGAS, y microcontroladores con soluciones IoT avanzadas.",
+    "Integrar hardware como PLCs, ESP32, Raspberry Pi, FPGAS, y microcontroladores con soluciones IoT avanzadas.",
     "Implementar patrones de diseño y Arquitecturas de software avanzadas."
   ],
   "canPerform": [

@@ -13,7 +13,7 @@
     "Desarrollar sistemas con almacenamiento de datos, alarmas, interfaces gráficas y comunicación en red (LAN/WAN).",
     "Implementar soluciones IoT con ESP32 integradas a LabVIEW."
   ],
-  "techs": ["labview", "rs485", "tcpip", "modbus"],
+  "techs": ["labview", "rs485", "tcpip", "modbus", "mqtt"],
   "modality": "híbrido",
   "duration": 4,
   "hours": 24,
