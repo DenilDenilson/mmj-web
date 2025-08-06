@@ -6,7 +6,7 @@
     "time": [19, 22]
   },
   "title": "Diseño de aplicaciones IoT con conectividad a la Red Celular",
-  "description": "Aprende a desarrollar aplicaciones IoT que se comuniquen a través de redes GSM, GPRS, 3G y 4G LTE. Domina el uso de módulos como SIM800L y SIM7000G, trabaja con ESP32 y plataformas en la nube como Ubidots. Crea soluciones de monitoreo, rastreo y control para sectores como energía, salud y agroindustria. Además, diseña hardware optimizado con Altium Designer y despliega sistemas reales en la nube.",
+  "description": "Aprende a desarrollar aplicaciones IoT que se comuniquen a través de redes GSM, GPRS, 3G y 4G LTE. Domina el uso de módulos de SIMCOM como el SIM800L, SIM7000, SIM7600G entre otros, trabaja con ESP32 y plataformas en la nube como Ubidots. Crea soluciones de monitoreo, rastreo y control para sectores como energía, salud y agroindustria. Además, diseña hardware optimizado con Altium Designer y despliega sistemas reales en la nube.",
   "goals": [
     "Comunicar sensores y dispositivos mediante redes GSM, GPRS, 3G y 4G LTE",
     "Desarrollar aplicaciones con módulos SIMCOM (SIM800L, SIM7000G, SIM7600, etc)",
@@ -15,10 +15,10 @@
     "Crear soluciones para rastreo GNSS y monitoreo de variables ambientales",
     "Programar en C/C++ y estructurar tus sistemas con máquinas de estado"
   ],
-  "techs": ["gsm", "gprs", "gnss", "c3g4g", "esp32", "arduino"],
+  "techs": ["gsm", "gprs", "gnss", "c3g4g", "esp32", "arduino", "simcom"],
   "modality": "híbrido",
-  "duration": 8,
-  "hours": 24,
+  "duration": 4,
+  "hours": 30,
   "priceBase": 100,
   "priceReal": 85,
   "carrer": "iot",

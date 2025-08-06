@@ -36,6 +36,7 @@ import GNSS from "@src/Images/Techs/GNSS.png";
 import MQTT from "@src/Images/Techs/MQTT.png";
 import TouchGFX from "@src/Images/Techs/TouchGFX.png";
 import OpenPLC from "@src/Images/Techs/OpenPLC.png";
+import SIMCOM from "@src/Images/Techs/SimCom.png";
 
 // crea la interfaz para las imágenes de tecnología
 interface kitImage {
@@ -81,4 +82,5 @@ export const techImages: kitImage = {
   mqtt: MQTT,
   touchgfx: TouchGFX,
   openplc: OpenPLC,
+  simcom: SIMCOM,
 };

@@ -4,18 +4,23 @@ import Chip from "@src/Images/icons/Chip.astro";
 
 const { carrera } = Astro.params;
 let text = "";
+let finalPrice = 240;
 switch (carrera) {
   case "embebido":
     text = "Firmware Embebido";
+    finalPrice = 400;
     break;
   case "iot":
     text = "IoT";
+    finalPrice = 240;
     break;
   case "software":
     text = "Software";
+    finalPrice = 240;
     break;
   default:
     text = "Carrera";
+    finalPrice = 0;
 }
 ---
 
@@ -38,7 +43,7 @@ switch (carrera) {
         <p class="grid place-content-center">
           <span class="flex items-baseline gap-1">
             <span class="self-start text-xl text-black-500">$</span>
-            <span class="text-5xl font-bold text-black-500">400</span>
+            <span class="text-5xl font-bold text-black-500">{finalPrice}</span>
             <span class="text-2xl font-bold text-black-500">USD</span>
           </span>
         </p>
@@ -86,7 +91,9 @@ switch (carrera) {
           <div class="grid h-5 w-5 place-content-center">
             <Check fill="#1F2937" />
           </div>
-          <span class="text-black-500">Opción de pago en cuotas</span>
+          <span class="text-black-500"
+            >Opción de pago en cuotas para estudiantes</span
+          >
         </li>
       </ul>
     </div>

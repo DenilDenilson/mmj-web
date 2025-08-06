@@ -18,8 +18,8 @@
   "modality": "virtual",
   "duration": 8,
   "hours": 45,
-  "priceBase": 800,
-  "priceReal": 400,
+  "priceBase": 170,
+  "priceReal": 120,
   "carrer": "iot",
   "competencias": [
     {
