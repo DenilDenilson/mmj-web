@@ -36,10 +36,10 @@ switch (carrera) {
     textLinktoBuy = `https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20la%20ruta%20de%20labVIEW%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`;
     break;
   case "hardware":
-    nCourses = 3;
+    nCourses = 2;
     text = "Diseño de Hardware";
-    priceBase = 300;
-    finalPrice = 250;
+    priceBase = 340;
+    finalPrice = 300;
     discount = priceBase - finalPrice;
     textLinktoBuy = `https://api.whatsapp.com/send?phone=51970570927&text=Hola%2C%20vengo%20de%20la%20web%2C%20quisiera%20adquirir%20el%20plan%20de%20${nCourses}%20cursos%20en%20la%20linea%20de%20carrera%20de:%20*${text}*`;
     break;
@@ -66,7 +66,9 @@ switch (carrera) {
         {
           carrera === "software"
             ? `Ruta de LabVIEW`
-            : `Pack de ${nCourses} cursos`
+            : carrera === "hardware"
+              ? `Ruta de Diseño de Hardware`
+              : `Pack de ${nCourses} cursos`
         }
       </header>
       <div class="mb-6">
