@@ -1,14 +1,18 @@
 {
-  "bgCourseCard": "labview",
-  "startDate": "Proximamente",
-  "title": "Arquitecturas avanzadas con NI LabVIEW para la Industria",
-  "description": "Domina las arquitecturas avanzadas de software como Productor-Consumidor, Maestro-Esclavo y QMH en LabVIEW. Aprende a diseñar proyectos industriales integrando hardware como microcontroladores, FPGAs y Controladores industriales. Prepárate para la certificación internacional CLD y desarrolla soluciones escalables y eficientes para la industria.",
+  "bgCourseCard": "labview-avanzado",
+  "startDate": "septiembre 2025",
+  "schedule": {
+    "days": ["Lunes", "Miercoles"],
+    "time": [19, 22]
+  },
+  "title": "Arquitecturas Avanzadas con NI LabVIEW para la Industria",
+  "description": "En esta especialización trabajarás con NI LabVIEW, dominando arquitecturas avanzadas como Productor-Consumidor, Maestro-Esclavo y QMH para sistemas HMI, SCADA y DCS. Aprenderás buenas prácticas, integración de protocolos industriales, adquisición de datos en tiempo real y comunicación con hardware embebido, preparándote para desarrollar soluciones robustas de automatización, monitoreo y control bajo estándares de la industria 4.0.",
   "goals": [
-    "Implementarás comunicación con equipos industriales usando protocolos globales.",
-    "Integrarás plataformas de hardware y software para diversas aplicaciones.",
-    "Aprenderás protocolos IoT como MQTT y HTTP para el desarrollo de aplicaciones.",
-    "Desplegarás soluciones IoT con el microcontrolador ESP32 y NI LabVIEW.",
-    "Estarás listo para la certificación CLAD y diseñarás software de control y monitoreo industrial."
+    "Aprender a implementar arquitecturas avanzadas como Productor-Consumidor, Maestro-Esclavo y QMH en NI LabVIEW",
+    "Integrar NI LabVIEW  con Microcontroladores, ESP32, FPGAs, PLCs industriales y DAQs.",
+    "Diseñar soluciones de automatización industrial con adquisición y monitoreo de datos en tiempo real.",
+    "Desarrollar proyectos industriales aplicando mantenimiento predictivo, control de procesos y monitoreo energético.",
+    "Prepararte para obtener la certificación Certified LabVIEW Developer (CLD) de National Instruments."
   ],
   "techs": ["labview", "modbus", "tcpip", "mqtt", "ubidots"],
   "modality": "virtual",
@@ -16,5 +20,156 @@
   "hours": 30,
   "priceBase": 200,
   "priceReal": 140,
-  "carrer": "software"
+  "carrer": "software",
+  "competencias": [
+    {
+      "title": "Arquitecturas Avanzadas en NI LabVIEW",
+      "description": "Dominarás arquitecturas como Productor-Consumidor, Maestro-Esclavo y QMH."
+    },
+    {
+      "title": "Desarrollo de Software para la Industria",
+      "description": "Diseñarás software industrial optimizado para diversos campos de la industria."
+    },
+    {
+      "title": "Certificación Internacional CLD",
+      "description": "Te prepararás para obtener la certificación oficial de Certified LabVIEW Developer de National Instruments."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Industria y Automatización de Procesos",
+      "description": "Implementación de sistemas SCADA, control HMI, monitoreo en tiempo real y automatización en sectores como manufactura, minería, petróleo, energía y agroindustria."
+    },
+    {
+      "title": "Energía y Monitoreo Eléctrico",
+      "description": "Supervisión del consumo energético, integración de medidores industriales por Modbus, análisis de calidad de energía y mantenimiento predictivo."
+    },
+    {
+      "title": "Instrumentación y Laboratorios",
+      "description": "Desarrollo de sistemas de adquisición de datos, pruebas automatizadas, control de variables físicas y creación de instrumentos virtuales para investigación y desarrollo."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Ingeniero de Automatización Industrial",
+    "Ingeniero de Desarrollo de Software Industrial",
+    "Especialista en Integración de Sistemas Embebidos",
+    "Consultor en Digitalización de Procesos",
+    "Docente o Formador en NI LabVIEW para la Industria"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de programación en C y electrónica",
+    "Haber llevado la primera especialización de LabVIEW en MMJ Smart Electronics o tener conocimientos básicos/intermedios en LabVIEW",
+    "Recomendado contar con el PLC IoT de MMJ con sus periféricos"
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo (ESP32, Arduino o PLC IoT MMJ). También deberás instalar el entorno NI LabVIEW (versión recomendada se brinda al inicio del curso) y otras herramientas de software que serán instaladas durante cada una de las sesiones.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "Necesito tener conocimientos previos en LabVIEW o programación?",
+      "answer": "Sí. Se requieren conocimientos básicos-Intermedios de LabVIEW y experiencia mínima en automatización o programación en entornos embebidos."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre programar con patrones básicos y usar arquitecturas avanzadas?",
+      "answer": "Los patrones básicos permiten tareas simples; las arquitecturas avanzadas como QMH permiten sistemas industriales robustos, modulares y mantenibles."
+    },
+    {
+      "question": "¿Qué arquitecturas de software se enseñan en el curso?",
+      "answer": "Aprenderás a implementar Productor-Consumidor, Maestro-Esclavo y QMH (Queued Message Handler), utilizadas en sistemas de control industrial robustos y modulares."
+    },
+    {
+      "question": "¿Qué tipo de comunicación industrial se aborda en el curso?",
+      "answer": "Se trabaja con protocolos como Modbus RTU y Modbus TCP/IP, permitiendo la integración de LabVIEW con PLCs, módulos de red y sensores industriales."
+    },
+    {
+      "question": "¿Cómo se gestionan múltiples procesos paralelos en LabVIEW?",
+      "answer": "A través de la arquitectura Productor-Consumidor y QMH, utilizando Queues, eventos dinámicos y control jerarquizado de múltiples loops."
+    },
+    {
+      "question": "¿Qué herramientas se usan para manejar errores en LabVIEW?",
+      "answer": "Se emplean técnicas avanzadas de manejo de errores, encolamiento con prioridad, detección de fallos, notificadores y estructuras de control tolerantes a fallos."
+    },
+    {
+      "question": "¿Se desarrollan proyectos reales aplicables a la industria?",
+      "answer": "Sí. Se diseñan proyectos integradores con controladores reales, adquisición de señales industriales, monitoreo energético y comunicación remota con protocolos estandarizados."
+    },
+    {
+      "question": "¿Incluye preparación para la certificación CLD?",
+      "answer": "Sí. El módulo final del curso está orientado a preparar al estudiante para rendir el examen Certified LabVIEW Developer (CLD) de National Instruments, incluyendo resolución de exámenes modelo."
+    },
+    {
+      "question": "¿Qué tipo de hardware se necesita para los proyectos?",
+      "answer": "Trabajamos principalmente con el SOC ESP32, PLC IoT de MMJ y sensores industriales, pero también te enseñamos a comunicarte con cualquier dispositivo electrónico."
+    },
+    {
+      "question": "¿Obtendré un certificado al finalizar?",
+      "answer": "Sí. Recibirás un certificado oficial a nombre de MMJ Smart Electronics y tendrás la preparación necesaria para rendir el examen internacional CLAD."
+    },
+    {
+      "question": "¿La especialización es teórico o práctico?",
+      "answer": "100% práctico. Todas las sesiones están enfocadas en desarrollar proyectos reales con hardware y software, desde la interfaz hasta la conectividad."
+    },
+    {
+      "question": "¿Puedo llevar la especialización si soy estudiante universitario o técnico?",
+      "answer": "¡Claro que sí! Esta especialización está pensada para estudiantes, técnicos, ingenieros o profesionales que deseen llevar sus habilidades al siguiente nivel en el desarrollo de software industrial."
+    },
+    {
+      "question": "¿Puedo aplicar lo aprendido a otras industrias que no sean netamente industriales?",
+      "answer": "CSí. Lo aprendido en esta especialización se puede aplicar a sectores como biomédica, agricultura, energía, domótica, educación, investigación y más, gracias a la versatilidad de NI LabVIEW y la integración con diferentes plataformas de hardware."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1pICAQgnAe6axC9eNOjNkxoVgpYaAlg6t/view",
+  "temario": [
+    [
+      {
+        "title": "Clase 01 – Buenas prácticas de programación",
+        "description": "Aplicarás FGVs, eventos dinámicos y máquinas de estado para estructurar software robusto y escalable en LabVIEW."
+      },
+      {
+        "title": "Arquitectura Productor-Consumidor",
+        "description": "Aprenderás a comunicar procesos paralelos usando queues, optimizando el rendimiento y el manejo de errores."
+      },
+      {
+        "title": "Arquitectura Maestro-Esclavo",
+        "description": "Diseñarás flujos sincronizados con notificadores y estructuras jerárquicas para el control de múltiples módulos."
+      },
+      {
+        "title": "Arquitecturas aplicadas",
+        "description": "Combinarás patrones como productor-consumidor + state machine con eventos, integrando hardware embebido en proyectos reales."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
 }

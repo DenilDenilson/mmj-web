@@ -2,19 +2,19 @@
   "bgCourseCard": "arm",
   "startDate": "septiembre 2025",
   "schedule": {
-    "days": ["Lunes", "Miércoles"],
+    "days": ["Martes", "Jueves"],
     "time": [19, 22]
   },
-  "title": "Programación de Microcontroladores ARM Cortex e interfaces HMI",
-  "description": "Domina la programación de microcontroladores STM32 con arquitectura ARM, configurando diversos periféricos, implementando protocolos como UART, I2C y SPI, y diseñando interfaces gráficas. Aprende a optimizar el consumo energético y desarrollar aplicaciones embebidas robustas con STM32CubeIDE, ideales para proyectos industriales y tecnológicos.",
+  "title": "Arquitectura ARM y Programación de Microcontroladores STM32",
+  "description": "Este curso te lleva desde la arquitectura ARM Cortex-M hasta la programación profesional de microcontroladores STM32 con STM32CubeIDE y CubeMX. Con un enfoque práctico, trabajarás con periféricos como GPIOs, interrupciones, temporizadores, PWM, ADC, DAC y comunicaciones UART, I2C y SPI, dominando herramientas, depuración y programación estructurada mediante laboratorios reales para proyectos embebidos en ámbitos industriales, educativos y tecnológicos.",
   "goals": [
-    "Comprender los principios del desarrollo de software embebido.",
-    "Aprender a integrar hardware y software en sistemas embebidos",
-    "Dominar la programación en tiempo real y la optimización de recursos.",
-    "Desarrollar aplicaciones robustas y escalables.",
-    "Comprender los principios del desarrollo de software embebido."
+    "Comprender la arquitectura ARM Cortex-M y sus ventajas frente a arquitecturas tradicionales de 8 y 16 bits.",
+    "Manejar entornos de desarrollo como STM32CubeIDE, CubeMX, Keil y PlatformIO.",
+    "Configurar y utilizar periféricos clave como GPIOs, timers, interrupciones, DMA, PWM, ADC, DAC, UART, I2C y SPI.",
+    "Programar usando HAL, LL, CMSIS y Baremetal, según el nivel de abstracción deseado.",
+    "Visualizar señales, gestionar sensores y controlar dispositivos en tiempo real"
   ],
-  "techs": ["stm32", "nextion", "touchgfx", "c"],
+  "techs": ["stm32", "touchgfx", "c"],
   "modality": "virtual",
   "duration": 5,
   "hours": 30,
@@ -23,41 +23,41 @@
   "carrer": "embebido",
   "competencias": [
     {
-      "title": "Programación en C para Microcontroladores",
-      "description": "Aprenderás a programar en ANSI C para microcontroladores y SoCs, incluyendo el uso de punteros, estructuras y registros"
+      "title": "Comprensión de la arquitectura ARM Cortex-M y sus ventajas en sistemas embebidos.",
+      "description": "Capacidad para explicar las características de la arquitectura ARM Cortex-M y cómo se compara con otras arquitecturas de microcontroladores."
     },
     {
-      "title": "Desarrollo de Software Embebido",
-      "description": "Aprenderás a desarrollar firmware para sistemas embebidos, microcontroladores y SoCs."
+      "title": "Configuración de periféricos internos como GPIO, temporizadores, ADC, DAC, PWM, DMA e interrupciones.",
+      "description": "Habilidad para configurar y utilizar los periféricos internos del microcontrolador STM32, incluyendo GPIOs, temporizadores, ADC, DAC, PWM, DMA e interrupciones."
     },
     {
-      "title": "Introducción a Sistemas Operativos en Tiempo Real",
-      "description": "Aprenderás a implementar sistemas operativos en tiempo real para microcontroladores y SoCs."
+      "title": "Programación con HAL, LL, CMSIS y Baremetal en entornos como STM32CubeIDE y CubeMX.",
+      "description": "Dominio de las diferentes capas de abstracción para programar microcontroladores STM32, utilizando HAL, LL, CMSIS y Baremetal en entornos de desarrollo como STM32CubeIDE y CubeMX."
     }
   ],
   "areasAplicacion": [
     {
-      "title": "Automatización Industrial",
-      "description": "Desarrollo de sistemas embebidos para la automatización de procesos industriales."
+      "title": "Automatización y Control Industrial",
+      "description": "Desarrollo de sistemas embebidos para control de procesos, monitoreo de variables físicas y manejo de actuadores."
     },
     {
-      "title": "IoT",
-      "description": "Desarrollo de dispositivos IoT utilizando microcontroladores y SoCs."
+      "title": "IoT y Proyectos Embebidos",
+      "description": "Integración de sensores, comunicación y procesamiento local para soluciones de bajo consumo en entornos inteligentes."
     },
     {
-      "title": "Robótica",
-      "description": "Desarrollo de sistemas embebidos para aplicaciones robóticas."
+      "title": "Instrumentación y Electrónica Aplicada",
+      "description": "Adquisición y visualización de señales en tiempo real para laboratorios, prototipado o monitoreo técnico."
     }
   ],
   "oportunidadesLaborales": [
-    "Ingeniero de Sistemas Embebidos",
-    "Desarrollador de Firmware",
-    "Ingeniero de Automatización",
-    "Desarrollador de IoT",
-    "Ingeniero de Robótica"
+    "Programador de firmware embebido con STM32",
+    "Desarrollador de soluciones con microcontroladores ARM",
+    "Especialista en integración de sensores y periféricos",
+    "Consultor en automatización embebida",
+    "Formador o docente especializado en sistemas STM32"
   ],
   "requisitos": [
-    "Conocimientos básicos de programación",
+    "Conocimientos básicos/intermedios de programación en C y electrónica",
     "Conocimientos básicos de electrónica",
     "Acceso a una PC o laptop",
     "Conexión a internet estable"
@@ -77,8 +77,28 @@
       "answer": "No es necesario tener conocimientos previos en programación. La especialización de Ansi C orientado a Microcontroladores y SoCs recorre desde los fundamentos de C hasta la implementación al programar microcontroladores."
     },
     {
-      "question": "¿Necesito tener un microcontrolador físico para hacer las prácticas?",
-      "answer": "No es obligatorio, aunque sí recomendable. Puedes comenzar con simuladores o herramientas virtuales. Más adelante, te recomendamos adquirir un kit como el ESP32, PIC o STM32 para reforzar tu aprendizaje práctico"
+      "question": "¿Qué microcontroladores se utilizan en el curso?",
+      "answer": "Principalmente el STM32F446RET6, aunque también se estudian otras familias (F0, F1, F3, F4, F7, G4, H7, L0, L4, etc.) para tener una visión global del ecosistema STM32."
+    },
+    {
+      "question": "¿Puedo llevar el curso si no tengo una placa STM32?",
+      "answer": "Sí. Puedes seguir todas las clases con simuladores o revisar los códigos. Sin embargo, se recomienda contar con una placa para practicar."
+    },
+    {
+      "question": "¿Qué entornos de desarrollo se emplean?",
+      "answer": "STM32CubeIDE y STM32CubeMX son los principales. También se menciona el uso de Keil uVision y PlatformIO según el entorno del desarrollador."
+    },
+    {
+      "question": "¿Se abordan diferentes niveles de programación?",
+      "answer": "Sí. Se explica la diferencia entre HAL, LL, CMSIS y Baremetal para que el alumno elija la mejor estrategia según el proyecto."
+    },
+    {
+      "question": "¿Qué tipo de laboratorios se desarrollan?",
+      "answer": "Proyectos como teclados matriciales con LCD, semáforos, motores Nema 17, sensores industriales, comunicación entre STM32, SD Card, entre otros."
+    },
+    {
+      "question": "¿Se utilizan herramientas de visualización?",
+      "answer": "Sí. Se trabaja con analizadores lógicos, visualización de datos en pantallas, además de integración con MATLAB y LabVIEW."
     },
     {
       "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
@@ -93,31 +113,31 @@
       "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
     }
   ],
-  "temarioLink": "https://drive.google.com/file/d/1_3F8FeSEB7xvOIHpbJmsv6lBefZUTe7B/view",
+  "temarioLink": "https://bit.ly/STM32MMJ",
   "temario": [
     [
       {
-        "title": "Introducción a los sistemas embebidos y su programación",
-        "description": "Introducción a los Sistemas Embebidos (SE). Tipos de Sistemas Embebidos y campos de aplicación. Introducción a la arquitectura de Microcontroladores. Introducción a los lenguajes de programación para MCUs. Lenguajes de programación de alto y bajo nivel. Historia del lenguaje de programación C. Proceso de compilación de los lenguajes de alto nivel."
+        "title": "Introducción a la arquitectura ARM y herramientas de desarrollo",
+        "description": "Estudiarás las diferencias entre arquitecturas de 8, 16 y 32 bits, conocerás la familia STM32 y trabajarás con herramientas como STM32CubeIDE y CubeMX para crear proyectos desde cero, configurar el sistema de reloj, prescalers y comparar los niveles de programación HAL, LL, CMSIS y Baremetal."
       },
       {
-        "title": "Tipos de datos y variables",
-        "description": "Tipos de datos nativos. Tipos de datos estandares. Identificadores. Calificadores de tipos de datos. Definición y declaración de variables.Palabras reservadas en ANSI C."
+        "title": "Control de GPIO, interrupciones y temporizadores",
+        "description": "Aprenderás a configurar entradas y salidas digitales, técnicas anti-rebote, manejo de pantallas LCD y displays, uso del NVIC y EXTI para interrupciones externas, temporizadores para delays y control de procesos como semáforos o motores paso a paso con máquinas de estado."
       },
       {
-        "title": "Constantes literales y simbólicas",
-        "description": "Literales de tipo integer, float, char, string. Etiquetas de sustitución. Constantes mediante enum. Guardar constantes en la memoria Flash."
+        "title": "Señales PWM, captura de pulsos, ADC y DAC",
+        "description": "Dominarás la generación de señales PWM, captura de pulsos, configuración de watchdogs, adquisición de datos analógicos con ADC en diferentes modos, generación de señales con DAC y control de velocidad mediante potenciómetro."
       },
       {
-        "title": "Operadores y expresiones",
-        "description": "Operadores aritméticos. Operadores de relación. Operadores lógicos. Operadores bitwise y de desplazamiento. Operadores de incremento y decremento. Operadores de asignación simple y compuesta. Operadores de direccionamiento de memoria."
+        "title": "Comunicación UART, I2C y SPI",
+        "description": "Implementarás comunicación serie UART en modos polling, interrupción y DMA, conexión con Bluetooth, sensores y visualización en MATLAB/LabVIEW; trabajarás con sensores I2C como DS3231, MPU6050 y pantallas OLED, y usarás SPI para integrar termocuplas y almacenamiento en SD Card."
       }
     ]
   ],
   "kitInclude": [
     {
-      "title": "Esp32 DevKit C",
-      "description": "Placa de desarrollo con ESP32, incluye WiFi y Bluetooth. Ideal para proyectos IoT."
+      "title": "STM32F446RET6",
+      "description": "Placa de desarrollo STM32F446RET6 con microcontrolador ARM Cortex-M4, ideal para proyectos embebidos."
     },
     {
       "title": "Módulo Joystick",
@@ -132,5 +152,5 @@
       "description": "Módulo de LEDs tipo semáforo para simular señales de tráfico."
     }
   ],
-  "kitPrice": 30
+  "kitPrice": 80
 }
