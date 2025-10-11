@@ -34,10 +34,13 @@ pipeline {
                     sh "mkdir -p ${DEPLOY_PATH}"
                     sh """
                         rsync -av --delete \
-                            --exclude 'node_modules' \
                             --exclude '.git' \
                             --exclude '.gitignore' \
-                            ${WORKSPACE}/ ${DEPLOY_PATH}/
+                            ${WORKSPACE}/dist/ ${DEPLOY_PATH}/dist/
+                    """
+                    sh """
+                        rsync -av \
+                            ${WORKSPACE}/package*.json ${DEPLOY_PATH}/
                     """
                     sh "cd ${DEPLOY_PATH} && npm ci --omit=dev"
                 }
