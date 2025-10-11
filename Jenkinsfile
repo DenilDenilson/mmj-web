@@ -41,6 +41,10 @@ pipeline {
                     """
                     sh """
                         rsync -av \
+                            ${WORKSPACE}/src/Images/ ${DEPLOY_PATH}/src/Images/
+                    """
+                    sh """
+                        rsync -av \
                             ${WORKSPACE}/package*.json ${DEPLOY_PATH}/
                     """
                     sh "cd ${DEPLOY_PATH} && npm ci --omit=dev"
