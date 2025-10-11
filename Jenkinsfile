@@ -50,7 +50,11 @@ pipeline {
                             ${WORKSPACE}/tsconfig.json \
                             ${DEPLOY_PATH}/
                     """
+                    // Instalar dependencias de producción
                     sh "cd ${DEPLOY_PATH} && npm ci --omit=dev"
+
+                    // Rebuild Sharp para la arquitectura del servidor
+                    sh "cd ${DEPLOY_PATH} && npm rebuild sharp"
                 }
             }
         }

@@ -17,6 +17,11 @@ export default defineConfig({
     port: 8090,
     host: true
   },
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    }
+  },
   vite: {
     build: {
       assetsInlineLimit: 0
