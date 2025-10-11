@@ -48,7 +48,6 @@ pipeline {
                             ${WORKSPACE}/package*.json \
                             ${WORKSPACE}/astro.config.mjs \
                             ${WORKSPACE}/tsconfig.json \
-                            ${WORKSPACE}/ecosystem.config.cjs \
                             ${DEPLOY_PATH}/
                     """
                     // Limpiar node_modules y cache, luego instalar dependencias de producción
@@ -65,20 +64,9 @@ pipeline {
         stage('Restart Service') {
             steps {
                 script {
-                    // Crear directorio de logs si no existe
-                    sh "mkdir -p ${DEPLOY_PATH}/logs"
-
-                    // Reiniciar o iniciar la app con PM2
-                    sh """
-                        cd ${DEPLOY_PATH} && \
-                        pm2 reload ecosystem.config.cjs --update-env || pm2 start ecosystem.config.cjs
-                    """
-
+                    sh "app-service ${APP_NAME} restart"
                     sleep(time: 3, unit: 'SECONDS')
-
-                    // Verificar estado
-                    sh "pm2 status ${APP_NAME}"
-                    sh "pm2 logs ${APP_NAME} --lines 20 --nostream"
+                    sh "app-service ${APP_NAME} status"
                 }
             }
         }
