@@ -16,5 +16,10 @@ export default defineConfig({
   server: {
     port: 8090,
     host: true
+  },
+  vite: {
+    build: {
+      assetsInlineLimit: 0
+    }
   }
 });

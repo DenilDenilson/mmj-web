@@ -5,6 +5,7 @@ pipeline {
         APP_NAME = "webapp"
         APP_PORT = "8090"
         DEPLOY_PATH = "/home/deployer/webapp"
+        NODE_ENV = "production"
     }
     
     stages {

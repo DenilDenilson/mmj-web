@@ -4,6 +4,7 @@ import { getEntry } from "astro:content";
 const infoMMJ = await getEntry("infoMMJ", "info-mmj");
 ---
 
+{infoMMJ && (
 <ul
   class="invisible absolute -bottom-20 left-0 right-0 z-50 mx-auto w-fit items-center justify-center gap-8 rounded-2xl bg-white-100 bg-opacity-90 p-8 lg:visible lg:flex"
 >
@@ -37,3 +38,4 @@ const infoMMJ = await getEntry("infoMMJ", "info-mmj");
     <span class="text-xl font-normal text-secondary-500">Proyectos</span>
   </li>
 </ul>
+)}
