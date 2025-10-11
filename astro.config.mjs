@@ -7,5 +7,13 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx()]
+  output: 'server',
+  adapter: node({
+    mode: 'standalone'
+  }),
+  integrations: [tailwind(), mdx()],
+  server: {
+    port: 8090,
+    host: true
+  }
 });
