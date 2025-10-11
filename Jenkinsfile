@@ -45,7 +45,10 @@ pipeline {
                     """
                     sh """
                         rsync -av \
-                            ${WORKSPACE}/package*.json ${DEPLOY_PATH}/
+                            ${WORKSPACE}/package*.json \
+                            ${WORKSPACE}/astro.config.mjs \
+                            ${WORKSPACE}/tsconfig.json \
+                            ${DEPLOY_PATH}/
                     """
                     sh "cd ${DEPLOY_PATH} && npm ci --omit=dev"
                 }
