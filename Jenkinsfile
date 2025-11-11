@@ -12,8 +12,8 @@ pipeline {
         stage('Clone repository') {
             steps {
                 git branch: 'prod', 
-                    url: 'https://gitlab.com/smartelectronics/webapp.git', 
-                    credentialsId: 'gitLab-read-repository'
+                    url: 'https://github.com/DenilDenilson/mmj-web',
+                    credentialsId: 'smartelectronics-webapp-cid'
             }
         }
         
