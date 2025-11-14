@@ -1,0 +1,143 @@
+{
+  "bgCourseCard": "altium",
+  "startDate": "septiembre 2025",
+  "schedule": {
+    "days": ["Sábado", "Domingo"],
+    "time": [19, 22]
+  },
+  "title": "Diseño de Circuitos y PCBs Orientados a la Instrumentación Industrial",
+  "description": "Diseñarás circuitos y PCBs para instrumentación industrial, desde sensores hasta transmisores completos bajo estándares internacionales. Aprenderás acondicionamiento, protección, conversión e integración de señales en HMI y protocolos como RS485, Modbus, ProfiNET o CANOpen, usando LTspice y Altium Designer.",
+  "goals": [
+    "Comprender el principio físico y funcionamiento de sensores industriales de nivel, caudal y temperatura.",
+    "Analizar errores, exactitud, resolución e histéresis en sistemas de instrumentación.",
+    "Simular y validar diseños en LTspice antes de su implementación física.",
+    "Desarrollar fuentes de alimentación industriales y referencias de voltaje confiables.",
+    "Seleccionar e integrar ADCs y DACs internos o externos para adquisición y control."
+  ],
+  "techs": ["ltspice", "altium"],
+  "modality": "virtual",
+  "duration": 12,
+  "hours": 75,
+  "priceBase": 400,
+  "priceReal": 240,
+  "carrer": "hardware",
+  "competencias": [
+    {
+      "title": "Diseño de Hardware para Instrumentación",
+      "description": "Dominarás desde la física del sensor hasta la salida digital y comunicación industrial."
+    },
+    {
+      "title": "Diseño y Simulación Electrónica",
+      "description": "Aplicarás LTspice para validar diseños y Altium Designer para PCB industriales."
+    },
+    {
+      "title": "Protocolos Industriales",
+      "description": "Implementarás comunicación mediante RS232, RS485, Ethernet y protocolos estándar."
+    }
+  ],
+  "areasAplicacion": [
+    {
+      "title": "Industria y Automatización de Procesos",
+      "description": "Diseño de transmisores y módulos de medición para manufactura, minería, petróleo, energía y agroindustria."
+    },
+    {
+      "title": "Energía y Monitoreo Eléctrico",
+      "description": "Medición y supervisión con integración a sistemas industriales vía protocolos estandarizados."
+    },
+    {
+      "title": "Instrumentación y Laboratorios",
+      "description": "Desarrollo de equipos de adquisición de datos, medición de variables físicas y control."
+    }
+  ],
+  "oportunidadesLaborales": [
+    "Diseñador de hardware electrónico industrial",
+    "Ingeniero de instrumentación y control",
+    "Especialista en diseño y fabricación de PCBs",
+    "Consultor en integración de sistemas industriales",
+    "Emprendedor en desarrollo de dispositivos electrónicos"
+  ],
+  "requisitos": [
+    "Conocimientos sólidos de electrónica analógica y digital.",
+    "Conocimientos sólidos en Diseño de PCBs.",
+    "Computadora capaz de ejecutar LTspice y Altium Designer."
+  ],
+  "requisitoWarning": "Se recomienda contar con un kit de desarrollo básico de MMJ, aunque no es obligatorio. Además, necesitarás instalar LTspice para realizar las prácticas.",
+  "faqs": [
+    {
+      "question": "¿Cuál es la metodología del curso?",
+      "answer": "Al momento de inscribirte se te agrega a un grupo de WhatsApp donde se comparten los links de las clases y se resuelven dudas. Las clases son en vivo, pero quedan grabadas para que puedas verlas cuando quieras."
+    },
+    {
+      "question": "¿Necesito experiencia previa?",
+      "answer": "No es necesario tener experiencia previa, pero se recomienda tener conocimientos básicos de electrónica y diseño de circuitos. El curso está diseñado para guiarte desde los fundamentos hasta técnicas avanzadas."
+    },
+    {
+      "question": "¿Puedo acceder al curso desde cualquier lugar?",
+      "answer": "Sí, el curso es completamente virtual y puedes acceder desde cualquier lugar con conexión a internet. Las clases se realizan en vivo, pero también quedan grabadas para que las veas cuando quieras."
+    },
+    {
+      "question": "¿Necesito un kit de desarrollo para el curso?",
+      "answer": "No es obligatorio tener un kit de desarrollo, pero se recomienda contar con uno para realizar las prácticas. Puedes adquirir el kit de MMJ que incluye todo lo necesario para el curso."
+    },
+    {
+      "question": "¿Qué protocolos industriales se abordan?",
+      "answer": "Modbus RTU/TCP-IP, ProfiNET, CANOpen, entre otros."
+    },
+    {
+      "question": "¿Se realizarán proyectos prácticos?",
+      "answer": "Sí, el curso incluye tres proyectos integradores: diseño de un transmisor de nivel capacitivo, un caudalímetro electromagnético y un transmisor de temperatura con RTD."
+    },
+    {
+      "question": "¿Qué pasa si no puedo asistir en vivo a una clase?",
+      "answer": "Todas las clases quedan grabadas y disponibles en la plataforma de MMJ para que las veas cuando puedas. Además, puedes hacer consultas al grupo o instructores en cualquier momento."
+    },
+    {
+      "question": "¿Qué soporte ofrecen durante el curso?",
+      "answer": "Tendrás acceso a un grupo de WhatsApp privado con tutores, donde podrás resolver tus dudas, compartir avances y recibir feedback continuo."
+    },
+    {
+      "question": "¿Puedo pagar desde otro país?",
+      "answer": "Sí, aceptamos pagos internacionales a través de múltiples métodos como tarjeta, PayPal o transferencia bancaria, dependiendo de tu país."
+    }
+  ],
+  "temarioLink": "https://drive.google.com/file/d/1jPlpLO_Okx1gzH_-XbzLxUepQwEhdVnb/view",
+  "temario": [
+    [
+      {
+        "title": "Fundamentos de instrumentación y sensores",
+        "description": "Principios físicos de medición, clasificación de sensores y análisis de errores."
+      },
+      {
+        "title": "Acondicionamiento y protección de señales",
+        "description": "Diseño de filtros, protecciones contra sobrecorriente y sobretensión, y referencias estables."
+      },
+      {
+        "title": "Conversión de señales y comunicación industrial",
+        "description": "Selección e integración de ADCs y DACs, diseño de interfaces HMI y comunicación mediante protocolos industriales."
+      },
+      {
+        "title": "Diseño de PCB y Proyecto Integrador",
+        "description": "Aplicación de normas IPC, mitigación de ruido y desarrollo completo de un transmisor industrial en Altium Designer."
+      }
+    ]
+  ],
+  "kitInclude": [
+    {
+      "title": "PLC IoT(Controlador Lógico Programable con ESP32)",
+      "description": "Controlador Lógico Programable de MMJ basado en ESP32 para aplicaciones de automatización de grado industrial."
+    },
+    {
+      "title": "Modulo I2C",
+      "description": "Módulo I2C para conectar sensores y actuadores al PLC IoT."
+    },
+    {
+      "title": "Módulo Conector Ethernet",
+      "description": "Módulo para conectar el PLC IoT a redes Ethernet, permitiendo la comunicación con otros dispositivos y sistemas SCADA."
+    },
+    {
+      "title": "Cable Ethernet",
+      "description": "Cable Ethernet para conectar el PLC IoT a redes industriales."
+    }
+  ],
+  "kitPrice": 80
+}
