@@ -33,7 +33,7 @@ if (!isCareer) {
   if (specificService) {
     isService = true;
     // Inject service param for children components that rely on Astro.params.service
-    Astro.params.service = carrera;
+    (Astro.params as any).service = carrera;
   }
 }
 
