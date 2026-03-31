@@ -41,34 +41,24 @@ const specificCarrer = await getEntry("carrers", `${carrera}`);
 
 const { title, description, goals, backgroundHeroImage } =
   specificCarrer?.data || {};
-
-const currentBgImage = bgImages[backgroundHeroImage as keyof typeof bgImages];
 ---
 
-{
-  currentBgImage && (
-    <Image
-      class="invisible absolute left-0 right-0 mx-auto hidden w-full object-cover md:visible md:z-10 md:block md:h-full"
-      src={currentBgImage.desktop}
-      alt="Imagen de fondo de alguien programando"
-    />
-  )
-}
+<Image
+  class="invisible absolute left-0 right-0 mx-auto hidden w-full object-cover md:visible md:z-10 md:block md:h-full"
+  src={bgImages[backgroundHeroImage as keyof typeof bgImages].desktop}
+  alt="Imagen de fondo de alguien programando"
+/>
 <div class="h-12 w-full"></div>
 <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
 <div class="relative mx-auto max-w-7xl overflow-x-hidden">
   <picture
     class="absolute -z-50 aspect-[2/1] h-full bg-white-50 md:z-0 md:bg-black-900"
   >
-    {
-      currentBgImage && (
-        <Image
-          class="absolute right-0 block h-full w-full object-cover md:hidden"
-          src={currentBgImage.mobile}
-          alt="Imagen de fondo de alguien programando"
-        />
-      )
-    }
+    <Image
+      class="absolute right-0 block h-full w-full object-cover md:hidden"
+      src={bgImages[backgroundHeroImage as keyof typeof bgImages].mobile}
+      alt="Imagen de fondo de alguien programando"
+    />
   </picture>
   <HeroContentInfo />
 </div>

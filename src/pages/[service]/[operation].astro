@@ -1,0 +1,22 @@
+---
+import Layout from "@src/layouts/Layout.astro";
+import Ubication from "@src/components/Home/Ubication.astro";
+import Home from "@src/components/Operation/Home.astro";
+import MainFeatures from "@src/components/Operation/MainFeatures.astro";
+import Galery from "@src/components/Operation/Galery.astro";
+import Dudes from "@src/components/Operation/Dudes.astro";
+
+export async function getStaticPaths() {
+  return [
+    { params: { service: "servicio-hardware", operation: "fabricacion-pcb" } },
+  ];
+}
+---
+
+<Layout title="Servicios MMJ">
+  <Home />
+  <MainFeatures />
+  <Galery />
+  <Dudes />
+  <Ubication />
+</Layout>
