@@ -1,9 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import node from "@astrojs/node";
-
 import tailwind from "@astrojs/tailwind";
-
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
@@ -14,7 +12,7 @@ export default defineConfig({
   }),
   integrations: [tailwind(), mdx()],
   server: {
-    port: 8090,
+    port: 4321,
     host: true,
   },
   image: {
@@ -25,9 +23,6 @@ export default defineConfig({
   vite: {
     build: {
       assetsInlineLimit: 0,
-    },
-    ssr: {
-      noExternal: ["sharp"],
     },
   },
 });
