@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/aula/:path*",
-      "destination": "https://aula.smartelectronis.com.pe",
-      "permanent": true
-    }
-  ]
-}
