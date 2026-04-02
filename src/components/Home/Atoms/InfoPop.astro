@@ -4,36 +4,42 @@ import { getEntry } from "astro:content";
 const infoMMJ = await getEntry("infoMMJ", "info-mmj");
 ---
 
-<ul
-  class="invisible absolute -bottom-20 left-0 right-0 z-50 mx-auto w-fit items-center justify-center gap-8 rounded-2xl bg-white-100 bg-opacity-90 p-8 lg:visible lg:flex"
->
-  <li
-    class="flex w-44 flex-col items-center px-6 py-4 text-5xl font-bold text-secondary-500"
+<div class="bg-black-800 py-12">
+  <ul
+    class="mx-auto grid max-w-7xl grid-cols-2 bg-[#28A0B3] sm:grid-cols-2 lg:grid-cols-4"
   >
-    {infoMMJ.data.amountStudents}
-    <span class="text-xl font-normal text-secondary-500">Estudiantes</span>
-  </li>
-  <div class="h-24 w-[1px] bg-secondary-500"></div>
-  <li
-    class="flex w-44 flex-col items-center px-6 py-4 text-5xl font-bold text-secondary-500"
-  >
-    {infoMMJ.data.amountCourses}
-    <span class="text-xl font-normal text-secondary-500">Cursos</span>
-  </li>
-  <div class="h-24 w-[1px] bg-secondary-500"></div>
+    <li
+      class="relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-1/2 after:-translate-x-1/2 after:bg-[#28A0B3] after:content-[''] md:text-5xl lg:after:content-none"
+    >
+      {infoMMJ.data.amountStudents}
+      <span class="text-lg font-normal text-[#28A0B3] md:text-xl">
+        Estudiantes
+      </span>
+    </li>
 
-  <li
-    class="flex w-44 flex-col items-center px-6 py-4 text-5xl font-bold text-secondary-500"
-  >
-    {infoMMJ.data.amountServices}
-    <span class="text-xl font-normal text-secondary-500">Servicios</span>
-  </li>
-  <div class="h-24 w-[1px] bg-secondary-500"></div>
+    <li
+      class="relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-1/2 after:-translate-x-1/2 after:bg-[#28A0B3] after:content-[''] md:text-5xl lg:after:content-none"
+    >
+      {infoMMJ.data.amountCourses}
+      <span class="text-lg font-normal text-[#28A0B3] md:text-xl">Cursos</span>
+    </li>
 
-  <li
-    class="flex w-44 flex-col items-center px-6 py-4 text-5xl font-bold text-secondary-500"
-  >
-    {infoMMJ.data.amountProyects}
-    <span class="text-xl font-normal text-secondary-500">Proyectos</span>
-  </li>
-</ul>
+    <li
+      class="relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] md:text-5xl"
+    >
+      {infoMMJ.data.amountServices}
+      <span class="text-lg font-normal text-[#28A0B3] md:text-xl"
+        >Servicios</span
+      >
+    </li>
+
+    <li
+      class="flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 md:text-5xl"
+    >
+      {infoMMJ.data.amountProyects}
+      <span class="text-lg font-normal text-[#28A0B3] md:text-xl"
+        >Proyectos</span
+      >
+    </li>
+  </ul>
+</div>
