@@ -11,14 +11,16 @@ const { bgImage, bgImageDesktop } = Astro.props;
 ---
 
 <div
-  class="relative mx-auto flex min-w-full max-w-7xl flex-col items-start justify-between px-7 pb-24 pt-8 sm:justify-start md:flex-row md:items-center md:gap-0 md:py-16 lg:pb-40"
+  class="relative mx-auto flex min-w-full flex-col items-start justify-between px-7 pb-24 pt-8 sm:justify-start md:flex-row md:items-center md:gap-0 md:py-16 lg:pb-40"
 >
-  <div class="absolute left-0 top-0 -z-10 h-full md:left-auto md:right-0">
-    <div class="absolute inset-0 z-10 bg-[#11171E90] lg:hidden"></div>
+  <div
+    class="absolute left-0 top-0 -z-10 h-full overflow-y-hidden md:left-auto md:right-0"
+  >
+    <div class="absolute inset-0 z-10 bg-[#11171E90]"></div>
     <Image
       src={bgImageDesktop}
       alt="Imagen de un grupo de ingenieros haciendo un proyecto sobre una mesa"
-      class="hidden h-full object-cover md:block"
+      class="hidden w-screen md:block"
     />
     <Image
       src={bgImage}
@@ -26,7 +28,7 @@ const { bgImage, bgImageDesktop } = Astro.props;
       class="h-full object-cover md:hidden"
     />
   </div>
-  <div>
+  <div class="mx-auto w-full max-w-7xl md:px-8">
     <div class="mb-8">
       <hgroup class="mb-8 max-w-xl sm:mb-32 md:mb-8 lg:mb-16">
         <slot />

@@ -1,10 +1,38 @@
 ---
-import HeroHome1 from "../Atoms/HeroHome1.astro";
-import HeroHome2 from "../Atoms/HeroHome2.astro";
-import HeroHome3 from "../Atoms/HeroHome3.astro";
+import HeroHome from "../Atoms/HeroHome.astro";
+import bgHomeHero1 from "@src/Images/Home/bg-HomeHero1-v2.avif";
+import bgHomeHeroDesktop1 from "@src/Images/Home/bgHomeHeroDesktop1-v2.avif";
+import bgHomeHero2 from "@src/Images/Home/bg-HomeHero2-v2.avif";
+import bgHomeHeroDesktop2 from "@src/Images/Home/bgHomeHeroDesktop2-v2.avif";
+import bgHomeHero3 from "@src/Images/Home/bg-HomeHero3-v2.avif";
+import bgHomeHeroDesktop3 from "@src/Images/Home/bgHomeHeroDesktop3-v2.avif";
+
+const Heros = [
+  {
+    title: "Tu camino hacia la especialización Comienza aquí",
+    description:
+      "Potencia tu futuro con nuestras líneas de carrera en Hardware, Software, Microcontroladores e Internet de las cosas, donde aprenderás con expertos en tecnología a diseñar, programar e innovar para enfrentar los retos de la industria actual.",
+    bgImage: bgHomeHero1,
+    bgImageDesktop: bgHomeHeroDesktop1,
+  },
+  {
+    title: "Consultoría especializada Para Impulsar proyectos Tecnológicos",
+    description:
+      "Ofrecemos asesoría profesional a empresas y estudiantes para desarrollar soluciones innovadoras en hardware, software y tecnologías IoT, adaptadas a los desafíos y necesidades del mercado actual. ¡Haz realidad tus ideas con el respaldo de expertos en tecnología!",
+    bgImage: bgHomeHero2,
+    bgImageDesktop: bgHomeHeroDesktop2,
+  },
+  {
+    title: "Potencia tu empresa con Soluciones Tecnológicas a la Medida",
+    description:
+      "Diseñamos soluciones personalizadas en Hardware; Software e loT, combinando tecnología de vanguardia para llevar tus ideas al siguiente nivel y convertirlas en resultados efectivos para la industria y el comercio.",
+    bgImage: bgHomeHero3,
+    bgImageDesktop: bgHomeHeroDesktop3,
+  },
+];
 ---
 
-<div id="sliderControl" class="mx-auto max-w-7xl md:px-8">
+<div id="sliderControl" class="">
   <input
     class="hidden"
     checked
@@ -16,9 +44,16 @@ import HeroHome3 from "../Atoms/HeroHome3.astro";
   <input class="hidden" type="radio" name="heroSelector" id="heroSelector3" />
   <div id="heroSlider" class="overflow-x-hidden">
     <div id="heroContainer" class="flex h-fit transition-all duration-300">
-      <HeroHome1 />
-      <HeroHome2 />
-      <HeroHome3 />
+      {
+        Heros.map((hero) => (
+          <HeroHome
+            title={hero.title}
+            description={hero.description}
+            bgImage={hero.bgImage}
+            bgImageDesktop={hero.bgImageDesktop}
+          />
+        ))
+      }
     </div>
   </div>
   <ul

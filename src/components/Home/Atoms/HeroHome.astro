@@ -1,0 +1,20 @@
+---
+import bgHomeHero1 from "@src/Images/Home/bg-HomeHero1-v2.avif";
+import bgHomeHeroDesktop1 from "@src/Images/Home/bgHomeHeroDesktop1.avif";
+import HeroHomeLayout from "../Sections/HeroHomeLayout.astro";
+
+const { bgImage, bgImageDesktop, title, description } = Astro.props
+---
+
+<HeroHomeLayout bgImage={bgImage} bgImageDesktop={bgImageDesktop}>
+  <h1
+    class="mb-6 font-bold text-white-200 text-4xl md:text-4xl xs:text-5xl lg:text-5xl text-pretty"
+  >
+    {title}
+  </h1>
+  <p
+    class="font-light text-white-300 text-xl md:text-2xl text-pretty leading-tight"
+  >
+    {description}
+  </p>
+</HeroHomeLayout>
