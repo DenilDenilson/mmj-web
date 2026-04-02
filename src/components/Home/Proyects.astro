@@ -1,9 +1,17 @@
 ---
+import { Image } from "astro:assets";
 import ProyectsContainer from "./Sections/ProyectsContainer.astro";
 import ProyectsTitle from "./Sections/ProyectsTitle.astro.astro";
+import ProjectHomeBg from "@src/Images/Home/ProjectHomeBg.avif";
 ---
 
-<section>
+<section class="relative">
+  <Image
+    src={ProjectHomeBg}
+    alt="Proyectos"
+    class="absolute -z-10 h-full w-full object-cover object-center"
+  />
+  <div class="absolute -z-10 h-full w-full bg-black-900/80"></div>
   <div class="mx-auto max-w-7xl px-7 py-20 md:px-7">
     <ProyectsTitle />
     <ProyectsContainer />
