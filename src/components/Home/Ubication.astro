@@ -1,9 +1,17 @@
 ---
 import UbicationInfo from "./Sections/UbicationInfo.astro";
 import UbicationTitle from "./Sections/UbicationTitle.astro";
+import BgFormHome from "@src/Images/Home/BgFormHome.avif";
+import { Image } from "astro:assets";
 ---
 
-<section class="bg-white-100">
+<section class="relative mt-2">
+  <Image
+    src={BgFormHome}
+    alt="Ubicación"
+    class="absolute -z-10 h-full w-full object-cover object-center"
+  />
+  <div class="absolute -z-10 h-full w-full bg-black-900/80"></div>
   <div class="mx-auto max-w-7xl overflow-hidden px-7 pb-28 pt-20 md:px-8">
     <UbicationTitle />
     <UbicationInfo />

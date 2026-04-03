@@ -1,46 +1,46 @@
 <form
-  class="mb-12 flex w-full flex-col justify-between justify-self-center rounded-lg p-6 shadow-[0px_0px_24px_10px_#18181B30] lg:mb-0 lg:w-[416px] lg:p-10"
+  class="mb-12 flex w-full flex-col justify-between justify-self-center rounded-lg p-6 shadow-[0px_0px_24px_10px_#18181B30] lg:mb-0 lg:p-10"
   action=""
 >
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:gap-4">
     <div class="flex flex-col">
-      <label for="name" class="h-5 text-black-500">Nombres:*</label>
+      <label for="name" class="h-5 text-white-200">Nombres:*</label>
       <input
         type="text"
         id="name"
         name="name"
-        class="border-b-2 border-black-200 px-2 py-2 invalid:border-[#C82323] invalid:text-[#C82323] focus:border-[#1D7A8A]"
+        class="rounded-lg border-b-2 border-white-200 px-2 py-2 invalid:border-[#C82323] invalid:text-[#C82323] focus:border-[#1D7A8A]"
       />
     </div>
     <div class="flex flex-col">
-      <label for="email" class="h-5 text-black-500">Correo:*</label>
+      <label for="email" class="h-5 text-white-200">Correo:*</label>
       <input
         type="email"
         id="email"
         name="email"
-        class="border-b-2 border-black-200 px-2 py-2 invalid:border-[#C82323] invalid:text-[#C82323] focus:border-[#1D7A8A]"
+        class="rounded-lg border-b-2 border-white-200 px-2 py-2 invalid:border-[#C82323] invalid:text-[#C82323] focus:border-[#1D7A8A]"
       />
     </div>
     <div class="flex flex-col">
-      <label for="email" class="h-5 text-black-500">Celular:*</label>
+      <label for="phone" class="h-5 text-white-200">Celular:*</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        class="rounded-lg border-b-2 border-white-200 px-2 py-2 invalid:border-[#C82323] invalid:text-[#C82323] focus:border-[#1D7A8A]"
+      />
+    </div>
+    <!-- <div class="flex flex-col">
+      <label for="email" class="h-5 text-white-200">Asunto:*</label>
       <input
         type="email"
         id="email"
         name="email"
-        class="border-b-2 border-black-200 px-2 py-2 invalid:border-[#C82323] invalid:text-[#C82323] focus:border-[#1D7A8A]"
+        class="px-2 py-2 border-white-200 focus:border-[#1D7A8A] invalid:border-[#C82323] border-b-2 rounded-lg invalid:text-[#C82323]"
       />
-    </div>
-    <div class="flex flex-col">
-      <label for="email" class="h-5 text-black-500">Asunto:*</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        class="border-b-2 border-black-200 px-2 py-2 invalid:border-[#C82323] invalid:text-[#C82323] focus:border-[#1D7A8A]"
-      />
-    </div>
-    <div class="flex flex-col gap-1">
-      <label for="message" class="h-5 text-black-500">Mensaje</label>
+    </div> -->
+    <div class="flex flex-col gap-1 lg:col-span-3">
+      <label for="message" class="h-5 text-white-200">Mensaje</label>
       <textarea
         name="message"
         id="message"
@@ -52,9 +52,16 @@
   <div>
     <button
       type="submit"
-      class="mt-8 h-14 w-full rounded bg-primary-500 px-8 py-4 text-base text-white-200 hover:bg-primary-400 lg:mt-0"
+      class="mt-8 grid h-10 w-full place-content-center rounded bg-primary-500 px-8 py-4 text-base text-white-200 hover:bg-primary-400 lg:mt-8"
     >
       Enviar mensaje
     </button>
   </div>
 </form>
+
+<style>
+  form input,
+  form textarea {
+    background-color: transparent;
+  }
+</style>
