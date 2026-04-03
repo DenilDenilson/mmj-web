@@ -1,10 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import puzzle from "@src/Images/Consultoria/Puzzle.png";
+
+const { extraClass } = Astro.props;
 ---
 
 <div
-  class="relative z-10 grid h-28 w-28 place-content-center rounded-full bg-white-500"
+  class={`relative z-10 grid h-28 w-28 place-content-center rounded-full bg-white-500 ${extraClass}`}
 >
   <div
     class="semi-circle absolute -bottom-1 -left-1 -z-10 h-[120px] w-[120px] bg-gradient-to-r from-[#006C57] to-[#009E7E]"

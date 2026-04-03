@@ -1,15 +1,30 @@
 ---
-import SolutionHardwareContainer from "./Sections/SolutionHardwareContainer.astro";
-import SolutionIoTContainer from "./Sections/SolutionIoTContainer.astro";
-import SolutionSoftwareContainer from "./Sections/SolutionSoftwareContainer.astro";
+import SolutionHomeContainer from "./Sections/SolutionHomeContainer.astro";
+import SolutionHomeSelector from "./Sections/SolutionHomeSelector.astro";
 import SolutionsTitle from "./Sections/SolutionsTitle.astro";
+// import SolutionHardwareContainer from "./Sections/SolutionHardwareContainer.astro";
+// import SolutionIoTContainer from "./Sections/SolutionIoTContainer.astro";
+// import SolutionSoftwareContainer from "./Sections/SolutionSoftwareContainer.astro";
 ---
 
 <section class="bg-white-500">
   <div class="mx-auto max-w-7xl overflow-hidden py-20">
     <SolutionsTitle />
-    <SolutionIoTContainer />
-    <SolutionHardwareContainer />
-    <SolutionSoftwareContainer />
+    <div id="solutions-slider">
+      <input
+        class="hidden"
+        name="solutions"
+        id="solution1"
+        type="radio"
+        checked
+      />
+      <input class="hidden" name="solutions" id="solution2" type="radio" />
+      <input class="hidden" name="solutions" id="solution3" type="radio" />
+      <SolutionHomeSelector />
+      <SolutionHomeContainer />
+    </div>
+    <!-- <SolutionIoTContainer /> -->
+    <!-- <SolutionHardwareContainer /> -->
+    <!-- <SolutionSoftwareContainer /> -->
   </div>
 </section>

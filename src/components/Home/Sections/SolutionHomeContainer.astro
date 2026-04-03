@@ -1,0 +1,233 @@
+---
+import Antena from "@src/Images/icons/Antena.astro";
+import Lupa from "@src/Images/icons/Lupa.astro";
+import ControlRemoto from "@src/Images/icons/ControlRemoto.astro";
+import BolsaDinero from "@src/Images/icons/BolsaDinero.astro";
+import SolutionHome from "./SolutionHome.astro";
+
+const Solutions = [
+  {
+    title: "Diseño de soluciones IoT",
+    description:
+      "Diseñamos y desarrollamos soluciones a medida que se adaptan a tus necesidades específicas, desde software especializado hasta hardware y dispositivos IoT interconectados",
+    url: "",
+    video: "",
+    implications: [
+      "Monitoreo de señales analógicas",
+      "Diseño de arquitectura IoT personalizada",
+      "Desarrollo de sensores y dispositivos inteligentes",
+      "Implemantación de plataforma de gestión de datos",
+      "Integración con sistemas existentes",
+      "Pruebas de conectividad y seguridad",
+    ],
+    beneficts: [
+      {
+        title: "Monitoreo en tiempo real",
+        description:
+          "Acceso a datos en vivo para una toma de decisiones más rápida y eficaz.",
+        icon: Antena,
+      },
+      {
+        title: "Automatización de procesos",
+        description:
+          "Optimización de operaciones mediante la automatización de tareas repetitivas.",
+        icon: Lupa,
+      },
+      {
+        title: "Mantenimiento predictivo",
+        description:
+          "Identificación temprana de problemas para reducir tiempos de inactividad.",
+        icon: ControlRemoto,
+      },
+      {
+        title: "Mejora en la eficiencia operativa",
+        description:
+          "Optimización de recursos y reducción de costos operativos.",
+        icon: BolsaDinero,
+      },
+    ],
+  },
+  {
+    title: "Desarrollo de Hardware",
+    description:
+      "Diseñamos hardware personalizado para distintos campos de la industria. Somos expertos en el diseño y fabricación de PCBs de alta calidad, adaptados a las necesidades del cliente. Además, ofrecemos servicios de ensamblaje para asegurar una solución completa y eficiente.",
+    url: "",
+    video: "",
+    implications: [
+      "Diseño electrónico de tarjetas PCBs",
+      "Fabricación local e internacional de tarjetas PCBs",
+      "Ensamblaje y testeo de tarjetas PCBs",
+      "Ingeniería inversa de quipos electrónicos",
+      "Desarrollo de productos electrónicos personalizados",
+      "Diseño mecánico e impresión 3D",
+    ],
+    beneficts: [
+      {
+        title: "Personalización Total",
+        description: "PCBs adaptadas a tus necesidades.",
+        icon: Antena,
+      },
+      {
+        title: "Calidad y Precisión",
+        description: "Fabricación y ensamblake bajo normativas.",
+        icon: Lupa,
+      },
+      {
+        title: "Eficiencia",
+        description: "Reducción de costos y tiempos.",
+        icon: ControlRemoto,
+      },
+      {
+        title: "Escalabilidad",
+        description:
+          "Optimización de recursos y reducción de costos operativos.",
+        icon: BolsaDinero,
+      },
+    ],
+  },
+  {
+    title: "Desarrollo de Software",
+    description:
+      "Ofrecemos soluciones de software personalizadas para diversas industrias, adaptándonos a las necesidades específicas de cada cliente. Nos especializamos en la optimización de procesos, monitoreo y automatización, garantizando eficiencia y crecimiento de tu proceso o negocio.",
+    url: "",
+    video: "",
+    implications: [
+      "Programación de microcontroladores",
+      "Desarrollo de software industrial",
+      "Desarrollo de aplicaciones Web IoT en la nube o local",
+      "Desararollo de plataformas de gestión de datos",
+      "Desarrollo de aplicaciones móviles",
+      "Implemantación de sistemas operativos en tiempo real",
+    ],
+    beneficts: [
+      {
+        title: "Optimización de Procesos",
+        description:
+          "Mejora en productividad y eficiencia mediante software a medida.",
+        icon: Antena,
+      },
+      {
+        title: "Automatización de procesos",
+        description:
+          "Reducción de intervención manual y errores mediante la automatización de tareas repetitivas.",
+        icon: Lupa,
+      },
+      {
+        title: "Escalabilidad y Flexibilidad",
+        description: "Adaptable a distintos entornos y necesidades.",
+        icon: ControlRemoto,
+      },
+      {
+        title: "Control centralizado",
+        description:
+          "Monitoreo y gestión integrada de los procesos en tiempo real.",
+        icon: BolsaDinero,
+      },
+    ],
+  },
+];
+---
+
+<section>
+  {
+    Solutions.map((solution: any, index: number) => (
+      <SolutionHome
+        title={solution.title}
+        description={solution.description}
+        url={solution.url}
+        video={solution.video}
+        implications={solution.implications}
+        beneficts={solution.beneficts}
+        data-index={index + 1}
+      />
+    ))
+  }
+</section>
+
+<style is:global>
+  /* Ocultar todas las soluciones por defecto */
+  #solutions-slider [data-index] {
+    display: none;
+  }
+
+  /* Mostrar la primera solución por defecto */
+  #solutions-slider [data-index="1"] {
+    display: block;
+  }
+
+  /* Mostrar solución 1 cuando se selecciona */
+  #solutions-slider
+    input:nth-child(1):checked
+    ~ section
+    ~ section
+    [data-index="1"] {
+    display: block;
+  }
+
+  /* Ocultar otras soluciones cuando se selecciona la 1 */
+  #solutions-slider
+    input:nth-child(1):checked
+    ~ section
+    ~ section
+    [data-index]:not([data-index="1"]) {
+    display: none;
+  }
+
+  /* Mostrar solución 2 cuando se selecciona */
+  #solutions-slider
+    input:nth-child(2):checked
+    ~ section
+    ~ section
+    [data-index="2"] {
+    display: block;
+  }
+
+  /* Ocultar otras soluciones cuando se selecciona la 2 */
+  #solutions-slider
+    input:nth-child(2):checked
+    ~ section
+    ~ section
+    [data-index]:not([data-index="2"]) {
+    display: none;
+  }
+
+  /* Mostrar solución 3 cuando se selecciona */
+  #solutions-slider
+    input:nth-child(3):checked
+    ~ section
+    ~ section
+    [data-index="3"] {
+    display: block;
+  }
+
+  /* Ocultar otras soluciones cuando se selecciona la 3 */
+  #solutions-slider
+    input:nth-child(3):checked
+    ~ section
+    ~ section
+    [data-index]:not([data-index="3"]) {
+    display: none;
+  }
+
+  /* Estilos para los botones seleccionados */
+  #solutions-slider .solution-option {
+    transition: all 0.3s ease;
+  }
+
+  #solutions-slider
+    input:nth-child(1):checked
+    ~ section
+    .solution-option:nth-child(1),
+  #solutions-slider
+    input:nth-child(2):checked
+    ~ section
+    .solution-option:nth-child(2),
+  #solutions-slider
+    input:nth-child(3):checked
+    ~ section
+    .solution-option:nth-child(3) {
+    background-color: #c40b2a;
+    color: white;
+    border-color: #c40b2a;
+  }
+</style>
