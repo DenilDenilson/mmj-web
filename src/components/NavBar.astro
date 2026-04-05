@@ -490,16 +490,20 @@ let selectedFlagComponent = "FlagForPeru"; // Componente de la bandera inicial
     // Cerrar el menú al hacer clic fuera de él
     document.addEventListener("click", (event) => {
       const currencyMenu = document.getElementById("currency-menu");
-      const arrowCurrency = document.getElementById(
+      const currencyTrigger = document.getElementById(
         "select-content-currency",
-      ).lastElementChild;
+      );
+      const arrowCurrency = currencyTrigger?.lastElementChild;
 
       // Verifica si el menú y la flecha existen antes de intentar acceder a sus propiedades
       if (
         currencyMenu &&
         arrowCurrency &&
         !currencyMenu.contains(event.target) &&
-        !event.target.closest(".currency-dropdown")
+        !(
+          event.target instanceof Element &&
+          event.target.closest(".currency-dropdown")
+        )
       ) {
         currencyMenu.classList.add("hidden");
         arrowCurrency.classList.remove("rotate-180");
