@@ -1,0 +1,92 @@
+---
+import { getCollection } from "astro:content";
+import CatSorter from "./CatSorter.astro";
+import CatFinder from "./CatFinder.astro";
+import CatFilter from "./CatFilter.astro";
+
+const allProducts = await getCollection("products");
+---
+
+<CatFinder />
+<CatSorter />
+<CatFilter />
+<div id="products-container">
+  {
+    allProducts.map((product) => (
+      <div
+        class="cat-product m-4 rounded border-2 border-black-700 p-2"
+        id={product.id}
+        data-category={product.id.split("/")[0]}
+        data-name={product.data.nombre}
+        data-description={product.data.descripcion}
+        data-price={product.data.precio}
+      >
+        <h2>{product.data.nombre}</h2>
+        <p>{product.data.descripcion}</p>
+        <strong>{product.data.precio}</strong>
+        <strong>{product.data.moneda}</strong>
+        <div class="text-end">{product.id.split("/")[0]}</div>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  const products = document.querySelectorAll<HTMLElement>(".cat-product");
+  const searchInput = document.getElementById(
+    "cat-search",
+  ) as HTMLInputElement | null;
+  const catSelector = document.getElementById(
+    "cat-selector",
+  ) as HTMLInputElement | null;
+  const catSorter = document.getElementById(
+    "cat-sorter",
+  ) as HTMLInputElement | null;
+  const container = document.getElementById("products-container");
+
+  catSorter?.addEventListener("change", (e) => {
+    const sort = (e.target as HTMLInputElement).value.toLowerCase();
+    const productsArray = Array.from(
+      container?.querySelectorAll<HTMLElement>(".cat-product") ?? [],
+    );
+    const sorted = productsArray.sort((a, b) => {
+      const priceA = parseFloat(a.dataset.price ?? "0");
+      const priceB = parseFloat(b.dataset.price ?? "0");
+
+      return sort === "precio-bajo" ? priceA - priceB : priceB - priceA;
+    });
+
+    // 🔥 limpiar y volver a insertar
+    container!.innerHTML = "";
+    sorted.forEach((el) => container!.appendChild(el));
+  });
+
+  catSelector?.addEventListener("change", (e) => {
+    const category = (e.target as HTMLInputElement).value.toLowerCase();
+
+    products.forEach((product) => {
+      const productCategory = product.dataset.category?.toLowerCase() ?? "";
+
+      const matchCategory = category === "all" || productCategory === category;
+
+      product.style.display = matchCategory ? "block" : "none";
+    });
+  });
+
+  searchInput?.addEventListener("input", (e) => {
+    const search = (e.target as HTMLInputElement).value.toLowerCase();
+
+    products.forEach((product) => {
+      const name = product.dataset.name?.toLowerCase() ?? "";
+      const description = product.dataset.description?.toLowerCase() ?? "";
+      const category = product.dataset.category?.toLowerCase() ?? "";
+
+      const matchSearch =
+        name.includes(search) ||
+        description.includes(search) ||
+        category.includes(search);
+
+      product.style.display = matchSearch ? "block" : "none";
+    });
+  });
+</script>
