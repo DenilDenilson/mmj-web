@@ -1,0 +1,14 @@
+{
+  "id": "modulos_051",
+  "nombre": "Transceptor Ethernet LAN8720 10/100MB",
+  "descripcion": "Módulo PHY Ethernet para comunicación 10/100Mbps en dispositivos embebidos.",
+  "subcategoria": "Comunicacion y Conversion",
+  "caracteristicas": [
+    "Soporte RMII",
+    "bajo consumo",
+    "compatible con MCU comunes"
+  ],
+  "precio": 80,
+  "moneda": "PEN",
+  "fotos": []
+}

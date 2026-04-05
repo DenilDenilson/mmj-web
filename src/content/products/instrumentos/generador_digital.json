@@ -1,0 +1,14 @@
+{
+  "id": "instrumentos_077",
+  "nombre": "Generador de señal digital 4-20mA 0-10V Transmisor de corriente de voltaje",
+  "descripcion": "Generador de señales para pruebas profesionales de 4-20mA y 0-10V.",
+  "subcategoria": "Instrumentacion",
+  "caracteristicas": [
+    "Preciso",
+    "múltiple rango",
+    "uso laboratorio e industrial"
+  ],
+  "precio": 160,
+  "moneda": "PEN",
+  "fotos": []
+}

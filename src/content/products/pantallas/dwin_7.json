@@ -1,0 +1,10 @@
+{
+  "id": "pantallas_072",
+  "nombre": "DWIN de 7,0 pulgadas 1024RGB600",
+  "descripcion": "Pantalla táctil LCD de 7” con resolución 1024x600 para interfaces gráﬁcas.",
+  "subcategoria": "HMI Industrial",
+  "caracteristicas": ["Pantalla TFT", "alta resolución", "interfaz TTL"],
+  "precio": 430,
+  "moneda": "PEN",
+  "fotos": []
+}

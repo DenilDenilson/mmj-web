@@ -1,0 +1,10 @@
+{
+  "id": "modulos_069",
+  "nombre": "Conversor RS485/RS422 a USB",
+  "descripcion": "Conversor industrial que convierte señales RS485/RS422 a USB",
+  "subcategoria": "Comunicacion y Conversion",
+  "caracteristicas": ["Convertidor que incluye un adaptador de 2 hilos"],
+  "precio": 120,
+  "moneda": "PEN",
+  "fotos": []
+}

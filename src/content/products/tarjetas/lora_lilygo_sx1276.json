@@ -1,0 +1,14 @@
+{
+  "id": "tarjetas_desarrollo_010",
+  "nombre": "LilyGo Lora SX1276 (915MHz)",
+  "descripcion": "Placa de desarrollo con módulo LoRa SX1276 para proyectos IoT 915 MHz.",
+  "subcategoria": "Comunicacion",
+  "caracteristicas": [
+    "Soporte LoRa",
+    "microcontrolador integrado",
+    "conectividad UART y SPI"
+  ],
+  "precio": 150,
+  "moneda": "PEN",
+  "fotos": []
+}

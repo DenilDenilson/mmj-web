@@ -1,0 +1,10 @@
+{
+  "id": "sensores_029",
+  "nombre": "Temperatura y humedad ambiente Modbus RTU RS485",
+  "descripcion": "Sensor conﬁable para monitoreo de temperatura y humedad en ambientes industriales.",
+  "subcategoria": "Grado Industrial",
+  "caracteristicas": ["Interfaz RS485", "4-20mA", "robusto y preciso"],
+  "precio": 145,
+  "moneda": "PEN",
+  "fotos": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antenas_045",
+  "nombre": "Antena SMA-J para conectividad WIFI",
+  "descripcion": "Antena con conector SMA para dispositivos IoT como ESP32 entre otros.",
+  "subcategoria": "WiFi",
+  "caracteristicas": ["Frecuencia 2", "4Ghz", "5dBi"],
+  "precio": 30,
+  "moneda": "PEN",
+  "fotos": []
+}

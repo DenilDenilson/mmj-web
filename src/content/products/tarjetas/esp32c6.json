@@ -1,0 +1,15 @@
+{
+  "id": "tarjetas_desarrollo_012",
+  "nombre": "SeedStudio ESP32C6",
+  "descripcion": "Placa de desarrollo ESP32 con conectividad WiFi, Bluetooth y mejor eﬁciencia.",
+  "subcategoria": "Microcontroladores",
+  "caracteristicas": [
+    "WiFi 6",
+    "Bluetooth 5",
+    "múltiples GPIO",
+    "bajo consumo"
+  ],
+  "precio": 50,
+  "moneda": "PEN",
+  "fotos": []
+}

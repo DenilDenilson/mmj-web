@@ -1,0 +1,13 @@
+{
+    "id": "actuadores_071",
+    "nombre": "Solenoide tipo Push-Pull DC 24V 20mm",
+    "descripcion": "Electroimán push-pull ideal para automatización, cerraduras y control mecánico.",
+    "subcategoria": "Solenoide",
+    "caracteristicas": [
+      "Voltaje de 24V DC 10A con 8 kg de fuerza y 20 mm de carrera",
+      "robusto y fácil de instalar"
+    ],
+    "precio": 320,
+    "moneda": "PEN",
+    "fotos": []
+  }

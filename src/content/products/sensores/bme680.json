@@ -1,0 +1,14 @@
+{
+  "id": "sensores_027",
+  "nombre": "BME680",
+  "descripcion": "Sensor ambiental multifuncional para medir gases, humedad, temperatura y presión.",
+  "subcategoria": "General",
+  "caracteristicas": [
+    "Sensor de gases",
+    "presión barométrica",
+    "humedad y temperatura"
+  ],
+  "precio": 85,
+  "moneda": "PEN",
+  "fotos": []
+}

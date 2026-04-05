@@ -1,0 +1,10 @@
+{
+  "id": "plc_095",
+  "nombre": "INKALOGIC BASIC",
+  "descripcion": "INKALOGIC BASIC Es un PLC industrial alimentado a 12/24V que cuenta con 4 entradas digitales para sensores, PNP o contacto seco con test de prueba sin conexión a sensor, 4 salidas digitales tipo relé para cargas de hasta 5A, 1 alarma integrada por buzzer. Procesador basado en el ESP32 con Wiﬁ, Bluetooth y RF, puerto USB para programación y depuración, 1 Puerto RS485 para comunicaciones industriales, 2puertos I2C y 2 SPI. El equipo cuenta con un puerto de expansión MikroBUS para adaptarle más de 1500 funcionalidades adicionales. SIM7000G o SIM7600G.",
+  "subcategoria": "Producto Propio MMJ",
+  "caracteristicas": [],
+  "precio": 300,
+  "moneda": "PEN",
+  "fotos": []
+}

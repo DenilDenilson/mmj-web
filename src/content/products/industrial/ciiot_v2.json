@@ -1,0 +1,10 @@
+{
+  "id": "plc_096",
+  "nombre": "CONTROLADOR INDUSTRIAL IOT V2.0",
+  "descripcion": "CONTROLADOR INDUSTRIAL IOT V2.0 Es un PLC industrial alimentado a 12/24V que cuenta con 6 entradas digitales para sensores NPN, PNP o contacto seco, 4 entradas analógicas conﬁgurables entre 0-10V y 4-20mA, interfaz Ethernet para protocolos Modbus TCP/IP, MQTT, HTTP, SMTP, y RS485 para Modbus RTU; además tiene 6 salidas tipo relé para cargas hasta 5A, procesador ESP32 con WiFi, Bluetooth y RF, puerto USB para programación y depuración, 4 puertos I2C, un puerto UART para pantallas industriales, comunicación CanBUS y opción de conexión con módulos GSM/GPRS SIM800L, SIM7000G o SIM7600G.",
+  "subcategoria": "PLC Industrial",
+  "caracteristicas": [],
+  "precio": 650,
+  "moneda": "PEN",
+  "fotos": []
+}

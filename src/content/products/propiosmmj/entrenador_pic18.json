@@ -1,0 +1,10 @@
+{
+  "id": "tarjetas_desarrollo_094",
+  "nombre": "MMJ ENTRENADOR PIC18",
+  "descripcion": "Tarjeta entrenadora compatible con microcontroladores PIC18F, que incluye 3 puertos mikroBUS, display multiplexado de 4 dígitos, botones, LEDs, interfaces USB y RS232, alimentada por fuente externa o USB, ideal para aprendizaje y desarrollo con PICKit y pruebas embebidas.",
+  "subcategoria": "Producto Propio MMJ",
+  "caracteristicas": [],
+  "precio": 300,
+  "moneda": "PEN",
+  "fotos": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "expansores_060",
+  "nombre": "Entradas y salidas 4AI,2DO Modbus RTU RS485",
+  "descripcion": "Expansor con 4 entradas analógicas y 2 salidas digitales para comunicaciones RS485.",
+  "subcategoria": "Entradas y Salidas",
+  "caracteristicas": ["Protocolo Modbus RTU", "alta precisión", "robusto"],
+  "precio": 95,
+  "moneda": "PEN",
+  "fotos": []
+}

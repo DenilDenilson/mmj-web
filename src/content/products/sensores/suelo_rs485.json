@@ -1,0 +1,14 @@
+{
+  "id": "sensores_028",
+  "nombre": "Medición de suelo 7 en 1 Modbus RTU RS485",
+  "descripcion": "Sensor robusto que mide temperatura, humedad, pH, y más para análisis de suelo.",
+  "subcategoria": "Grado Industrial",
+  "caracteristicas": [
+    "7 parámetros",
+    "comunicación RS485",
+    "protocolo Modbus RTU"
+  ],
+  "precio": 300,
+  "moneda": "PEN",
+  "fotos": []
+}

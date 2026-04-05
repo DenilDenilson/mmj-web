@@ -1,0 +1,14 @@
+{
+  "id": "tarjetas_desarrollo_011",
+  "nombre": "LilyGo GSM/GPRS SIM800L",
+  "descripcion": "Placa con módulo GSM/GPRS SIM800L para comunicación celular y control remoto.",
+  "subcategoria": "Comunicacion",
+  "caracteristicas": [
+    "Soporte 2G",
+    "interfaz UART",
+    "microcontrolador integrado"
+  ],
+  "precio": 140,
+  "moneda": "PEN",
+  "fotos": []
+}

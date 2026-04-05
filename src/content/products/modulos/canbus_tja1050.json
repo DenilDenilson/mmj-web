@@ -1,0 +1,10 @@
+{
+  "id": "modulos_052",
+  "nombre": "CAN Bus TJA1050 SPI",
+  "descripcion": "Módulo controlador CAN para comunicación industrial con interfaz SPI.",
+  "subcategoria": "Comunicacion y Conversion",
+  "caracteristicas": ["Protocolo CAN 2", "interfaz SPI", "alta ﬁabilidad"],
+  "precio": 25,
+  "moneda": "PEN",
+  "fotos": []
+}

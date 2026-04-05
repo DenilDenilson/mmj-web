@@ -1,0 +1,17 @@
+{
+  "id": "comunicacion_002",
+  "nombre": "GSM/GPRS/3G/4G SIM7600G",
+  "descripcion": "Módulo celular con soporte 4G LTE y funcionalidades avanzadas LTE Cat-1.",
+  "subcategoria": "Comunicacion Inalambrica",
+  "caracteristicas": [
+    "Voz",
+    "datos",
+    "SMS",
+    "GNSS integrado",
+    "soporte multibandas",
+    "protocolos TCP/IP"
+  ],
+  "precio": 300,
+  "moneda": "PEN",
+  "fotos": []
+}

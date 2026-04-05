@@ -1,0 +1,15 @@
+{
+  "id": "comunicacion_001",
+  "nombre": "GSM/GPRS/3G/4G SIM7000G",
+  "descripcion": "Módulo de comunicación celular para IoT y aplicaciones M2M con soporte 4G.",
+  "subcategoria": "Comunicacion Inalambrica",
+  "caracteristicas": [
+    "Compatible con bandas 4G LTE",
+    "bajo consumo energético",
+    "soporte GNSS",
+    "interfaz UART y SPI"
+  ],
+  "precio": 160,
+  "moneda": "PEN",
+  "fotos": []
+}

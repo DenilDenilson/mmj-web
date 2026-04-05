@@ -1,0 +1,15 @@
+{
+  "id": "comunicacion_006",
+  "nombre": "LoRa E220-900T22D 915MHz 5Km+Antena",
+  "descripcion": "Módulo LoRa de largo alcance para comunicaciones inalámbricas 915 MHz.",
+  "subcategoria": "LoRa",
+  "caracteristicas": [
+    "Alcance 5 km",
+    "alta sensibilidad",
+    "antena incluida",
+    "interfaz UART"
+  ],
+  "precio": 115,
+  "moneda": "PEN",
+  "fotos": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tarjetas_desarrollo_023",
+  "nombre": "Amiba2",
+  "descripcion": "Placa de desarrollo versátil para prototipos y aplicaciones de IoT y sistemas embebidos.",
+  "subcategoria": "Producto Propio MMJ",
+  "caracteristicas": [
+    "Compatible con varios periféricos",
+    "múltiples entradas/salidas",
+    "soporte para expansores y sensores",
+    "interfaz de fácil programación"
+  ],
+  "precio": 280,
+  "moneda": "PEN",
+  "fotos": []
+}

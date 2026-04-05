@@ -1,0 +1,14 @@
+{
+  "id": "expansores_059",
+  "nombre": "Entradas y salidas 2DI,2AI,4DO Modbus RTU RS485",
+  "descripcion": "Expansor de I/O para control y monitoreo con protocolo Modbus RTU RS485.",
+  "subcategoria": "Entradas y Salidas",
+  "caracteristicas": [
+    "2 entradas digitales",
+    "2 analógicas",
+    "4 salidas digitales"
+  ],
+  "precio": 130,
+  "moneda": "PEN",
+  "fotos": []
+}
