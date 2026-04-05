@@ -1,0 +1,40 @@
+---
+import BgFormHome from "@src/Images/Catalogo/HeroBg.avif";
+import ComponentsHero from "@src/Images/Catalogo/ComponentsHero.avif";
+import ComponentsHeroDesktop from "@src/Images/Catalogo/ComponentsHeroDesktop.avif";
+import { Image } from "astro:assets";
+---
+
+<section class="relative">
+  <Image
+    src={BgFormHome}
+    alt="Ubicación"
+    class="absolute -z-10 h-full w-full object-cover object-center"
+  />
+  <div class="absolute -z-10 h-full w-full bg-black-900/80"></div>
+  <div
+    class="relative mx-auto h-full max-w-7xl items-center px-6 pb-12 pt-16 lg:flex lg:justify-between"
+  >
+    <div class="max-w-md">
+      <h1 class="mb-4 pt-8 text-4xl font-bold text-secondary-400 lg:text-5xl">
+        Catálogo MMJ
+      </h1>
+      <p
+        class="text-pretty text-base font-light leading-snug text-white-400 lg:text-lg"
+      >
+        Dale vida a tus ideas electrónicas con nuestra selección esencial de
+        hardware. Explora módulos de desarrollo, sensores, instrumentos y
+        equipos de laboratorio, perfectos para el aula y tus proyectos más
+        innovadores.
+      </p>
+    </div>
+    <Image
+      src={ComponentsHeroDesktop}
+      alt="Componentes"
+      class="hidden aspect-auto max-w-2xl flex-1 lg:block"
+    />
+  </div>
+  <div class="">
+    <Image src={ComponentsHero} alt="Componentes" class="mt-8 lg:hidden" />
+  </div>
+</section>
