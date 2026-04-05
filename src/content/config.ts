@@ -118,9 +118,24 @@ const infoMMJCollection = defineCollection({
   type: "data",
 });
 
+const products = defineCollection({
+  type: "data",
+  schema: z.object({
+    id: z.string(),
+    nombre: z.string(),
+    descripcion: z.string(),
+    subcategoria: z.string(),
+    caracteristicas: z.array(z.string()),
+    precio: z.number(),
+    moneda: z.string(),
+    fotos: z.array(z.string()),
+  }),
+});
+
 export const collections = {
   carrers: carrerCollection,
   courses: courseCollection,
   services: serviceCollection,
   infoMMJ: infoMMJCollection,
+  products: products,
 };
