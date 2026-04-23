@@ -1,13 +1,21 @@
 ---
 import HeroInfo from "./Sections/HeroInfo.astro";
 import HeroImage from "./Sections/HeroImage.astro";
+import BgService from "@src/Images/Servicios/Hardware/BgNewBase.png";
+import { Image } from "astro:assets";
 ---
 
-<section class="lg:bg-[#11171E]">
+<section class="relative">
   <div class="h-12 w-full"></div>
   <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
   <div class="relative mx-auto max-w-7xl overflow-x-hidden sm:flex">
-    <HeroImage />
     <HeroInfo />
+    <HeroImage />
   </div>
+  <Image
+    src={BgService}
+    alt="Imagen de fondo de los servicios"
+    class="absolute top-0 hidden lg:block"
+  />
+  <div class="absolute top-0 h-full w-full bg-black-900 opacity-5"></div>
 </section>
