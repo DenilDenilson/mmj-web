@@ -28,3 +28,5 @@ pnpm-lock.yaml
 
 # De los LLM
 .codex
+DESIGN.md
+TODO.md
