@@ -1,35 +1,257 @@
 ---
 import { getCollection } from "astro:content";
-import CatSorter from "./CatSorter.astro";
-import CatFinder from "./CatFinder.astro";
-import CatFilter from "./CatFilter.astro";
 
 const allProducts = await getCollection("products");
+
+const categoryLabels: Record<string, string> = {
+  actuadores: "Actuadores",
+  antenas: "Antenas",
+  comunicacion: "Comunicación",
+  expansores: "Expansores",
+  industrial: "Industrial",
+  modulos: "Módulos",
+  pantallas: "Pantallas",
+  propiosmmj: "Propios MMJ",
+  sensores: "Sensores",
+  tarjetas: "Tarjetas",
+  all: "Todos",
+};
 ---
 
-<CatFinder />
-<CatSorter />
-<CatFilter />
-<div id="products-container">
-  {
-    allProducts.map((product) => (
-      <div
-        class="cat-product m-4 rounded border-2 border-black-700 p-2"
-        id={product.id}
-        data-category={product.id.split("/")[0]}
-        data-name={product.data.nombre}
-        data-description={product.data.descripcion}
-        data-price={product.data.precio}
+<section
+  class="bg-white px-6 pb-14 pt-[52px] lg:grid lg:grid-cols-[256px_1fr] lg:grid-rows-[164px_1fr] lg:gap-x-12 lg:gap-y-8 lg:bg-white-300 lg:px-[150px] lg:py-[74px]"
+  aria-labelledby="catalog-products-title"
+>
+  <div
+    class="mx-auto max-w-[1360px] lg:col-span-1 lg:col-start-2 lg:w-full lg:justify-self-start"
+  >
+    <h2
+      id="catalog-products-title"
+      class="m-0 max-w-[15ch] text-4xl font-bold leading-none text-secondary-500 lg:max-w-none lg:text-[48px]"
+    >
+      Nuestros Productos en MMJ
+    </h2>
+
+    <div
+      class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-4 lg:mt-[25px] lg:w-full lg:max-w-[928px]"
+    >
+      <label
+        class="inline-flex min-w-0 flex-1 items-center gap-1 rounded-2xl bg-black-50 px-4 py-2 focus-within:ring-2 focus-within:ring-secondary-500"
+        for="cat-search"
       >
-        <h2>{product.data.nombre}</h2>
-        <p>{product.data.descripcion}</p>
-        <strong>{product.data.precio}</strong>
-        <strong>{product.data.moneda}</strong>
-        <div class="text-end">{product.id.split("/")[0]}</div>
+        <svg
+          class="h-5 w-5 shrink-0 fill-black-400"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M11 18a7 7 0 1 1 4.95-2.05A6.95 6.95 0 0 1 11 18m0-12a5 5 0 1 0 0 10a5 5 0 0 0 0-10m10 15.59L17.46 18l1.41-1.41L22.41 20z"
+          ></path>
+        </svg>
+        <input
+          type="text"
+          id="cat-search"
+          placeholder="Escribe nombre del Producto"
+          autocomplete="off"
+          class="bg-transparent w-full min-w-0 border-0 text-base font-light leading-normal text-black-400 outline-none"
+        />
+      </label>
+
+      <button
+        type="button"
+        class="cursor-pointer rounded border border-primary-500 bg-primary-500 px-4 py-2 text-center text-sm font-normal leading-normal text-white-200 transition-colors hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500"
+      >
+        Buscar producto
+      </button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-start gap-3 lg:gap-8">
+      <div class="inline-flex items-center gap-2 text-base text-black-500">
+        <span>Ver:</span>
+        <span
+          class="min-w-[133px] rounded border border-black-100 px-2 py-1 font-light text-black-500"
+        >
+          Todos
+        </span>
       </div>
-    ))
-  }
-</div>
+
+      <a
+        class="inline-flex items-center gap-2 rounded border border-black-100 px-3 py-1 text-base font-light leading-normal text-black-500 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 lg:hidden"
+        href="#cat-selector"
+      >
+        <span>Filtrar por</span>
+        <svg
+          width="12"
+          height="7"
+          viewBox="0 0 12 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          class="h-[7px] w-3"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4.94797 6.1232C5.10424 6.27942 5.31617 6.36719 5.53714 6.36719C5.75811 6.36719 5.97003 6.27942 6.1263 6.1232L10.8405 1.40903C10.9923 1.25186 11.0763 1.04136 11.0744 0.822865C11.0725 0.604367 10.9848 0.395357 10.8303 0.24085C10.6758 0.086343 10.4668 -0.00129756 10.2483 -0.00319625C10.0298 -0.00509493 9.81931 0.0789003 9.66214 0.230699L5.53714 4.3557L1.41214 0.230699C1.25497 0.0789003 1.04447 -0.00509493 0.82597 -0.00319625C0.607473 -0.00129756 0.398462 0.086343 0.243955 0.24085C0.0894487 0.395357 0.00180811 0.604367 -9.05681e-05 0.822865C-0.00198925 1.04136 0.082006 1.25186 0.233804 1.40903L4.94797 6.1232Z"
+            fill="#11171E"></path>
+        </svg>
+      </a>
+
+      <label
+        class="inline-flex flex-wrap items-center gap-2 text-base text-black-500"
+        for="cat-sorter"
+      >
+        <span class="inline-flex items-center gap-2">
+          <span>Ordenar por:</span>
+          <svg
+            width="12"
+            height="7"
+            viewBox="0 0 12 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            class="h-[7px] w-3"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.94797 6.1232C5.10424 6.27942 5.31617 6.36719 5.53714 6.36719C5.75811 6.36719 5.97003 6.27942 6.1263 6.1232L10.8405 1.40903C10.9923 1.25186 11.0763 1.04136 11.0744 0.822865C11.0725 0.604367 10.9848 0.395357 10.8303 0.24085C10.6758 0.086343 10.4668 -0.00129756 10.2483 -0.00319625C10.0298 -0.00509493 9.81931 0.0789003 9.66214 0.230699L5.53714 4.3557L1.41214 0.230699C1.25497 0.0789003 1.04447 -0.00509493 0.82597 -0.00319625C0.607473 -0.00129756 0.398462 0.086343 0.243955 0.24085C0.0894487 0.395357 0.00180811 0.604367 -9.05681e-05 0.822865C-0.00198925 1.04136 0.082006 1.25186 0.233804 1.40903L4.94797 6.1232Z"
+              fill="#11171E"></path>
+          </svg>
+        </span>
+        <select
+          name="cat-sorter"
+          id="cat-sorter"
+          class="bg-white bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' fill=\'none\'%3E%3Cpath d=\'M5 7.5L10 12.5L15 7.5\' stroke=\'%2311171E\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/%3E%3C/svg%3E')] min-h-[30px] min-w-[222px] appearance-none rounded border border-black-100 bg-[position:right_8px_center] bg-no-repeat px-2 py-1 pr-[34px] text-base font-light leading-normal text-black-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500"
+        >
+          <option value="precio-bajo">Precio más bajo</option>
+          <option value="precio-alto">Precio más alto</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <aside
+    class="mt-4 rounded-[8px] border border-black-100 bg-white-300 px-5 py-[18px] shadow-[0_0_32px_0_rgba(152,157,163,0.3)] lg:col-span-1 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:h-fit lg:min-h-[727px] lg:px-7"
+    aria-label="Categorías del catálogo"
+  >
+    <p class="mb-5 mt-0 text-[20px] font-normal leading-normal text-black-800">
+      Categorías:
+    </p>
+
+    <form id="cat-selector" class="grid gap-3 lg:gap-4">
+      {
+        Object.entries(categoryLabels).map(([value, label], index) => (
+          <label class="flex cursor-pointer items-center gap-[10px] text-base font-light leading-[1.15] text-black-500 lg:gap-2">
+            <input
+              type="radio"
+              name="category"
+              value={value}
+              checked={index === 0}
+              class="peer m-0 h-4 w-4 accent-primary-500"
+            />
+            <span class="w-full peer-checked:font-bold">{label}</span>
+          </label>
+        ))
+      }
+    </form>
+  </aside>
+
+  <div
+    class="mx-auto mt-6 grid max-w-[1360px] gap-6 lg:col-span-1 lg:col-start-2 lg:row-span-1 lg:row-start-2 lg:mt-0"
+  >
+    <div class="flex flex-col gap-5">
+      <div
+        id="products-container"
+        class="grid grid-cols-2 items-stretch gap-x-3 gap-y-[14px] lg:grid-cols-[repeat(4,minmax(0,292px))] lg:justify-start lg:gap-x-[45px] lg:gap-y-9"
+      >
+        {
+          allProducts.map((product) => {
+            const [category] = product.id.split("/");
+            const imageSrc = product.data.fotos?.[0];
+            const currency =
+              product.data.moneda?.toUpperCase() === "PEN"
+                ? "S/."
+                : product.data.moneda;
+
+            return (
+              <article
+                class="cat-product relative overflow-hidden rounded-[10px] bg-[rgba(217,217,217,0.5)] px-[14px] pb-[11px] pt-0 lg:min-h-[336px] lg:w-[292px] lg:px-6 lg:pb-4"
+                id={product.id}
+                data-category={category}
+                data-name={product.data.nombre}
+                data-description={product.data.descripcion}
+                data-price={product.data.precio}
+              >
+                <div
+                  class="mx-auto aspect-square w-full max-w-[134px] lg:max-w-[216px]"
+                  aria-hidden="true"
+                >
+                  {imageSrc ? (
+                    <img
+                      src={imageSrc}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      class="block h-full w-full object-contain"
+                    />
+                  ) : (
+                    <div class="block h-full w-full rounded-lg bg-[linear-gradient(145deg,_#f3f4f5,_#d8dadd)]" />
+                  )}
+                </div>
+
+                <div class="mt-0 grid justify-items-center gap-[6px] text-center lg:mt-[6px] lg:gap-2">
+                  <h3 class="m-0 min-h-8 text-[15px] font-medium leading-[1.05] text-black-800 lg:min-h-14 lg:w-full lg:text-2xl">
+                    {product.data.nombre}
+                  </h3>
+                  <p class="m-0 min-h-[22px] text-[10px] font-normal leading-[1.1] text-black-800 lg:min-h-8 lg:text-base lg:leading-[1.05]">
+                    {product.data.descripcion}
+                  </p>
+
+                  <div class="mt-0.5 flex items-center justify-center gap-2 lg:mt-1 lg:gap-5">
+                    <strong class="inline-flex items-center gap-0.5 whitespace-nowrap rounded-[5.357px] bg-[#c82323] px-2 py-px not-italic leading-normal text-white-200 lg:px-[13px]">
+                      <span class="text-[9px] font-normal lg:text-base">
+                        {currency}
+                      </span>
+                      <span class="text-[13px] font-bold lg:text-2xl">
+                        {product.data.precio}
+                      </span>
+                    </strong>
+
+                    <button
+                      type="button"
+                      class="inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-[5.357px] border-0 bg-[#c82323] px-[13px] py-[2.5px] text-[11.6px] font-normal not-italic leading-normal text-white-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 lg:hidden"
+                    >
+                      ver más
+                      <span
+                        aria-hidden="true"
+                        class="text-sm font-semibold leading-none"
+                      >
+                        ›
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+                <span class="absolute -left-[9999px] h-px w-px overflow-hidden">
+                  {category}
+                </span>
+              </article>
+            );
+          })
+        }
+      </div>
+
+      <button
+        type="button"
+        class="min-w-[170px] cursor-pointer self-center rounded-[6px] border border-primary-500 bg-primary-500 px-[30px] py-2 text-center text-sm font-normal leading-normal text-white-200 shadow-[0_1px_3px_0_rgb(0_0_0_/_0.1),0_1px_2px_-1px_rgb(0_0_0_/_0.1)] transition-colors hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 lg:mt-[14px]"
+      >
+        Ver más
+      </button>
+    </div>
+  </div>
+</section>
 
 <script>
   const products = document.querySelectorAll<HTMLElement>(".cat-product");
@@ -38,7 +260,7 @@ const allProducts = await getCollection("products");
   ) as HTMLInputElement | null;
   const catSelector = document.getElementById(
     "cat-selector",
-  ) as HTMLInputElement | null;
+  ) as HTMLFormElement | null;
   const catSorter = document.getElementById(
     "cat-sorter",
   ) as HTMLInputElement | null;
@@ -90,3 +312,9 @@ const allProducts = await getCollection("products");
     });
   });
 </script>
+
+<style>
+  #cat-search {
+    background: transparent;
+  }
+</style>
