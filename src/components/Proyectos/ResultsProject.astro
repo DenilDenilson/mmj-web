@@ -1,0 +1,123 @@
+---
+import { Image } from "astro:assets";
+import Analitics from "@src/Images/icons/Analitics.astro";
+import Mouse from "@src/Images/icons/Mouse.astro";
+import OptimizationResources from "@src/Images/icons/OptimizationResources.astro";
+import Scalability from "@src/Images/icons/Scalability.astro";
+import projectResultsBase from "@src/Images/Project/ProjectResultsBase.png";
+
+const results = [
+  {
+    title: "Eficiencia en Recursos",
+    description: "Reducción del uso de agua y fertilizantes.",
+    icon: OptimizationResources,
+  },
+  {
+    title: "Incremento de la Productividad",
+    description: "Mejora en los rendimientos de las cosechas.",
+    icon: Analitics,
+  },
+  {
+    title: "Toma de Decisiones Informadas",
+    description: "Datos en tiempo real para una gestión óptima",
+    icon: Mouse,
+  },
+  {
+    title: "Adaptabilidad",
+    description:
+      "Solución escalable que se puede ajustar a diferentes tipos de cultivos.",
+    icon: Scalability,
+  },
+];
+---
+
+<section class="bg-[#F3F4F6] px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-5xl text-center">
+      <h2
+        class="text-balance text-4xl font-bold leading-none text-secondary-400 sm:text-5xl lg:text-6xl"
+      >
+        ¿Cuáles fueron los resultados?
+      </h2>
+
+      <p
+        class="mx-auto mt-8 max-w-4xl text-pretty text-xl font-light leading-tight text-black-400 sm:text-2xl"
+      >
+        Los agricultores experimentaron una
+        <span class="font-medium text-secondary-400">
+          reducción del 30% en el consumo de agua
+        </span>
+        y un
+        <span class="font-medium text-secondary-400">
+          aumento del 20% en la productividad
+        </span>
+        de sus cultivos, gracias a la optimización proporcionada por el sistema.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-12">
+      {
+        results.map((result) => {
+          const Icon = result.icon;
+
+          return (
+            <article class="flex flex-col items-center text-center">
+              <div class="flex h-28 items-center justify-center text-black-400">
+                <Icon />
+              </div>
+
+              <h3 class="mt-4 text-balance text-2xl font-medium leading-tight text-black-400">
+                {result.title}
+              </h3>
+
+              <p class="mt-4 max-w-[12rem] text-pretty text-xl font-light leading-tight text-black-400">
+                {result.description}
+              </p>
+            </article>
+          );
+        })
+      }
+    </div>
+
+    <div class="mx-auto mt-20 max-w-5xl">
+      <div class="overflow-hidden rounded-[28px] border-2 border-secondary-400">
+        <div class="relative bg-[#11171E]">
+          <Image
+            src={projectResultsBase}
+            alt="Controlador de procesos FCP230"
+            class="h-full w-full object-cover"
+          />
+
+          <div
+            class="from-black/80 to-transparent absolute inset-x-0 bottom-0 bg-gradient-to-t px-4 pb-4 pt-12"
+          >
+            <p
+              class="text-balance text-center text-2xl font-light text-white-50"
+            >
+              Controlador de procesos FCP230
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="mt-4 grid grid-cols-4 gap-4">
+        {
+          Array.from({ length: 4 }).map((_, index) => (
+            <div
+              class:list={[
+                "overflow-hidden rounded-lg bg-black-100",
+                index === 0 ? "ring-2 ring-secondary-400" : "",
+              ]}
+            >
+              <Image
+                src={projectResultsBase}
+                alt={`Vista previa ${index + 1} del controlador de procesos FCP230`}
+                class="h-20 w-full object-cover"
+              />
+            </div>
+          ))
+        }
+      </div> -->
+    </div>
+  </div>
+</section>

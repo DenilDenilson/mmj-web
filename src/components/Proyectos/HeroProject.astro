@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import Check from "@src/Images/icons/Check.astro";
+import heroProjectImage from "@src/Images/Project/ProjectHeroBase.png";
+
+const goals = [
+  "Proporcionar datos precisos sobre condiciones climáticas y del suelo.",
+  "Reducir el desperdicio de recursos mediante un uso eficiente del agua y nutrientes.",
+  "Mejorar la toma de decisiones en la gestión agrícola.",
+];
+---
+
+<section class="bg-black px-4 pb-16 pt-20 sm:px-6 lg:px-10 lg:pb-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-5xl">
+      <div class="overflow-hidden rounded-3xl">
+        <Image
+          src={heroProjectImage}
+          alt="Sistema de monitoreo IoT aplicado a agricultura"
+          class="h-full w-full object-cover"
+        />
+      </div>
+
+      <div class="mt-8 max-w-5xl">
+        <h1
+          class="text-balance text-5xl font-bold leading-none text-[#1F2A44] sm:text-6xl"
+        >
+          Desarrollo de Sistema de Monitoreo IoT para Agricultura
+        </h1>
+
+        <p
+          class="mt-8 text-pretty text-xl font-light leading-tight text-[#1F2A44]"
+        >
+          Desarrollamos un sistema de monitoreo IoT que permite a los
+          agricultores rastrear y optimizar el uso de recursos en tiempo real,
+          mejorando la eficiencia y productividad.
+        </p>
+
+        <div class="mt-10">
+          <h2 class="text-3xl font-bold leading-tight text-[#1F2A44]">
+            Desafío del proyecto
+          </h2>
+          <p
+            class="mt-6 text-pretty text-xl font-light leading-tight text-[#1F2A44]"
+          >
+            Los agricultores enfrentaban problemas de gestión ineficiente de
+            recursos, lo que resultaba en un desperdicio significativo de agua y
+            fertilizantes, además de rendimientos subóptimos en las cosechas.
+          </p>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-3">
+          <span
+            class="rounded-full border-0 border-black-900 bg-white-100 px-2 py-1 text-base font-light text-black-400"
+          >
+            Solucion Software Embebido
+          </span>
+          <span
+            class="rounded-full border-0 border-white-100 px-2 py-1 text-base font-light text-black-400"
+          >
+            Agricultura
+          </span>
+        </div>
+      </div>
+
+      <div class="mt-20 max-w-5xl">
+        <h2
+          class="mb-4 text-balance text-4xl font-bold leading-none text-secondary-400 sm:text-5xl"
+        >
+          ¿Cuáles fueron nuestros objetivos ?
+        </h2>
+
+        <ul class="mt-10 flex flex-col gap-4">
+          {
+            goals.map((goal) => (
+              <li class="flex items-start gap-4">
+                <span class="mt-1 shrink-0">
+                  <Check fill="#28A0B3" />
+                </span>
+                <span class="text-pretty text-xl font-light leading-tight text-[#1F2A44]">
+                  {goal}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="mt-20 max-w-5xl">
+        <h2
+          class="my-4 text-balance text-4xl font-bold leading-none text-secondary-400 sm:text-5xl"
+        >
+          ¿Qué solución pudimos brindar?
+        </h2>
+
+        <p
+          class="mt-10 text-pretty text-xl font-light leading-tight text-[#1F2A44]"
+        >
+          Implementamos un sistema de monitoreo basado en IoT que recopila datos
+          en tiempo real sobre condiciones climáticas y del suelo, permitiendo
+          una gestión precisa y efectiva de los recursos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
