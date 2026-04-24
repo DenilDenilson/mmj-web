@@ -1,0 +1,120 @@
+---
+import Analitics from "@src/Images/icons/Analitics.astro";
+import Bulb from "@src/Images/icons/Bulb.astro";
+import Cup from "@src/Images/icons/Cup.astro";
+import Hands from "@src/Images/icons/Hands.astro";
+import HappyFace from "@src/Images/icons/HappyFace.astro";
+
+type BenefitIconComponent =
+  | typeof Analitics
+  | typeof Bulb
+  | typeof Hands
+  | typeof Cup
+  | typeof HappyFace;
+
+interface BenefitItem {
+  title: string;
+  description: string;
+  icon: BenefitIconComponent;
+}
+
+const benefits: BenefitItem[] = [
+  {
+    title: "Compromiso con la Innovación",
+    description:
+      "Estamos siempre a la vanguardia, ofreciendo las últimas soluciones tecnológicas para tu negocio.",
+    icon: Analitics,
+  },
+  {
+    title: "Personalización en Cada Proyecto",
+    description:
+      "Adaptamos cada solución a tus necesidades específicas, garantizando funcionalidad y eficiencia.",
+    icon: Bulb,
+  },
+  {
+    title: "Soporte Técnico Continuo",
+    description:
+      "Contamos con soporte post-venta y mantenimiento, asegurando que tu proyecto esté siempre en óptimas condiciones.",
+    icon: Hands,
+  },
+  {
+    title: "Resultados Medibles y Eficiencia Garantizada",
+    description:
+      "Implementamos soluciones efectivas, optimizando tus operaciones y mejorando el retorno de inversión.",
+    icon: Cup,
+  },
+  {
+    title: "Transparencia y Comunicación Constante",
+    description:
+      "Mantenemos comunicación clara en todo el proceso, para lograr una alineación total.",
+    icon: HappyFace,
+  },
+];
+---
+
+<section class="bg-[#F3F4F6] px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
+  <div class="mx-auto max-w-7xl">
+    <hgroup class="mx-auto max-w-4xl text-center">
+      <h2
+        class="text-balance text-3xl font-bold leading-tight text-secondary-400 md:text-[40px] lg:text-[52px]"
+      >
+        Beneficios de Trabajar con Nosotros
+      </h2>
+      <p
+        class="mx-auto mt-6 max-w-4xl text-pretty text-base font-light leading-relaxed text-black-500 md:text-[18px] lg:text-[19px]"
+      >
+        Al elegirnos como tu socio en innovación, te aseguras una colaboración
+        basada en la excelencia, la confiabilidad y un enfoque centrado en tus
+        necesidades específicas. Conoce los beneficios que ofrecemos para
+        impulsar tus proyectos tecnológicos al siguiente nivel.
+      </p>
+    </hgroup>
+
+    <div class="mt-14 flex flex-col gap-8 lg:mt-20 lg:gap-3">
+      {
+        benefits.map((benefit) => {
+          const Icon = benefit.icon;
+
+          return (
+            <article class="relative isolate mx-auto w-full max-w-3xl">
+              <div class="relative mx-auto flex min-h-80 w-full items-center">
+                <div class="bg-black relative mr-20 flex min-h-60 w-full flex-col justify-center rounded-full border-4 border-[#298CB0] px-6 py-8 pr-24 text-center shadow-sm">
+                  <div class="mx-auto max-w-xs">
+                    <h3 class="text-balance text-2xl font-bold leading-tight text-[#28A0B3]">
+                      {benefit.title}
+                    </h3>
+                    <p class="mt-4 text-pretty text-xl font-light leading-tight text-[#1F2A44]">
+                      {benefit.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="absolute right-0 top-1/2 flex h-44 w-44 -translate-y-1/2 items-center justify-center rounded-full bg-white-50 text-[#298CB0] shadow-2xl ring-8 ring-[#298CB0]">
+                  <Icon width="96" height="96" fill="#298CB0" />
+                </div>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+
+    <div class="mt-16 text-center lg:mt-20">
+      <p
+        class="text-balance text-2xl font-light leading-tight text-primary-500 lg:text-[28px]"
+      >
+        ¿Listo para llevar tus proyectos a otro nivel?
+      </p>
+      <div class="mt-8">
+        <a
+          href="https://wa.link/fc3qb5"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex min-w-[200px] items-center justify-center rounded bg-primary-500 px-8 py-4 text-center text-sm font-light leading-base text-white-200 ring-1 ring-inset ring-primary-500 transition-all duration-200 hover:bg-primary-400 lg:text-lg"
+        >
+          Contacta con nosotros
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
