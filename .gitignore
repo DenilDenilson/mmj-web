@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# De pnpm use
+pnpm-lock.yaml
+
+# De los LLM
+.codex
+DESIGN.md
+TODO.md
