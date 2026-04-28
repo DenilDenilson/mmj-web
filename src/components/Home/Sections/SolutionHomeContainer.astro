@@ -3,6 +3,19 @@ import Antena from "@src/Images/icons/Antena.astro";
 import Lupa from "@src/Images/icons/Lupa.astro";
 import ControlRemoto from "@src/Images/icons/ControlRemoto.astro";
 import BolsaDinero from "@src/Images/icons/BolsaDinero.astro";
+import Analitics from "@src/Images/icons/Analitics.astro";
+import Bulb from "@src/Images/icons/Bulb.astro";
+import CheckChip from "@src/Images/icons/CheckChip.astro";
+import Chip from "@src/Images/icons/Chip.astro";
+import Clock from "@src/Images/icons/Clock.astro";
+import Cloud from "@src/Images/icons/Cloud.astro";
+import Integration from "@src/Images/icons/Integration.astro";
+import Iot from "@src/Images/icons/Iot.astro";
+import Mobile from "@src/Images/icons/Mobile.astro";
+import Pcb from "@src/Images/icons/Pcb.astro";
+import Printer3D from "@src/Images/icons/Printer3D.astro";
+import Software from "@src/Images/icons/Software.astro";
+import Warning from "@src/Images/icons/Warning.astro";
 import SolutionHome from "./SolutionHome.astro";
 
 const Solutions = [
@@ -13,12 +26,12 @@ const Solutions = [
     url: "",
     video: "",
     implications: [
-      "Monitoreo de señales analógicas",
-      "Diseño de arquitectura IoT personalizada",
-      "Desarrollo de sensores y dispositivos inteligentes",
-      "Implemantación de plataforma de gestión de datos",
-      "Integración con sistemas existentes",
-      "Pruebas de conectividad y seguridad",
+      { text: "Monitoreo de señales analógicas", icon: Analitics },
+      { text: "Diseño de arquitectura IoT personalizada", icon: Iot },
+      { text: "Desarrollo de sensores y dispositivos inteligentes", icon: Chip },
+      { text: "Implemantación de plataforma de gestión de datos", icon: Cloud },
+      { text: "Integración con sistemas existentes", icon: Integration },
+      { text: "Pruebas de conectividad y seguridad", icon: Warning },
     ],
     beneficts: [
       {
@@ -54,12 +67,12 @@ const Solutions = [
     url: "",
     video: "",
     implications: [
-      "Diseño electrónico de tarjetas PCBs",
-      "Fabricación local e internacional de tarjetas PCBs",
-      "Ensamblaje y testeo de tarjetas PCBs",
-      "Ingeniería inversa de quipos electrónicos",
-      "Desarrollo de productos electrónicos personalizados",
-      "Diseño mecánico e impresión 3D",
+      { text: "Diseño electrónico de tarjetas PCBs", icon: Pcb },
+      { text: "Fabricación local e internacional de tarjetas PCBs", icon: Chip },
+      { text: "Ensamblaje y testeo de tarjetas PCBs", icon: CheckChip },
+      { text: "Ingeniería inversa de quipos electrónicos", icon: Lupa },
+      { text: "Desarrollo de productos electrónicos personalizados", icon: Bulb },
+      { text: "Diseño mecánico e impresión 3D", icon: Printer3D },
     ],
     beneficts: [
       {
@@ -92,12 +105,12 @@ const Solutions = [
     url: "",
     video: "",
     implications: [
-      "Programación de microcontroladores",
-      "Desarrollo de software industrial",
-      "Desarrollo de aplicaciones Web IoT en la nube o local",
-      "Desararollo de plataformas de gestión de datos",
-      "Desarrollo de aplicaciones móviles",
-      "Implemantación de sistemas operativos en tiempo real",
+      { text: "Programación de microcontroladores", icon: Chip },
+      { text: "Desarrollo de software industrial", icon: Software },
+      { text: "Desarrollo de aplicaciones Web IoT en la nube o local", icon: Cloud },
+      { text: "Desararollo de plataformas de gestión de datos", icon: Analitics },
+      { text: "Desarrollo de aplicaciones móviles", icon: Mobile },
+      { text: "Implemantación de sistemas operativos en tiempo real", icon: Clock },
     ],
     beneficts: [
       {

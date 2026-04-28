@@ -2,44 +2,128 @@
 import { getEntry } from "astro:content";
 
 const infoMMJ = await getEntry("infoMMJ", "info-mmj");
+
+const parseCounterValue = (value: string) => {
+  const match = value.match(/^(\D*?)([\d,.]+)(\D*)$/);
+
+  if (!match) {
+    return {
+      prefix: "",
+      amount: 0,
+      suffix: "",
+      label: value,
+    };
+  }
+
+  const [, prefix, amount, suffix] = match;
+
+  return {
+    prefix,
+    amount: Number(amount.replace(/,/g, "")),
+    suffix,
+    label: value,
+  };
+};
+
+const infoItems = [
+  {
+    value: parseCounterValue(infoMMJ.data.amountStudents),
+    label: "Estudiantes",
+    className:
+      "relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-1/2 after:-translate-x-1/2 after:bg-[#28A0B3] after:content-[''] md:text-5xl lg:after:content-none",
+  },
+  {
+    value: parseCounterValue(infoMMJ.data.amountCourses),
+    label: "Cursos",
+    className:
+      "relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-1/2 after:-translate-x-1/2 after:bg-[#28A0B3] after:content-[''] md:text-5xl lg:after:content-none",
+  },
+  {
+    value: parseCounterValue(infoMMJ.data.amountServices),
+    label: "Servicios",
+    className:
+      "relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] md:text-5xl",
+  },
+  {
+    value: parseCounterValue(infoMMJ.data.amountProyects),
+    label: "Proyectos",
+    className:
+      "flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 md:text-5xl",
+  },
+];
 ---
 
 <div class="bg-black-800 py-12">
   <ul
+    id="info-pop-counters"
     class="mx-auto grid max-w-7xl grid-cols-2 bg-[#28A0B3] sm:grid-cols-2 lg:grid-cols-4"
   >
-    <li
-      class="relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-1/2 after:-translate-x-1/2 after:bg-[#28A0B3] after:content-[''] md:text-5xl lg:after:content-none"
-    >
-      {infoMMJ.data.amountStudents}
-      <span class="text-lg font-normal text-[#28A0B3] md:text-xl">
-        Estudiantes
-      </span>
-    </li>
-
-    <li
-      class="relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-1/2 after:-translate-x-1/2 after:bg-[#28A0B3] after:content-[''] md:text-5xl lg:after:content-none"
-    >
-      {infoMMJ.data.amountCourses}
-      <span class="text-lg font-normal text-[#28A0B3] md:text-xl">Cursos</span>
-    </li>
-
-    <li
-      class="relative flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 before:absolute before:right-0 before:top-1/2 before:h-1/2 before:w-[2px] before:-translate-y-1/2 before:bg-[#28A0B3] before:content-[''] md:text-5xl"
-    >
-      {infoMMJ.data.amountServices}
-      <span class="text-lg font-normal text-[#28A0B3] md:text-xl"
-        >Servicios</span
-      >
-    </li>
-
-    <li
-      class="flex flex-col items-center justify-center bg-black-800 px-4 py-3 text-4xl font-bold text-white-200 md:text-5xl"
-    >
-      {infoMMJ.data.amountProyects}
-      <span class="text-lg font-normal text-[#28A0B3] md:text-xl"
-        >Proyectos</span
-      >
-    </li>
+    {
+      infoItems.map((item) => (
+        <li class={item.className}>
+          <span
+            class="info-pop-counter"
+            data-count-prefix={item.value.prefix}
+            data-count-target={item.value.amount}
+            data-count-suffix={item.value.suffix}
+          >
+            {item.value.label}
+          </span>
+          <span class="text-lg font-normal text-[#28A0B3] md:text-xl">
+            {item.label}
+          </span>
+        </li>
+      ))
+    }
   </ul>
 </div>
+
+<script>
+  const countersContainer = document.querySelector("#info-pop-counters");
+  const counters = Array.from(
+    document.querySelectorAll<HTMLElement>(".info-pop-counter"),
+  );
+
+  const formatCounter = (value: number, prefix: string, suffix: string) =>
+    `${prefix}${Math.round(value)}${suffix}`;
+
+  const animateCounter = (counter: HTMLElement) => {
+    const target = Number(counter.dataset.countTarget ?? 0);
+    const prefix = counter.dataset.countPrefix ?? "";
+    const suffix = counter.dataset.countSuffix ?? "";
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const updateCounter = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const currentValue = target * easedProgress;
+
+      counter.textContent = formatCounter(currentValue, prefix, suffix);
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      }
+    };
+
+    counter.textContent = formatCounter(0, prefix, suffix);
+    requestAnimationFrame(updateCounter);
+  };
+
+  if (countersContainer && counters.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          counters.forEach(animateCounter);
+          observer.disconnect();
+        });
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(countersContainer);
+  }
+</script>

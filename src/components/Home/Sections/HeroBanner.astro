@@ -9,6 +9,13 @@ import bgHomeHeroDesktop3 from "@src/Images/Home/bgHomeHeroDesktop3-v2.avif";
 
 const Heros = [
   {
+    title: "Potencia tu empresa con Soluciones Tecnológicas a la Medida",
+    description:
+      "Diseñamos soluciones personalizadas en Hardware; Software e loT, combinando tecnología de vanguardia para llevar tus ideas al siguiente nivel y convertirlas en resultados efectivos para la industria y el comercio.",
+    bgImage: bgHomeHero3,
+    bgImageDesktop: bgHomeHeroDesktop3,
+  },
+  {
     title: "Tu camino hacia la especialización Comienza aquí",
     description:
       "Potencia tu futuro con nuestras líneas de carrera en Hardware, Software, Microcontroladores e Internet de las cosas, donde aprenderás con expertos en tecnología a diseñar, programar e innovar para enfrentar los retos de la industria actual.",
@@ -21,13 +28,6 @@ const Heros = [
       "Ofrecemos asesoría profesional a empresas y estudiantes para desarrollar soluciones innovadoras en hardware, software y tecnologías IoT, adaptadas a los desafíos y necesidades del mercado actual. ¡Haz realidad tus ideas con el respaldo de expertos en tecnología!",
     bgImage: bgHomeHero2,
     bgImageDesktop: bgHomeHeroDesktop2,
-  },
-  {
-    title: "Potencia tu empresa con Soluciones Tecnológicas a la Medida",
-    description:
-      "Diseñamos soluciones personalizadas en Hardware; Software e loT, combinando tecnología de vanguardia para llevar tus ideas al siguiente nivel y convertirlas en resultados efectivos para la industria y el comercio.",
-    bgImage: bgHomeHero3,
-    bgImageDesktop: bgHomeHeroDesktop3,
   },
 ];
 ---
@@ -82,36 +82,6 @@ const Heros = [
 </div>
 
 <style>
-  /* Animación para cambiar automáticamente las dispositivas */
-  /* @keyframes slide {
-    0% {
-      transform: translateX(0%);
-    }
-    25% {
-      transform: translateX(0%);
-    }
-    33.33% {
-      transform: translateX(-100%);
-    }
-    58.33% {
-      transform: translateX(-100%);
-    }
-    66.66% {
-      transform: translateX(-200%);
-    }
-    91.66% {
-      transform: translateX(-200%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  } */
-
-  /* Configurar el contenedor para usar la animación */
-  /* #heroContainer {
-    animation: slide 9s infinite;
-  } */
-
   #sliderControl > input:nth-child(1):checked ~ #heroSlider > #heroContainer {
     transform: translateX(0%);
   }
@@ -129,3 +99,42 @@ const Heros = [
     background: #4a94a0;
   }
 </style>
+
+<script>
+  const sliderControl = document.querySelector("#sliderControl");
+  const heroContainer = document.querySelector("#heroContainer");
+  const heroInputs = Array.from(
+    document.querySelectorAll<HTMLInputElement>('input[name="heroSelector"]'),
+  );
+
+  if (sliderControl && heroContainer && heroInputs.length > 0) {
+    let currentHero = heroInputs.findIndex((input) => input.checked);
+    let autoplay: ReturnType<typeof window.setInterval>;
+
+    const selectHero = (index: number) => {
+      currentHero = index;
+      heroInputs[currentHero].checked = true;
+      heroContainer.setAttribute(
+        "style",
+        `transform: translateX(-${currentHero * 100}%);`,
+      );
+    };
+
+    const startAutoplay = () => {
+      window.clearInterval(autoplay);
+      autoplay = window.setInterval(() => {
+        selectHero((currentHero + 1) % heroInputs.length);
+      }, 5000);
+    };
+
+    heroInputs.forEach((input, index) => {
+      input.addEventListener("change", () => {
+        selectHero(index);
+        startAutoplay();
+      });
+    });
+
+    selectHero(Math.max(currentHero, 0));
+    startAutoplay();
+  }
+</script>

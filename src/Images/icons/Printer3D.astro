@@ -1,0 +1,30 @@
+---
+const { fill = "#1F2937", width = "64", height = "64" } = Astro.props;
+---
+
+<svg
+  width={width}
+  height={height}
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 8h40M18 8v10h28V8M24 18v9m16-9v9M20 27h24l6 8v17H14V35l6-8Z"
+    stroke={fill}
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"></path>
+  <path
+    d="M25 35h14v9H25v-9ZM22 52v4h20v-4M32 27v8"
+    stroke={fill}
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"></path>
+  <path
+    d="M28 44h8l3 8H25l3-8Z"
+    stroke={fill}
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"></path>
+</svg>

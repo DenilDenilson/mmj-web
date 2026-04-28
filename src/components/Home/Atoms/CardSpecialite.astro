@@ -2,23 +2,31 @@
 const { title, description, link } = Astro.props;
 ---
 
-<section
-  class="relative flex h-64 w-56 flex-col items-center gap-4 rounded-2xl border-[3px] border-black-100 bg-white-50 p-4 transition-all duration-300 hover:border-secondary-100 hover:shadow-[0px_4px_16px_10px_#1D798830]"
->
-  <div class="absolute -top-10 flex flex-col items-center bg-white-50">
-    <div class="grid h-20 w-20 place-content-center">
-      <slot />
-    </div>
-    <!-- <a href={link} class="text-primary-500 text-sm text-center cursor-pointer"
-      >Ver cursos</a
+<a href={link} class="h-full">
+  <section
+    class="relative flex min-h-full max-w-80 items-center gap-4 rounded-2xl border-[3px] border-black-100 bg-white-50 p-4 transition-all duration-300 hover:border-secondary-100 hover:shadow-[0px_4px_16px_10px_#1D798830] lg:h-64 lg:w-56 lg:flex-col"
+  >
+    <div
+      class="absolute -left-10 flex flex-col items-center bg-white-50 lg:-top-10 lg:left-16"
+    >
+      <div class="grid h-20 w-20 place-content-center">
+        <slot />
+      </div>
+      <!-- <a href={link} class="text-primary-500 text-sm text-center cursor-pointer"
+    >Ver cursos</a
     > -->
-  </div>
-  <hgroup class="max-w-52 pt-8">
-    <h5 class="mb-3 text-center text-2xl font-bold text-black-500">
-      {title}
-    </h5>
-    <p class="text-center text-base font-light leading-snug text-black-500">
-      {description}
-    </p>
-  </hgroup>
-</section>
+    </div>
+    <hgroup class="pl-8 lg:max-w-52 lg:pl-0 lg:pt-8">
+      <h5
+        class="mb-1 text-2xl font-bold leading-tight text-black-500 lg:mb-3 lg:text-center"
+      >
+        {title}
+      </h5>
+      <p
+        class="text-base font-light leading-snug text-black-500 lg:text-center"
+      >
+        {description}
+      </p>
+    </hgroup>
+  </section>
+</a>

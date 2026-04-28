@@ -1,14 +1,18 @@
 ---
 import TarjetaServiciosBg from "@src/Images/Home/TarjetaServicios.avif";
-import PuzzleConsulting from "@src/Images/icons/PuzzleConsulting.astro";
 import { Image } from "astro:assets";
+
+type Implication = {
+  text: string;
+  icon: any;
+};
 
 interface Props {
   title: string;
   description: string;
   url: string;
   video: string;
-  implications: string[];
+  implications: Implication[];
   beneficts: any[];
   "data-index"?: string | number;
 }
@@ -52,17 +56,24 @@ const {
     class="scroll-hidden my-6 flex snap-x snap-mandatory gap-4 overflow-x-auto lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-4"
   >
     {
-      implications.map((implication: any) => (
-        <li class="relative flex h-24 min-w-72 snap-center items-center gap-2 rounded-md bg-white-900">
+      implications.map((implication) => (
+        <li class="relative flex h-24 min-w-72 snap-center items-center gap-2 rounded-md bg-white-900 pr-2">
           <Image
             src={TarjetaServiciosBg}
             alt="Fondo de tarjeta de servicio"
             class="absolute inset-0 h-full w-full rounded-md object-cover object-center"
           />
           <div class="absolute inset-0 rounded-md bg-black-900/50" />
-          <PuzzleConsulting extraClass="scale-50 lg:scale-[65%]" />
+          <div class="implication-icon relative z-10 ml-4 grid h-14 w-14 shrink-0 place-content-center rounded-full bg-white-400 text-primary-500 shadow-lg outline-offset-4 outline-secondary-500">
+            <implication.icon
+              fill="#009E7E"
+              width="36"
+              height="36"
+              className="h-9 w-9"
+            />
+          </div>
           <p class="relative text-sm font-normal leading-tight text-white-50 lg:text-xl">
-            {implication}
+            {implication.text}
           </p>
         </li>
       ))
@@ -107,5 +118,10 @@ const {
   /* IE y Edge antiguo */
   .scroll-hidden {
     -ms-overflow-style: none;
+  }
+
+  .implication-icon :global(svg) {
+    width: 2.25rem;
+    height: 2.25rem;
   }
 </style>
