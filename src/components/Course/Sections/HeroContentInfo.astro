@@ -18,12 +18,60 @@ const {
 } = specificCourse?.data || {};
 ---
 
-<HeroContentInfoHeader title={title} description={description} />
-<HeroContentInfoGoals goals={goals} />
-<HeroContentInfoFooter
-  modality={modality}
-  duration={duration}
-  hours={hours}
-  priceBase={priceBase}
-  priceReal={priceReal}
-/>
+<div class="course-hero-info">
+  <div class="course-hero-info-step">
+    <HeroContentInfoHeader title={title} description={description} />
+  </div>
+  <div class="course-hero-info-step">
+    <HeroContentInfoGoals goals={goals} />
+  </div>
+  <div class="course-hero-info-step">
+    <HeroContentInfoFooter
+      modality={modality}
+      duration={duration}
+      hours={hours}
+      priceBase={priceBase}
+      priceReal={priceReal}
+    />
+  </div>
+</div>
+
+<style>
+  .course-hero-info-step {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: course-hero-info-step 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .course-hero-info-step:nth-child(1) {
+    animation-delay: 520ms;
+  }
+
+  .course-hero-info-step:nth-child(2) {
+    animation-delay: 640ms;
+  }
+
+  .course-hero-info-step:nth-child(3) {
+    animation-delay: 760ms;
+  }
+
+  @keyframes course-hero-info-step {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .course-hero-info-step {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

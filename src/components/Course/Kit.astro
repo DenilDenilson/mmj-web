@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import kitBase from "@src/Images/Courses/KitBase.png";
 import { kitsImages } from "@src/data/Kits.ts";
 import KitTitle from "./Sections/KitTitle.astro";
 import KitInfo from "./Sections/KitInfo.astro";
@@ -12,16 +11,87 @@ const specificCourse = await getEntry("courses", `${carrera}/${course}`);
 const { bgCourseCard } = specificCourse?.data || {};
 ---
 
-<section class="bg-white-500">
+<section class="course-kit bg-white-500" data-course-reveal>
   <div class="mx-auto max-w-7xl px-7 py-16">
-    <KitTitle />
+    <div class="course-kit-title">
+      <KitTitle />
+    </div>
     <div class="lg:flex lg:items-center lg:gap-12">
       <Image
         src={kitsImages[bgCourseCard as keyof typeof kitsImages]}
         alt="Kit de Desarrollo"
-        class="mx-auto mb-16 w-96 lg:flex-1 lg:object-center"
+        class="course-kit-image mx-auto mb-16 w-96 lg:flex-1 lg:object-center"
       />
-      <KitInfo />
+      <div class="course-kit-info">
+        <KitInfo />
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .course-kit {
+    overflow: hidden;
+  }
+
+  .course-kit-title,
+  .course-kit-image,
+  .course-kit-info {
+    opacity: 0;
+    transition:
+      opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 720ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .course-kit-title {
+    transform: translateY(24px);
+  }
+
+  .course-kit-image {
+    transform: translateX(-34px) scale(0.96);
+    filter: blur(8px);
+  }
+
+  .course-kit-info {
+    transform: translateX(34px);
+    filter: blur(8px);
+  }
+
+  .course-kit.is-visible .course-kit-title,
+  .course-kit.is-visible .course-kit-image,
+  .course-kit.is-visible .course-kit-info {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  .course-kit.is-visible .course-kit-image {
+    transition-delay: 120ms;
+  }
+
+  .course-kit.is-visible .course-kit-info {
+    transition-delay: 220ms;
+  }
+
+  @media (hover: hover) {
+    .course-kit-image {
+      transform-origin: center;
+    }
+
+    .course-kit.is-visible .course-kit-image:hover {
+      transform: scale(1.025);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .course-kit-title,
+    .course-kit-image,
+    .course-kit-info {
+      opacity: 1;
+      transform: none;
+      filter: none;
+      transition: none;
+    }
+  }
+</style>

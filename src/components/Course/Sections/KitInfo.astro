@@ -1,12 +1,58 @@
 ---
-import Cart from "@src/Images/icons/Cart.astro";
 import KitInfoHeader from "./KitInfoHeader.astro";
 import KitInfoContent from "./KitInfoContent.astro";
 import KitInfoFooter from "./KitInfoFooter.astro";
 ---
 
-<div class="lg:max-w-xl">
+<div class="kit-info-card lg:max-w-xl">
   <KitInfoHeader />
   <KitInfoContent />
   <KitInfoFooter />
 </div>
+
+<style>
+  .kit-info-card :global(ol li) {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+
+  :global(.course-kit.is-visible) .kit-info-card :global(ol li) {
+    animation: kit-item-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  :global(.course-kit.is-visible) .kit-info-card :global(ol li:nth-of-type(1)) {
+    animation-delay: 420ms;
+  }
+
+  :global(.course-kit.is-visible) .kit-info-card :global(ol li:nth-of-type(2)) {
+    animation-delay: 500ms;
+  }
+
+  :global(.course-kit.is-visible) .kit-info-card :global(ol li:nth-of-type(3)) {
+    animation-delay: 580ms;
+  }
+
+  :global(.course-kit.is-visible) .kit-info-card :global(ol li:nth-of-type(4)) {
+    animation-delay: 660ms;
+  }
+
+  @keyframes kit-item-enter {
+    from {
+      opacity: 0;
+      transform: translateX(-12px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kit-info-card :global(ol li) {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

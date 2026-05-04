@@ -9,7 +9,7 @@ import PerfilEgresado from "./Sections/PerfilEgresado.astro";
 import Requisitos from "./Sections/Requisitos.astro";
 ---
 
-<section class="lg:min-w-2xl lg:flex-1">
+<section class="course-info-section lg:min-w-2xl lg:flex-1" data-course-reveal>
   <div class="mx-auto max-w-7xl px-7 pb-16 pt-8">
     <div id="sliderCourse" class="flex flex-col-reverse">
       <input
@@ -38,7 +38,7 @@ import Requisitos from "./Sections/Requisitos.astro";
         type="radio"
       />
 
-      <div id="infoCourseContainer">
+      <div id="infoCourseContainer" class="course-info-panel">
         <ul class="relative">
           <!-- Hacemos realative solo al elemento que queremos mostrar y el resto se mantiene en absolute, quedando por detrás y por ende ocultos a la vista -->
           <AcercaDe />
@@ -55,7 +55,7 @@ import Requisitos from "./Sections/Requisitos.astro";
         <!-- El span en el interior de las opciones es para que la sombra de las opciones no se superponga al article -->
         <label
           for="sliderCourse1"
-          class="project-options relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
+          class="project-options course-tab relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <SunScreen fill="#1F2937" width="20" height="20" />
           <span class="cursor-pointer font-medium text-black-300">
@@ -68,7 +68,7 @@ import Requisitos from "./Sections/Requisitos.astro";
         </label>
         <label
           for="sliderCourse2"
-          class="project-options relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
+          class="project-options course-tab relative z-30 flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <Start />
           <span class="cursor-pointer font-medium text-black-300">
@@ -81,7 +81,7 @@ import Requisitos from "./Sections/Requisitos.astro";
         </label>
         <label
           for="sliderCourse3"
-          class="project-options relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
+          class="project-options course-tab relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <ChcekList />
           <span class="cursor-pointer font-medium text-black-300">
@@ -94,7 +94,7 @@ import Requisitos from "./Sections/Requisitos.astro";
         </label>
         <label
           for="sliderCourse4"
-          class="project-options relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
+          class="project-options course-tab relative flex gap-1 text-sm font-medium text-black-500 hover:text-secondary-500"
         >
           <FAQIcon />
           <span class="cursor-pointer font-medium text-black-300"> FAQ's </span>
@@ -181,5 +181,93 @@ import Requisitos from "./Sections/Requisitos.astro";
     label:nth-child(4)
     span:nth-child(2) {
     color: #1f2937;
+  }
+</style>
+
+<style>
+  .course-info-section {
+    opacity: 0;
+    transform: translateY(34px);
+    transition:
+      opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .course-info-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .course-info-panel {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+
+  .course-info-section.is-visible .course-info-panel {
+    animation: course-info-panel-enter 680ms cubic-bezier(0.22, 1, 0.36, 1)
+      160ms both;
+  }
+
+  .course-tab {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  .course-info-section.is-visible .course-tab {
+    animation: course-tab-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .course-info-section.is-visible .course-tab:nth-child(1) {
+    animation-delay: 80ms;
+  }
+
+  .course-info-section.is-visible .course-tab:nth-child(2) {
+    animation-delay: 150ms;
+  }
+
+  .course-info-section.is-visible .course-tab:nth-child(3) {
+    animation-delay: 220ms;
+  }
+
+  .course-info-section.is-visible .course-tab:nth-child(4) {
+    animation-delay: 290ms;
+  }
+
+  @keyframes course-info-panel-enter {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+      filter: blur(6px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes course-tab-enter {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .course-info-section,
+    .course-info-panel,
+    .course-tab {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      transition: none;
+      filter: none;
+    }
   }
 </style>

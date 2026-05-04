@@ -1,11 +1,9 @@
 ---
-import type { GetStaticPaths } from "astro";
 import Layout from "@src/layouts/Layout.astro";
 import Hero from "@src/components/Course/Hero.astro";
 import Info from "@src/components/Course/Info.astro";
 import Temario from "@src/components/Course/Temario.astro";
 import Kit from "@src/components/Course/Kit.astro";
-import Projects from "@src/components/Course/Projects.astro";
 import { getCollection } from "astro:content";
 
 const { course } = Astro.params;
@@ -25,7 +23,7 @@ export async function getStaticPaths() {
 
 <Layout title={course}>
   <Hero />
-  <div class="mx-auto max-w-7xl lg:flex">
+  <div class="course-main mx-auto max-w-7xl lg:flex">
     <Info />
     <Temario />
   </div>
@@ -33,3 +31,36 @@ export async function getStaticPaths() {
   <!-- <Projects /> -->
   <!-- <OtherCourses /> -->
 </Layout>
+
+<script>
+  const courseRevealItems = document.querySelectorAll<HTMLElement>(
+    "[data-course-reveal]",
+  );
+
+  const showCourseItem = (item: HTMLElement) => {
+    item.classList.add("is-visible");
+  };
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    courseRevealItems.forEach(showCourseItem);
+  } else if ("IntersectionObserver" in window) {
+    const courseRevealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          showCourseItem(entry.target as HTMLElement);
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.12,
+      },
+    );
+
+    courseRevealItems.forEach((item) => courseRevealObserver.observe(item));
+  } else {
+    courseRevealItems.forEach(showCourseItem);
+  }
+</script>

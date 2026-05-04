@@ -32,29 +32,122 @@ const { startDate } = specificCourse?.data || {};
 // };
 ---
 
-<section class="bg-secondary-50">
+<section class="course-hero bg-secondary-50">
   <div class="h-14 w-full"></div>
   <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
   <div
     class="mx-auto max-w-7xl px-7 py-7 lg:grid lg:grid-cols-2 lg:grid-rows-[32px_minmax(256px,_1fr)] lg:gap-x-6"
   >
-    <CourseBreadcrumb carrera={carrera} course={course} />
+    <div class="course-breadcrumb-motion">
+      <CourseBreadcrumb carrera={carrera} course={course} />
+    </div>
     <div
-      class="mb-4 aspect-video w-full rounded-lg text-black-300 shadow-[0px_16px_32px_0px_1C253250] lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3"
+      class="course-hero-image-wrap mb-4 aspect-video w-full overflow-hidden rounded-lg text-black-300 shadow-[0px_16px_32px_0px_1C253250] lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3"
     >
       <Image
         src={bgImages[course as keyof typeof bgImages]}
         alt={`Imagen del curso de ${course}`}
-        class="h-full w-full rounded-xl object-cover object-center lg:object-contain lg:object-top"
+        class="course-hero-image h-full w-full rounded-xl object-cover object-center lg:object-contain lg:object-top"
       />
     </div>
     <div
-      class="mb-1 flex justify-end lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2"
+      class="course-date-motion mb-1 flex justify-end lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2"
     >
       <FechaStart startDate={startDate} />
     </div>
-    <div class="lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3">
+    <div
+      class="course-hero-copy lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3"
+    >
       <HeroContentInfo />
     </div>
   </div>
 </section>
+
+<style>
+  .course-hero {
+    overflow: hidden;
+  }
+
+  .course-breadcrumb-motion,
+  .course-date-motion,
+  .course-hero-image-wrap,
+  .course-hero-copy {
+    animation: course-hero-enter 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .course-breadcrumb-motion {
+    animation-delay: 80ms;
+  }
+
+  .course-hero-image-wrap {
+    animation-name: course-hero-image-card;
+    animation-delay: 160ms;
+    transform-origin: center;
+  }
+
+  .course-date-motion {
+    animation-delay: 260ms;
+  }
+
+  .course-hero-copy {
+    animation-delay: 340ms;
+  }
+
+  .course-hero-image {
+    animation: course-hero-image 1200ms cubic-bezier(0.16, 1, 0.3, 1) 160ms both;
+    transform-origin: center;
+  }
+
+  @keyframes course-hero-enter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes course-hero-image-card {
+    from {
+      opacity: 0;
+      transform: translateX(-34px) scale(0.97);
+      filter: blur(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes course-hero-image {
+    from {
+      transform: scale(1.08);
+      filter: saturate(0.82) brightness(0.9);
+    }
+
+    to {
+      transform: scale(1);
+      filter: saturate(1) brightness(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .course-breadcrumb-motion,
+    .course-date-motion,
+    .course-hero-image-wrap,
+    .course-hero-copy,
+    .course-hero-image {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+</style>

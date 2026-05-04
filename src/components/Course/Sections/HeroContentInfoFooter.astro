@@ -8,7 +8,9 @@ const { course } = Astro.params;
 const { modality, duration, hours, priceBase, priceReal } = Astro.props;
 ---
 
-<div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-between">
+<div
+  class="course-hero-footer lg:flex lg:flex-row-reverse lg:items-center lg:justify-between"
+>
   <ul class="mb-3 flex items-center justify-start lg:mb-0 lg:gap-6">
     <li class="flex items-center gap-1 px-2 py-1 lg:flex-col">
       <Vivo width="24" height="24" />
@@ -32,7 +34,7 @@ const { modality, duration, hours, priceBase, priceReal } = Astro.props;
       <a
         target="_blank"
         href={`https://api.whatsapp.com/send?phone=51970570927&text=Buenas,%20vengo%20de%20la%20web,%20quiero%20adquirir%20el%20curso%20de%20${course}`}
-        class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 py-4 pl-5 pr-6"
+        class="flex h-fit items-center gap-1 rounded border border-primary-500 bg-primary-500 py-4 pl-5 pr-6 transition-colors duration-300 hover:bg-primary-400"
       >
         <Cart fill="#FBFCFC" />
         <span class="text-sm text-white-100"
@@ -43,3 +45,23 @@ const { modality, duration, hours, priceBase, priceReal } = Astro.props;
     </span>
   </footer>
 </div>
+
+<style>
+  .course-hero-footer :global(li) {
+    transition:
+      transform 240ms ease,
+      color 240ms ease;
+  }
+
+  @media (hover: hover) {
+    .course-hero-footer :global(li:hover) {
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .course-hero-footer :global(li) {
+      transition: none;
+    }
+  }
+</style>

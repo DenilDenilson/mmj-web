@@ -2,13 +2,47 @@
 import TemarioModuloDetails from "./TemarioModuloDetails.astro";
 import TemarioModuloSummary from "./TemarioModuloSummary.astro";
 
-const { startOpen = false, key, modulo } = Astro.props;
+const { startOpen = false, key, index = key ?? 0, modulo } = Astro.props;
 ---
 
 <details
-  class="border-l border-black-100 px-6 transition-all duration-300"
+  class="temario-module border-l border-black-100 px-6 transition-all duration-300"
   open={startOpen}
+  style={`--module-delay: ${index * 80}ms`}
 >
-  <TemarioModuloSummary index={key} />
+  <TemarioModuloSummary index={index} />
   <TemarioModuloDetails modulo={modulo} />
 </details>
+
+<style>
+  .temario-module {
+    --module-delay: 0ms;
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  :global(.course-temario.is-visible) .temario-module {
+    animation: temario-module-enter 520ms cubic-bezier(0.22, 1, 0.36, 1)
+      var(--module-delay) both;
+  }
+
+  @keyframes temario-module-enter {
+    from {
+      opacity: 0;
+      transform: translateX(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .temario-module {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
