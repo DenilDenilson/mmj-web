@@ -5,8 +5,6 @@ import Hero from "@src/components/Servicios/Hero.astro";
 import HighLights from "@src/components/Servicios/HighLights.astro";
 import Ubication from "@src/components/Home/Ubication.astro";
 import Services from "@src/components/Servicios/Services.astro";
-import ExitCases from "@src/components/Servicios/ExitCases.astro";
-import OurProcess from "@src/components/Servicios/OurProcess.astro";
 import Proyects from "@src/components/Home/Proyects.astro";
 
 export const getStaticPaths = (() => {
@@ -23,7 +21,65 @@ export const getStaticPaths = (() => {
   <HighLights />
   <Services />
   <!-- <ExitCases /> -->
-  <Proyects />
+  <div class="service-projects-reveal" data-service-reveal>
+    <Proyects />
+  </div>
   <!-- <OurProcess /> -->
   <Ubication />
 </Layout>
+
+<style>
+  .service-projects-reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition:
+      opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .service-projects-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-projects-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const serviceRevealItems = document.querySelectorAll<HTMLElement>(
+    "[data-service-reveal]",
+  );
+
+  const showServiceItem = (item: HTMLElement) => {
+    item.classList.add("is-visible");
+  };
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    serviceRevealItems.forEach(showServiceItem);
+  } else if ("IntersectionObserver" in window) {
+    const serviceRevealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          showServiceItem(entry.target as HTMLElement);
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.12,
+      },
+    );
+
+    serviceRevealItems.forEach((item) => serviceRevealObserver.observe(item));
+  } else {
+    serviceRevealItems.forEach(showServiceItem);
+  }
+</script>

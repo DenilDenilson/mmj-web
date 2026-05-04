@@ -46,8 +46,9 @@ const items = [
 ---
 
 <section
-  class="relative z-50 grid place-content-center overflow-hidden bg-black-800 px-8 py-8 shadow-[0_16px_32px_0_rgba(12,12,13,0.1),0_4px_4px_0_rgba(12,12,13,0.05)]"
+  class="service-highlights relative z-50 grid place-content-center overflow-hidden bg-black-800 px-8 py-8 shadow-[0_16px_32px_0_rgba(12,12,13,0.1),0_4px_4px_0_rgba(12,12,13,0.05)]"
   aria-label="Beneficios destacados del servicio"
+  data-service-reveal
 >
   <ul
     class="mx-auto flex w-full snap-x snap-mandatory items-center gap-10 overflow-x-auto"
@@ -55,7 +56,10 @@ const items = [
     {
       items.map(({ Icon, title, description, colorClass }, index) => (
         <>
-          <li class="flex w-[270px] min-w-[270px] snap-center flex-col items-center gap-5 text-center">
+          <li
+            class="highlight-item flex w-[270px] min-w-[270px] snap-center flex-col items-center gap-5 text-center"
+            style={`--highlight-delay: ${index * 90}ms`}
+          >
             <div class="grid h-24 w-24 place-content-center brightness-0 invert [&>svg]:h-24 [&>svg]:w-24">
               <Icon />
             </div>
@@ -75,7 +79,8 @@ const items = [
           </li>
           {index < items.length - 1 && (
             <li
-              class="h-[209px] min-w-0 border-l-2 border-secondary-500"
+              class="highlight-divider h-[209px] min-w-0 border-l-2 border-secondary-500"
+              style={`--highlight-delay: ${index * 90 + 70}ms`}
               aria-hidden="true"
               role="presentation"
             />
@@ -85,3 +90,74 @@ const items = [
     }
   </ul>
 </section>
+
+<style>
+  .service-highlights {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+      opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .service-highlights.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .highlight-item,
+  .highlight-divider {
+    --highlight-delay: 0ms;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .service-highlights.is-visible .highlight-item,
+  .service-highlights.is-visible .highlight-divider {
+    animation: highlight-item-enter 560ms cubic-bezier(0.22, 1, 0.36, 1)
+      var(--highlight-delay) both;
+  }
+
+  .service-highlights.is-visible .highlight-divider {
+    transform-origin: center;
+    animation-name: highlight-divider-enter;
+  }
+
+  @keyframes highlight-item-enter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(6px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes highlight-divider-enter {
+    from {
+      opacity: 0;
+      transform: scaleY(0.65);
+    }
+
+    to {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-highlights,
+    .highlight-item,
+    .highlight-divider {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      transition: none;
+      filter: none;
+    }
+  }
+</style>

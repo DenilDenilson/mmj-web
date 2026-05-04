@@ -1,34 +1,25 @@
 ---
-import bgEmbebido from "@src/Images/Carreras/HeroBg.avif";
 import bgMobile from "@src/Images/Servicios/bgMobile.avif";
-import bgDesktop from "@src/Images/Servicios/bgDesktop.avif";
 import bgDesktopHardware from "@src/Images/Servicios/Hardware/HeroHardware.jpg";
 import bgDesktopSoftware from "@src/Images/Servicios/Software/HeroSoftware.jpg";
 import { Image } from "astro:assets";
 
 const { service } = Astro.params;
-
-const bgImages = {
-  embebido: {
-    mobile: bgEmbebido,
-    desktop: bgDesktop,
-  },
-};
 ---
 
 <div
-  class="relative hidden overflow-hidden lg:block lg:h-[448px] lg:w-[448px] xl:h-[576px] xl:w-[576px]"
+  class="service-hero-image-wrap relative hidden overflow-hidden lg:block lg:h-[448px] lg:w-[448px] xl:h-[576px] xl:w-[576px]"
 >
   {
     service === "servicio-hardware" ? (
       <Image
-        class="invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
+        class="service-hero-image invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
         src={bgDesktopHardware}
         alt="Imagen de fondo de alguien programando"
       />
     ) : (
       <Image
-        class="invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
+        class="service-hero-image invisible absolute mx-auto hidden h-full w-full max-w-xl object-cover lg:visible lg:z-10 lg:block"
         src={bgDesktopSoftware}
         alt="Imagen de fondo de alguien programando"
       />
@@ -41,16 +32,71 @@ const bgImages = {
   /> -->
 </div>
 <picture
-  class="absolute -z-50 aspect-[2/1] h-full sm:bg-black-900 lg:z-0 lg:hidden"
+  class="service-hero-mobile absolute -z-50 aspect-[2/1] h-full sm:bg-black-900 lg:z-0 lg:hidden"
 >
   <Image
-    class="absolute block aspect-auto h-full w-full object-cover sm:hidden"
+    class="service-hero-image absolute block aspect-auto h-full w-full object-cover sm:hidden"
     src={bgMobile}
     alt="Imagen de fondo de alguien programando"
   />
   <Image
-    class="absolute hidden aspect-auto h-full w-full object-cover sm:block"
+    class="service-hero-image absolute hidden aspect-auto h-full w-full object-cover sm:block"
     src={bgMobile}
     alt="Imagen de fondo de alguien programando"
   />
 </picture>
+
+<style>
+  .service-hero-image-wrap {
+    opacity: 0;
+    transform: translateX(42px) scale(0.96);
+    animation: service-hero-visual-enter 860ms cubic-bezier(0.22, 1, 0.36, 1)
+      220ms both;
+  }
+
+  .service-hero-image {
+    animation: service-hero-image-enter 1400ms cubic-bezier(0.16, 1, 0.3, 1)
+      220ms both;
+    transform-origin: center;
+  }
+
+  .service-hero-mobile .service-hero-image {
+    animation-delay: 0ms;
+  }
+
+  @keyframes service-hero-visual-enter {
+    from {
+      opacity: 0;
+      transform: translateX(42px) scale(0.96);
+      filter: blur(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes service-hero-image-enter {
+    from {
+      transform: scale(1.08);
+      filter: saturate(0.82) brightness(0.88);
+    }
+
+    to {
+      transform: scale(1);
+      filter: saturate(1) brightness(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-hero-image-wrap,
+    .service-hero-image {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+</style>

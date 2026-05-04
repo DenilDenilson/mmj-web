@@ -4,16 +4,54 @@ import ServicesContainer from "./Sections/ServicesContainer.astro";
 import ServicesTitle from "./Sections/ServicesTitle.astro";
 ---
 
-<section class="bg-white-500">
+<section class="services-block bg-white-500" data-service-reveal>
   <div
     class="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 px-7 py-16 md:px-8 lg:pt-32 xl:flex-row"
   >
     <div class="flex flex-col items-center">
-      <ServicesTitle />
+      <div class="services-title-motion">
+        <ServicesTitle />
+      </div>
       <ServicesContainer />
-      <BottomText
-        text="¿Listo para potenciar tu proyecto con tecnología de vanguardia?"
-      />
+      <div class="services-bottom-motion">
+        <BottomText
+          text="¿Listo para potenciar tu proyecto con tecnología de vanguardia?"
+        />
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .services-block {
+    overflow: hidden;
+  }
+
+  .services-title-motion,
+  .services-bottom-motion {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 680ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 680ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .services-block.is-visible .services-title-motion,
+  .services-block.is-visible .services-bottom-motion {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .services-block.is-visible .services-bottom-motion {
+    transition-delay: 280ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .services-title-motion,
+    .services-bottom-motion {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>

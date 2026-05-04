@@ -12,11 +12,12 @@ const { services } = specificService?.data || { services: [] }; // Aseguramos qu
 >
   {
     services.length > 0 ? (
-      services.map((service) => (
+      services.map((service, index) => (
         <ServiceCard
           title={service.title}
           description={service.description}
           ImageSrc={service.ImageSrc}
+          index={index}
         />
       ))
     ) : (
