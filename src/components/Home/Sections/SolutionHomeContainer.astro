@@ -141,7 +141,7 @@ const Solutions = [
 ];
 ---
 
-<section>
+<section class="relative overflow-hidden bg-white-500">
   {
     Solutions.map((solution: any, index: number) => (
       <SolutionHome
@@ -158,71 +158,111 @@ const Solutions = [
 </section>
 
 <style is:global>
-  /* Ocultar todas las soluciones por defecto */
   #solutions-slider [data-index] {
-    display: none;
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: #f3f4f6;
+    transform: translateX(32px);
+    clip-path: inset(0 0 0 18%);
   }
 
-  /* Mostrar la primera solución por defecto */
-  #solutions-slider [data-index="1"] {
-    display: block;
-  }
-
-  /* Mostrar solución 1 cuando se selecciona */
   #solutions-slider
     input:nth-child(1):checked
     ~ section
     ~ section
     [data-index="1"] {
-    display: block;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    clip-path: inset(0);
+    animation: solution-content-enter 460ms cubic-bezier(0.22, 1, 0.36, 1)
+      both;
   }
 
-  /* Ocultar otras soluciones cuando se selecciona la 1 */
   #solutions-slider
     input:nth-child(1):checked
     ~ section
     ~ section
     [data-index]:not([data-index="1"]) {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
-  /* Mostrar solución 2 cuando se selecciona */
   #solutions-slider
     input:nth-child(2):checked
     ~ section
     ~ section
     [data-index="2"] {
-    display: block;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    clip-path: inset(0);
+    animation: solution-content-enter 460ms cubic-bezier(0.22, 1, 0.36, 1)
+      both;
   }
 
-  /* Ocultar otras soluciones cuando se selecciona la 2 */
   #solutions-slider
     input:nth-child(2):checked
     ~ section
     ~ section
     [data-index]:not([data-index="2"]) {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
-  /* Mostrar solución 3 cuando se selecciona */
   #solutions-slider
     input:nth-child(3):checked
     ~ section
     ~ section
     [data-index="3"] {
-    display: block;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    clip-path: inset(0);
+    animation: solution-content-enter 460ms cubic-bezier(0.22, 1, 0.36, 1)
+      both;
   }
 
-  /* Ocultar otras soluciones cuando se selecciona la 3 */
   #solutions-slider
     input:nth-child(3):checked
     ~ section
     ~ section
     [data-index]:not([data-index="3"]) {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
-  /* Estilos para los botones seleccionados */
+  @keyframes solution-content-enter {
+    from {
+      opacity: 0;
+      transform: translateX(32px);
+      clip-path: inset(0 0 0 18%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      clip-path: inset(0);
+    }
+  }
+
   #solutions-slider .solution-option {
     transition: all 0.3s ease;
   }
