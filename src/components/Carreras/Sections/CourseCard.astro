@@ -57,7 +57,7 @@ import { techImages } from "@src/data/techImages.ts";
 // import TouchGFX from "@src/Images/Techs/TouchGFX.png";
 // import OpenPLC from "@src/Images/Techs/OpenPLC.png";
 
-const { course } = Astro.props;
+const { course, index = 0 } = Astro.props;
 
 const {
   bgCourseCard,
@@ -126,14 +126,18 @@ const {
 // };
 ---
 
-<div class="lg:odd:bg-white-500">
+<div
+  class="course-row lg:odd:bg-white-500"
+  data-career-reveal
+  style={`--course-delay: ${index * 90}ms`}
+>
   <li
-    class="mx-auto min-w-72 max-w-7xl snap-center rounded-xl px-7 py-8 shadow-[0px_8px_16px_0px_#18181B30] lg:flex lg:gap-8 lg:rounded-none lg:shadow-none"
+    class="course-card mx-auto min-w-72 max-w-7xl snap-center rounded-xl px-7 py-8 shadow-[0px_8px_16px_0px_#18181B30] lg:flex lg:gap-8 lg:rounded-none lg:shadow-none"
   >
     <Image
       src={bgImages[bgCourseCard as keyof typeof bgImages]}
       alt={`Imagen del curso de ${title}`}
-      class="mb-4 aspect-video rounded object-contain lg:mb-0"
+      class="course-image mb-4 aspect-video rounded object-contain lg:mb-0"
     />
     <div>
       <header
@@ -237,3 +241,78 @@ const {
     </div>
   </li>
 </div>
+
+<style>
+  .course-row {
+    --course-delay: 0ms;
+    opacity: 0;
+    transform: translateX(-42px);
+    transition:
+      opacity 720ms cubic-bezier(0.22, 1, 0.36, 1) var(--course-delay),
+      transform 720ms cubic-bezier(0.22, 1, 0.36, 1) var(--course-delay);
+  }
+
+  .course-row:nth-child(even) {
+    transform: translateX(42px);
+  }
+
+  .course-row.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .course-card {
+    transition:
+      transform 280ms ease,
+      box-shadow 280ms ease;
+  }
+
+  .course-image {
+    transform: scale(0.98);
+    transition:
+      transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 520ms ease;
+  }
+
+  .course-row.is-visible .course-image {
+    transform: scale(1);
+  }
+
+  @media (hover: hover) {
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 28px 0 #18181b24;
+    }
+
+    .course-card:hover .course-image {
+      transform: scale(1.025);
+      filter: saturate(1.08);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .course-row:nth-child(even) {
+      transform: translateX(42px);
+    }
+
+    .course-row.is-visible:nth-child(even) {
+      transform: translateX(0);
+    }
+
+    .course-card:hover {
+      box-shadow: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .course-row,
+    .course-row:nth-child(even),
+    .course-card,
+    .course-image {
+      opacity: 1;
+      transform: none;
+      transition: none;
+      filter: none;
+    }
+  }
+</style>

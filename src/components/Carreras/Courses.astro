@@ -16,14 +16,44 @@ const coursesInCarrer = courses.filter((course) =>
       id="courses-in-carrer"
       class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-2 py-4 lg:block lg:px-0"
     >
-      {coursesInCarrer.map((course) => <CourseCard course={course} />)}
+      {
+        coursesInCarrer.map((course, index) => (
+          <CourseCard course={course} index={index} />
+        ))
+      }
     </ul>
   </div>
 </section>
 
-<style is:global>
-  @media (min-width: 1024px) {
-    #courses-in-carrer:nth-child(even) {
-    }
+<script>
+  const revealItems = document.querySelectorAll<HTMLElement>(
+    "[data-career-reveal]",
+  );
+
+  const showItem = (item: HTMLElement) => {
+    item.classList.add("is-visible");
+  };
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealItems.forEach(showItem);
+  } else if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          showItem(entry.target as HTMLElement);
+          currentObserver.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.12,
+      },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach(showItem);
   }
-</style>
+</script>

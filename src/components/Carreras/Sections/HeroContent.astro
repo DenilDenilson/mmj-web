@@ -39,26 +39,65 @@ const bgImages = {
 const { carrera } = Astro.params;
 const specificCarrer = await getEntry("carrers", `${carrera}`);
 
-const { title, description, goals, backgroundHeroImage } =
-  specificCarrer?.data || {};
+const { backgroundHeroImage } = specificCarrer?.data || {};
 ---
 
 <Image
-  class="invisible absolute left-0 right-0 mx-auto hidden w-full object-cover md:visible md:z-10 md:block md:h-full"
+  class="carrera-hero-bg pointer-events-none invisible absolute left-0 right-0 z-0 mx-auto hidden w-full object-cover md:visible md:block md:h-full"
   src={bgImages[backgroundHeroImage as keyof typeof bgImages].desktop}
   alt="Imagen de fondo de alguien programando"
 />
 <div class="h-12 w-full"></div>
 <!-- Pequeño cuadro para bajar el resto del espacio que oculata la barra de navegación fija -->
-<div class="relative mx-auto max-w-7xl overflow-x-hidden">
+<div
+  class="carrera-hero-frame relative z-10 mx-auto max-w-7xl overflow-x-hidden"
+>
   <picture
-    class="absolute -z-50 aspect-[2/1] h-full bg-white-50 md:z-0 md:bg-black-900"
+    class="carrera-hero-picture absolute -z-50 aspect-[2/1] h-full md:z-0"
   >
     <Image
-      class="absolute right-0 block h-full w-full object-cover md:hidden"
+      class="carrera-hero-bg absolute right-0 block h-full w-full object-cover md:hidden"
       src={bgImages[backgroundHeroImage as keyof typeof bgImages].mobile}
       alt="Imagen de fondo de alguien programando"
     />
   </picture>
   <HeroContentInfo />
 </div>
+
+<style>
+  .carrera-hero-frame {
+    isolation: isolate;
+  }
+
+  .carrera-hero-picture {
+    overflow: hidden;
+  }
+
+  .carrera-hero-bg {
+    animation: carrera-hero-image 1400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    transform-origin: center;
+  }
+
+  @keyframes carrera-hero-image {
+    from {
+      opacity: 0;
+      transform: scale(1.08);
+      filter: saturate(0.7) brightness(0.76);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: saturate(1) brightness(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carrera-hero-bg {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+</style>
