@@ -1,6 +1,7 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
 import BgTrabajoHome from "@src/Images/Home/BgTrabajoHome.avif";
+import UneteInges from "@src/Images/Home/UneteInges.webp";
 import { Image } from "astro:assets";
 ---
 
@@ -11,7 +12,9 @@ import { Image } from "astro:assets";
     class="absolute -z-10 h-full w-full object-cover object-center"
   />
   <div class="absolute -z-10 h-full w-full bg-black-900/90"></div>
-  <div class="px-4 py-16 lg:mx-auto lg:max-w-7xl lg:px-0">
+  <div
+    class="flex flex-col gap-10 px-4 py-16 lg:mx-auto lg:max-w-7xl lg:flex-row lg:items-center lg:gap-16 lg:px-0"
+  >
     <div class="lg:mr-auto lg:max-w-xl">
       <hgroup class="mb-10 text-3xl font-bold text-[#28A0B3] lg:text-2xl">
         <h2 class="mb-4 font-bold">Colabora en Proyectos Innovadores</h2>
@@ -65,5 +68,10 @@ import { Image } from "astro:assets";
         >
       </div>
     </div>
+    <Image
+      src={UneteInges}
+      alt="Ingenieros de MMJ trabajando en proyectos tecnológicos"
+      class="h-72 w-full rounded-lg object-cover object-center lg:h-auto lg:w-1/2"
+    />
   </div>
 </section>

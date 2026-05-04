@@ -1,6 +1,7 @@
 ---
 import Check from "@src/Images/icons/Check.astro";
 import BgDocenteHome from "@src/Images/Home/BgDocenteHome.avif";
+import UneteDocentes from "@src/Images/Home/UneteDocentes.webp";
 import { Image } from "astro:assets";
 ---
 
@@ -11,8 +12,15 @@ import { Image } from "astro:assets";
     class="absolute -z-10 h-full w-full object-cover object-center"
   />
   <div class="absolute -z-10 h-full w-full bg-black-900/90"></div>
-  <div class="px-4 py-16 lg:mx-auto lg:max-w-7xl lg:px-0">
-    <div class="lg:ml-auto lg:max-w-xl">
+  <div
+    class="flex flex-col gap-10 px-4 py-16 lg:mx-auto lg:max-w-7xl lg:flex-row lg:items-center lg:gap-16 lg:px-0"
+  >
+    <Image
+      src={UneteDocentes}
+      alt="Docentes de MMJ compartiendo conocimientos"
+      class="order-2 h-72 w-full rounded-lg object-cover object-center lg:order-1 lg:h-auto lg:w-1/2"
+    />
+    <div class="order-1 lg:order-2 lg:ml-auto lg:max-w-xl">
       <hgroup class="mb-10 text-3xl font-bold text-[#28A0B3] lg:text-2xl">
         <h2 class="mb-4 font-bold">Sé Parte de Nuestro Equipo Docente</h2>
         <p
