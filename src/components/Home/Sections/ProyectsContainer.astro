@@ -17,7 +17,7 @@ import ProyecResume from "./ProyecResume.astro";
 
   <div
     id="projectsContainer"
-    class="mx-auto overflow-y-hidden rounded-lg shadow-[0px_0px_24px_10px_#18181B30] lg:w-full lg:rounded-none lg:shadow-[16px_16px_24px_10px_#18181B30]"
+    class="mx-auto overflow-hidden rounded-lg shadow-[0px_0px_24px_10px_#18181B30] lg:w-full lg:rounded-none lg:shadow-[16px_16px_24px_10px_#18181B30]"
   >
     <ul class="relative transition-all duration-300 ease-in-out lg:h-[500px]">
       {
@@ -88,7 +88,17 @@ import ProyecResume from "./ProyecResume.astro";
 
 <style is:global>
   #projectsContainer > ul > article {
-    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(24px) scale(0.98);
+    transition:
+      opacity 420ms ease,
+      transform 420ms ease,
+      visibility 0s linear 420ms;
   }
 
   #slider
@@ -116,8 +126,13 @@ import ProyecResume from "./ProyecResume.astro";
     ~ #projectsContainer
     > ul
     article:nth-child(5) {
-    display: flex;
     position: relative;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0) scale(1);
+    transition-delay: 0s;
   }
 
   #slider input:nth-child(1):checked ~ #buttonsSlider label:nth-child(1),
